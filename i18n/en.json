@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robert Vogel <vogel@hallowelt.biz>"
+		]
+	},
+	"bs-bssmwconnector-desc": "Integrates SemanticMediaWiki into BlueSpice",
+	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice Grid",
+	"bs-bssmwconnector-nmmngr-label-smw": "Semantic MediaWiki"
+}

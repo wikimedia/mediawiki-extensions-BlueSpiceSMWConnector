@@ -1,0 +1,65 @@
+<?php
+
+class BSSMWCNamespaceManager {
+
+	public static function onGetMetaFields( &$aMetaFields ) {
+		$aMetaFields[] = array(
+			'name' => 'smw',
+			'type' => 'boolean',
+			'label' => wfMessage( 'bs-bssmwconnector-nmmngr-label-smw' )->plain(),
+			'filter' => array(
+				'type' => 'bool'
+			),
+		);
+		return true;
+	}
+
+	public static function onGetNamespaceData( &$aResults ) {
+		global $smwgNamespacesWithSemanticLinks;
+
+		$iResults = count( $aResults );
+		for ( $i = 0; $i < $iResults; $i++ ) {
+			$aResults[ $i ][ 'smw' ] =
+				isset( $smwgNamespacesWithSemanticLinks[  $aResults[ $i ][ 'id' ] ] )
+				? $smwgNamespacesWithSemanticLinks[  $aResults[ $i ][ 'id' ] ]
+				: false;
+		}
+		return true;
+	}
+
+	public static function onEditNamespace( &$aNamespaceDefinitions, &$iNS, $aAdditionalSettings, $bUseInternalDefaults = false ) {
+
+		if ( !$bUseInternalDefaults ) {
+			$aNamespaceDefinitions[$iNS][ 'smw' ] = $aAdditionalSettings['smw'];
+		}
+		else {
+			$aNamespaceDefinitions[$iNS][ 'smw' ] = false;
+		}
+		return true;
+	}
+
+	public static function onWriteNamespaceConfiguration( &$sSaveContent, $sConstName, $aDefinition ) {
+		global $smwgNamespacesWithSemanticLinks;
+
+		$iNsID = constant( $sConstName );
+		$bCurrentlyActivated = isset( $smwgNamespacesWithSemanticLinks[ $iNsID ] )
+			? $smwgNamespacesWithSemanticLinks[ $iNsID ]
+			: false;
+
+		$bExplicitlyDeactivated = false;
+		if ( isset( $aDefinition[ 'smw' ] ) && $aDefinition[ 'smw' ] === false ) {
+			$bExplicitlyDeactivated = true;
+		}
+
+		$bExplicitlyActivated = false;
+		if ( isset( $aDefinition[ 'smw' ] ) && $aDefinition[ 'smw' ] === true ) {
+			$bExplicitlyActivated = true;
+		}
+
+		if( ($bCurrentlyActivated && !$bExplicitlyDeactivated) || $bExplicitlyActivated ) {
+			$sSaveContent .= "\$GLOBALS['smwgNamespacesWithSemanticLinks'][{$sConstName}] = true;\n";
+		}
+
+		return true;
+	}
+}

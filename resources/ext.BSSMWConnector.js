@@ -1,0 +1,1 @@
+Ext.Loader.setPath( 'BS.SMWConnector', mw.config.get('wgScriptPath')+'/extensions/BlueSpiceSemantic/SMWConnector/resources/BS.SMWConnector' );

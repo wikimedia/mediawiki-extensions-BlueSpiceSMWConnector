@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Robert Vogel <vogel@hallowelt.biz>"
+		]
+	},
+	"bs-bssmwconnector-desc": "{{desc|name=BSSMWConnector|url=https://www.mediawiki.org/wiki/Extension:BSSMWConnector}}",
+	"bs-bssmwconnector-srf-printername-bsgrid": "Name of a Semantic Result Format that uses BlueSpice/ExtJS",
+	"bs-bssmwconnector-nmmngr-label-smw": "Label for column in grid of NamespaceManager extension"
+}
