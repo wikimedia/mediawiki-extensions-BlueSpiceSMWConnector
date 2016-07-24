@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Wladek92"
+		]
+	},
+	"bs-bssmwconnector-desc": "Intègre SemanticMediaWiki à BlueSpice",
+	"bs-bssmwconnector-srf-printername-bsgrid": "Grille BlueSpice"
+}
