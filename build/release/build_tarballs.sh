@@ -136,7 +136,6 @@ cat <<EOT >> LocalSettings.BlueSpiceSemantic.php.template
 /*
 cp LocalSettings.BlueSpiceSemantic.php.template ../LocalSettings.BlueSpiceSemantic.php
 echo 'require_once "LocalSettings.BlueSpiceSemantic.php";' | tee --append ../LocalSettings.php
-echo 'enableSemantics( 'localhost' );' | tee --append ../LocalSettings.php
 */
 //finaly append to bottom of LocalSettings.php, set host properly and Activate smw with: enableSemantics( 'localhost' );
 
@@ -152,8 +151,11 @@ require_once "\$IP/extensions/SemanticForms/SemanticForms.php";
 require_once "\$IP/extensions/SemanticResultFormats/SemanticResultFormats.php";
 require_once "\$IP/extensions/BSSMWConnector/BSSMWConnector.php";
 
-if ( !defined( \$GLOBALS[ 'smwgNamespaceIndex' ] ) )
+if ( !defined( \$GLOBALS[ 'smwgNamespaceIndex' ] ) ) {
 	\$GLOBALS[ 'smwgNamespaceIndex' ] = 700;
+}
+
+enableSemantics( 'localhost' );
 
 \$GLOBALS[ 'smwgPageSpecialProperties' ] = array_merge(
 	\$GLOBALS[ 'smwgPageSpecialProperties' ],
