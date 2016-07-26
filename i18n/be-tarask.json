@@ -4,5 +4,6 @@
 			"Red Winged Duck"
 		]
 	},
-	"bs-bssmwconnector-desc": "Інтэгруе SemanticMediaWiki ў BlueSpice"
+	"bs-bssmwconnector-desc": "Інтэгруе SemanticMediaWiki ў BlueSpice",
+	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice Grid"
 }
