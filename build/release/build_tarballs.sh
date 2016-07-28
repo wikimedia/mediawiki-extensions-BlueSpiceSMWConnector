@@ -155,8 +155,6 @@ if ( !defined( \$GLOBALS[ 'smwgNamespaceIndex' ] ) ) {
 	\$GLOBALS[ 'smwgNamespaceIndex' ] = 700;
 }
 
-enableSemantics( 'localhost' );
-
 \$GLOBALS[ 'smwgPageSpecialProperties' ] = array_merge(
 	\$GLOBALS[ 'smwgPageSpecialProperties' ],
 	array( '_CDAT', '_LEDT', '_NEWP', '_MIME', '_MEDIA' )
@@ -169,9 +167,15 @@ enableSemantics( 'localhost' );
 	'_SUBP', '_USERREG', '_USEREDITCNT', '_EXIFDATA'
 );
 
+\$GLOBALS[ 'bssSpecialProperties' ] = array(
+	'_RESPEDITOR'
+);
+
 \$GLOBALS[ 'sespUseAsFixedTables' ] = true;
 
 \$GLOBALS[ 'wgSESPExcludeBots' ] = true;
+
+enableSemantics( 'localhost' );
 
 EOT
 

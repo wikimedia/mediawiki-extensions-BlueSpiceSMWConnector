@@ -20,6 +20,9 @@ $GLOBALS['wgAutoloadClasses']['BSSMWConnectorHooks'] = __DIR__.'/includes/BSSMWC
 $GLOBALS['wgAutoloadClasses']['SMWCNamespaceManager'] = __DIR__.'/includes/SMWCNamespaceManager.php';
 $GLOBALS['wgAutoloadClasses']['BSSFVisualEditor'] = __DIR__.'/includes/forminputs/BSSFVisualEditor.php';
 $GLOBALS['wgAutoloadClasses']['BSGridResultPrinter'] = __DIR__.'/includes/formats/Grid/BSGridResultPrinter.php';
+$GLOBALS['wgAutoloadClasses']['BSPropertyRegistry'] = __DIR__.'/includes/BSPropertyRegistry.php';
+$GLOBALS['wgAutoloadClasses']['BSDefinitionReader'] = __DIR__.'/includes/BSDefinitionReader.php';
+$GLOBALS['wgAutoloadClasses']['BSExtraPropertyAnnotator'] = __DIR__.'/includes/BSExtraPropertyAnnotator.php';
 
 #$GLOBALS['wgExtensionFunctions'][] = 'BSSMWConnectorHooks::setup';
 $GLOBALS['wgHooks']['BeforePageDisplay'][] = 'BSSMWConnectorHooks::onBeforePageDisplay';
@@ -35,8 +38,8 @@ $GLOBALS['wgHooks']['NamespaceManager::writeNamespaceConfiguration'][] = 'SMWCNa
 $GLOBALS['smwgResultFormats']['bsgrid'] = 'BSGridResultPrinter';
 
 $aResourceModuleTemplate = array(
-	'localBasePath' => $IP.'/extensions/BlueSpiceSemantic/BSSMWConnector/resources',
-	'remoteExtPath' => 'BlueSpiceSemantic/BSSMWConnector/resources',
+	'localBasePath' => $IP.'/extensions/BSSMWConnector/resources',
+	'remoteExtPath' => 'BSSMWConnector/resources',
 );
 
 $GLOBALS['wgResourceModules']['ext.BSSMWConnector.BookshelfUI'] = array(
@@ -94,3 +97,7 @@ if( $iEchoKey !== false ) {
 }
 unset( $iEchoKey );
 unset( $aResourceModuleTemplate );
+
+$GLOBALS[ 'wgExtensionFunctions' ][] = function() {
+	BSExtraPropertyAnnotator::processProperties();
+};
