@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Piramidion"
+		]
+	},
+	"bs-bssmwconnector-desc": "Інтегрує SemanticMediaWiki в BlueSpice",
+	"bs-bssmwconnector-srf-printername-bsgrid": "Сітка BlueSpice"
+}
