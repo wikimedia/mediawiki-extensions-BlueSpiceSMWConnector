@@ -13,6 +13,7 @@
 # SemanticExtraSpecialProperties
 # SemanticForms
 # SemanticResultFormats
+# SemanticBreadcrumbLinks
 # BSSMWConnector
 
 #build zip package with standalone working smw extensions to be extracted in mw-extensions folder
@@ -78,6 +79,12 @@ OUT_SemanticResultFormats="$DIR_BUILD/SemanticResultFormats_dev.zip"
 REAL_PATH_SemanticResultFormats="SemanticResultFormats-master"
 FIX_PATH_SemanticResultFormats="SemanticResultFormats"
 
+# SemanticBreadcrumbLinks
+URL_SemanticBreadcrumbLinks="https://github.com/SemanticMediaWiki/SemanticBreadcrumbLinks/archive/1.3.0.zip"
+OUT_SemanticBreadcrumbLinks="$DIR_BUILD/SemanticBreadcrumbLinks_.1.3.0.zip"
+REAL_PATH_SemanticBreadcrumbLinks="SemanticBreadcrumbLinks-1.3.0"
+FIX_PATH_SemanticBreadcrumbLinks="SemanticBreadcrumbLinks"
+
 # BSSMWConnector
 URL_BSSMWConnector="https://github.com/wikimedia/mediawiki-extensions-BSSMWConnector/archive/master.zip"
 OUT_BSSMWConnector="$DIR_BUILD/BSSMWConnector_dev.zip"
@@ -100,6 +107,7 @@ wget $URL_SemanticCompoundQueries 		-O $OUT_SemanticCompoundQueries
 wget $URL_SemanticExtraSpecialProperties 	-O $OUT_SemanticExtraSpecialProperties
 wget $URL_SemanticForms 			-O $OUT_SemanticForms
 wget $URL_SemanticResultFormats			-O $OUT_SemanticResultFormats
+wget $URL_SemanticBreadcrumbLinks			-O $OUT_SemanticBreadcrumbLinks
 wget $URL_BSSMWConnector			-O $OUT_BSSMWConnector
 
 
@@ -118,6 +126,7 @@ mv $REAL_PATH_SemanticCompoundQueries 		$FIX_PATH_SemanticCompoundQueries
 mv $REAL_PATH_SemanticExtraSpecialProperties 	$FIX_PATH_SemanticExtraSpecialProperties
 mv $REAL_PATH_SemanticForms 			$FIX_PATH_SemanticForms
 mv $REAL_PATH_SemanticResultFormats		$FIX_PATH_SemanticResultFormats
+mv $REAL_PATH_SemanticBreadcrumbLinks		$FIX_PATH_SemanticBreadcrumbLinks
 mv $REAL_PATH_BSSMWConnector			$FIX_PATH_BSSMWConnector
 
 #create composer autoload files
@@ -125,6 +134,9 @@ cd $FIX_PATH_SemanticExtraSpecialProperties
 composer dumpautoload
 cd $DIR_BUILD
 cd $FIX_PATH_SemanticResultFormats
+composer dumpautoload
+cd $DIR_BUILD
+cd $FIX_PATH_SemanticBreadcrumbLinks
 composer dumpautoload
 cd $DIR_BUILD
 
@@ -149,7 +161,10 @@ require_once "\$IP/extensions/SemanticCompoundQueries/SemanticCompoundQueries.ph
 require_once "\$IP/extensions/SemanticExtraSpecialProperties/vendor/autoload.php";
 require_once "\$IP/extensions/SemanticForms/SemanticForms.php";
 require_once "\$IP/extensions/SemanticResultFormats/SemanticResultFormats.php";
-require_once "\$IP/extensions/BSSMWConnector/BSSMWConnector.php";
+require_once "\$IP/extensions/SemanticBreadcrumbLinks/vendor/autoload.php";
+require_once "\$IP/extensions/BlueSpiceSMWConnector/BlueSpiceSMWConnector.php";
+
+enableSemantics( 'localhost' );
 
 if ( !defined( \$GLOBALS[ 'smwgNamespaceIndex' ] ) ) {
 	\$GLOBALS[ 'smwgNamespaceIndex' ] = 700;
@@ -174,8 +189,6 @@ if ( !defined( \$GLOBALS[ 'smwgNamespaceIndex' ] ) ) {
 \$GLOBALS[ 'sespUseAsFixedTables' ] = true;
 
 \$GLOBALS[ 'wgSESPExcludeBots' ] = true;
-
-enableSemantics( 'localhost' );
 
 EOT
 
