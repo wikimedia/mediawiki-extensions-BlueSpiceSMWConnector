@@ -17,7 +17,7 @@ $GLOBALS['wgExtensionCredits']['other'][] = array(
 $GLOBALS['wgMessagesDirs']['BSSMWConnectorHooks'] = __DIR__ .'/i18n';
 
 $GLOBALS['wgAutoloadClasses']['BSSMWConnectorHooks'] = __DIR__.'/includes/BSSMWConnectorHooks.php';
-$GLOBALS['wgAutoloadClasses']['SMWCNamespaceManager'] = __DIR__.'/includes/SMWCNamespaceManager.php';
+$GLOBALS['wgAutoloadClasses']['BSSMWCNamespaceManager'] = __DIR__.'/includes/BSSMWCNamespaceManager.php';
 $GLOBALS['wgAutoloadClasses']['BSSFVisualEditor'] = __DIR__.'/includes/forminputs/BSSFVisualEditor.php';
 $GLOBALS['wgAutoloadClasses']['BSGridResultPrinter'] = __DIR__.'/includes/formats/Grid/BSGridResultPrinter.php';
 $GLOBALS['wgAutoloadClasses']['BSPropertyRegistry'] = __DIR__.'/includes/BSPropertyRegistry.php';
@@ -30,10 +30,10 @@ $GLOBALS['wgHooks']['sfFormPrinterSetup'][] = 'BSSMWConnectorHooks::onSfFormPrin
 $GLOBALS['wgHooks']['BSBookshelfNodeTag'][] = 'BSSMWConnectorHooks::onBSBookshelfNodeTag';
 $GLOBALS['wgHooks']['BSBookshelfExportTag'][] = 'BSSMWConnectorHooks::onBSBookshelfExportTag';
 
-$GLOBALS['wgHooks']['NamespaceManager::getMetaFields'][] = 'SMWCNamespaceManager::onGetMetaFields';
-$GLOBALS['wgHooks']['NamespaceManager::getNamespaceData'][] = 'SMWCNamespaceManager::onGetNamespaceData';
-$GLOBALS['wgHooks']['NamespaceManager::editNamespace'][] = 'SMWCNamespaceManager::onEditNamespace';
-$GLOBALS['wgHooks']['NamespaceManager::writeNamespaceConfiguration'][] = 'SMWCNamespaceManager::onWriteNamespaceConfiguration';
+$GLOBALS['wgHooks']['NamespaceManager::getMetaFields'][] = 'BSSMWCNamespaceManager::onGetMetaFields';
+$GLOBALS['wgHooks']['NamespaceManager::getNamespaceData'][] = 'BSSMWCNamespaceManager::onGetNamespaceData';
+$GLOBALS['wgHooks']['NamespaceManager::editNamespace'][] = 'BSSMWCNamespaceManager::onEditNamespace';
+$GLOBALS['wgHooks']['NamespaceManager::writeNamespaceConfiguration'][] = 'BSSMWCNamespaceManager::onWriteNamespaceConfiguration';
 
 $GLOBALS['smwgResultFormats']['bsgrid'] = 'BSGridResultPrinter';
 
