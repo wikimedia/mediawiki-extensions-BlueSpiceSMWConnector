@@ -4,7 +4,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
-wfLoadExtension( 'BlueSpiceSMWConnector' );
+wfLoadExtension( 'BluespiceSmwConnector' );
 
 $GLOBALS['smwgResultFormats']['bsgrid'] = 'BSGridResultPrinter';
 
