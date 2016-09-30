@@ -31,7 +31,7 @@ class BSSMWConnectorHooks {
 		$out->addModules( array(
 			'ext.bluespice.visualEditor.styles',
 			'ext.bluespice.visualEditor.tinymce',
-			'ext.SMWConnector.SF.VisualEditorField'
+			'ext.BSSMWConnector.SF.VisualEditorField'
 		) );
 
 		//This is ugly, but as long as the "Insert*" extensions can not detect

@@ -1,72 +1,72 @@
 {
-    "load_composer_autoloader": true,
-    "manifest_version": 1,
-    "name": "BlueSpiceSMWConnector",
-    "descriptionmsg": "bs-bssmwconnector-desc",
-    "license-name": "GPL-2.0+",
-    "type": "bluespice",
-    "version": "2.27.1.1",
-    "author": [
-	"Robert Vogel",
-	"Leonid Verhovskij"
-    ],
-    "url": "https://www.mediawiki.org/wiki/Extension:BlueSpiceSMWConnector",
-    "AutoloadClasses": {
-	"BSSMWConnectorHooks": "includes/BSSMWConnectorHooks.php",
-	"BSSMWCNamespaceManager": "includes/BSSMWCNamespaceManager.php",
-	"BSSFVisualEditor": "includes/forminputs/BSSFVisualEditor.php",
-	"BSGridResultPrinter":"includes/formats/Grid/BSGridResultPrinter.php",
-	"BSPropertyRegistry":"includes/BSPropertyRegistry.php",
-	"BSDefinitionReader":"includes/BSDefinitionReader.php",
-	"BSExtraPropertyAnnotator":"includes/BSExtraPropertyAnnotator.php"
-    },
-    "MessagesDirs":{
-	"BSSMWConnectorHooks": "i18n"
-    },
-    "Hooks":{
-	"BeforePageDisplay": "BSSMWConnectorHooks::onBeforePageDisplay",
-	"sfFormPrinterSetup": "BSSMWConnectorHooks::onSfFormPrinterSetup",
-	"BSBookshelfNodeTag": "BSSMWConnectorHooks::onBSBookshelfNodeTag",
-	"BSBookshelfExportTag": "BSSMWConnectorHooks::onBSBookshelfExportTag",
-	"NamespaceManager::getMetaFields": "BSSMWCNamespaceManager::onGetMetaFields",
-	"NamespaceManager::getNamespaceData": "BSSMWCNamespaceManager::onGetNamespaceData",
-	"NamespaceManager::editNamespace":"BSSMWCNamespaceManager::onEditNamespace",
-	"NamespaceManager::writeNamespaceConfiguration":"BSSMWCNamespaceManager::onWriteNamespaceConfiguration"
-    },
-    "ResourceModuleTemplate":{
-	"localBasePath": "resources",
-        "remoteExtPath": "BlueSpiceSMWConnector/resources"
-    },
-    "ResourceModules":{
-	"ext.BSSMWConnector.BookshelfUI":{
-	    "scripts":[
-		"ext.BSSMWConnector.BookshelfUI.js"
-	    ]
+	"name": "BlueSpiceSMWConnector",
+	"descriptionmsg": "bs-bssmwconnector-desc",
+	"license-name": "GPL-2.0+",
+	"type": "bluespice",
+	"version": "2.27.1.1",
+	"author": [
+		"Robert Vogel",
+		"Leonid Verhovskij"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:BlueSpiceSMWConnector",
+	"AutoloadClasses": {
+		"BSSMWConnectorHooks": "includes/BSSMWConnectorHooks.php",
+		"BSSMWCNamespaceManager": "includes/BSSMWCNamespaceManager.php",
+		"BSSFVisualEditor": "includes/forminputs/BSSFVisualEditor.php",
+		"BSGridResultPrinter": "includes/formats/Grid/BSGridResultPrinter.php",
+		"BSPropertyRegistry": "includes/BSPropertyRegistry.php",
+		"BSDefinitionReader": "includes/BSDefinitionReader.php",
+		"BSExtraPropertyAnnotator": "includes/BSExtraPropertyAnnotator.php"
 	},
-	"ext.BSSMWConnector":{
-	    "scripts": [
-		"ext.BSSMWConnector.js",
-                "ext.BSSMWConnector.smwc.js",
-                "ext.BSSMWConnector.util.js"
-	    ],
-	    "dependencies":[
-		"ext.bluespice.extjs",
-                "ext.smw.api"
-	    ]
+	"MessagesDirs": {
+		"BSSMWConnectorHooks": "i18n"
 	},
-	"ext.BSSMWConnector.SF.VisualEditorField":{
-	    "scripts":[
-		"ext.BSSMWConnector.SF.VisualEditorField.js"
-	    ]
+	"Hooks": {
+		"BeforePageDisplay": "BSSMWConnectorHooks::onBeforePageDisplay",
+		"sfFormPrinterSetup": "BSSMWConnectorHooks::onSfFormPrinterSetup",
+		"BSBookshelfNodeTag": "BSSMWConnectorHooks::onBSBookshelfNodeTag",
+		"BSBookshelfExportTag": "BSSMWConnectorHooks::onBSBookshelfExportTag",
+		"NamespaceManager::getMetaFields": "BSSMWCNamespaceManager::onGetMetaFields",
+		"NamespaceManager::getNamespaceData": "BSSMWCNamespaceManager::onGetNamespaceData",
+		"NamespaceManager::editNamespace": "BSSMWCNamespaceManager::onEditNamespace",
+		"NamespaceManager::writeNamespaceConfiguration": "BSSMWCNamespaceManager::onWriteNamespaceConfiguration"
 	},
-	"ext.srf.bsextjsgrid":{
-	    "scripts": [
-		"ext.srf.bsextjsgrid.js"
-	    ],
-	    "dependencies":[
-		"ext.BSSMWConnector",
-                "ext.smw.api"
-	    ]
-	}
-    }
+	"ResourceFileModulePaths": {
+		"localBasePath": "resources",
+		"remoteExtPath": "BlueSpiceSMWConnector/resources"
+	},
+	"ResourceModules": {
+		"ext.BSSMWConnector.BookshelfUI": {
+			"scripts": [
+				"ext.BSSMWConnector.BookshelfUI.js"
+			]
+		},
+		"ext.BSSMWConnector": {
+			"scripts": [
+				"ext.BSSMWConnector.js",
+				"ext.BSSMWConnector.smwc.js",
+				"ext.BSSMWConnector.util.js"
+			],
+			"dependencies": [
+				"ext.bluespice.extjs",
+				"ext.smw.api"
+			]
+		},
+		"ext.BSSMWConnector.SF.VisualEditorField": {
+			"scripts": [
+				"ext.BSSMWConnector.SF.VisualEditorField.js"
+			]
+		},
+		"ext.srf.bsextjsgrid": {
+			"scripts": [
+				"ext.srf.bsextjsgrid.js"
+			],
+			"dependencies": [
+				"ext.BSSMWConnector",
+				"ext.smw.api"
+			]
+		}
+	},
+	"load_composer_autoloader": true,
+	"manifest_version": 1
 }
