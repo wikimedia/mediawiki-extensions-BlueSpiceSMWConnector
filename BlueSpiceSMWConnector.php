@@ -21,13 +21,15 @@ $GLOBALS['smwgResultFormats']['bsgrid'] = 'BSGridResultPrinter';
  *
  * -- RV
  */
-$iEchoKey = array_search( 'EchoHooks::initEchoExtension', $wgExtensionFunctions ) ;
-if( $iEchoKey !== false ) {
-	unset($wgExtensionFunctions[$iEchoKey]);
-	$wgExtensionFunctions[] = 'EchoHooks::initEchoExtension';
+if ( isset( $wgExtensionFunctions ) ) {
+	$iEchoKey = array_search( 'EchoHooks::initEchoExtension', $wgExtensionFunctions ) ;
+	if( $iEchoKey !== false ) {
+		unset($wgExtensionFunctions[$iEchoKey]);
+		$wgExtensionFunctions[] = 'EchoHooks::initEchoExtension';
+	}
+	unset( $iEchoKey );
+	unset( $aResourceModuleTemplate );
 }
-unset( $iEchoKey );
-unset( $aResourceModuleTemplate );
 
 $GLOBALS[ 'wgExtensionFunctions' ][] = function() {
 	BSExtraPropertyAnnotator::processProperties();
