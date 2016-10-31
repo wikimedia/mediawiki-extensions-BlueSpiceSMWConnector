@@ -26,7 +26,6 @@ $GLOBALS['wgHooks']['BeforePageDisplay'][] = 'BSSMWConnectorHooks::onBeforePageD
 $GLOBALS['wgHooks']['sfFormPrinterSetup'][] = 'BSSMWConnectorHooks::onSfFormPrinterSetup';
 $GLOBALS['wgHooks']['BSBookshelfNodeTag'][] = 'BSSMWConnectorHooks::onBSBookshelfNodeTag';
 $GLOBALS['wgHooks']['BSBookshelfExportTag'][] = 'BSSMWConnectorHooks::onBSBookshelfExportTag';
-$GLOBALS['wgHooks']['ParserFirstCallInit'][] = 'BSSMWConnectorHooks::onParserFirstCallInit';
 $GLOBALS['wgHooks']['BSUEModulePDFbeforeGetPage'][] = 'BSSMWConnectorHooks::onBSUEModulePDFbeforeGetPage';
 $GLOBALS['wgHooks']['BSUEModulePDFgetPage'][] = 'BSSMWConnectorHooks::onBSUEModulePDFgetPage';
 
