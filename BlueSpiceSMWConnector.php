@@ -44,18 +44,18 @@ $aResourceModuleTemplate = array(
 	'remoteExtPath' => 'BlueSpiceSMWConnector/resources',
 );
 
-$GLOBALS['wgResourceModules']['ext.SMWConnector.BookshelfUI'] = array(
+$GLOBALS['wgResourceModules']['ext.BSSMWConnector.BookshelfUI'] = array(
 	'scripts' => array(
-		'ext.SMWConnector.BookshelfUI.js'
+		'ext.BSSMWConnector.BookshelfUI.js'
 	),
 	'messages' => array()
 ) + $aResourceModuleTemplate;
 
-$GLOBALS['wgResourceModules']['ext.SMWConnector'] = array(
+$GLOBALS['wgResourceModules']['ext.BSSMWConnector'] = array(
 	'scripts' => array(
-		'ext.SMWConnector.js',
-		'ext.SMWConnector.smwc.js',
-		'ext.SMWConnector.util.js'
+		'ext.BSSMWConnector.js',
+		'ext.BSSMWConnector.smwc.js',
+		'ext.BSSMWConnector.util.js'
 	),
 	'dependencies' => array(
 		'ext.bluespice.extjs',
@@ -63,9 +63,9 @@ $GLOBALS['wgResourceModules']['ext.SMWConnector'] = array(
 	)
 ) + $aResourceModuleTemplate;
 
-$GLOBALS['wgResourceModules']['ext.SMWConnector.SF.VisualEditorField'] = array(
+$GLOBALS['wgResourceModules']['ext.BSSMWConnector.SF.VisualEditorField'] = array(
 	'scripts' => array(
-		'ext.SMWConnector.SF.VisualEditorField.js'
+		'ext.BSSMWConnector.SF.VisualEditorField.js'
 	)
 ) + $aResourceModuleTemplate;
 
@@ -74,7 +74,7 @@ $GLOBALS['wgResourceModules']['ext.srf.bsextjsgrid'] = array(
 		'ext.srf.bsextjsgrid.js'
 	),
 	'dependencies' => array(
-		'ext.SMWConnector',
+		'ext.BSSMWConnector',
 		'ext.smw.api'
 	)
 ) + $aResourceModuleTemplate;

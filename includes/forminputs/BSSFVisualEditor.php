@@ -20,7 +20,7 @@ class BSSFVisualEditor extends SFTextAreaInput {
 		/*return array(
 			'ext.bluespice.visualEditor.styles',
 			'ext.bluespice.visualEditor.tinymce',
-			'ext.SMWConnector.SF.VisualEditorField'
+			'ext.BSSMWConnector.SF.VisualEditorField'
 		);*/
 	}
 
