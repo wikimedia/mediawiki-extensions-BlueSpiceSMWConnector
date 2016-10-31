@@ -1,0 +1,48 @@
+==Extensions==
+The following extensions need to be installed in the <mediawiki>/extensions
+directory.
+
+===SemanticMediaWiki===
+* Type: TARBALL with all dependencies
+* Source: http://downloads.sourceforge.net/project/semediawiki/semediawiki/Semantic%20MediaWiki%202.3.0/Semantic%20MediaWiki%202.3.0%20%28%2Bdependencies%29.zip
+* Version: 2.3
+
+===SemanticResultFormats===
+* Type: GIT + Composer
+* Source: https://github.com/SemanticMediaWiki/SemanticResultFormats.git
+* Version: 2.3 (master/abb0c93d218186720daf04f2c136fbd8b8eeab9e)
+
+===SemanticExtraSpecialProperties===
+* Type: GIT + Composer
+* Source: https://github.com/SemanticMediaWiki/SemanticExtraSpecialProperties.git
+* Version: 1.3.1 (master/6374a2347c9bf4dd0e55286326eebc67b0653717)
+
+===ExternalData===
+* Type: GIT
+* Source: https://github.com/wikimedia/mediawiki-extensions-ExternalData.git
+* Version: 1.8.2 (master/fd997b8bf744fb1279f23d5b2106eb6319199e68)
+
+==SemanticForms==
+* Type: GIT + Composer
+* Source: https://github.com/wikimedia/mediawiki-extensions-SemanticForms.git
+* Version: 3.4 (master/9db0fc713913b1aec11eec2919f30a269145e2d9)
+
+==SemanticFormsInputs==
+* Type: GIT
+* Source: https://github.com/wikimedia/mediawiki-extensions-SemanticFormsInputs.git
+* Version: 0.9.0 alpha (master/fc7d604b51be88383cf03c45d4e0b441c24e02fa)
+
+==PageSchemas==
+* Type: GIT
+* Source: https://github.com/wikimedia/mediawiki-extensions-PageSchemas.git
+* Version: 0.4.5 alpha (master/3d6c214b0e569793731fba15a21d7c7f7d7bd47c)
+
+==Semantic Compound Queries==
+* Type: GIT
+* Source: https://github.com/wikimedia/mediawiki-extensions-SemanticCompoundQueries.git
+* Version: 0.4 (master/0a2d43e0196c085c52de31e2bfdefdfc9f46e934)
+
+==Semantic Internal Objects==
+* Type: GIT
+* Source: https://github.com/wikimedia/mediawiki-extensions-SemanticInternalObjects.git
+* Version: 0.8.1 (master/f6052fc8dae100afb356bbac6f2970ca8709f4c9)
