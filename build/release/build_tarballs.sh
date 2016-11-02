@@ -171,7 +171,7 @@ enableSemantics( 'localhost' );
 );
 
 \$GLOBALS[ 'bssSpecialProperties' ] = array(
-	'_RESPEDITOR'
+	'_RESPEDITOR', '_PARENTPAGE', '_CHECKLIST', '_PAGEASSIGN', '_REVIEW', '_SHOUTBOX'
 );
 
 \$GLOBALS[ 'sespUseAsFixedTables' ] = true;
