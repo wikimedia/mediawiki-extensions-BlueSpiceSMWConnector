@@ -69,6 +69,12 @@ $GLOBALS['wgResourceModules']['ext.BSSMWConnector.SF.VisualEditorField'] = array
 	)
 ) + $aResourceModuleTemplate;
 
+$GLOBALS['wgResourceModules']['ext.BSSMWConnector.SF.FreeTextVisualEditor'] = array(
+		'scripts' => array(
+			'ext.BSSMWConnector.SF.FreeTextVisualEditor.js'
+		)
+	) + $aResourceModuleTemplate;
+
 $GLOBALS['wgResourceModules']['ext.srf.bsextjsgrid'] = array(
 	'scripts' => array(
 		'ext.srf.bsextjsgrid.js'
@@ -78,3 +84,5 @@ $GLOBALS['wgResourceModules']['ext.srf.bsextjsgrid'] = array(
 		'ext.smw.api'
 	)
 ) + $aResourceModuleTemplate;
+
+unset( $aResourceModuleTemplate );

@@ -1,29 +1,24 @@
 mw.loader.using( 'ext.bluespice.visualEditor.tinymce' ).done( function() {
 	var BsVisualEditorLoaderUsingDeps = mw.config.get('BsVisualEditorLoaderUsingDeps');
 	mw.loader.using(BsVisualEditorLoaderUsingDeps).done(function(){
-		//START UGLY COPY&PASTE CODE FROM BlueSpiceExtensions/VisualEditor/resoures/bluespice.visualEditor.js
-		var currentSiteCSS = [];
-		//We collect the CSS Links from this document and set them as content_css
-		//for TinyMCE
+		var sp = mw.config.get('wgScriptPath');
+		tinymce.baseURL =
+			sp + '/extensions/BlueSpiceExtensions/VisualEditor/resources/tinymce';
 
-		$('link[rel=stylesheet]').each(function(){
-			var cssBaseURL = '';
-			var cssUrl = $(this).attr('href');
-			//Conditionally make urls absolute to avoid conflict with tinymce.baseURL
-			if( cssUrl.indexOf('/') === 0 ) {
-				cssBaseURL = mw.config.get('wgServer');
-			}
-			//need to check, if the stylesheet is already included
-			if (jQuery.inArray(cssBaseURL + cssUrl, currentSiteCSS) === -1)
-				currentSiteCSS.push( cssBaseURL + cssUrl );
-		});
-		//END UGLY COPY&PASTE CODE FROM BlueSpiceExtensions/VisualEditor/resoures/bluespice.visualEditor.js
-
-		VisualEditor.setConfig( 'semanticForms', {
+		tinymce.init({
 			selector: '#sfForm .bs-visualeditor',
-			auto_focus: false,
-			content_css: currentSiteCSS.join(',')
+			menubar: false,
+			statusbar: false,
+			//We silently require "InsertLink" ('bslink') extension to also be enabled. This is not nice, but okay for now.
+			toolbar1: 'undo redo | bold italic underline strikethrough | bslink unlink | bullist numlist | outdent indent | styleselect forecolor removeformat',
+			plugins: 'textcolor colorpicker table', //We don't use 'table', we just need it for 'bsactions'
+			external_plugins: {
+				'bswikicodetemplateunescape': sp + '/extensions/BlueSpiceSMWConnector/resources/tiny_mce_plugins/bswikicodetemplateunescape/plugin.js',
+				'bswikicode': '../tiny_mce_plugins/bswikicode/plugin.js',
+				'bswikicodetemplateescape': sp + '/extensions/BlueSpiceSMWConnector/resources/tiny_mce_plugins/bswikicodetemplateescape/plugin.js',
+				'bsbehaviour': '../tiny_mce_plugins/bsbehaviour/plugin.js',
+				'bsactions': '../tiny_mce_plugins/bsactions/plugin.js'
+			}
 		});
-		VisualEditor.startEditors();
 	});
 });
