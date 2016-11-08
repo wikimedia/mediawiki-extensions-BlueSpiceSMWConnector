@@ -140,10 +140,6 @@ echo 'require_once "LocalSettings.BlueSpiceSemantic.php";' | tee --append ../Loc
 */
 //finaly append to bottom of LocalSettings.php, set host properly and Activate smw with: enableSemantics( 'localhost' );
 
-if ( !isset( \$GLOBALS[ 'smwgNamespaceIndex' ] ) ) {
-	\$GLOBALS[ 'smwgNamespaceIndex' ] = 700;
-}
-
 require_once "\$IP/extensions/SemanticMediaWiki/SemanticMediaWiki.php";
 require_once "\$IP/extensions/ExternalData/ExternalData.php";
 require_once "\$IP/extensions/PageSchemas/PageSchemas.php";
@@ -157,6 +153,10 @@ require_once "\$IP/extensions/SemanticResultFormats/SemanticResultFormats.php";
 require_once "\$IP/extensions/BlueSpiceSMWConnector/BlueSpiceSMWConnector.php";
 
 enableSemantics( 'localhost' );
+
+if ( !isset( \$GLOBALS[ 'smwgNamespaceIndex' ] ) ) {
+	\$GLOBALS[ 'smwgNamespaceIndex' ] = 700;
+}
 
 \$GLOBALS[ 'smwgPageSpecialProperties' ] = array_merge(
 	\$GLOBALS[ 'smwgPageSpecialProperties' ],
@@ -181,5 +181,3 @@ enableSemantics( 'localhost' );
 EOT
 
 zip -r $FILE_BUILD *
-
-
