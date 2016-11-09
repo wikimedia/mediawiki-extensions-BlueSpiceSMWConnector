@@ -154,10 +154,6 @@ require_once "\$IP/extensions/BlueSpiceSMWConnector/BlueSpiceSMWConnector.php";
 
 enableSemantics( 'localhost' );
 
-if ( !isset( \$GLOBALS[ 'smwgNamespaceIndex' ] ) ) {
-	\$GLOBALS[ 'smwgNamespaceIndex' ] = 700;
-}
-
 \$GLOBALS[ 'smwgPageSpecialProperties' ] = array_merge(
 	\$GLOBALS[ 'smwgPageSpecialProperties' ],
 	array( '_CDAT', '_LEDT', '_NEWP', '_MIME', '_MEDIA' )
