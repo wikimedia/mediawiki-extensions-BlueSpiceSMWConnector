@@ -31,19 +31,20 @@ class BSSMWConnectorHooks {
 		$out->addModules( array(
 			'ext.bluespice.visualEditor.styles',
 			'ext.bluespice.visualEditor.tinymce',
-			'ext.BSSMWConnector.SF.VisualEditorField'
+			'ext.BSSMWConnector.SF.VisualEditorField',
+			'ext.BSSMWConnector.SF.FreeTextVisualEditor'
 		) );
 
 		//This is ugly, but as long as the "Insert*" extensions can not detect
 		//the precence of VE or the "form edit" action we need to load those
 		//manually
+		global $bsgExtendedEditBarEnabledActions;
+		$bsgExtendedEditBarEnabledActions[] = 'formedit';
+		$bsgExtendedEditBarEnabledActions[] = 'view';
 		$oEEB = BsExtensionManager::getExtension('ExtendedEditBar');
 		if( $oEEB instanceof ExtendedEditBar ) {
-			$dummy = '';
+			$dummy = '<div></div>'; //Must not be empty string
 			$oEEB->onEditPageBeforeEditToolbar( $dummy );
-		}
-		else {
-			return true;
 		}
 
 		return true;
