@@ -57,6 +57,11 @@
 				"ext.BSSMWConnector.SF.VisualEditorField.js"
 			]
 		},
+		"ext.BSSMWConnector.SF.FreeTextVisualEditor": {
+			"scripts": [
+				"ext.BSSMWConnector.SF.FreeTextVisualEditor.js"
+			]
+		},
 		"ext.srf.bsextjsgrid": {
 			"scripts": [
 				"ext.srf.bsextjsgrid.js"
