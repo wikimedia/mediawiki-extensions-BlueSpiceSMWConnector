@@ -29,3 +29,17 @@ require_once "$IP/extensions/ExternalData/ExternalData.php";
 require_once "$IP/extensions/PageSchemas/PageSchemas.php";
 
 require_once( "$IP/extensions/BlueSpiceSMWConnector/BlueSpiceSMWConnector.php" );
+
+$GLOBALS['smwgPageSpecialProperties'] = array_merge( $GLOBALS['smwgPageSpecialProperties'], array(
+	'_CDAT', '_LEDT', '_NEWP', '_MIME', '_MEDIA'
+) );
+$GLOBALS['smwgEnabledEditPageHelp'] = false;
+
+
+$GLOBALS['sespUseAsFixedTables'] = true;
+$GLOBALS['wgSESPExcludeBots'] = true;
+
+$GLOBALS['sespSpecialProperties'] = array(
+	'_EUSER', '_CUSER', '_REVID', '_PAGEID', '_VIEWS', '_NREV', '_TNREV',
+	'_SUBP', '_USERREG', '_USEREDITCNT', '_EXIFDATA'
+);
