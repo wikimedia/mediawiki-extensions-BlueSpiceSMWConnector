@@ -4,18 +4,20 @@ class BSSMWConnectorHooks {
 
 	/**
 	 * Add VisualEditor standard config to Special:FormEdit this is necessary
-	 * as VisualEditor istself only adds in 'edit' mode!
+	 * as VisualEditor itself only adds in 'edit' mode!
 	 * @param OutputPage $out
 	 * @param Skin $skin
 	 * @return boolean Always true
 	 */
 	public static function onBeforePageDisplay( $out, $skin ) {
+		$out->addModuleStyles( 'ext.BSSMWConnector.styles' );
+
 		if( !$out->getTitle()->isSpecial( 'FormEdit') && $out->getRequest()->getVal('action', 'view') !== 'formedit' ) {
 			return true;
 		}
 
 		$oVE = BsExtensionManager::getExtension( 'VisualEditor' );
-		if( $oVE instanceof VisualEditor ) {
+		if( $oVE instanceof BlueSpiceVisualEditor ) {
 			global $wgParser;
 			$aConfigs = $oVE->makeConfig( $wgParser );
 		}

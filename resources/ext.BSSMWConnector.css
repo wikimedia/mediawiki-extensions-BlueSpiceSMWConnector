@@ -1,0 +1,4 @@
+/* BlueSpiceExtensions/PageTemplates integration */
+.bs-pt-item.form:before {
+	content: '\f298 ';
+}
