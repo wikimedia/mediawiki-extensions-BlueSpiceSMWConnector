@@ -16,7 +16,8 @@
 		"BSGridResultPrinter": "includes/formats/Grid/BSGridResultPrinter.php",
 		"BSPropertyRegistry": "includes/BSPropertyRegistry.php",
 		"BSDefinitionReader": "includes/BSDefinitionReader.php",
-		"BSExtraPropertyAnnotator": "includes/BSExtraPropertyAnnotator.php"
+		"BSExtraPropertyAnnotator": "includes/BSExtraPropertyAnnotator.php",
+		"BSSMWCPageTemplates": "includes/BSSMWCPageTemplates.php"
 	},
 	"MessagesDirs": {
 		"BSSMWConnectorHooks": "i18n"
@@ -29,13 +30,20 @@
 		"NamespaceManager::getMetaFields": "BSSMWCNamespaceManager::onGetMetaFields",
 		"NamespaceManager::getNamespaceData": "BSSMWCNamespaceManager::onGetNamespaceData",
 		"NamespaceManager::editNamespace": "BSSMWCNamespaceManager::onEditNamespace",
-		"NamespaceManager::writeNamespaceConfiguration": "BSSMWCNamespaceManager::onWriteNamespaceConfiguration"
+		"NamespaceManager::writeNamespaceConfiguration": "BSSMWCNamespaceManager::onWriteNamespaceConfiguration",
+		"BSPageTemplatesBeforeRender": "BSSMWCPageTemplates::onBSPageTemplatesBeforeRender"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
 		"remoteExtPath": "BlueSpiceSMWConnector/resources"
 	},
 	"ResourceModules": {
+		"ext.BSSMWConnector.styles": {
+			"styles": [
+				"ext.BSSMWConnector.css"
+			],
+			"position": "top"
+		},
 		"ext.BSSMWConnector.BookshelfUI": {
 			"scripts": [
 				"ext.BSSMWConnector.BookshelfUI.js"
