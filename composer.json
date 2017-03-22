@@ -1,37 +1,37 @@
 {
-    "name": "hallowelt/blue-spice-s-m-w-connector",
-    "type": "mediawiki-extension",
-    "description": "Connector for Semantic MediWiki and BlueSpice. Provide tar package builder and some custom functions.",
-    "keywords": [
-	"SMW",
-	"Semantic MediaWiki",
-	"Wiki",
-	"MediaWiki",
-	"properties",
-	"special properties",
-	"BlueSpice for Mediawiki"
-    ],
-    "homepage": "https://www.mediawiki.org/wiki/Extension:BlueSpiceSMWConnector",
-    "license": "GPL-2.0+",
-    "authors": [
-	{
-	    "name": "Robert Vogel"
+	"name": "hallowelt/blue-spice-s-m-w-connector",
+	"type": "mediawiki-extension",
+	"description": "Connector for Semantic MediWiki and BlueSpice. Provide tar package builder and some custom functions.",
+	"keywords": [
+		"SMW",
+		"Semantic MediaWiki",
+		"Wiki",
+		"MediaWiki",
+		"properties",
+		"special properties",
+		"BlueSpice for Mediawiki"
+	],
+	"homepage": "https://www.mediawiki.org/wiki/Extension:BlueSpiceSMWConnector",
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name": "Robert Vogel"
+		},
+		{
+			"name": "Leonid Verhovskij"
+		}
+	],
+	"require": {
+		"php": ">=5.3.0",
+		"composer/installers": "1.*,>=1.0.1",
+		"mediawiki/semantic-media-wiki": "~2.4",
+		"mediawiki/semantic-extra-special-properties": ">=1.3.1",
+		"mediawiki/semantic-forms": ">=3.7",
+		"mediawiki/semantic-result-formats": ">=2.3"
 	},
-	{
-	    "name": "Leonid Verhovskij"
+	"autoload": {
+		"files" : [
+			"BlueSpiceSMWConnector.php"
+		]
 	}
-    ],
-    "require": {
-	"php": ">=5.3.0",
-	"composer/installers": "1.*,>=1.0.1",
-	"mediawiki/semantic-media-wiki": "~2.4",
-	"mediawiki/semantic-extra-special-properties": ">=1.3.1",
-	"mediawiki/semantic-forms": ">=3.7",
-	"mediawiki/semantic-result-formats": ">=2.3"
-    },
-    "autoload": {
-	"files" : [
-	    "BlueSpiceSMWConnector.php"
-	]
-    }
 }
