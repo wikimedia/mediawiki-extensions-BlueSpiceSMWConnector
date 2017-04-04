@@ -3,7 +3,7 @@
 	"descriptionmsg": "bs-bssmwconnector-desc",
 	"license-name": "GPL-2.0+",
 	"type": "bluespice",
-	"version": "2.27.1.1",
+	"version": "2.27.1",
 	"author": [
 		"Robert Vogel",
 		"Leonid Verhovskij"
