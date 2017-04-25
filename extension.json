@@ -28,7 +28,7 @@
 		"BSBookshelfNodeTag": "BSSMWConnectorHooks::onBSBookshelfNodeTag",
 		"BSBookshelfExportTag": "BSSMWConnectorHooks::onBSBookshelfExportTag",
 		"NamespaceManager::getMetaFields": "BSSMWCNamespaceManager::onGetMetaFields",
-		"NamespaceManager::getNamespaceData": "BSSMWCNamespaceManager::onGetNamespaceData",
+		"BSApiNamespaceStoreMakeData": "BSSMWCNamespaceManager::onGetNamespaceData",
 		"NamespaceManager::editNamespace": "BSSMWCNamespaceManager::onEditNamespace",
 		"NamespaceManager::writeNamespaceConfiguration": "BSSMWCNamespaceManager::onWriteNamespaceConfiguration",
 		"BSPageTemplatesBeforeRender": "BSSMWCPageTemplates::onBSPageTemplatesBeforeRender"
