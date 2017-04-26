@@ -29,7 +29,7 @@ class BSSMWCNamespaceManager {
 
 	public static function onEditNamespace( &$aNamespaceDefinitions, &$iNS, $aAdditionalSettings, $bUseInternalDefaults = false ) {
 
-		if ( !$bUseInternalDefaults ) {
+		if ( !$bUseInternalDefaults && isset( $aAdditionalSettings['smw'] ) ) {
 			$aNamespaceDefinitions[$iNS][ 'smw' ] = $aAdditionalSettings['smw'];
 		}
 		else {
@@ -38,10 +38,12 @@ class BSSMWCNamespaceManager {
 		return true;
 	}
 
-	public static function onWriteNamespaceConfiguration( &$sSaveContent, $sConstName, $aDefinition ) {
+	public static function onWriteNamespaceConfiguration( &$sSaveContent, $sConstName, $iNsID, $aDefinition ) {
 		global $smwgNamespacesWithSemanticLinks;
 
-		$iNsID = constant( $sConstName );
+		if ( $iNsID === null ) {
+			return true;
+		}
 		$bCurrentlyActivated = isset( $smwgNamespacesWithSemanticLinks[ $iNsID ] )
 			? $smwgNamespacesWithSemanticLinks[ $iNsID ]
 			: false;
