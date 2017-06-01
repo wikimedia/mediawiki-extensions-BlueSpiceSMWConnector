@@ -18,6 +18,11 @@ mw.loader.using( 'ext.bluespice.visualEditor.tinymce' ).done( function() {
 				'bswikicodetemplateescape': sp + '/extensions/BlueSpiceSMWConnector/resources/tiny_mce_plugins/bswikicodetemplateescape/plugin.js',
 				'bsbehaviour': '../tiny_mce_plugins/bsbehaviour/plugin.js',
 				'bsactions': '../tiny_mce_plugins/bsactions/plugin.js'
+			},
+			init_instance_callback: function ( editor ) {
+				editor.on( 'Blur', function () {
+					tinymce.triggerSave();
+				});
 			}
 		});
 	});
