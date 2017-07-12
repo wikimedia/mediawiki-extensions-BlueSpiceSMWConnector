@@ -1,6 +1,8 @@
 <?php
 
-class BSSFVisualEditor extends SFTextAreaInput {
+
+
+class BSSFVisualEditor extends PFTextAreaInput {
 
 	public static function getName() {
 		return 'bsvisualeditor';
@@ -25,8 +27,8 @@ class BSSFVisualEditor extends SFTextAreaInput {
 	}
 
 	protected function getTextAreaAttributes() {
-		$aParams = parent::getTextAreaAttributes();
-		$aParams['class'] .= ' bs-visualeditor';
-		return $aParams;
+		$textarea_attrs = parent::getTextAreaAttributes();
+		$textarea_attrs['class'] .= ' bs-visualeditor';
+		return $textarea_attrs;
 	}
 }

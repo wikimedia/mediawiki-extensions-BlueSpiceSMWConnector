@@ -24,7 +24,7 @@
 	},
 	"Hooks": {
 		"BeforePageDisplay": "BSSMWConnectorHooks::onBeforePageDisplay",
-		"sfFormPrinterSetup": "BSSMWConnectorHooks::onSfFormPrinterSetup",
+		"PageForms::FormPrinterSetup": "BSSMWConnectorHooks::onPFFormPrinterSetup",
 		"BSBookshelfNodeTag": "BSSMWConnectorHooks::onBSBookshelfNodeTag",
 		"BSBookshelfExportTag": "BSSMWConnectorHooks::onBSBookshelfExportTag",
 		"NamespaceManager::getMetaFields": "BSSMWCNamespaceManager::onGetMetaFields",
