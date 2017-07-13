@@ -54,10 +54,10 @@ class BSSMWConnectorHooks {
 
 	/**
 	 * Registers new input types
-	 * @param SFFormPrinter $formPrinter
+	 * @param PFFormPrinter $formPrinter
 	 * @return boolean Always true
 	 */
-	public static function onSfFormPrinterSetup( $formPrinter ) {
+	public static function onPFFormPrinterSetup( PFFormPrinter $formPrinter ) {
 		$formPrinter->registerInputType( 'BSSFVisualEditor' );
 		return true;
 	}

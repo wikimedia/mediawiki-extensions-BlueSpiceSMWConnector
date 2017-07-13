@@ -3,7 +3,7 @@
 	"descriptionmsg": "bs-bssmwconnector-desc",
 	"license-name": "GPL-2.0+",
 	"type": "bluespice",
-	"version": "2.27.1",
+	"version": "2.27.2",
 	"author": [
 		"Robert Vogel",
 		"Leonid Verhovskij"
@@ -24,7 +24,7 @@
 	},
 	"Hooks": {
 		"BeforePageDisplay": "BSSMWConnectorHooks::onBeforePageDisplay",
-		"sfFormPrinterSetup": "BSSMWConnectorHooks::onSfFormPrinterSetup",
+		"PageForms::FormPrinterSetup": "BSSMWConnectorHooks::onPFFormPrinterSetup",
 		"BSBookshelfNodeTag": "BSSMWConnectorHooks::onBSBookshelfNodeTag",
 		"BSBookshelfExportTag": "BSSMWConnectorHooks::onBSBookshelfExportTag",
 		"NamespaceManager::getMetaFields": "BSSMWCNamespaceManager::onGetMetaFields",
