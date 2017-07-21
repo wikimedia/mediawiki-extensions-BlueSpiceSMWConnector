@@ -31,7 +31,8 @@
 		"BSApiNamespaceStoreMakeData": "BSSMWCNamespaceManager::onGetNamespaceData",
 		"NamespaceManager::editNamespace": "BSSMWCNamespaceManager::onEditNamespace",
 		"NamespaceManager::writeNamespaceConfiguration": "BSSMWCNamespaceManager::onWriteNamespaceConfiguration",
-		"BSPageTemplatesBeforeRender": "BSSMWCPageTemplates::onBSPageTemplatesBeforeRender"
+		"BSPageTemplatesBeforeRender": "BSSMWCPageTemplates::onBSPageTemplatesBeforeRender",
+		"PageContentSaveComplete": "BSSMWConnectorHooks::onPageContentSaveComplete"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
