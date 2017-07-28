@@ -78,6 +78,11 @@
 				"ext.BSSMWConnector",
 				"ext.smw.api"
 			]
+		},
+		"ext.BSSMWConnector.PageForms.DateTimePicker.fix": {
+			"scripts": [
+				"ext.BSSMWConnector.PageForms.DateTimePicker.fix.js"
+			]
 		}
 	},
 	"load_composer_autoloader": true,
