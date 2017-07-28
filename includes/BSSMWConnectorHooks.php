@@ -16,6 +16,8 @@ class BSSMWConnectorHooks {
 			return true;
 		}
 
+		$out->addModules( 'ext.BSSMWConnector.PageForms.DateTimePicker.fix' );
+
 		$oVE = BsExtensionManager::getExtension( 'VisualEditor' );
 		if( $oVE instanceof BlueSpiceVisualEditor ) {
 			global $wgParser;
