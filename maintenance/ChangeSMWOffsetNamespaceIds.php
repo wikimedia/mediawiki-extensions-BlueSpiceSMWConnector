@@ -1,6 +1,6 @@
 <?php
 
-require '../../../maintenance/Maintenance.php';
+require __DIR__ . '/../../../maintenance/Maintenance.php';
 
 class ChangeSMWOffsetNamespaceIds extends Maintenance {
 
