@@ -186,4 +186,35 @@ HERE
 
 		return true;
 	}
+
+	/**
+	 * Since commit [1] the 'categorylinks' table is not updated directly when a
+	 * page gets saved. Therefore the "Edit with form" tab of
+	 * "Extension:PageForms" may mot be shown directly after page save.
+	 * This hook handler updates the 'categorylinks' table.
+	 *
+	 * [1] https://github.com/wikimedia/mediawiki/commit/072e3666d3fcd1738d4742930bbe3acd5e7519b2#diff-a0f7feeaae57e9d2c735c8919c16ad15R2198
+	 *
+	 * @param WikiPage $article
+	 * @param User $user
+	 * @param Content $content
+	 * @param string $summary
+	 * @param boolean $isMinor
+	 * @param boolean $isWatch
+	 * @param int $section
+	 * @param int $flags
+	 * @param int $revision
+	 * @param Status $status
+	 * @param int $baseRevId
+	 * @return boolean Always true to keep hook running
+	 */
+	public static function onPageContentSaveComplete( $article, $user, $content,
+			$summary, $isMinor, $isWatch, $section, $flags, $revision, $status,
+			$baseRevId ) {
+
+		DataUpdate::runUpdates(
+			$content->getSecondaryDataUpdates( $article->getTitle() )
+		);
+		return true;
+	}
 }
