@@ -6,7 +6,7 @@ mw.loader.using( 'ext.bluespice.visualEditor.tinymce' ).done( function() {
 			sp + '/extensions/BlueSpiceExtensions/VisualEditor/resources/tinymce';
 
 		tinymce.init({
-			selector: '#sfForm .bs-visualeditor',
+			selector: '#pfForm .bs-visualeditor',
 			menubar: false,
 			statusbar: false,
 			//We silently require "InsertLink" ('bslink') extension to also be enabled. This is not nice, but okay for now.
