@@ -32,7 +32,9 @@
 		"NamespaceManager::editNamespace": "BSSMWCNamespaceManager::onEditNamespace",
 		"NamespaceManager::writeNamespaceConfiguration": "BSSMWCNamespaceManager::onWriteNamespaceConfiguration",
 		"BSPageTemplatesBeforeRender": "BSSMWCPageTemplates::onBSPageTemplatesBeforeRender",
-		"PageContentSaveComplete": "BSSMWConnectorHooks::onPageContentSaveComplete"
+		"PageContentSaveComplete": "BSSMWConnectorHooks::onPageContentSaveComplete",
+		"SMW::Store::AfterQueryResultLookupComplete": "BlueSpice\\SMWConnector\\Hook\\SMWStoreAfterQueryResultLookupComplete\\ApplySecurityTrimming::callback",
+		"SMW::Store::BeforeQueryResultLookupComplete": "BlueSpice\\SMWConnector\\Hook\\SMWStoreBeforeQueryResultLookupComplete\\AddPermissionBasedNamespaceFilters::callback"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
