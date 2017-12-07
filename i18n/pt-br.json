@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"!Silent"
+		]
+	},
+	"bs-bssmwconnector-desc": "Integra o SemanticMediaWiki no BlueSpice",
+	"bs-bssmwconnector-srf-printername-bsgrid": "Grade BlueSpice"
+}

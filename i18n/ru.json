@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Facenapalm"
+		]
+	},
+	"bs-bssmwconnector-desc": "Интегрирует SemanticMediaWiki в BlueSpice",
+	"bs-bssmwconnector-srf-printername-bsgrid": "Решётка BlueSpice"
+}

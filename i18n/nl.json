@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Mainframe98"
+		]
+	},
+	"bs-bssmwconnector-desc": "Integreert SemanticMediaWiki in BlueSpice",
+	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice Grid"
+}

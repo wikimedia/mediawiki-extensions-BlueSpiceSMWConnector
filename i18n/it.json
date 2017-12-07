@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Beta16"
+			"Beta16",
+			"Selven"
 		]
 	},
-	"bs-bssmwconnector-desc": "Integra SemanticMediaWiki in BlueSpice"
+	"bs-bssmwconnector-desc": "Integra SemanticMediaWiki in BlueSpice",
+	"bs-bssmwconnector-srf-printername-bsgrid": "Griglia di BlueSpice"
 }

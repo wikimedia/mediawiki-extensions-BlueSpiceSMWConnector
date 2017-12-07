@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"bs-bssmwconnector-desc": "Integrerer SemanticMediaWiki med BlueSpice",
+	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice-rutenett"
+}

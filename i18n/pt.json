@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hamilton Abreu"
+		]
+	},
+	"bs-bssmwconnector-desc": "Integra o MediaWiki Semântico no BlueSpice",
+	"bs-bssmwconnector-srf-printername-bsgrid": "Grelha BlueSpice"
+}
