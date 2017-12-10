@@ -195,7 +195,7 @@ HERE
 	 *
 	 * [1] https://github.com/wikimedia/mediawiki/commit/072e3666d3fcd1738d4742930bbe3acd5e7519b2#diff-a0f7feeaae57e9d2c735c8919c16ad15R2198
 	 *
-	 * @param WikiPage $article
+	 * @param WikiPage $wikiPage
 	 * @param User $user
 	 * @param Content $content
 	 * @param string $summary
@@ -208,12 +208,12 @@ HERE
 	 * @param int $baseRevId
 	 * @return boolean Always true to keep hook running
 	 */
-	public static function onPageContentSaveComplete( $article, $user, $content,
+	public static function onPageContentSaveComplete( WikiPage $wikiPage, $user, $content,
 			$summary, $isMinor, $isWatch, $section, $flags, $revision, $status,
 			$baseRevId ) {
 
 		DataUpdate::runUpdates(
-			$content->getSecondaryDataUpdates( $article->getTitle() )
+			$content->getSecondaryDataUpdates( $wikiPage->getTitle() )
 		);
 		return true;
 	}
