@@ -1,7 +1,7 @@
 {
 	"name": "BlueSpiceSMWConnector",
 	"descriptionmsg": "bs-bssmwconnector-desc",
-	"license-name": "GPL-2.0+",
+	"license-name": "GPL-2.0-or-later",
 	"type": "bluespice",
 	"version": "2.27.1",
 	"author": [
