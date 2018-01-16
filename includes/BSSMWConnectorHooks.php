@@ -10,7 +10,11 @@ class BSSMWConnectorHooks {
 	 * @return boolean Always true
 	 */
 	public static function onBeforePageDisplay( $out, $skin ) {
-		$out->addModuleStyles( 'ext.BSSMWConnector.styles' );
+		$out->addModules( 'ext.BSSMWConnector' );
+
+		if( $out->getTitle()->isSpecial( 'BookshelfBookUI' ) ) {
+			$out->addModules( 'ext.BSSMWConnector.BookshelfUI' );
+		}
 
 		if( !$out->getTitle()->isSpecial( 'FormEdit') && $out->getRequest()->getVal('action', 'view') !== 'formedit' ) {
 			return true;
