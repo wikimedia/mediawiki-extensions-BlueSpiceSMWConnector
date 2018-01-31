@@ -29,6 +29,11 @@ class ChangeSMWOffsetNamespaceIds extends Maintenance {
 		'watchlist' => [ 'wl_namespace' ]
 	];
 
+	public function __construct() {
+		parent::__construct();
+
+		$this->requireExtension( 'BlueSpiceSMWConnector' );
+	}
 
 	public function execute() {
 		$this->output(
