@@ -25,6 +25,12 @@ class MigrateSemanticFormsToPageForms extends Maintenance {
 
 	protected $pagesToChange = [];
 
+	public function __construct() {
+		parent::__construct();
+
+		$this->requireExtension( 'BlueSpiceSMWConnector' );
+	}
+
 	public function execute() {
 		$this->output( "Searching for pages with [[Has default form::+]] ..." );
 		foreach( $this->propHasDefaultFormVariants as $propName ) {
