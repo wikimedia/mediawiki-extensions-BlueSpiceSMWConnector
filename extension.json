@@ -17,10 +17,18 @@
 		"BSPropertyRegistry": "includes/BSPropertyRegistry.php",
 		"BSDefinitionReader": "includes/BSDefinitionReader.php",
 		"BSExtraPropertyAnnotator": "includes/BSExtraPropertyAnnotator.php",
-		"BSSMWCPageTemplates": "includes/BSSMWCPageTemplates.php"
+		"BSSMWCPageTemplates": "includes/BSSMWCPageTemplates.php",
+		"BSSMWPropertyPageProvider": "includes/BSSMWPropertyPageProvider.php",
+		"ApiSMWPropertyStore": "includes/api/ApiSMWPropertyStore.php"
+	},
+	"APIModules": {
+		"bs-smw-connector-smw-property-store": "ApiSMWPropertyStore"
 	},
 	"MessagesDirs": {
 		"BSSMWConnectorHooks": "i18n"
+	},
+	"BlueSpiceBookshelfUIMassAddHandlerRegistry": {
+		"smwproperty": "BSSMWPropertyPageProvider::factory"
 	},
 	"Hooks": {
 		"BeforePageDisplay": "BSSMWConnectorHooks::onBeforePageDisplay",
@@ -50,6 +58,13 @@
 		"ext.BSSMWConnector.BookshelfUI": {
 			"scripts": [
 				"ext.BSSMWConnector.BookshelfUI.js"
+			],
+			"dependencies": [
+				"ext.bluespice"
+			],
+			"messages": [
+				"bs-dlg-choosesmwprop-label",
+				"bs-bookshelfui-type-smwprop"
 			]
 		},
 		"ext.BSSMWConnector": {
