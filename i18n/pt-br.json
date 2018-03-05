@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"!Silent"
+			"!Silent",
+			"Eduardo Addad de Oliveira"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integra o SemanticMediaWiki no BlueSpice",
-	"bs-bssmwconnector-srf-printername-bsgrid": "Grade BlueSpice"
+	"bs-bssmwconnector-srf-printername-bsgrid": "Grade BlueSpice",
+	"bs-dlg-choosesmwprop-label": "Propriedade",
+	"bs-dlg-choosesmwprop-type-smwprop": "Propriedade semântica"
 }

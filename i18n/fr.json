@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Wladek92"
+			"Wladek92",
+			"Gomoko"
 		]
 	},
 	"bs-bssmwconnector-desc": "Intègre SemanticMediaWiki à BlueSpice",
-	"bs-bssmwconnector-srf-printername-bsgrid": "Grille BlueSpice"
+	"bs-bssmwconnector-srf-printername-bsgrid": "Grille BlueSpice",
+	"bs-dlg-choosesmwprop-label": "Propriété",
+	"bs-dlg-choosesmwprop-type-smwprop": "Propriété sémantique"
 }

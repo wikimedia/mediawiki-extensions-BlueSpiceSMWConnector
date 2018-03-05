@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Hamilton Abreu"
+			"Hamilton Abreu",
+			"Athena in Wonderland"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integra o MediaWiki Semântico no BlueSpice",
-	"bs-bssmwconnector-srf-printername-bsgrid": "Grelha BlueSpice"
+	"bs-bssmwconnector-srf-printername-bsgrid": "Grelha BlueSpice",
+	"bs-dlg-choosesmwprop-label": "Propriedade",
+	"bs-dlg-choosesmwprop-type-smwprop": "Propriedade semântica"
 }

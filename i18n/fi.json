@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Pyscowicz"
+			"Pyscowicz",
+			"Nike"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integroi SemanticMediaWiki osaksi BlueSpicea",
-	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice-verkko"
+	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice-verkko",
+	"bs-dlg-choosesmwprop-type-smwprop": "Semanttinen ominaisuus"
 }

@@ -6,5 +6,7 @@
 		]
 	},
 	"bs-bssmwconnector-desc": "Integriert SemanticMediaWiki in BlueSpice",
-	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice-Raster"
+	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice-Raster",
+	"bs-dlg-choosesmwprop-label": "Attribut",
+	"bs-dlg-choosesmwprop-type-smwprop": "Semantisches Attribut"
 }

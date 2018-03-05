@@ -6,5 +6,7 @@
 		]
 	},
 	"bs-bssmwconnector-desc": "Integra SemanticMediaWiki in BlueSpice",
-	"bs-bssmwconnector-srf-printername-bsgrid": "Griglia di BlueSpice"
+	"bs-bssmwconnector-srf-printername-bsgrid": "Griglia di BlueSpice",
+	"bs-dlg-choosesmwprop-label": "Proprietà",
+	"bs-dlg-choosesmwprop-type-smwprop": "Proprietà semantica"
 }
