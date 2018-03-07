@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Macofe"
+			"Macofe",
+			"Fitoschido"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integra SemanticMediaWiki en BlueSpice",
-	"bs-bssmwconnector-srf-printername-bsgrid": "Cuadrícula de BlueSpice"
+	"bs-bssmwconnector-srf-printername-bsgrid": "Cuadrícula de BlueSpice",
+	"bs-dlg-choosesmwprop-label": "Propiedad",
+	"bs-dlg-choosesmwprop-type-smwprop": "Propiedad semántica"
 }

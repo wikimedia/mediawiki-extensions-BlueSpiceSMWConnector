@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Facenapalm"
+			"Facenapalm",
+			"Patrick Star"
 		]
 	},
 	"bs-bssmwconnector-desc": "Интегрирует SemanticMediaWiki в BlueSpice",
-	"bs-bssmwconnector-srf-printername-bsgrid": "Решётка BlueSpice"
+	"bs-bssmwconnector-srf-printername-bsgrid": "Решётка BlueSpice",
+	"bs-dlg-choosesmwprop-label": "Свойство"
 }
