@@ -8,7 +8,7 @@ class BSSMWCNamespaceManager {
 			'type' => 'boolean',
 			'label' => wfMessage( 'bs-bssmwconnector-nmmngr-label-smw' )->plain(),
 			'filter' => array(
-				'type' => 'bool'
+				'type' => 'boolean'
 			),
 		);
 		return true;
