@@ -60,7 +60,7 @@
 				"ext.BSSMWConnector.BookshelfUI.js"
 			],
 			"dependencies": [
-				"ext.bluespice"
+				"ext.bluespice.extjs"
 			],
 			"messages": [
 				"bs-dlg-choosesmwprop-label",
