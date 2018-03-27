@@ -1,0 +1,10 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nikosgranturismogt"
+		]
+	},
+	"bs-bssmwconnector-desc": "Ενσωματώνει το SemanticMediaWiki στο BlueSpice",
+	"bs-dlg-choosesmwprop-label": "Ιδιότητα",
+	"bs-dlg-choosesmwprop-type-smwprop": "Σημασιολογική ιδιότητα"
+}
