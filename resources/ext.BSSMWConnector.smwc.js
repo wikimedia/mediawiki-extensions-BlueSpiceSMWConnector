@@ -28,8 +28,11 @@
 		});
 	}
 
-	bs.smwc =bs.semanticMediaWikiConnector = {
-		getSMWFAutoComplete: getSMWFAutoComplete
+	bs.smwc = bs.semanticMediaWikiConnector = {
+		getSMWFAutoComplete: getSMWFAutoComplete,
+		pf: {
+			input: {}
+		}
 	};
 
 } (mediaWiki, jQuery, blueSpice) );

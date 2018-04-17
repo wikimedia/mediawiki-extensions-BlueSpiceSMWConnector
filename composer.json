@@ -32,7 +32,11 @@
 	"autoload": {
 		"files" : [
 			"BlueSpiceSMWConnector.php"
-		]
+		],
+		"psr-4": {
+			"BlueSpice\\SMWConnector\\Tests\\": "tests/phpunit",
+			"BlueSpice\\SMWConnector\\": "src"
+		}
 	},
 	"require-dev": {
 		"jakub-onderka/php-parallel-lint": "0.9.2",
