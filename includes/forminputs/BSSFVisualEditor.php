@@ -28,7 +28,7 @@ class BSSFVisualEditor extends PFTextAreaInput {
 
 	protected function getTextAreaAttributes() {
 		$textarea_attrs = parent::getTextAreaAttributes();
-		$textarea_attrs['class'] .= ' bs-visualeditor';
+		$textarea_attrs['class'] .= ' bs-visualeditor-field';
 		return $textarea_attrs;
 	}
 }

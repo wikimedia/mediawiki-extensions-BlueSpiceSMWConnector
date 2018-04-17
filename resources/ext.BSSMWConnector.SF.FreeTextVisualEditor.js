@@ -21,11 +21,11 @@ mw.loader.using( 'ext.bluespice.visualEditor.tinymce' ).done( function() {
         //END UGLY COPY&PASTE CODE FROM BlueSpiceExtensions/VisualEditor/resoures/bluespice.visualEditor.js
 
         VisualEditor.setConfig( 'semanticForms', {
-            selector: '#pfForm #pf_free_text.bsvisualeditor',
+            selector: '#pfForm #pf_free_text.bs-visualeditor, #pfForm #pf_free_text.bsvisualeditor',
             auto_focus: false,
             content_css: currentSiteCSS.join(','),
             /* We need to remove some tools from the toolbar that do not make sense in a formedit */
-            toolbar1: BsVisualEditorConfigDefault.toolbar1.replace( /bswiki|bssave|fullscreen/gi, '' )
+            toolbar1: BsVisualEditorConfigDefault.toolbar1.replace( /bswiki|bssave/gi, '' )
         });
         VisualEditor.startEditors();
     });
