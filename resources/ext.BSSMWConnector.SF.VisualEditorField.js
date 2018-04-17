@@ -6,9 +6,10 @@ mw.loader.using( 'ext.bluespice.visualEditor.tinymce' ).done( function() {
 			sp + '/extensions/BlueSpiceExtensions/VisualEditor/resources/tinymce';
 
 		tinymce.init({
-			selector: '#pfForm .bs-visualeditor',
+			selector: '#pfForm .bs-visualeditor-field',
 			menubar: false,
 			statusbar: false,
+			branding: false,
 			language: BsVisualEditorConfigDefault.language,
 			//We silently require "InsertLink" ('bslink') extension to also be enabled. This is not nice, but okay for now.
 			toolbar1: 'undo redo | bold italic underline strikethrough | bslink unlink | bullist numlist | outdent indent | styleselect forecolor removeformat',
