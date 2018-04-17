@@ -31,8 +31,14 @@
 		"smwproperty": "BSSMWPropertyPageProvider::factory"
 	},
 	"Hooks": {
-		"BeforePageDisplay": "BSSMWConnectorHooks::onBeforePageDisplay",
-		"PageForms::FormPrinterSetup": "BSSMWConnectorHooks::onPFFormPrinterSetup",
+		"BeforePageDisplay": [
+			"BSSMWConnectorHooks::onBeforePageDisplay",
+			"BlueSpice\\SMWConnector\\Hook\\BeforePageDisplay\\AddModules::callback"
+		],
+		"PageForms::FormPrinterSetup": [
+			"BSSMWConnectorHooks::onPFFormPrinterSetup",
+			"BlueSpice\\SMWConnector\\Hook\\PFFormPrinterSetup\\RegisterInputTypes::callback"
+		],
 		"BSBookshelfNodeTag": "BSSMWConnectorHooks::onBSBookshelfNodeTag",
 		"BSBookshelfExportTag": "BSSMWConnectorHooks::onBSBookshelfExportTag",
 		"NamespaceManager::getMetaFields": "BSSMWCNamespaceManager::onGetMetaFields",
@@ -81,6 +87,21 @@
 		"ext.BSSMWConnector.SF.VisualEditorField": {
 			"scripts": [
 				"ext.BSSMWConnector.SF.VisualEditorField.js"
+			]
+		},
+		"ext.BSSMWConnector.PF.Input.Grid": {
+			"scripts": [
+				"ext.BSSMWConnector.PF.Inputs.Grid.js"
+			]
+		},
+		"ext.BSSMWConnector.PF.Input.UserCombo": {
+			"scripts": [
+				"ext.BSSMWConnector.PF.Inputs.UserCombo.js"
+			]
+		},
+		"ext.BSSMWConnector.PF.Input.UserTags": {
+			"scripts": [
+				"ext.BSSMWConnector.PF.Inputs.UserTags.js"
 			]
 		},
 		"ext.BSSMWConnector.SF.FreeTextVisualEditor": {
