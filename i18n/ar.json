@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"ديفيد"
+		]
+	},
+	"bs-bssmwconnector-desc": "يدمج SemanticMediaWiki في BlueSpice",
+	"bs-bssmwconnector-srf-printername-bsgrid": "شبكة BlueSpice",
+	"bs-dlg-choosesmwprop-label": "الخاصية",
+	"bs-dlg-choosesmwprop-type-smwprop": "الخاصية الدلالية"
+}

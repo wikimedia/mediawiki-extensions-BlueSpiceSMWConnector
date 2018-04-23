@@ -6,5 +6,6 @@
 	},
 	"bs-bssmwconnector-desc": "Інтэгруе SemanticMediaWiki ў BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice Grid",
-	"bs-dlg-choosesmwprop-label": "Уласьцівасьць"
+	"bs-dlg-choosesmwprop-label": "Уласьцівасьць",
+	"bs-dlg-choosesmwprop-type-smwprop": "Сэмантычная ўласьцівасьць"
 }
