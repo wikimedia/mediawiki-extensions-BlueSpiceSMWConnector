@@ -1,4 +1,4 @@
-Ext.onReady(function(){
-	Ext.Loader.setPath( 'BS.SMWConnector', mw.config.get('wgScriptPath')+'/extensions/BlueSpiceSMWConnector/resources/BS.SMWConnector' );
-});
-
+Ext.Loader.setPath(
+	'BS.SMWConnector',
+	mw.config.get( 'wgScriptPath' ) + '/extensions/BlueSpiceSMWConnector/resources/BS.SMWConnector'
+);

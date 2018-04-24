@@ -3,20 +3,19 @@
 namespace BlueSpice\SMWConnector\PageForms\Input;
 
 class UserCombo extends \PFFormInput {
-	protected $currentUser;
+	protected $currentUser = null;
 	protected $groups = [];
 
 	public function __construct( $input_number, $cur_value, $input_name, $disabled, $other_args ) {
 		parent::__construct( $input_number, $cur_value, $input_name, $disabled, $other_args );
 
 		$this->parseCurrentValue();
-		//$this->setUser();
 
 		if( isset( $other_args['group'] ) ) {
 			$this->setGroups();
 		}
 
-		$this->addJsInitFunctionData( 'bs.smwc.pf.input.usercombo.init', $this->getInitParams() );
+		$this->addJsInitFunctionData( 'bs_smwc_pf_input_usercombo_init', $this->getInitParams() );
 	}
 
 	public static function getName() {
@@ -34,7 +33,7 @@ class UserCombo extends \PFFormInput {
 		);
 		$html .= \Html::input(
 			$this->mInputName,
-			'',
+			$currentUser ? $currentUser->getName() : '',
 			'hidden',
 			[
 				'id' => 'input_' . $this->mInputNumber
@@ -55,33 +54,17 @@ class UserCombo extends \PFFormInput {
 	 * If value is name of user page ( User: FooBar ), parse it
 	 * and set username as current value
 	 */
-	public function parseCurrentValue() {
-		if( strpos( $this->mCurrentValue, ':' ) !== false ) {
-			$userPage = \Title::newFromText( $this->mCurrentValue );
-			if( $userPage->getNamespace() == NS_USER ) {
-				$this->mCurrentValue = $userPage->getText();
-			}
+	protected function parseCurrentValue() {
+		if( !$user = \User::newFromName( $this->mCurrentValue ) ) {
+			return;
 		}
-	}
-
-	/**
-	 * Currently not used, sets User object from username
-	 */
-	public function setUser() {
-		if( $this->mCurrentValue == '' ) {
-			return null;
-		}
-
-		$user = \User::newFromName( $this->mCurrentValue );
-		if( $user instanceof \User && $user->getId() > 0 ) {
-			$this->currentUser = $user;
-		}
+		$this->currentUser = $user;
 	}
 
 	/**
 	 * Parses "group" parameter to an array
 	 */
-	public function setGroups() {
+	protected function setGroups() {
 		$raw = $this->mOtherArgs['group'];
 		$groups = explode( ',', $raw );
 		foreach( $groups as &$group ) {
