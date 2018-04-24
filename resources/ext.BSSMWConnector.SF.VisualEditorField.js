@@ -1,13 +1,14 @@
 mw.loader.using( 'ext.BSSMWConnector' ).done( function() {
 	bs.smwc.pf.input.visualeditorfield = {
 		init: initVisualEditor
-	}
+	};
 
 	function initVisualEditor( input_id, params ) {
 		mw.loader.using( 'ext.bluespice.visualEditor.tinymce' ).done( function() {
-			var BsVisualEditorLoaderUsingDeps = mw.config.get('BsVisualEditorLoaderUsingDeps');
-			mw.loader.using(BsVisualEditorLoaderUsingDeps).done(function(){
-				var sp = mw.config.get('wgScriptPath');
+			var BsVisualEditorLoaderUsingDeps = mw.config.get( 'BsVisualEditorLoaderUsingDeps' );
+			var BsVisualEditorConfigDefault = mw.config.get( 'BsVisualEditorConfigDefault' );
+			mw.loader.using( BsVisualEditorLoaderUsingDeps ).done( function() {
+				var sp = mw.config.get( 'wgScriptPath' );
 				tinymce.baseURL =
 					sp + '/extensions/BlueSpiceExtensions/VisualEditor/resources/tinymce';
 
