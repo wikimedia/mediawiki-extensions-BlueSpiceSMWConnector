@@ -23,7 +23,7 @@ mw.loader.using( 'ext.BSSMWConnector' ).done( function() {
 
 						for( idx in params.groups ) {
 							var group = params.groups[idx];
-							if( $.inArray( group, userGroups ) ) {
+							if( $.inArray( group, userGroups ) != -1 ) {
 								return true;
 							}
 						}
