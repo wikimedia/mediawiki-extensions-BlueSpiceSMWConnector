@@ -1,9 +1,9 @@
 {
 	"name": "BlueSpiceSMWConnector",
 	"descriptionmsg": "bs-bssmwconnector-desc",
-	"license-name": "GPL-2.0-or-later",
+	"license-name": "GPL-3.0",
 	"type": "bluespice",
-	"version": "2.27.1",
+	"version": "3.0.0-alpha",
 	"author": [
 		"Robert Vogel",
 		"Leonid Verhovskij"

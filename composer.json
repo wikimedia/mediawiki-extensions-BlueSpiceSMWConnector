@@ -12,7 +12,7 @@
 		"BlueSpice MediaWiki"
 	],
 	"homepage": "https://www.mediawiki.org/wiki/Extension:BlueSpiceSMWConnector",
-	"license": "GPL-2.0-or-later",
+	"license": "GPL-3.0",
 	"authors": [
 		{
 			"name": "Robert Vogel"
