@@ -26,9 +26,6 @@
 		"composer/installers": "1.*,>=1.0.1"
 	},
 	"autoload": {
-		"files": [
-			"BlueSpiceSMWConnector.php"
-		],
 		"psr-4": {
 			"BlueSpice\\SMWConnector\\Tests\\": "tests/phpunit",
 			"BlueSpice\\SMWConnector\\": "src"
