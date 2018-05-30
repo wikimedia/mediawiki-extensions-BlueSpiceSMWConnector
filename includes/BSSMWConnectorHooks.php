@@ -35,7 +35,6 @@ class BSSMWConnectorHooks {
 		$out->addModules( array(
 			'ext.bluespice.visualEditor.styles',
 			'ext.bluespice.visualEditor.tinymce',
-			'ext.BSSMWConnector.SF.VisualEditorField',
 			'ext.BSSMWConnector.SF.FreeTextVisualEditor'
 		) );
 
