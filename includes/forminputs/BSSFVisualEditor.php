@@ -3,6 +3,11 @@
 
 
 class BSSFVisualEditor extends PFTextAreaInput {
+	public function __construct( $input_number, $cur_value, $input_name, $disabled, $other_args ) {
+		parent::__construct( $input_number, $cur_value, $input_name, $disabled, $other_args );
+
+		$this->addJsInitFunctionData( 'bs.smwc.pf.input.visualeditorfield.init', $this->getInitParams() );
+	}
 
 	public static function getName() {
 		return 'bsvisualeditor';
@@ -14,21 +19,23 @@ class BSSFVisualEditor extends PFTextAreaInput {
 	 * @return array
 	 */
 	public function getResourceModuleNames() {
-		return parent::getResourceModuleNames();
-		/*
-		As we want VisualEditor to be available for standard input "free text"
-		we need to load the whole module in 'BeforePageDisplay' hook
-		*/
-		/*return array(
-			'ext.bluespice.visualEditor.styles',
-			'ext.bluespice.visualEditor.tinymce',
-			'ext.SMWConnector.SF.VisualEditorField'
-		);*/
+		$modules =  parent::getResourceModuleNames();
+		$modules[] = 'ext.BSSMWConnector.SF.VisualEditorField';
+
+		return $modules;
 	}
 
 	protected function getTextAreaAttributes() {
 		$textarea_attrs = parent::getTextAreaAttributes();
 		$textarea_attrs['class'] .= ' bs-visualeditor-field';
 		return $textarea_attrs;
+	}
+
+	protected function getInitParams() {
+		$params = [
+			'input_name' => $this->mInputName,
+			'current_value' => $this->mCurrentValue
+		];
+		return $params;
 	}
 }
