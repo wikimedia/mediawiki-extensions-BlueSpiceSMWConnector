@@ -48,7 +48,8 @@
 		"BSPageTemplatesBeforeRender": "BSSMWCPageTemplates::onBSPageTemplatesBeforeRender",
 		"PageContentSaveComplete": "BSSMWConnectorHooks::onPageContentSaveComplete",
 		"SMW::Store::AfterQueryResultLookupComplete": "BlueSpice\\SMWConnector\\Hook\\SMWStoreAfterQueryResultLookupComplete\\ApplySecurityTrimming::callback",
-		"SMW::Store::BeforeQueryResultLookupComplete": "BlueSpice\\SMWConnector\\Hook\\SMWStoreBeforeQueryResultLookupComplete\\AddPermissionBasedNamespaceFilters::callback"
+		"SMW::Store::BeforeQueryResultLookupComplete": "BlueSpice\\SMWConnector\\Hook\\SMWStoreBeforeQueryResultLookupComplete\\AddPermissionBasedNamespaceFilters::callback",
+		"BSExtendedSearchMakeConfig": "BSSMWConnectorHooks::onBSExtendedSearchMakeConfig"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",

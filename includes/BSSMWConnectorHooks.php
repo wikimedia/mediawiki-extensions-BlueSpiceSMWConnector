@@ -57,6 +57,14 @@ class BSSMWConnectorHooks {
 		return true;
 	}
 
+	//Did not bother making a class in NS Hook for this since we must
+	//come up with a better solution for this
+	public static function onBSExtendedSearchMakeConfig( &$backends ) {
+		$backends['local']['args'][0]['sources']['wikipage']["class"] =
+				\BlueSpice\SMWConnector\ExtendedSearch\Source\SMWWikiPage::class;
+		return true;
+	}
+
 	/**
 	 * Registers new input types
 	 * @param PFFormPrinter $formPrinter
