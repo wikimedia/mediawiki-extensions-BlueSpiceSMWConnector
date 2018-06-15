@@ -4,7 +4,7 @@ namespace BlueSpice\SMWConnector\Hook\SMWStoreAfterQueryResultLookupComplete;
 
 use BlueSpice\SMWConnector\Hook\SMWStoreAfterQueryResultLookupComplete;
 
-class AddPermissionBasedNamespaceFilters extends SMWStoreAfterQueryResultLookupComplete {
+class ApplySecurityTrimming extends SMWStoreAfterQueryResultLookupComplete {
 
 	/**
 	 *
