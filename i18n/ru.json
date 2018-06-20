@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Facenapalm",
-			"Patrick Star"
+			"Patrick Star",
+			"Okras"
 		]
 	},
 	"bs-bssmwconnector-desc": "Интегрирует SemanticMediaWiki в BlueSpice",
