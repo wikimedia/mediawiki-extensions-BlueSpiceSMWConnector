@@ -1,5 +1,5 @@
 {
-	"name": "hallowelt/blue-spice-s-m-w-connector",
+	"name": "bluespice/smwconnector",
 	"type": "mediawiki-extension",
 	"description": "Connector for Semantic MediWiki and BlueSpice. Provide tar package builder and some custom functions.",
 	"keywords": [
@@ -44,5 +44,8 @@
 		"fix": [
 			"minus-x fix ."
 		]
+	},
+	"extra": {
+		"installer-name": "BlueSpiceSMWConnector"
 	}
 }
