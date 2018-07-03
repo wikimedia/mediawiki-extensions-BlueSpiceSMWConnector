@@ -10,15 +10,21 @@ class SMWWikiPage extends WikiPage {
 
 		$aPC = array_merge( $aPC, [
 			'smwproperty' => [
-				'type' => 'object',
+				'type' => 'nested',
 				'properties' => [
 					'name' => [
-						'type' => 'text'
+						'type' => 'keyword'
 					],
 					'value' => [
-						'type' => 'text'
+						'type' => 'keyword'
+					],
+					'type' => [
+						'type' => 'keyword'
 					]
 				]
+			],
+			'smwproperty_agg' => [
+				'type' => 'keyword'
 			]
 		] );
 
