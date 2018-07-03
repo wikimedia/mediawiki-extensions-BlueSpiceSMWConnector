@@ -9,6 +9,15 @@
 		"Leonid Verhovskij"
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:BlueSpiceSMWConnector",
+	"attributes": {
+		"BlueSpiceExtendedSearch": {
+			"Sources": {
+				"wikipage": {
+					"class": "\\BlueSpice\\SMWConnector\\ExtendedSearch\\Source\\SMWWikiPage"
+				}
+			}
+		}
+	},
 	"AutoloadClasses": {
 		"BSSMWConnectorHooks": "includes/BSSMWConnectorHooks.php",
 		"BSSMWCNamespaceManager": "includes/BSSMWCNamespaceManager.php",
@@ -48,8 +57,7 @@
 		"BSPageTemplatesBeforeRender": "BSSMWCPageTemplates::onBSPageTemplatesBeforeRender",
 		"PageContentSaveComplete": "BSSMWConnectorHooks::onPageContentSaveComplete",
 		"SMW::Store::AfterQueryResultLookupComplete": "BlueSpice\\SMWConnector\\Hook\\SMWStoreAfterQueryResultLookupComplete\\ApplySecurityTrimming::callback",
-		"SMW::Store::BeforeQueryResultLookupComplete": "BlueSpice\\SMWConnector\\Hook\\SMWStoreBeforeQueryResultLookupComplete\\AddPermissionBasedNamespaceFilters::callback",
-		"BSExtendedSearchMakeConfig": "BSSMWConnectorHooks::onBSExtendedSearchMakeConfig"
+		"SMW::Store::BeforeQueryResultLookupComplete": "BlueSpice\\SMWConnector\\Hook\\SMWStoreBeforeQueryResultLookupComplete\\AddPermissionBasedNamespaceFilters::callback"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
