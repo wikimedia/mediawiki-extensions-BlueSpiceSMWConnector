@@ -74,7 +74,7 @@ class SMWWikiPage extends WikiPage {
 	 * @return string
 	 */
 	protected function parseSemanticValue( $value, &$type ) {
-		if( $value instanceof \SMW\DIWikiPage ) {
+		if( $value instanceof \SMW\DIWikiPage && $value->getTitle() instanceof \Title ) {
 			$type = 'title';
 			return $value->getTitle()->getPrefixedText();
 		} else if( $value instanceof \SMWDINumber ) {
