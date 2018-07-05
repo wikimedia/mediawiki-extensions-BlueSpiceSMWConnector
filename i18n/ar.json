@@ -1,11 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"ديفيد"
+			"ديفيد",
+			"محمد أحمد عبد الفتاح"
 		]
 	},
 	"bs-bssmwconnector-desc": "يدمج SemanticMediaWiki في BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "شبكة BlueSpice",
 	"bs-dlg-choosesmwprop-label": "الخاصية",
-	"bs-dlg-choosesmwprop-type-smwprop": "الخاصية الدلالية"
+	"bs-dlg-choosesmwprop-type-smwprop": "الخاصية الدلالية",
+	"bs-extendedsearch-add-filter-group-smwproperty-label": "الخصائص الدلالية",
+	"bs-extendedsearch-search-center-result-smwproperty-label": "الخصائص الدلالية:"
 }
