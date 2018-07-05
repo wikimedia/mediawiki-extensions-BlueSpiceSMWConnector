@@ -33,4 +33,4 @@ bs_smwc_pf_input_usertags_init = function( input_id, params ){
 			userTagField.select( params.current_value );
 		}
 	}
-}
+};

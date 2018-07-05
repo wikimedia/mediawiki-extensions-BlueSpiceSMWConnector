@@ -58,4 +58,4 @@ bs_smwc_pf_input_usercombo_init = function( input_id, params ) {
 			$( '#' + input_id ).val( params.current_value );
 		}
 	}
-}
+};

@@ -90,6 +90,11 @@
 				"ext.BSSMWConnector.SF.VisualEditorField.js"
 			]
 		},
+		"ext.BSSMWConnector.PF.Inputs.MWVisualEditor": {
+			"scripts": [
+				"ext.BSSMWConnector.PF.Inputs.MWVisualEditor.js"
+			]
+		},
 		"ext.BSSMWConnector.PF.Input.Grid": {
 			"scripts": [
 				"ext.BSSMWConnector.PF.Inputs.Grid.js"
