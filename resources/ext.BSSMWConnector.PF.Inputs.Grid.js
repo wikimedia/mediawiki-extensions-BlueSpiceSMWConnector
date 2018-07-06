@@ -18,4 +18,4 @@ bs_smwc_pf_input_grid_init = function( input_id, params ) {
 			});
 		});
 	}
-}
+};
