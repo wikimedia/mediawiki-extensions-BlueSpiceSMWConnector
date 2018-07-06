@@ -8,5 +8,7 @@
 	"bs-bssmwconnector-desc": "Integra o SemanticMediaWiki no BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "Grade BlueSpice",
 	"bs-dlg-choosesmwprop-label": "Propriedade",
-	"bs-dlg-choosesmwprop-type-smwprop": "Propriedade semântica"
+	"bs-dlg-choosesmwprop-type-smwprop": "Propriedade semântica",
+	"bs-extendedsearch-add-filter-group-smwproperty-label": "Propriedades semânticas",
+	"bs-extendedsearch-search-center-result-smwproperty-label": "Propriedades semânticas:"
 }

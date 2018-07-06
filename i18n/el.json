@@ -6,5 +6,7 @@
 	},
 	"bs-bssmwconnector-desc": "Ενσωματώνει το SemanticMediaWiki στο BlueSpice",
 	"bs-dlg-choosesmwprop-label": "Ιδιότητα",
-	"bs-dlg-choosesmwprop-type-smwprop": "Σημασιολογική ιδιότητα"
+	"bs-dlg-choosesmwprop-type-smwprop": "Σημασιολογική ιδιότητα",
+	"bs-extendedsearch-add-filter-group-smwproperty-label": "Σημασιολογικές ιδιότητες",
+	"bs-extendedsearch-search-center-result-smwproperty-label": "Σημασιολογικές ιδιότητες"
 }

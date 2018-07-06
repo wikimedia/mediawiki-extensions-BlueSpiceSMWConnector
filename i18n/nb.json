@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Jon Harald Søby"
+			"Jon Harald Søby",
+			"Orf3us"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integrerer SemanticMediaWiki med BlueSpice",
-	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice-rutenett"
+	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice-rutenett",
+	"bs-extendedsearch-add-filter-group-smwproperty-label": "Semantiske egenskaper",
+	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantiske egenskaper"
 }
