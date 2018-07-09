@@ -3,10 +3,14 @@
 		"authors": [
 			"Facenapalm",
 			"Patrick Star",
-			"Okras"
+			"Okras",
+			"Evs",
+			"Vlad5250"
 		]
 	},
 	"bs-bssmwconnector-desc": "Интегрирует SemanticMediaWiki в BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "Решётка BlueSpice",
-	"bs-dlg-choosesmwprop-label": "Свойство"
+	"bs-dlg-choosesmwprop-label": "Свойство",
+	"bs-extendedsearch-add-filter-group-smwproperty-label": "Семантические свойства",
+	"bs-extendedsearch-search-center-result-smwproperty-label": "Семантические свойства:"
 }
