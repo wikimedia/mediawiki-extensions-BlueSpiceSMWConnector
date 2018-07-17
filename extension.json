@@ -16,6 +16,72 @@
 					"class": "\\BlueSpice\\SMWConnector\\ExtendedSearch\\Source\\SMWWikiPage"
 				}
 			}
+		},
+		"BlueSpiceFoundation": {
+			"PermissionRegistry": {
+				"smw-admin": {
+					"type": "global",
+					"roles": [
+						"admin"
+					]
+				},
+				"smw-patternedit": {
+					"type": "global",
+					"roles": [
+						"admin"
+					]
+				},
+				"smw-pageedit": {
+					"type": "global",
+					"roles": [
+						"admin"
+					]
+				},
+				"geocode": {
+					"type": "global",
+					"roles": [
+						"admin"
+					]
+				},
+				"viewedittab": {
+					"type": "global",
+					"roles": [
+						"reader",
+						"admin",
+						"editor",
+						"user"
+					]
+				},
+				"editrestrictedfields": {
+					"type": "global",
+					"roles": [
+						"admin"
+					]
+				},
+				"createclass": {
+					"type": "global",
+					"roles": [
+						"admin",
+						"editor",
+						"user"
+					]
+				}
+			}
+		}
+	},
+	"GroupPermissions": {
+		"sysop": {
+			"smw-admin": true,
+			"smw-patternedit": true,
+			"smw-pageedit": true,
+			"geocode": true,
+			"editrestrictedfields": true
+		},
+		"*": {
+			"viewedittab": true
+		},
+		"user": {
+			"createclass": true
 		}
 	},
 	"AutoloadClasses": {
