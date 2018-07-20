@@ -13,7 +13,7 @@ use BlueSpice\SMWConnector\ExtendedSearch\Source\Formatter\SMWWikiPageFormatter;
 class SMWWikiPage extends WikiPages {
 	/**
 	 *
-	 * @return \BlueSpice\SMWConnector\ExtendedSearch\Source\ExtendedSearch\DocumentProvider\SMWWikiPage
+	 * @return DocumentProvider\SMWWikiPage
 	 */
 	public function getDocumentProvider() {
 		return new Source\DocumentProvider\SMWWikiPage(
@@ -23,7 +23,7 @@ class SMWWikiPage extends WikiPages {
 
 	/**
 	 *
-	 * @return \BlueSpice\SMWConnector\ExtendedSearch\Source\ExtendedSearch\MappingProvider\SMWWikiPage
+	 * @return MappingProvider\SMWWikiPage
 	 */
 	public function getMappingProvider() {
 		return new Source\MappingProvider\SMWWikiPage(
