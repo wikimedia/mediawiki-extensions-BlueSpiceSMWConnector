@@ -10,26 +10,11 @@ bs_smwc_pf_input_usercombo_init = function( input_id, params ) {
 			hideLabel: true,
 			style: 'display: inline-block; background-color: transparent',
 			storeFilters: [
-				//filter by groups
-				function( record ) {
-					if( !params.groups || params.groups.length == 0 ) {
-						return true;
-					}
-
-					var userGroups = record.data.groups;
-					if( userGroups.length == 0 ) {
-						return false;
-					}
-
-					for( var idx in params.groups ) {
-						var group = params.groups[idx];
-						if( $.inArray( group, userGroups ) != -1 ) {
-							return true;
-
-						}
-					}
-
-					return false;
+				{
+					type: 'list',
+					comparison: 'ct',
+					property: 'groups',
+					value: params.groups
 				}
 			]
 		} );
