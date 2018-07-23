@@ -81,8 +81,6 @@ class SMWWikiPage extends WikiPage {
 			$type = 'numeric';
 			return $value->getNumber();
 		} else if( $value instanceof \SMWDIBoolean ) {
-			//Default serilization will return "t"/"f"
-			//what is the best way to index this?
 			$type = 'boolean';
 			return $value->getBoolean() ? 1 : 0;
 		} else if( $value instanceof \SMWDITime ) {

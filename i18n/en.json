@@ -11,6 +11,7 @@
 	"bs-dlg-choosesmwprop-type-smwprop": "Semantic property",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Semantic properties",
 	"bs-smwconnector-extendedsearch-smwproperty-result-value": "$1: $2",
-	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantic properties:"
-
+	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantic properties:",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "Yes",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "No"
 }

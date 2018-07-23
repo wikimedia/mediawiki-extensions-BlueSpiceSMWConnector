@@ -17,7 +17,6 @@ class ParseSMWFilters extends Base {
 	public function apply() {
 		$filters = $this->oLookup->getFilters();
 		$terms = isset( $filters['terms'] ) ? $filters['terms'] : [];
-		//$term = isset( $filters['term'] ) ? $filters['term'] : [];
 		foreach( $terms as $key => $value ) {
 			if( $this->getSMWKey( $key ) ) {
 				$this->addTermsFilter( $key, $value );

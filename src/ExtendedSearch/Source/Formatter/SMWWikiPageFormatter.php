@@ -34,8 +34,13 @@ class SMWWikiPageFormatter extends WikiPageFormatter {
 			if( $property['type'] === 'datetime' ) {
 				$value = $lang->userTimeAndDate( $property['value'], $user );
 			}
+
+			if( $property['type'] === 'boolean' ) {
+				$value = $this->getBooleanLabel( $value );
+			}
+
 			if( is_array( $value ) ) {
-				$value = implode( ',', $value );
+				$value = implode( ';', $value );
 			}
 			$smwPropertyValues[] = wfMessage(
 				'bs-smwconnector-extendedsearch-smwproperty-result-value',
@@ -76,6 +81,9 @@ class SMWWikiPageFormatter extends WikiPageFormatter {
 
 				foreach( $bucket['value']['buckets'] as &$valueBucket ) {
 					$valueBucket['type'] = $type;
+					if( $type === 'boolean' ) {
+						$valueBucket['label'] = $this->getBooleanLabel( $valueBucket['key'] );
+					}
 				}
 				//jQuery/Sizzle is very sensitive to what is an ID
 				//of an element, encode value is always alphanumeric
@@ -90,6 +98,14 @@ class SMWWikiPageFormatter extends WikiPageFormatter {
 					'group' => 'smwproperty'
 				];
 			}
+		}
+	}
+
+	protected function getBooleanLabel( $boolValue ) {
+		if( $boolValue ) {
+			return wfMessage( 'bs-smwconnector-extendedsearch-boolean-property-true' )->plain();
+		} else {
+			return wfMessage( 'bs-smwconnector-extendedsearch-boolean-property-false' )->plain();
 		}
 	}
 }

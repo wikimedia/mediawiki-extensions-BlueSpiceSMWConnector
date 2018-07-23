@@ -14,5 +14,7 @@
 	"bs-dlg-choosesmwprop-type-smwprop": "Text for SemanticProperty type BookshelfUI extension",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Label for the group holding semantic properties filters in the dialog for adding filters",
 	"bs-smwconnector-extendedsearch-smwproperty-result-value": "Helper message to show name and values of semantic property in search results. $1 - smw property name, $2 - smw property value",
-	"bs-extendedsearch-search-center-result-smwproperty-label": "Label for the field in search results showing all semantic properties of a page"
+	"bs-extendedsearch-search-center-result-smwproperty-label": "Label for the field in search results showing all semantic properties of a page",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "Textual representation of boolean \"true\" value for semantic properties",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Textual representation of boolean \"false\" value for semantic properties"
 }
