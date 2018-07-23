@@ -98,7 +98,14 @@ class SMWWikiPage extends WikiPage {
 		$smwData = $this->getSemanticData( $wikipage );
 		$valueArray = [];
 		foreach( $smwData as $smwDataItem ) {
-			$valueArray[] = $smwDataItem['name'] . '|' . $smwDataItem['value'];
+			$value = $smwDataItem['value'];
+			if( !is_array( $value ) ) {
+				$value = [$value];
+			}
+
+			foreach( $value as $singleValue ) {
+				$valueArray[] = $smwDataItem['name'] . '|' . $singleValue;
+			}
 		}
 		return $valueArray;
 	}
