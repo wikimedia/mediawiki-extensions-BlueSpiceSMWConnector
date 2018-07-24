@@ -5,5 +5,7 @@
 		]
 	},
 	"bs-dlg-choosesmwprop-label": "Właściwość",
-	"bs-dlg-choosesmwprop-type-smwprop": "Właściwość semantyczna"
+	"bs-dlg-choosesmwprop-type-smwprop": "Właściwość semantyczna",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "Tak",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Nie"
 }

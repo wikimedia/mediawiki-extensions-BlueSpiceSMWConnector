@@ -10,5 +10,7 @@
 	"bs-dlg-choosesmwprop-label": "Attribut",
 	"bs-dlg-choosesmwprop-type-smwprop": "Semantisches Attribut",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Semantische Attribute",
-	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantische Attribute:"
+	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantische Attribute:",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "Ja",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Nein"
 }
