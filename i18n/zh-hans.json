@@ -9,5 +9,7 @@
 	"bs-dlg-choosesmwprop-label": "属性",
 	"bs-dlg-choosesmwprop-type-smwprop": "语义属性",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "语义属性",
-	"bs-extendedsearch-search-center-result-smwproperty-label": "语义属性："
+	"bs-extendedsearch-search-center-result-smwproperty-label": "语义属性：",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "是",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "否"
 }

@@ -8,5 +8,7 @@
 	"bs-dlg-choosesmwprop-label": "속성",
 	"bs-dlg-choosesmwprop-type-smwprop": "시맨틱 속성",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "시맨틱 속성",
-	"bs-extendedsearch-search-center-result-smwproperty-label": "시맨틱 속성:"
+	"bs-extendedsearch-search-center-result-smwproperty-label": "시맨틱 속성:",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "예",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "아니오"
 }

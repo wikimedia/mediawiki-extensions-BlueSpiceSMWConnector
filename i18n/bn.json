@@ -5,5 +5,7 @@
 			"আফতাবুজ্জামান"
 		]
 	},
-	"bs-dlg-choosesmwprop-label": "বৈশিষ্ট্য"
+	"bs-dlg-choosesmwprop-label": "বৈশিষ্ট্য",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "হ্যাঁ",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "না"
 }

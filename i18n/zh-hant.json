@@ -9,5 +9,7 @@
 	"bs-dlg-choosesmwprop-label": "屬性",
 	"bs-dlg-choosesmwprop-type-smwprop": "語意屬性：",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "語意屬性",
-	"bs-extendedsearch-search-center-result-smwproperty-label": "語意屬性："
+	"bs-extendedsearch-search-center-result-smwproperty-label": "語意屬性：",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "是",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "否"
 }

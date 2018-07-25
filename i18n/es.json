@@ -10,5 +10,7 @@
 	"bs-dlg-choosesmwprop-label": "Propiedad",
 	"bs-dlg-choosesmwprop-type-smwprop": "Propiedad semántica",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Propiedades semánticas",
-	"bs-extendedsearch-search-center-result-smwproperty-label": "Propiedades semánticas:"
+	"bs-extendedsearch-search-center-result-smwproperty-label": "Propiedades semánticas:",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "Sí",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "No"
 }
