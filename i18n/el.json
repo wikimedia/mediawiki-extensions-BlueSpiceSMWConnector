@@ -8,5 +8,7 @@
 	"bs-dlg-choosesmwprop-label": "Ιδιότητα",
 	"bs-dlg-choosesmwprop-type-smwprop": "Σημασιολογική ιδιότητα",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Σημασιολογικές ιδιότητες",
-	"bs-extendedsearch-search-center-result-smwproperty-label": "Σημασιολογικές ιδιότητες"
+	"bs-extendedsearch-search-center-result-smwproperty-label": "Σημασιολογικές ιδιότητες",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "Ναι",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Όχι"
 }
