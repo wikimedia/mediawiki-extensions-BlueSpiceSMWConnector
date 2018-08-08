@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"BadDog"
+		]
+	},
+	"bs-smwconnector-extendedsearch-boolean-property-true": "Да",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Не"
+}
