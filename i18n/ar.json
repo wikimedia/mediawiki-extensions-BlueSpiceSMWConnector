@@ -10,5 +10,7 @@
 	"bs-dlg-choosesmwprop-label": "الخاصية",
 	"bs-dlg-choosesmwprop-type-smwprop": "الخاصية الدلالية",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "الخصائص الدلالية",
-	"bs-extendedsearch-search-center-result-smwproperty-label": "الخصائص الدلالية:"
+	"bs-extendedsearch-search-center-result-smwproperty-label": "الخصائص الدلالية:",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "نعم",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "لا"
 }
