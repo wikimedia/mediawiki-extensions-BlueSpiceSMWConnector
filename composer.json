@@ -1,7 +1,7 @@
 {
 	"name": "bluespice/smwconnector",
 	"type": "mediawiki-extension",
-	"description": "Connector for Semantic MediWiki and BlueSpice. Provide tar package builder and some custom functions.",
+	"description": "Connector for Semantic MediaWiki and BlueSpice. Provide tar package builder and some custom functions.",
 	"keywords": [
 		"SMW",
 		"Semantic MediaWiki",
