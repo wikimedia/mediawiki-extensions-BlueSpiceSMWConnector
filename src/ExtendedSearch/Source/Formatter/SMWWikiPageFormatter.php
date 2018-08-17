@@ -23,6 +23,9 @@ class SMWWikiPageFormatter extends WikiPageFormatter {
 		}
 
 		parent::format( $result, $resultObject );
+		if( $this->isSemanticFilterSet() == false ) {
+			return;
+		}
 
 		$lang = $this->getContext()->getLanguage();
 		$user = $this->getContext()->getUser();
@@ -108,5 +111,23 @@ class SMWWikiPageFormatter extends WikiPageFormatter {
 			return wfMessage( 'bs-smwconnector-extendedsearch-boolean-property-false' )->plain();
 		}
 	}
+
+	protected function isSemanticFilterSet() {
+		$filters = $this->lookup->getFilters();
+
+		if( !isset( $filters['terms'] ) ) {
+			return false;
+		}
+
+		foreach( $filters['terms'] as $key => $value ) {
+			$decodedKey = base64_decode( $key );
+			if( strpos( $decodedKey, 'smwproperty:' ) == 0 ) {
+				return true;
+			}
+		}
+
+		return true;
+	}
+
 }
 
