@@ -23,7 +23,7 @@ class SMWWikiPageFormatter extends WikiPageFormatter {
 		}
 
 		parent::format( $result, $resultObject );
-		if( $this->isSemanticFilterSet() == false ) {
+		if( $this->isSemanticFilterSet() === false ) {
 			return;
 		}
 
@@ -121,12 +121,12 @@ class SMWWikiPageFormatter extends WikiPageFormatter {
 
 		foreach( $filters['terms'] as $key => $value ) {
 			$decodedKey = base64_decode( $key );
-			if( strpos( $decodedKey, 'smwproperty:' ) == 0 ) {
+			if( strpos( $decodedKey, 'smwproperty:' ) === 0 ) {
 				return true;
 			}
 		}
 
-		return true;
+		return false;
 	}
 
 }
