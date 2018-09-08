@@ -56,6 +56,7 @@ class AddModules {
 	}
 	protected function doProcess() {
 		$this->out->addModules( 'ext.BSSMWConnector' );
+		$this->out->addModuleStyles( 'ext.BSSMWConnector.styles' );
 		return true;
 	}
 

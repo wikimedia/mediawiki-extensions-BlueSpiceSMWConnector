@@ -8,7 +8,7 @@ bs_smwc_pf_mw_visualeditor_init = function( input_id, params ) {
 			var valueText = _getHtmlFromWikitext_Sync( params.current_value );
 			var cfg = {
 				placeholder: valueText,
-					value: valueText,
+				value: valueText,
 				selector: '#' + input_id,
 				id : input_id + '_ve',
 				classes : ['bs-pf-visualeditor-text'],
