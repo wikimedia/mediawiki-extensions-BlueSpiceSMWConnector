@@ -60,6 +60,8 @@ class BSSMWCNamespaceManager {
 
 		if( ($bCurrentlyActivated && !$bExplicitlyDeactivated) || $bExplicitlyActivated ) {
 			$sSaveContent .= "\$GLOBALS['smwgNamespacesWithSemanticLinks'][{$sConstName}] = true;\n";
+		} else {
+			$sSaveContent .= "\$GLOBALS['smwgNamespacesWithSemanticLinks'][{$sConstName}] = false;\n";
 		}
 
 		return true;
