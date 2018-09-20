@@ -19,51 +19,46 @@
 		},
 		"BlueSpiceFoundation": {
 			"PermissionRegistry": {
-				"smw-admin": {
+				"createclass": {
 					"type": "global",
 					"roles": [
-						"admin"
-					]
-				},
-				"smw-patternedit": {
-					"type": "global",
-					"roles": [
-						"admin"
-					]
-				},
-				"smw-pageedit": {
-					"type": "global",
-					"roles": [
-						"admin"
-					]
-				},
-				"geocode": {
-					"type": "global",
-					"roles": [
-						"admin"
-					]
-				},
-				"viewedittab": {
-					"type": "global",
-					"roles": [
-						"reader",
 						"admin",
+						"author",
 						"editor",
-						"user"
+						"maintenanceadmin"
 					]
 				},
 				"editrestrictedfields": {
 					"type": "global",
 					"roles": [
-						"admin"
+						"admin",
+						"editor",
+						"maintenanceadmin"
 					]
 				},
-				"createclass": {
+				"geocode": {
+					"type": "global",
+					"roles": [
+						"admin",
+						"author",
+						"editor",
+						"maintenanceadmin"
+					]
+				},
+				"smw-admin": {
+					"type": "global",
+					"roles": [
+						"admin",
+						"maintenanceadmin"
+					]
+				},
+				"viewedittab": {
 					"type": "global",
 					"roles": [
 						"admin",
 						"editor",
-						"user"
+						"maintenanceadmin",
+						"structuremanager"
 					]
 				}
 			}
