@@ -7,6 +7,8 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 wfLoadExtension( 'BlueSpiceSMWConnector' );
 
 $GLOBALS['smwgResultFormats']['bsgrid'] = 'BSGridResultPrinter';
+$GLOBALS['smwgQMaxSize'] = 100;
+$GLOBALS['maxRecursionDepth'] = 4;
 
 /**
  * Dieser Hack ist in der aktuellen Version von BlueSpiceExtensions
