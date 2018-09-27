@@ -16,9 +16,6 @@ table.formtable {
 	border: 1px solid #BBB;
 	padding: 4px 8px;
 	display: inline-block;
-}
-
-table.formtable .bs-mwvisualeditor-field-container {
 	border-collapse: separate;
 	border-spacing: 2px;
 }
