@@ -74,6 +74,10 @@ class SMWWikiPageFormatter extends WikiPageFormatter {
 
 			$smwAgg = $smwAgg['name'];
 			foreach( $smwAgg['buckets'] as $bucket ) {
+				if( !isset( $bucket['value']['buckets'][0] ) ) {
+					// If bucket has no keys, skip it
+					continue;
+				}
 				//First type of first key must be the type for all the keys
 				$type = $bucket['value']['buckets'][0]['type']['buckets'][0]['key'];
 
