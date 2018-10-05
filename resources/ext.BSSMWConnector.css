@@ -6,20 +6,3 @@
 table.formtable {
 	width: 100%;
 }
-
-.bs-mwvisualeditor-field-container {
-	max-width: 100%;
-	min-height: 190px;
-	width: 100%;
-	margin-left: 0;
-	border-radius: 3px;
-	border: 1px solid #BBB;
-	padding: 4px 8px;
-	display: inline-block;
-	border-collapse: separate;
-	border-spacing: 2px;
-}
-
-.bs-mwvisualeditor-field-container .oo-ui-popupToolGroup-header {
-	display: none;
-}
