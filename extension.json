@@ -141,7 +141,7 @@
 			],
 			"messages": [
 				"bs-dlg-choosesmwprop-label",
-				"bs-bookshelfui-type-smwprop"
+				"bs-dlg-choosesmwprop-type-smwprop"
 			]
 		},
 		"ext.BSSMWConnector": {
