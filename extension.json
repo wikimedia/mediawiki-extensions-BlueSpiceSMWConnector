@@ -118,7 +118,6 @@
 		"BSPageTemplatesBeforeRender": "BSSMWCPageTemplates::onBSPageTemplatesBeforeRender",
 		"PageContentSaveComplete": "BSSMWConnectorHooks::onPageContentSaveComplete",
 		"SMW::Store::AfterQueryResultLookupComplete": "BlueSpice\\SMWConnector\\Hook\\SMWStoreAfterQueryResultLookupComplete\\ApplySecurityTrimming::callback",
-		"SMW::Store::BeforeQueryResultLookupComplete": "BlueSpice\\SMWConnector\\Hook\\SMWStoreBeforeQueryResultLookupComplete\\AddPermissionBasedNamespaceFilters::callback",
 		"SkinTemplateOutputPageBeforeExec": "BlueSpice\\SMWConnector\\Hook\\SkinTemplateOutputPageBeforeExec\\AddFormEditAction::callback"
 	},
 	"ResourceFileModulePaths": {
