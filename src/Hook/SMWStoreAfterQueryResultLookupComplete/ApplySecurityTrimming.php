@@ -29,7 +29,7 @@ class ApplySecurityTrimming extends SMWStoreAfterQueryResultLookupComplete {
 		}
 
 		if( count( $filteredItems ) !== count( $this->resultItems ) ) {
-			$this->result = new SMWQueryResult(
+			$this->result = new \SMWQueryResult(
 				$this->result->getPrintRequests(),
 				$this->result->getQuery(),
 				$filteredItems,
