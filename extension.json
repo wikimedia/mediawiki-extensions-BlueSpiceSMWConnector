@@ -9,6 +9,9 @@
 		"Leonid Verhovskij"
 	],
 	"url": "https://en.wiki.bluespice.com/wiki/Reference:SMWConnector",
+	"requires": {
+		"MediaWiki": ">= 1.29.0"
+	},
 	"attributes": {
 		"BlueSpiceExtendedSearch": {
 			"Sources": {
