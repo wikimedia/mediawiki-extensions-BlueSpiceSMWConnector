@@ -15,9 +15,7 @@
 	"attributes": {
 		"BlueSpiceExtendedSearch": {
 			"Sources": {
-				"wikipage": {
-					"class": "\\BlueSpice\\SMWConnector\\ExtendedSearch\\Source\\SMWWikiPage"
-				}
+				"wikipage": "\\BlueSpice\\SMWConnector\\ExtendedSearch\\Source\\SMWWikiPage::create"
 			}
 		},
 		"BlueSpiceFoundation": {

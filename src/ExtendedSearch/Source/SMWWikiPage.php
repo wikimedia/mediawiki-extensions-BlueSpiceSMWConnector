@@ -22,6 +22,14 @@ class SMWWikiPage extends WikiPages {
 	}
 
 	/**
+	 * @param Base $base
+	 * @return SMWWikiPage
+	 */
+	public static function create( $base ) {
+		return new self( $base );
+	}
+
+	/**
 	 *
 	 * @return MappingProvider\SMWWikiPage
 	 */
