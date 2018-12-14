@@ -2,11 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"Robert Vogel <vogel@hallowelt.biz>",
-			"Metalhead64"
+			"Metalhead64",
+			"Hwboehm"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integriert SemanticMediaWiki in BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice-Raster",
+	"bs-bssmwconnector-nmmngr-label-smw": "Semantic MediaWiki",
 	"bs-dlg-choosesmwprop-label": "Attribut",
 	"bs-dlg-choosesmwprop-type-smwprop": "Semantisches Attribut",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Semantische Attribute",
