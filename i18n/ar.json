@@ -2,11 +2,13 @@
 	"@metadata": {
 		"authors": [
 			"ديفيد",
-			"محمد أحمد عبد الفتاح"
+			"محمد أحمد عبد الفتاح",
+			"Meno25"
 		]
 	},
 	"bs-bssmwconnector-desc": "يدمج SemanticMediaWiki في BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "شبكة BlueSpice",
+	"bs-bssmwconnector-nmmngr-label-smw": "سيمانتيك ميدياويكي",
 	"bs-dlg-choosesmwprop-label": "الخاصية",
 	"bs-dlg-choosesmwprop-type-smwprop": "الخاصية الدلالية",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "الخصائص الدلالية",
