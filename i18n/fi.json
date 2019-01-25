@@ -8,6 +8,7 @@
 	},
 	"bs-bssmwconnector-desc": "Integroi SemanticMediaWiki osaksi BlueSpicea",
 	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice-verkko",
+	"bs-dlg-choosesmwprop-label": "Ominaisuus",
 	"bs-dlg-choosesmwprop-type-smwprop": "Semanttinen ominaisuus",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Semanttiset ominaisuudet",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Semanttiset ominaisuudet:",
