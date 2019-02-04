@@ -146,7 +146,6 @@
 		},
 		"ext.BSSMWConnector": {
 			"scripts": [
-				"ext.BSSMWConnector.js",
 				"ext.BSSMWConnector.smwc.js",
 				"ext.BSSMWConnector.util.js"
 			],
@@ -155,7 +154,7 @@
 				"bs-extendedsearch-search-center-result-smwproperty-label"
 			],
 			"dependencies": [
-				"ext.bluespice.extjs",
+				"ext.bluespice",
 				"ext.smw.api"
 			]
 		},
