@@ -20,6 +20,12 @@ class BSSFVisualEditor extends PFTextAreaInput {
 	 */
 	public function getResourceModuleNames() {
 		$modules =  parent::getResourceModuleNames();
+		if( $modules == null ) {
+			$modules = [];
+		}
+		if( is_string( $modules ) ) {
+			$modules = [ $modules ];
+		}
 		$modules[] = 'ext.BSSMWConnector.SF.VisualEditorField';
 
 		return $modules;
