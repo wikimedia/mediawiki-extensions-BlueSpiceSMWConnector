@@ -19,6 +19,13 @@
 			}
 		},
 		"BlueSpiceFoundation": {
+			"Extensions": {
+				"BlueSpiceSMWConnector": {
+					"className": "\\BlueSpice\\SMWConnector\\Extension",
+					"extPath": "/BlueSpiceSMWConnector",
+					"package": "BlueSpice Pro"
+				}
+			},
 			"PermissionRegistry": {
 				"createclass": {
 					"type": "global",
