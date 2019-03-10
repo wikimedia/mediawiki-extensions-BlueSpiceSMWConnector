@@ -108,7 +108,7 @@ class MigrateSemanticFormsToPageForms extends Maintenance {
 	}
 
 	protected function extractFormName( $formNameAndMaybeAlias ) {
-		//This is not actually neccessary as
+		//This is not actually necessary as
 		//{{#default_form:SomeForm|Alias}} (derived from [[Has default from::SomeForm|Alias]])
 		//will work the same as
 		//{{#default_form:SomeForm}}
