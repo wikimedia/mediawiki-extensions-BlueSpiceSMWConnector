@@ -5,6 +5,7 @@ namespace BlueSpice\SMWConnector\ExtendedSearch\Source\DocumentProvider;
 use BS\ExtendedSearch\Source\DocumentProvider\WikiPage;
 
 class SMWWikiPage extends WikiPage {
+	protected $semanticData = [];
 	/**
 	 *
 	 * @param string $uri
@@ -15,22 +16,28 @@ class SMWWikiPage extends WikiPage {
 		$aDC = $this->oDecoratedDP->getDataConfig( $uri, $wikipage );
 
 		$aDC = array_merge( $aDC, parent::getDataConfig( $uri, $wikipage ) );
+		$this->getSemanticData( $wikipage );
 
 		$aDC = array_merge( [
-			'smwproperty' => $this->getSemanticData( $wikipage ),
+			'smwproperty' => $this->semanticData,
 			//This field is necessary for filtering
-			'smwproperty_agg' => $this->getSemanticValueArray( $wikipage )
+			'smwproperty_agg' =>$this->getSemanticValueArray()
 		], $aDC);
 
 		return $aDC;
 	}
 
+	public function __destruct() {
+		parent::__destruct();
+		$this->semanticData = null;
+		unset( $this->semanticData );
+	}
+
 	/**
 	 * Gets all semantic properties for a given page
-	 * and returns correctly formatted array of values to be indexed
+	 * and sets correctly formatted array of values to be indexed as class variable
 	 *
 	 * @param \WikiPage $wikipage
-	 * @return array
 	 */
 	protected function getSemanticData( $wikipage ) {
 		$subject = \SMW\DIWikiPage::newFromTitle( $wikipage->getTitle() );
@@ -65,7 +72,7 @@ class SMWWikiPage extends WikiPage {
 				"type" => $type
 			];
 		}
-		return $smwData;
+		$this->semanticData = $smwData;
 	}
 
 	/**
@@ -92,10 +99,9 @@ class SMWWikiPage extends WikiPage {
 		}
 	}
 
-	protected function getSemanticValueArray( $wikipage ) {
-		$smwData = $this->getSemanticData( $wikipage );
+	protected function getSemanticValueArray() {
 		$valueArray = [];
-		foreach( $smwData as $smwDataItem ) {
+		foreach( $this->semanticData as $smwDataItem ) {
 			$value = $smwDataItem['value'];
 			if( !is_array( $value ) ) {
 				$value = [$value];
