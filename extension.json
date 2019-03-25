@@ -63,6 +63,11 @@
 					]
 				}
 			}
+		},
+		"BlueSpiceBookshelfUI": {
+			"MassAddHandlerRegistry": {
+				"smwproperty": "BSSMWPropertyPageProvider::factory"
+			}
 		}
 	},
 	"GroupPermissions": {
@@ -97,9 +102,6 @@
 	},
 	"MessagesDirs": {
 		"BSSMWConnectorHooks": "i18n"
-	},
-	"BlueSpiceBookshelfUIMassAddHandlerRegistry": {
-		"smwproperty": "BSSMWPropertyPageProvider::factory"
 	},
 	"Hooks": {
 		"BeforePageDisplay": [
