@@ -10,7 +10,7 @@ Ext.define( 'BS.SMWConnector.store.SMWPropertyStore', {
 		},
 		reader: {
 			type: 'json',
-			root: 'results',
+			rootProperty: 'results',
 			idProperty: 'id',
 			totalProperty: 'total'
 		}

@@ -21,7 +21,7 @@
 				},
 				reader: {
 					type: 'json',
-					root: 'sfautocomplete'
+					rootProperty: 'sfautocomplete'
 				}
 			},
 			fields: config.fields
