@@ -47,15 +47,15 @@ class UserCombo extends \PFFormInput {
 	}
 
 
-	protected function getUsername() {
+	protected function getUser() {
 		if ( !$this->mCurrentValue ) {
-			return '';
+			return null;
 		}
 		$username = array_pop( explode( ':', $this->mCurrentValue ) );
 		if( !$user = \User::newFromName( $username ) ) {
-			return '';
+			return null;
 		}
-		return $user->getName();
+		return $user;
 	}
 
 	/**
@@ -72,7 +72,7 @@ class UserCombo extends \PFFormInput {
 	}
 
 	protected function getInitParams() {
-		$user = \User::newFromName( $this->mCurrentValue );
+		$user = $this->getUser();
 		$params = [
 			'input_name' => $this->mInputName,
 			'current_value' => $this->mCurrentValue
