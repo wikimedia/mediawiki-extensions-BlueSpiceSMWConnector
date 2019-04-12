@@ -5,16 +5,16 @@ class ApiSMWPropertyStore extends BSApiExtJSStoreBase {
 	protected function makeData( $query = '' ) {
 		$result = new stdClass();
 
-		$properties = array();
+		$properties = [];
 		$dbr = $this->getDB();
 
 		$res = $dbr->select(
-			array( 'smw_object_ids' ),
-			array( 'smw_title', 'smw_id' ),
-			array(
+			[ 'smw_object_ids' ],
+			[ 'smw_title', 'smw_id' ],
+			[
 				"smw_namespace" => SMW_NS_PROPERTY,
 				"smw_title" . $dbr->buildLike( $query, $dbr->anyString() )
-			)
+			]
 		);
 
 		foreach ( $res as $row ) {

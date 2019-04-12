@@ -42,7 +42,7 @@ class SMWWikiPage extends WikiPages {
 	public function getLookupModifiers( $oLookup, $oContext, $sType = LookupModifier::TYPE_SEARCH ) {
 		$lookupModifiers = parent::getLookupModifiers( $oLookup, $oContext, $sType );
 
-		if( $sType === LookupModifier::TYPE_SEARCH ) {
+		if ( $sType === LookupModifier::TYPE_SEARCH ) {
 			$lookupModifiers['smw-source-fields'] = new AddSourceFields( $oLookup, $oContext );
 			$lookupModifiers['smw-aggregation'] = new AddSMWAggregation( $oLookup, $oContext );
 			$lookupModifiers['smw-filter-parser'] = new ParseSMWFilters( $oLookup, $oContext );

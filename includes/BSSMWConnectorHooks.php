@@ -7,50 +7,49 @@ class BSSMWConnectorHooks {
 	 * as VisualEditor itself only adds in 'edit' mode!
 	 * @param OutputPage $out
 	 * @param Skin $skin
-	 * @return boolean Always true
+	 * @return bool Always true
 	 */
 	public static function onBeforePageDisplay( $out, $skin ) {
 		$out->addModules( 'ext.BSSMWConnector' );
 
-		if( $out->getTitle()->isSpecial( 'BookshelfBookUI' ) ) {
+		if ( $out->getTitle()->isSpecial( 'BookshelfBookUI' ) ) {
 			$out->addModules( 'ext.BSSMWConnector.BookshelfUI' );
 		}
 
-		if( !$out->getTitle()->isSpecial( 'FormEdit') && $out->getRequest()->getVal('action', 'view') !== 'formedit' ) {
+		if ( !$out->getTitle()->isSpecial( 'FormEdit' ) && $out->getRequest()->getVal( 'action', 'view' ) !== 'formedit' ) {
 			return true;
 		}
 
 		$out->addModules( 'ext.BSSMWConnector.PageForms.DateTimePicker.fix' );
 
 		$oVE = BsExtensionManager::getExtension( 'VisualEditor' );
-		if( $oVE instanceof BlueSpiceVisualEditor ) {
+		if ( $oVE instanceof BlueSpiceVisualEditor ) {
 			global $wgParser;
 			$aConfigs = $oVE->makeConfig( $wgParser );
-		}
-		else {
+		} else {
 			return true;
 		}
 
 		$out->addJsConfigVars( 'BsVisualEditorConfigDefault', $aConfigs['standard'] );
 		$out->addJsConfigVars( 'BsVisualEditorLoaderUsingDeps', $aConfigs['module_deps'] );
 
-		//Semantic Forms does not load the messages from modules returned by SFInput::getResourceModuleNames
-		//$out->addModuleMessages( 'ext.bluespice.visualEditor.tinymce' );
-		$out->addModules( array(
+		// Semantic Forms does not load the messages from modules returned by SFInput::getResourceModuleNames
+		// $out->addModuleMessages( 'ext.bluespice.visualEditor.tinymce' );
+		$out->addModules( [
 			'ext.bluespice.visualEditor.styles',
 			'ext.bluespice.visualEditor.tinymce',
 			'ext.BSSMWConnector.SF.FreeTextVisualEditor'
-		) );
+		] );
 
-		//This is ugly, but as long as the "Insert*" extensions can not detect
-		//the precence of VE or the "form edit" action we need to load those
-		//manually
+		// This is ugly, but as long as the "Insert*" extensions can not detect
+		// the precence of VE or the "form edit" action we need to load those
+		// manually
 		global $bsgExtendedEditBarEnabledActions;
 		$bsgExtendedEditBarEnabledActions[] = 'formedit';
 		$bsgExtendedEditBarEnabledActions[] = 'view';
-		$oEEB = BsExtensionManager::getExtension('ExtendedEditBar');
-		if( $oEEB instanceof ExtendedEditBar ) {
-			$dummy = '<div></div>'; //Must not be empty string
+		$oEEB = BsExtensionManager::getExtension( 'ExtendedEditBar' );
+		if ( $oEEB instanceof ExtendedEditBar ) {
+			$dummy = '<div></div>'; // Must not be empty string
 			$oEEB->onEditPageBeforeEditToolbar( $dummy );
 		}
 
@@ -60,7 +59,7 @@ class BSSMWConnectorHooks {
 	/**
 	 * Registers new input types
 	 * @param PFFormPrinter $formPrinter
-	 * @return boolean Always true
+	 * @return bool Always true
 	 */
 	public static function onPFFormPrinterSetup( PFFormPrinter $formPrinter ) {
 		$formPrinter->registerInputType( 'BSSFVisualEditor' );
@@ -70,14 +69,14 @@ class BSSMWConnectorHooks {
 	/**
 	 *
 	 * @param string $sType The type of the node that gets processed
-	 * @param string $sNodeText HTML element value to be rendered (RAW)
-	 * @param array $aAttribs HTML attributes to be rendered
-	 * @param string $sElement HTML element name to be rendered
+	 * @param string &$sNodeText HTML element value to be rendered (RAW)
+	 * @param array &$aAttribs HTML attributes to be rendered
+	 * @param string &$sElement HTML element name to be rendered
 	 * @param Parser $oParser
-	 * @return boolean Always true to keep hook running
+	 * @return bool Always true to keep hook running
 	 */
 	public static function onBSBookshelfNodeTag( $sType, &$sNodeText, &$aAttribs, &$sElement, $oParser ) {
-		if( $sType !== 'ask' ) {
+		if ( $sType !== 'ask' ) {
 			return true;
 		}
 
@@ -88,32 +87,32 @@ class BSSMWConnectorHooks {
 
 	/**
 	 *
-	 * @param array $aDummyPage
-	 * @param array $aArticle
-	 * @param array $aTemplate
+	 * @param array &$aDummyPage
+	 * @param array &$aArticle
+	 * @param array &$aTemplate
 	 * @param DOMElement $oTOCList
 	 * @param array $aBookMeta
-	 * @param array $aLinkMap
-	 * @param array $aBookPage
+	 * @param array &$aLinkMap
+	 * @param array &$aBookPage
 	 * @param DOMXPath $oDOMXPath
-	 * @return boolean Always true to keep hook running
+	 * @return bool Always true to keep hook running
 	 */
 	public static function onBSBookshelfExportTag( &$aDummyPage, &$aArticle, &$aTemplate, $oTOCList, $aBookMeta, &$aLinkMap, &$aBookPage, $oDOMXPath ) {
-		if( !isset($aArticle['bookshelf']) || !isset($aArticle['bookshelf']['arguments']['type']) ) {
+		if ( !isset( $aArticle['bookshelf'] ) || !isset( $aArticle['bookshelf']['arguments']['type'] ) ) {
 			return true;
 		}
-		if( strtolower( $aArticle['bookshelf']['arguments']['type'] ) !== 'ask' ) {
+		if ( strtolower( $aArticle['bookshelf']['arguments']['type'] ) !== 'ask' ) {
 			return true;
 		}
 
 		$aParams = new DerivativeRequest(
 			RequestContext::getMain()->getRequest(),
-			array(
+			[
 				'action' => 'askargs',
 				'conditions' => $aArticle['bookshelf']['arguments']['conditions'],
 				'printouts' => '',
 				'parameters' => ''
-			),
+			],
 			true
 		);
 
@@ -121,16 +120,16 @@ class BSSMWConnectorHooks {
 		$oApi->execute();
 
 		$data = $oApi->getResult()->getResultData();
-		if( !isset( $data['query']['results'] ) || empty( $data['query']['results'] ) ) {
+		if ( !isset( $data['query']['results'] ) || empty( $data['query']['results'] ) ) {
 			return true;
 		}
 
-		//If there is no table of contents yet, we create one and add it to the '.bodyContent'
-		if( $aDummyPage['toc-ul-element'] instanceof DOMElement === false ) {
+		// If there is no table of contents yet, we create one and add it to the '.bodyContent'
+		if ( $aDummyPage['toc-ul-element'] instanceof DOMElement === false ) {
 			$sId = str_replace( '#bs-ue-jumpmark-', '', $aDummyPage['bookmark-element']->getAttribute( 'href' ) );
 			$sTocHeading = wfMessage( 'toc' )->plain();
 			$oTOCDOM = new DOMDocument();
-			$oTOCDOM->loadXML(<<<HERE
+			$oTOCDOM->loadXML( <<<HERE
 <div id="toc-bs-ue-jumpmark-$sId" class="toc">
 	<div id="toctitle-bs-ue-jumpmark-$sId" class="toctitle">
 		<h2>$sTocHeading</h2>
@@ -146,27 +145,27 @@ HERE
 				$aDummyPage['bodycontent-element']->firstChild
 			);
 			$aDummyPage['toc-ul-element'] = $aDummyPage['bodycontent-element']
-				->getElementsByTagName('ul')->item(0);
+				->getElementsByTagName( 'ul' )->item( 0 );
 		}
 
 		$iCount = 0;
-		foreach( $data['query']['results'] as $sTitle => $aData ) {
+		foreach ( $data['query']['results'] as $sTitle => $aData ) {
 			$iCount++;
-			$aPage = BsPDFPageProvider::getPage( array( 'title' => $sTitle ) );
+			$aPage = BsPDFPageProvider::getPage( [ 'title' => $sTitle ] );
 
-			//Let's get the bookmark XML from the page and add it to the TagNode's bookmark XML
-			$oBookmark = BsUniversalExportHelper::getBookmarkElementForPageDOM($aPage['dom']);
+			// Let's get the bookmark XML from the page and add it to the TagNode's bookmark XML
+			$oBookmark = BsUniversalExportHelper::getBookmarkElementForPageDOM( $aPage['dom'] );
 			$aDummyPage['bookmark-element']->appendChild(
 				$aDummyPage['bookmarks-dom']->importNode( $oBookmark, true )
 			);
 
-			//Also append the TagNode's ToC
-			$oToCItem = $aDummyPage['dom']->createElement('li');
+			// Also append the TagNode's ToC
+			$oToCItem = $aDummyPage['dom']->createElement( 'li' );
 			$oToCItem->setAttribute( 'class', 'toclevel-1 tocsection-1' );
 			$oToCEntryLink = $aDummyPage['dom']->createDocumentFragment();
 			$aTocName = $oBookmark->getAttribute( 'name' );
 			$aTocHref = $oBookmark->getAttribute( 'href' );
-			$oToCEntryLink->appendXML(<<<HERE
+			$oToCEntryLink->appendXML( <<<HERE
 <a href="$aTocHref">
 	<span class="tocnumber">$iCount</span> <span class="toctext">$aTocName</span>
 </a>
@@ -174,12 +173,12 @@ HERE
 			);
 			$oToCItem->appendChild( $oToCEntryLink );
 
-			$aDummyPage['toc-ul-element']->appendChild($oToCItem);
-			if( $aPage['toc-ul-element'] instanceof DOMElement ) {
+			$aDummyPage['toc-ul-element']->appendChild( $oToCItem );
+			if ( $aPage['toc-ul-element'] instanceof DOMElement ) {
 				$oToCItem->appendChild(
 					$aDummyPage['dom']->importNode( $aPage['toc-ul-element'], true )
 				);
-				//TODO: Maybe remove original ToC from $aPage['dom']?
+				// TODO: Maybe remove original ToC from $aPage['dom']?
 			}
 
 			$aDummyPage['bodycontent-element']->appendChild(
@@ -202,19 +201,18 @@ HERE
 	 * @param User $user
 	 * @param Content $content
 	 * @param string $summary
-	 * @param boolean $isMinor
-	 * @param boolean $isWatch
+	 * @param bool $isMinor
+	 * @param bool $isWatch
 	 * @param int $section
 	 * @param int $flags
 	 * @param int $revision
 	 * @param Status $status
 	 * @param int $baseRevId
-	 * @return boolean Always true to keep hook running
+	 * @return bool Always true to keep hook running
 	 */
 	public static function onPageContentSaveComplete( WikiPage $wikiPage, $user, $content,
 			$summary, $isMinor, $isWatch, $section, $flags, $revision, $status,
 			$baseRevId ) {
-
 		DataUpdate::runUpdates(
 			$content->getSecondaryDataUpdates( $wikiPage->getTitle() )
 		);

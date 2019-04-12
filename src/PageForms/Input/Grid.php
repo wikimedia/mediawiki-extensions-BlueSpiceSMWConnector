@@ -45,16 +45,16 @@ class Grid extends \PFFormInput {
 
 	public static function getParameters() {
 		$params = parent::getParameters();
-		$params['colDef'] = array(
+		$params['colDef'] = [
 			'name' => 'colDef',
 			'type' => 'string',
 			'description' => wfMessage( 'bs-bssmwconnector-pf-forminput-grid-coldef' )->text()
-		);
-		$params['template'] = array(
+		];
+		$params['template'] = [
 			'name' => 'template',
 			'type' => 'string',
 			'description' => wfMessage( 'bs-bssmwconnector-pf-forminput-grid-template' )->text()
-		);
+		];
 		return $params;
 	}
 

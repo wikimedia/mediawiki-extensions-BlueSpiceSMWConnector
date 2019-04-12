@@ -22,7 +22,7 @@ abstract class SMWStoreAfterQueryResultLookupComplete extends Hook {
 	 * @param \IContextSource $context
 	 * @param \Config $config
 	 * @param \SMW\Store $store
-	 * @param \SMWQueryResult $result
+	 * @param \SMWQueryResult &$result
 	 */
 	public function __construct( $context, $config, $store, &$result ) {
 		parent::__construct( $context, $config );

@@ -39,7 +39,7 @@ class MWVisualEditor extends \PFFormInput {
 	}
 
 	public function getResourceModuleNames() {
-		$modules =  parent::getResourceModuleNames();
+		$modules = parent::getResourceModuleNames();
 		$modules[] = 'ext.BSSMWConnector.PF.Inputs.MWVisualEditor';
 
 		return $modules;

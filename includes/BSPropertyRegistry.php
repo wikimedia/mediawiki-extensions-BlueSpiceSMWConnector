@@ -17,7 +17,7 @@ class BSPropertyRegistry extends SESP\PropertyRegistry {
 	/**
 	 * @since 1.0
 	 *
-	 * @return boolean
+	 * @return bool
 	 */
 	public function registerPropertiesAndAliases() {
 		$this->registerPropertiesFromList( array_keys( $this->definitions ) );

@@ -9,23 +9,23 @@ class BSSMWPropertyPageProvider implements BlueSpice\BookshelfUI\MassAdd\IHandle
 	 */
 	protected $root;
 
-	public function getData () {
+	public function getData() {
 		$store = \SMW\StoreFactory::getStore();
 		$property = new \SMW\DIProperty( $this->root );
 		$values = $store->getAllPropertySubjects( $property );
 
 		$pagesRes = [];
-		foreach( $values as $value ) {
+		foreach ( $values as $value ) {
 			$title = \Title::newFromText( $value->getDBkey(), $value->getNamespace() );
-			if( !( $title instanceof Title ) ) {
+			if ( !( $title instanceof Title ) ) {
 				continue;
 			}
-			$pagesRes[] = array(
+			$pagesRes[] = [
 				'page_id' => $title->getArticleId(),
 				'page_title' => $title->getText(),
 				'page_namespace' => $title->getNamespace(),
 				'prefixed_text' => $title->getPrefixedText()
-			);
+			];
 		}
 		return $pagesRes;
 	}
@@ -45,4 +45,3 @@ class BSSMWPropertyPageProvider implements BlueSpice\BookshelfUI\MassAdd\IHandle
 	}
 
 }
-

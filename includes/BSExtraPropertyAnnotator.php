@@ -5,22 +5,23 @@ use SESP\Cache\MessageCache;
 use SESP\AppFactory;
 use SMW\SemanticData;
 use SMW\DIProperty;
-use SMWDataItem as DataItem;
 
 class BSExtraPropertyAnnotator extends ExtraPropertyAnnotator {
 
-	protected $aPropertyRegistry; //!< @var PropertyRegistry
-	protected $aHandlers = array(); //!< @var array
-	protected $aConfiguration;  //!< @var array
-	protected $propertyRegistry; //!< @var BSPropertyRegistry
+	protected $aPropertyRegistry; // !< @var PropertyRegistry
+	protected $aHandlers = []; // !< @var array
+	protected $aConfiguration;  // !< @var array
+	protected $propertyRegistry; // !< @var BSPropertyRegistry
 	protected $definitions;
 
 	/**
 	 * @since 1.0
 	 *
 	 * @param SemanticData $semanticData
-	 * @param Factory $factory
+	 * @param AppFactory $appFactory
 	 * @param array $configuration
+	 * @param BSDefinitionReader $aDefinitionReader
+	 * @param BSPropertyRegistry $propertyRegistry
 	 */
 	public function __construct( SemanticData $semanticData, AppFactory $appFactory, array $configuration, BSDefinitionReader $aDefinitionReader, BSPropertyRegistry $propertyRegistry ) {
 		parent::__construct( $semanticData, $appFactory, $configuration );
@@ -33,8 +34,7 @@ class BSExtraPropertyAnnotator extends ExtraPropertyAnnotator {
 	}
 
 	protected function addPropertyValues() {
-
-		$cachedProperties = array();
+		$cachedProperties = [];
 
 		foreach ( $this->configuration[ 'sespSpecialProperties' ] as $externalId ) {
 
@@ -46,7 +46,7 @@ class BSExtraPropertyAnnotator extends ExtraPropertyAnnotator {
 
 			$propertyDI = new DIProperty( $propertyId );
 
-			if ( $this->getSemanticData()->getPropertyValues( $propertyDI ) !== array() ) {
+			if ( $this->getSemanticData()->getPropertyValues( $propertyDI ) !== [] ) {
 				$cachedProperties[ $propertyId ] = true;
 				continue;
 			}
@@ -58,32 +58,27 @@ class BSExtraPropertyAnnotator extends ExtraPropertyAnnotator {
 		return true;
 	}
 
-	/**
-	 *
-	 * @param String $pPropertyDefinitionFile
-	 */
 	public static function processProperties() {
-
-		if(!isset($GLOBALS[ "bssDefinitions" ]) || !isset($GLOBALS[ 'bssSpecialProperties' ])){
-			return; //definitions missing
+		if ( !isset( $GLOBALS[ "bssDefinitions" ] ) || !isset( $GLOBALS[ 'bssSpecialProperties' ] ) ) {
+			return; // definitions missing
 		}
-		//check if user selected property is defined from extension
+		// check if user selected property is defined from extension
 		$arrIntersect = array_intersect(
 		  array_keys( $GLOBALS[ "bssDefinitions" ] ), $GLOBALS[ 'bssSpecialProperties' ]
 		);
 
-		//catch if something is missing
+		// catch if something is missing
 		if ( count( array_keys( $GLOBALS[ "bssDefinitions" ] ) ) == 0 ||
 		  !is_array( $GLOBALS[ 'bssSpecialProperties' ] ) ||
 		  count( $GLOBALS[ 'bssSpecialProperties' ] ) == 0 ||
-		  count($arrIntersect) == 0
+		  count( $arrIntersect ) == 0
 		) {
-			return; //exit if no special field requested
+			return; // exit if no special field requested
 		}
 
 		$configuration = self::getConfiguration();
 
-		$aDefinitionReader = new BSDefinitionReader( );
+		$aDefinitionReader = new BSDefinitionReader();
 
 		$aPropertyRegistry = new BSPropertyRegistry(
 		  $aDefinitionReader, new MessageCache( $GLOBALS[ 'wgContLang' ] )
@@ -97,19 +92,18 @@ class BSExtraPropertyAnnotator extends ExtraPropertyAnnotator {
 	}
 
 	public static function getConfiguration() {
-		return array(
+		return [
 			'wgDisableCounters' => $GLOBALS[ 'wgDisableCounters' ],
 			'sespUseAsFixedTables' => $GLOBALS[ 'sespUseAsFixedTables' ],
 			'sespSpecialProperties' => $GLOBALS[ 'bssSpecialProperties' ],
 			'wgSESPExcludeBots' => $GLOBALS[ 'wgSESPExcludeBots' ],
 			'wgShortUrlPrefix' => $GLOBALS[ 'wgShortUrlPrefix' ],
 			'sespCacheType' => $GLOBALS[ 'sespCacheType' ]
-		);
+		];
 	}
 
 	public static function addHandler( BSPropertyRegistry $propertyRegistry, $configuration, BSDefinitionReader $aDefinitionReader ) {
-
-		$arrHandlers = array();
+		$arrHandlers = [];
 
 		$arrHandlers[ 'SMW::Property::initProperties' ] = function () use( $propertyRegistry ) {
 			return $propertyRegistry->registerPropertiesAndAliases();
@@ -120,7 +114,6 @@ class BSExtraPropertyAnnotator extends ExtraPropertyAnnotator {
 		};
 
 		$arrHandlers[ 'SMWStore::updateDataBefore' ] = function ( $store, SemanticData $semanticData ) use ( $configuration, $aDefinitionReader, $propertyRegistry ) {
-
 			$appFactory = new AppFactory( $configuration[ 'wgShortUrlPrefix' ] );
 
 			$propertyAnnotator = new BSExtraPropertyAnnotator(

@@ -23,8 +23,8 @@ class ChangeSMWOffsetNamespaceIds extends Maintenance {
 		'job' => [ 'job_namespace' ],
 		'redirect' => [ 'rd_namespace' ],
 		'recentchanges' => [ 'rc_namespace' ],
-		'querycache' =>  [ 'qc_namespace' ],
-		'querycachetwo' =>  [ 'qcc_namespace', 'qcc_namespacetwo' ],
+		'querycache' => [ 'qc_namespace' ],
+		'querycachetwo' => [ 'qcc_namespace', 'qcc_namespacetwo' ],
 		'protected_titles' => [ 'pt_namespace' ],
 		'watchlist' => [ 'wl_namespace' ]
 	];
@@ -48,9 +48,9 @@ HERE
 
 		$this->output( "Too late ..." );
 
-		foreach( $this->tablesAndFields as $tableName => $fieldNames ) {
-			foreach( $fieldNames as $fieldName ) {
-				$this->output("\Processing $tableName.$fieldName ..." );
+		foreach ( $this->tablesAndFields as $tableName => $fieldNames ) {
+			foreach ( $fieldNames as $fieldName ) {
+				$this->output( "\Processing $tableName.$fieldName ..." );
 				$this->fixNamespaceIds(
 					$tableName,
 					$fieldName
@@ -61,9 +61,9 @@ HERE
 	}
 
 	protected function fixNamespaceIds( $tableName, $fieldName ) {
-		foreach( $this->namespaceIdMap as $oldNS => $newNS ) {
+		foreach ( $this->namespaceIdMap as $oldNS => $newNS ) {
 			$this->output( "\nNamespace '$oldNS': " );
-			$numberOfEntriesToChange = $this->getDB( DB_SLAVE )
+			$numberOfEntriesToChange = $this->getDB( DB_REPLICA )
 				->selectRowCount(
 					$tableName,
 					'*',
@@ -71,11 +71,11 @@ HERE
 						$fieldName => $oldNS
 					]
 				);
-			if( $numberOfEntriesToChange === 0 ) {
-				$this->output( "Nothing to do.");
+			if ( $numberOfEntriesToChange === 0 ) {
+				$this->output( "Nothing to do." );
 				continue;
 			}
-			$this->output( "Found: $numberOfEntriesToChange\n");
+			$this->output( "Found: $numberOfEntriesToChange\n" );
 			$this->output( "Changing ..." );
 
 			$this->getDB( DB_MASTER )->update(
@@ -94,4 +94,4 @@ HERE
 }
 
 $maintClass = 'ChangeSMWOffsetNamespaceIds';
-require_once( RUN_MAINTENANCE_IF_MAIN );
+require_once RUN_MAINTENANCE_IF_MAIN;

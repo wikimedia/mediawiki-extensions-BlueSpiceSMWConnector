@@ -15,7 +15,7 @@ class UserTags extends \PFFormInput {
 
 		$this->parseCurrentValue();
 
-		if( isset( $other_args['group'] ) ) {
+		if ( isset( $other_args['group'] ) ) {
 			$this->setGroups();
 		}
 
@@ -61,14 +61,13 @@ class UserTags extends \PFFormInput {
 	 */
 	protected function parseCurrentValue() {
 		$this->mCurrentValue = explode( ',', $this->mCurrentValue );
-		foreach( $this->mCurrentValue as $userName ) {
-			if( !$user = \User::newFromName( $userName ) ) {
+		foreach ( $this->mCurrentValue as $userName ) {
+			if ( !$user = \User::newFromName( $userName ) ) {
 				continue;
 			}
 			$this->users[] = $user;
 		}
 	}
-		
 
 	/**
 	 * Parses "group" parameter to an array
@@ -76,7 +75,7 @@ class UserTags extends \PFFormInput {
 	protected function setGroups() {
 		$raw = $this->mOtherArgs['group'];
 		$groups = explode( ',', $raw );
-		foreach( $groups as &$group ) {
+		foreach ( $groups as &$group ) {
 			$group = trim( $group );
 			$group = strtolower( $group );
 		}
@@ -89,7 +88,7 @@ class UserTags extends \PFFormInput {
 			'current_value' => $this->mCurrentValue
 		];
 
-		if( !empty( $this->groups ) ) {
+		if ( !empty( $this->groups ) ) {
 			$params['groups'] = $this->groups;
 		}
 		return $params;
