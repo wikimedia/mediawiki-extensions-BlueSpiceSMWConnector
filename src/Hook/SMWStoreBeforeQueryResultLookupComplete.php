@@ -30,14 +30,13 @@ abstract class SMWStoreBeforeQueryResultLookupComplete extends Hook {
 	 */
 	protected $slaveQueryEngine = null;
 
-
 	/**
 	 *
 	 * @param \IContextSource $context
 	 * @param \Config $config
 	 * @param \SMW\Store $store
 	 * @param \SMWQuery $query
-	 * @param null $result
+	 * @param null &$result
 	 * @param \SMW\QueryEngine $slaveQueryEngine
 	 */
 	public function __construct( $context, $config, $store, $query, &$result, $slaveQueryEngine ) {
@@ -53,9 +52,9 @@ abstract class SMWStoreBeforeQueryResultLookupComplete extends Hook {
 	 *
 	 * @param \SMW\Store $store
 	 * @param \SMWQuery $query
-	 * @param \SMWQueryResult $result
+	 * @param \SMWQueryResult &$result
 	 * @param \SMW\SQLStore\QueryEngine\QueryEngine $slaveQueryEngine
-	 * @return boolean
+	 * @return bool
 	 */
 	public static function callback( $store, $query, &$result, $slaveQueryEngine ) {
 		$className = static::class;

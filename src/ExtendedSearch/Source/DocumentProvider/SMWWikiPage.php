@@ -20,9 +20,9 @@ class SMWWikiPage extends WikiPage {
 
 		$aDC = array_merge( [
 			'smwproperty' => $this->semanticData,
-			//This field is necessary for filtering
-			'smwproperty_agg' =>$this->getSemanticValueArray()
-		], $aDC);
+			// This field is necessary for filtering
+			'smwproperty_agg' => $this->getSemanticValueArray()
+		], $aDC );
 
 		return $aDC;
 	}
@@ -46,10 +46,10 @@ class SMWWikiPage extends WikiPage {
 		$properties = $store->getProperties( $subject );
 
 		$smwData = [];
-		foreach( $properties as $property ) {
-			if( $property->isUserDefined() == false ) {
-				//If only user properties are wanted
-				//continue;
+		foreach ( $properties as $property ) {
+			if ( $property->isUserDefined() == false ) {
+				// If only user properties are wanted
+				// continue;
 			}
 			$name = $property->getKey();
 			$values = $store->getPropertyValues( $subject, $property );
@@ -57,12 +57,12 @@ class SMWWikiPage extends WikiPage {
 
 			$type = 'string';
 			$parsedValues = [];
-			foreach( $values as $value ) {
+			foreach ( $values as $value ) {
 				$parsedValues[] = $this->parseSemanticValue( $value, $type );
 			}
 
-			if( count( $parsedValues ) == 1 ) {
-				//No need to store array for single value
+			if ( count( $parsedValues ) == 1 ) {
+				// No need to store array for single value
 				$parsedValues = $parsedValues[0];
 			}
 
@@ -78,36 +78,37 @@ class SMWWikiPage extends WikiPage {
 	/**
 	 *
 	 * @param \SMWDataItem $value
+	 * @param string &$type
 	 * @return string
 	 */
 	protected function parseSemanticValue( $value, &$type ) {
-		if( $value instanceof \SMW\DIWikiPage && $value->getTitle() instanceof \Title ) {
+		if ( $value instanceof \SMW\DIWikiPage && $value->getTitle() instanceof \Title ) {
 			$type = 'title';
 			return $value->getTitle()->getPrefixedText();
-		} else if( $value instanceof \SMWDINumber ) {
+		} elseif ( $value instanceof \SMWDINumber ) {
 			$type = 'numeric';
 			return $value->getNumber();
-		} else if( $value instanceof \SMWDIBoolean ) {
+		} elseif ( $value instanceof \SMWDIBoolean ) {
 			$type = 'boolean';
 			return $value->getBoolean() ? 1 : 0;
-		} else if( $value instanceof \SMWDITime ) {
+		} elseif ( $value instanceof \SMWDITime ) {
 			$type = 'datetime';
 			return $value->getMwTimestamp( TS_ISO_8601 );
 		} else {
-			//Use default serialization
+			// Use default serialization
 			return $value->__toString();
 		}
 	}
 
 	protected function getSemanticValueArray() {
 		$valueArray = [];
-		foreach( $this->semanticData as $smwDataItem ) {
+		foreach ( $this->semanticData as $smwDataItem ) {
 			$value = $smwDataItem['value'];
-			if( !is_array( $value ) ) {
-				$value = [$value];
+			if ( !is_array( $value ) ) {
+				$value = [ $value ];
 			}
 
-			foreach( $value as $singleValue ) {
+			foreach ( $value as $singleValue ) {
 				$valueArray[] = $smwDataItem['name'] . '|' . $singleValue;
 			}
 		}

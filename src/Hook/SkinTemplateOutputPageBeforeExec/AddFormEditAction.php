@@ -17,7 +17,7 @@ class AddFormEditAction extends SkinTemplateOutputPageBeforeExec {
 			]
 		];
 
-		$this->template->data[SkinData::FEATURED_ACTIONS] += [ 'edit' =>  $link ];
+		$this->template->data[SkinData::FEATURED_ACTIONS] += [ 'edit' => $link ];
 	}
 
 	protected function skipProcessing() {

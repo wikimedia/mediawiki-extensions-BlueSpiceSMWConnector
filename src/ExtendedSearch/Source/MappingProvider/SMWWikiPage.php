@@ -1,6 +1,7 @@
 <?php
 
 namespace BlueSpice\SMWConnector\ExtendedSearch\Source\MappingProvider;
+
 use BS\ExtendedSearch\Source\MappingProvider\WikiPage;
 
 class SMWWikiPage extends WikiPage {

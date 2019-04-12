@@ -19,8 +19,8 @@ class AddPermissionBasedNamespaceFilters extends SMWStoreBeforeQueryResultLookup
 		$namespaceFilterDisjunction = $this->makeNamespaceFilterDisjunction();
 		$this->originalDescription = $this->query->getDescription();
 
-		//The user is not allowed to read in any namespace!?
-		if( $namespaceFilterDisjunction instanceof Disjunction === false ) {
+		// The user is not allowed to read in any namespace!?
+		if ( $namespaceFilterDisjunction instanceof Disjunction === false ) {
 			$this->result = new \SMWQueryResult(
 				$this->originalDescription->getPrintRequests(),
 				$this->query,
@@ -46,14 +46,14 @@ class AddPermissionBasedNamespaceFilters extends SMWStoreBeforeQueryResultLookup
 	protected function makeNamespaceFilterDisjunction() {
 		$readableNamespaceDescriptions = [];
 		$namespaceIds = $this->getContext()->getLanguage()->getNamespaceIds();
-		foreach( $namespaceIds as $nmspText => $namespaceId ) {
+		foreach ( $namespaceIds as $nmspText => $namespaceId ) {
 			$dummyTitle = \Title::makeTitle( $namespaceId, 'X' );
-			if( $dummyTitle->userCan( 'read' ) ) {
+			if ( $dummyTitle->userCan( 'read' ) ) {
 				$readableNamespaceDescriptions[] = new NamespaceDescription( $namespaceId );
 			}
 		}
 
-		if( empty( $readableNamespaceDescriptions ) ) {
+		if ( empty( $readableNamespaceDescriptions ) ) {
 			return null;
 		}
 

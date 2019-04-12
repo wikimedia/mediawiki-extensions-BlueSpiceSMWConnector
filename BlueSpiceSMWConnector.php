@@ -24,15 +24,15 @@ $GLOBALS['maxRecursionDepth'] = 4;
  * -- RV
  */
 if ( isset( $wgExtensionFunctions ) ) {
-	$iEchoKey = array_search( 'EchoHooks::initEchoExtension', $wgExtensionFunctions ) ;
-	if( $iEchoKey !== false ) {
-		unset($wgExtensionFunctions[$iEchoKey]);
+	$iEchoKey = array_search( 'EchoHooks::initEchoExtension', $wgExtensionFunctions );
+	if ( $iEchoKey !== false ) {
+		unset( $wgExtensionFunctions[$iEchoKey] );
 		$wgExtensionFunctions[] = 'EchoHooks::initEchoExtension';
 	}
 	unset( $iEchoKey );
 	unset( $aResourceModuleTemplate );
 }
 
-$GLOBALS[ 'wgExtensionFunctions' ][] = function() {
+$GLOBALS[ 'wgExtensionFunctions' ][] = function () {
 	BSExtraPropertyAnnotator::processProperties();
 };

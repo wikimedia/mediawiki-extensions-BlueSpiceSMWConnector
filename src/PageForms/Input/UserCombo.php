@@ -11,8 +11,7 @@ class UserCombo extends \PFFormInput {
 
 		$this->parseCurrentValue();
 
-		if( isset( $other_args['group'] ) ) {
-			$this->setGroups();
+		if ( isset( $other_args['group'] ) ) {			$this->setGroups();
 		}
 
 		$this->addJsInitFunctionData( 'bs_smwc_pf_input_usercombo_init', $this->getInitParams() );
@@ -55,7 +54,7 @@ class UserCombo extends \PFFormInput {
 	 * and set username as current value
 	 */
 	protected function parseCurrentValue() {
-		if( !$user = \User::newFromName( $this->mCurrentValue ) ) {
+		if ( !$user = User::newFromName( $this->mCurrentValue ) ) {
 			return;
 		}
 		$this->currentUser = $user;
@@ -67,7 +66,7 @@ class UserCombo extends \PFFormInput {
 	protected function setGroups() {
 		$raw = $this->mOtherArgs['group'];
 		$groups = explode( ',', $raw );
-		foreach( $groups as &$group ) {
+		foreach ( $groups as &$group ) {
 			$group = trim( $group );
 			$group = strtolower( $group );
 		}
@@ -80,7 +79,7 @@ class UserCombo extends \PFFormInput {
 			'current_value' => $this->mCurrentValue
 		];
 
-		if( !empty( $this->groups ) ) {
+		if ( !empty( $this->groups ) ) {
 			$params['groups'] = $this->groups;
 		}
 		return $params;
