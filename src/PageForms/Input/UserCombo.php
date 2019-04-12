@@ -10,7 +10,7 @@ class UserCombo extends \PFFormInput {
 
 	public function __construct( $input_number, $cur_value, $input_name, $disabled, $other_args ) {
 		parent::__construct( $input_number, $cur_value, $input_name, $disabled, $other_args );
-		if( isset( $other_args['group'] ) ) {
+		if ( isset( $other_args['group'] ) ) {
 			$this->setGroups();
 		}
 
@@ -49,13 +49,12 @@ class UserCombo extends \PFFormInput {
 		];
 	}
 
-
 	protected function getUser() {
 		if ( !$this->mCurrentValue ) {
 			return null;
 		}
 		$username = array_pop( explode( ':', $this->mCurrentValue ) );
-		if( !$user = User::newFromName( $username ) ) {
+		if ( !$user = User::newFromName( $username ) ) {
 			return null;
 		}
 		return $user;
@@ -67,7 +66,7 @@ class UserCombo extends \PFFormInput {
 	protected function setGroups() {
 		$raw = $this->mOtherArgs['group'];
 		$groups = explode( ',', $raw );
-		foreach( $groups as &$group ) {
+		foreach ( $groups as &$group ) {
 			$group = trim( $group );
 			$group = strtolower( $group );
 		}
@@ -94,7 +93,7 @@ class UserCombo extends \PFFormInput {
 			];
 		}
 
-		if( !empty( $this->groups ) ) {
+		if ( !empty( $this->groups ) ) {
 			$params['groups'] = $this->groups;
 		}
 

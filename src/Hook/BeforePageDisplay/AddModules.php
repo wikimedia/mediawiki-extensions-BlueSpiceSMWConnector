@@ -3,7 +3,7 @@
 
 namespace BlueSpice\SMWConnector\Hook\BeforePageDisplay;
 
-//TODO: when on 'master', derive from BlueSpice\Hook\BeforePageDisplay and remove redundant code
+// TODO: when on 'master', derive from BlueSpice\Hook\BeforePageDisplay and remove redundant code
 class AddModules {
 
 	/**
@@ -33,9 +33,9 @@ class AddModules {
 	 *
 	 * @param \OutputPage $out
 	 * @param \Skin $skin
-	 * @return boolean
+	 * @return bool
 	 */
-	public static function callback( $out, $skin  ) {
+	public static function callback( $out, $skin ) {
 		$className = static::class;
 		$hookHandler = new $className(
 			null,
@@ -47,10 +47,10 @@ class AddModules {
 	}
 
 	public function process() {
-		if( $this->skipProcessing() ) {
+		if ( $this->skipProcessing() ) {
 			return true;
 		}
-		\Profiler::instance()->scopedProfileIn( "Hook ". __METHOD__ );
+		\Profiler::instance()->scopedProfileIn( "Hook " . __METHOD__ );
 		$result = $this->doProcess();
 		return $result;
 	}
@@ -62,14 +62,14 @@ class AddModules {
 
 	/**
 	 * Allow subclasses to define a skip condition
-	 * @return boolean
+	 * @return bool
 	 */
 	protected function skipProcessing() {
-		$onSpecialFormEdit = $this->out->getTitle()->isSpecial( 'FormEdit');
+		$onSpecialFormEdit = $this->out->getTitle()->isSpecial( 'FormEdit' );
 		$inViewFormEdit =
 			$this->out->getRequest()->getVal( 'action', 'view' ) === 'formedit';
 
-		if( $onSpecialFormEdit || $inViewFormEdit ) {
+		if ( $onSpecialFormEdit || $inViewFormEdit ) {
 			return false;
 		}
 		return true;

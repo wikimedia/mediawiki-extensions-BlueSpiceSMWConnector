@@ -8,28 +8,28 @@ class BSGridResultPrinter extends SMW\RawResultPrinter {
 	protected function getHtml( array $data ) {
 		$this->isHTML = true;
 		$id = $this->getId();
-		$this->encode( $id, $data ); //Creates a client side JS variable accessible via mw.config.get($id)
+		$this->encode( $id, $data ); // Creates a client side JS variable accessible via mw.config.get($id)
 		$this->addResources( 'ext.srf.bsextjsgrid' );
 
 		return Html::element(
 			'div',
-			array(
+			[
 				'id' => $id,
 				'class' => 'srf-bsextjsgrid',
-				#'data-external-class' => ( $this->params['class'] ? $this->params['class'] : '' )
-			),
+				# 'data-external-class' => ( $this->params['class'] ? $this->params['class'] : '' )
+			],
 			''
 		);
 	}
 
 	/**
 	 * @see SMWResultPrinter::getParamDefinitions
-	 * @param $definitions array of IParamDefinition
+	 * @param array $definitions array of IParamDefinition
 	 *
 	 * @return array of IParamDefinition|array
 	 */
 	public function getParamDefinitions( array $definitions ) {
-		//Just to remember that one can define own params :)
+		// Just to remember that one can define own params :)
 		return parent::getParamDefinitions( $definitions );
 	}
 }

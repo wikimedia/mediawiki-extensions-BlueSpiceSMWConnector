@@ -3,14 +3,14 @@
 class BSSMWCNamespaceManager {
 
 	public static function onGetMetaFields( &$aMetaFields ) {
-		$aMetaFields[] = array(
+		$aMetaFields[] = [
 			'name' => 'smw',
 			'type' => 'boolean',
 			'label' => wfMessage( 'bs-bssmwconnector-nmmngr-label-smw' )->plain(),
-			'filter' => array(
+			'filter' => [
 				'type' => 'boolean'
-			),
-		);
+			],
+		];
 		return true;
 	}
 
@@ -28,11 +28,9 @@ class BSSMWCNamespaceManager {
 	}
 
 	public static function onEditNamespace( &$aNamespaceDefinitions, &$iNS, $aAdditionalSettings, $bUseInternalDefaults = false ) {
-
 		if ( !$bUseInternalDefaults && isset( $aAdditionalSettings['smw'] ) ) {
 			$aNamespaceDefinitions[$iNS][ 'smw' ] = $aAdditionalSettings['smw'];
-		}
-		else {
+		} else {
 			$aNamespaceDefinitions[$iNS][ 'smw' ] = false;
 		}
 		return true;
@@ -58,7 +56,7 @@ class BSSMWCNamespaceManager {
 			$bExplicitlyActivated = true;
 		}
 
-		if( ($bCurrentlyActivated && !$bExplicitlyDeactivated) || $bExplicitlyActivated ) {
+		if ( ( $bCurrentlyActivated && !$bExplicitlyDeactivated ) || $bExplicitlyActivated ) {
 			$sSaveContent .= "\$GLOBALS['smwgNamespacesWithSemanticLinks'][{$sConstName}] = true;\n";
 		} else {
 			$sSaveContent .= "\$GLOBALS['smwgNamespacesWithSemanticLinks'][{$sConstName}] = false;\n";

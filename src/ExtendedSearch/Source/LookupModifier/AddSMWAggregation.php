@@ -15,7 +15,7 @@ class AddSMWAggregation extends Base {
 				"name" => [
 					"terms" => [
 						"field" => "smwproperty.name",
-						//max num of different SMW props to return - should be tweaked
+						// max num of different SMW props to return - should be tweaked
 						"size" => 50,
 					],
 					"aggs" => [
@@ -44,7 +44,7 @@ class AddSMWAggregation extends Base {
 	 * by this modifier, in case they should not be sent to client
 	 */
 	public function undo() {
-		if( !isset( $this->oLookup['aggs'] ) ) {
+		if ( !isset( $this->oLookup['aggs'] ) ) {
 			return;
 		}
 		unset( $this->oLookup['aggs']['smwproperty'] );
