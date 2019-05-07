@@ -192,11 +192,6 @@
 				"ext.BSSMWConnector.PF.Inputs.UserTags.js"
 			]
 		},
-		"ext.BSSMWConnector.SF.FreeTextVisualEditor": {
-			"scripts": [
-				"ext.BSSMWConnector.SF.FreeTextVisualEditor.js"
-			]
-		},
 		"ext.srf.bsextjsgrid": {
 			"scripts": [
 				"ext.srf.bsextjsgrid.js"
