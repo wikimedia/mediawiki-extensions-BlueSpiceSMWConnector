@@ -85,6 +85,9 @@
 			"createclass": true
 		}
 	},
+	"AutoloadNamespaces": {
+		"BlueSpice\\SMWConnector\\": "src/"
+	},
 	"AutoloadClasses": {
 		"BSSMWConnectorHooks": "includes/BSSMWConnectorHooks.php",
 		"BSSMWCNamespaceManager": "includes/BSSMWCNamespaceManager.php",
