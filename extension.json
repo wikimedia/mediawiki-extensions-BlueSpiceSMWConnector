@@ -103,9 +103,6 @@
 		"BSSMWCNamespaceManager": "includes/BSSMWCNamespaceManager.php",
 		"BSSFVisualEditor": "includes/forminputs/BSSFVisualEditor.php",
 		"BSGridResultPrinter": "includes/formats/Grid/BSGridResultPrinter.php",
-		"BSPropertyRegistry": "includes/BSPropertyRegistry.php",
-		"BSDefinitionReader": "includes/BSDefinitionReader.php",
-		"BSExtraPropertyAnnotator": "includes/BSExtraPropertyAnnotator.php",
 		"BSSMWCPageTemplates": "includes/BSSMWCPageTemplates.php",
 		"BSSMWPropertyPageProvider": "includes/BSSMWPropertyPageProvider.php",
 		"ApiSMWPropertyStore": "includes/api/ApiSMWPropertyStore.php"
@@ -116,6 +113,9 @@
 	"MessagesDirs": {
 		"BSSMWConnectorHooks": "i18n"
 	},
+	"ExtensionFunctions": [
+		"BlueSpice\\SMWConnector\\PropertyValueProvidersRegistration::addExtensions"
+	],
 	"Hooks": {
 		"BeforePageDisplay": [
 			"BSSMWConnectorHooks::onBeforePageDisplay",
