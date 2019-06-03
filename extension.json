@@ -141,8 +141,7 @@
 		"ext.BSSMWConnector.styles": {
 			"styles": [
 				"ext.BSSMWConnector.css"
-			],
-			"position": "top"
+			]
 		},
 		"ext.BSSMWConnector.BookshelfUI": {
 			"scripts": [
