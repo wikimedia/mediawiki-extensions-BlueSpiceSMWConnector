@@ -32,7 +32,3 @@ if ( isset( $wgExtensionFunctions ) ) {
 	unset( $iEchoKey );
 	unset( $aResourceModuleTemplate );
 }
-
-$GLOBALS[ 'wgExtensionFunctions' ][] = function () {
-	BSExtraPropertyAnnotator::processProperties();
-};
