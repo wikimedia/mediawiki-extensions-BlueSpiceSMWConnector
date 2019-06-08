@@ -10,7 +10,10 @@
 	],
 	"url": "https://en.wiki.bluespice.com/wiki/Reference:SMWConnector",
 	"requires": {
-		"MediaWiki": ">= 1.29.0"
+		"MediaWiki": "~1.31",
+		"extensions": {
+			"BlueSpiceFoundation": "~3.1"
+		}
 	},
 	"attributes": {
 		"BlueSpiceExtendedSearch": {
