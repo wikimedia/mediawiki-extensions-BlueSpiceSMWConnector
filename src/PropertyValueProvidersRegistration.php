@@ -26,6 +26,7 @@ class PropertyValueProvidersRegistration {
 					$GLOBALS['sespgLocalDefinitions'] += self::makeSESPDefinition(
 						$propertyValueProvider
 					);
+					$GLOBALS['sespgEnabledPropertyList'][] = $propertyValueProvider->getId();
 				}
 			}
 		}
