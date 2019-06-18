@@ -43,7 +43,7 @@ class PropertyValueProvidersRegistration {
 		$externalId = "__$internalId";
 		$def[$internalId] = [
 			'id'    => $externalId,
-			'type'  => $propertyValueProvider->getType(),
+			'type'  => PropertyValueTypeDictionary::$types[$propertyValueProvider->getType()],
 			'alias' => $propertyValueProvider->getAliasMessageKey(),
 			'label' => $propertyValueProvider->getLabel(),
 			'desc'  => $propertyValueProvider->getDescriptionMessageKey(),
