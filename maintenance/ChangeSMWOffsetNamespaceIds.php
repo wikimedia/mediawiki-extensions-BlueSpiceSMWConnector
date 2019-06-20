@@ -44,7 +44,7 @@ not yet created a backup, please abort and do so now!
 
 HERE
 		);
-		wfCountDown( 5 );
+		\Maintenance::countDown( 5 );
 
 		$this->output( "Too late ..." );
 
