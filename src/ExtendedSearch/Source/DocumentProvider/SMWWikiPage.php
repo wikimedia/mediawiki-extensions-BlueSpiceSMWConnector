@@ -6,6 +6,7 @@ use BS\ExtendedSearch\Source\DocumentProvider\WikiPage;
 
 class SMWWikiPage extends WikiPage {
 	protected $semanticData = [];
+
 	/**
 	 *
 	 * @param string $uri
