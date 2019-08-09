@@ -7,5 +7,6 @@
 	"bs-bssmwconnector-desc": "Integreert SemanticMediaWiki in BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice Grid",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Ja",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "Nee"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Nee",
+	"bs-dlg-choosesmwprop-label": "Eigenschap"
 }

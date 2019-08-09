@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Guycn2"
+			"Guycn2",
+			"Erelon"
 		]
 	},
 	"bs-bssmwconnector-desc": "שילוב ההרחבה SemanticMediaWiki בתוך BlueSpice",
@@ -10,5 +11,7 @@
 	"bs-dlg-choosesmwprop-label": "מאפיין",
 	"bs-dlg-choosesmwprop-type-smwprop": "מאפיין סמנטי",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "מאפיינים סמנטיים",
-	"bs-extendedsearch-search-center-result-smwproperty-label": "מאפיינים סמנטיים:"
+	"bs-extendedsearch-search-center-result-smwproperty-label": "מאפיינים סמנטיים:",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "כן",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "לא"
 }
