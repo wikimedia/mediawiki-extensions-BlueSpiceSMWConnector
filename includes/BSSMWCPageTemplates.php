@@ -13,9 +13,9 @@ class BSSMWCPageTemplates {
 	public static function onBSPageTemplatesBeforeRender( $oSender, &$oPageTemplateList, &$oPageTemplateListRenderer, $oTitle ) {
 		$aData = $oPageTemplateList->getAll();
 		foreach ( $aData as $iId => $aDataSet ) {
-			if ( (int)$aDataSet['pt_template_namespace'] === SF_NS_FORM ) {
+			if ( (int)$aDataSet['pt_template_namespace'] === PF_NS_FORM ) {
 				$oFormTitle = Title::makeTitle(
-					SF_NS_FORM,
+					PF_NS_FORM,
 					$aDataSet['pt_template_title'] . '/' . $oTitle->getPrefixedDBkey()
 				);
 				$oTargetTitle = SpecialPage::getTitleFor( 'FormEdit', $oFormTitle->getDBkey() );
