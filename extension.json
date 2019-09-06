@@ -114,6 +114,7 @@
 		"BSSMWConnectorHooks": "i18n"
 	},
 	"ExtensionFunctions": [
+		"BlueSpice\\SMWConnector\\Extension::setup",
 		"BlueSpice\\SMWConnector\\PropertyValueProvidersRegistration::addExtensions"
 	],
 	"Hooks": {
