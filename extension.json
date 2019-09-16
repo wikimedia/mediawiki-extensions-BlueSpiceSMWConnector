@@ -101,7 +101,6 @@
 	"AutoloadClasses": {
 		"BSSMWConnectorHooks": "includes/BSSMWConnectorHooks.php",
 		"BSSMWCNamespaceManager": "includes/BSSMWCNamespaceManager.php",
-		"BSSFVisualEditor": "includes/forminputs/BSSFVisualEditor.php",
 		"BSGridResultPrinter": "includes/formats/Grid/BSGridResultPrinter.php",
 		"BSSMWCPageTemplates": "includes/BSSMWCPageTemplates.php",
 		"BSSMWPropertyPageProvider": "includes/BSSMWPropertyPageProvider.php",
@@ -123,7 +122,6 @@
 			"BlueSpice\\SMWConnector\\Hook\\BeforePageDisplay\\AddModules::callback"
 		],
 		"PageForms::FormPrinterSetup": [
-			"BSSMWConnectorHooks::onPFFormPrinterSetup",
 			"BlueSpice\\SMWConnector\\Hook\\PFFormPrinterSetup\\RegisterInputTypes::callback"
 		],
 		"BSBookshelfNodeTag": "BSSMWConnectorHooks::onBSBookshelfNodeTag",
@@ -171,11 +169,6 @@
 			"dependencies": [
 				"ext.bluespice",
 				"ext.smw.api"
-			]
-		},
-		"ext.BSSMWConnector.SF.VisualEditorField": {
-			"scripts": [
-				"ext.BSSMWConnector.SF.VisualEditorField.js"
 			]
 		},
 		"ext.BSSMWConnector.PF.Inputs.MWVisualEditor": {

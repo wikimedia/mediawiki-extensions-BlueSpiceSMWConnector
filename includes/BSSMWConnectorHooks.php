@@ -26,16 +26,6 @@ class BSSMWConnectorHooks {
 	}
 
 	/**
-	 * Registers new input types
-	 * @param PFFormPrinter $formPrinter
-	 * @return bool Always true
-	 */
-	public static function onPFFormPrinterSetup( PFFormPrinter $formPrinter ) {
-		$formPrinter->registerInputType( 'BSSFVisualEditor' );
-		return true;
-	}
-
-	/**
 	 *
 	 * @param string $sType The type of the node that gets processed
 	 * @param string &$sNodeText HTML element value to be rendered (RAW)
