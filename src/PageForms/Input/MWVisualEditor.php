@@ -2,7 +2,9 @@
 
 namespace BlueSpice\SMWConnector\PageForms\Input;
 
-class MWVisualEditor extends \PFFormInput {
+use PFTextAreaInput;
+
+class MWVisualEditor extends PFTextAreaInput {
 
 	public function __construct( $input_number, $cur_value, $input_name, $disabled, $other_args ) {
 		parent::__construct( $input_number, $cur_value, $input_name, $disabled, $other_args );
@@ -16,7 +18,7 @@ class MWVisualEditor extends \PFFormInput {
 	}
 
 	public function getHtmlText() {
-		$html .= \Html::openElement(
+		$html = \Html::openElement(
 			'div',
 			[
 				'id' => 'input_' . $this->mInputNumber . '_cnt',

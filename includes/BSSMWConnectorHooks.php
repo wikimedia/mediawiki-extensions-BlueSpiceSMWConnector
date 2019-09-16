@@ -22,47 +22,6 @@ class BSSMWConnectorHooks {
 
 		$out->addModules( 'ext.BSSMWConnector.PageForms.DateTimePicker.fix' );
 
-		$oVE = BsExtensionManager::getExtension( 'VisualEditor' );
-		if ( $oVE instanceof BlueSpiceVisualEditor ) {
-			global $wgParser;
-			$aConfigs = $oVE->makeConfig( $wgParser );
-		} else {
-			return true;
-		}
-
-		$out->addJsConfigVars( 'BsVisualEditorConfigDefault', $aConfigs['standard'] );
-		$out->addJsConfigVars( 'BsVisualEditorLoaderUsingDeps', $aConfigs['module_deps'] );
-
-		// Semantic Forms does not load the messages from modules returned by SFInput::getResourceModuleNames
-		// $out->addModuleMessages( 'ext.bluespice.visualEditor.tinymce' );
-		$out->addModules( [
-			'ext.bluespice.visualEditor.styles',
-			'ext.bluespice.visualEditor.tinymce',
-			'ext.BSSMWConnector.SF.FreeTextVisualEditor'
-		] );
-
-		// This is ugly, but as long as the "Insert*" extensions can not detect
-		// the precence of VE or the "form edit" action we need to load those
-		// manually
-		global $bsgExtendedEditBarEnabledActions;
-		$bsgExtendedEditBarEnabledActions[] = 'formedit';
-		$bsgExtendedEditBarEnabledActions[] = 'view';
-		$oEEB = BsExtensionManager::getExtension( 'ExtendedEditBar' );
-		if ( $oEEB instanceof ExtendedEditBar ) {
-			$dummy = '<div></div>'; // Must not be empty string
-			$oEEB->onEditPageBeforeEditToolbar( $dummy );
-		}
-
-		return true;
-	}
-
-	/**
-	 * Registers new input types
-	 * @param PFFormPrinter $formPrinter
-	 * @return bool Always true
-	 */
-	public static function onPFFormPrinterSetup( PFFormPrinter $formPrinter ) {
-		$formPrinter->registerInputType( 'BSSFVisualEditor' );
 		return true;
 	}
 
