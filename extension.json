@@ -3,14 +3,17 @@
 	"descriptionmsg": "bs-bssmwconnector-desc",
 	"license-name": "GPL-3.0-only",
 	"type": "bluespice",
-	"version": "3.0.1",
+	"version": "3.1.0",
 	"author": [
 		"Robert Vogel",
 		"Leonid Verhovskij"
 	],
 	"url": "https://en.wiki.bluespice.com/wiki/Reference:SMWConnector",
 	"requires": {
-		"MediaWiki": ">= 1.29.0"
+		"MediaWiki": "~1.31",
+		"extensions": {
+			"BlueSpiceFoundation": "~3.1"
+		}
 	},
 	"attributes": {
 		"BlueSpiceExtendedSearch": {
@@ -19,6 +22,13 @@
 			}
 		},
 		"BlueSpiceFoundation": {
+			"Extensions": {
+				"BlueSpiceSMWConnector": {
+					"className": "\\BlueSpice\\SMWConnector\\Extension",
+					"extPath": "/BlueSpiceSMWConnector",
+					"package": "BlueSpice Pro"
+				}
+			},
 			"PermissionRegistry": {
 				"createclass": {
 					"type": "global",
@@ -91,11 +101,7 @@
 	"AutoloadClasses": {
 		"BSSMWConnectorHooks": "includes/BSSMWConnectorHooks.php",
 		"BSSMWCNamespaceManager": "includes/BSSMWCNamespaceManager.php",
-		"BSSFVisualEditor": "includes/forminputs/BSSFVisualEditor.php",
 		"BSGridResultPrinter": "includes/formats/Grid/BSGridResultPrinter.php",
-		"BSPropertyRegistry": "includes/BSPropertyRegistry.php",
-		"BSDefinitionReader": "includes/BSDefinitionReader.php",
-		"BSExtraPropertyAnnotator": "includes/BSExtraPropertyAnnotator.php",
 		"BSSMWCPageTemplates": "includes/BSSMWCPageTemplates.php",
 		"BSSMWPropertyPageProvider": "includes/BSSMWPropertyPageProvider.php",
 		"ApiSMWPropertyStore": "includes/api/ApiSMWPropertyStore.php"
@@ -106,13 +112,16 @@
 	"MessagesDirs": {
 		"BSSMWConnectorHooks": "i18n"
 	},
+	"ExtensionFunctions": [
+		"BlueSpice\\SMWConnector\\Extension::setup",
+		"BlueSpice\\SMWConnector\\PropertyValueProvidersRegistration::addExtensions"
+	],
 	"Hooks": {
 		"BeforePageDisplay": [
 			"BSSMWConnectorHooks::onBeforePageDisplay",
 			"BlueSpice\\SMWConnector\\Hook\\BeforePageDisplay\\AddModules::callback"
 		],
 		"PageForms::FormPrinterSetup": [
-			"BSSMWConnectorHooks::onPFFormPrinterSetup",
 			"BlueSpice\\SMWConnector\\Hook\\PFFormPrinterSetup\\RegisterInputTypes::callback"
 		],
 		"BSBookshelfNodeTag": "BSSMWConnectorHooks::onBSBookshelfNodeTag",
@@ -134,8 +143,7 @@
 		"ext.BSSMWConnector.styles": {
 			"styles": [
 				"ext.BSSMWConnector.css"
-			],
-			"position": "top"
+			]
 		},
 		"ext.BSSMWConnector.BookshelfUI": {
 			"scripts": [
@@ -163,11 +171,6 @@
 				"ext.smw.api"
 			]
 		},
-		"ext.BSSMWConnector.SF.VisualEditorField": {
-			"scripts": [
-				"ext.BSSMWConnector.SF.VisualEditorField.js"
-			]
-		},
 		"ext.BSSMWConnector.PF.Inputs.MWVisualEditor": {
 			"scripts": [
 				"ext.BSSMWConnector.PF.Inputs.MWVisualEditor.js"
@@ -186,11 +189,6 @@
 		"ext.BSSMWConnector.PF.Input.UserTags": {
 			"scripts": [
 				"ext.BSSMWConnector.PF.Inputs.UserTags.js"
-			]
-		},
-		"ext.BSSMWConnector.SF.FreeTextVisualEditor": {
-			"scripts": [
-				"ext.BSSMWConnector.SF.FreeTextVisualEditor.js"
 			]
 		},
 		"ext.srf.bsextjsgrid": {

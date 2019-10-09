@@ -2,16 +2,16 @@
 
 namespace BlueSpice\SMWConnector\PageForms\Input;
 
+use User;
+use Html;
+
 class UserCombo extends \PFFormInput {
-	protected $currentUser = null;
 	protected $groups = [];
 
 	public function __construct( $input_number, $cur_value, $input_name, $disabled, $other_args ) {
 		parent::__construct( $input_number, $cur_value, $input_name, $disabled, $other_args );
-
-		$this->parseCurrentValue();
-
-		if ( isset( $other_args['group'] ) ) {			$this->setGroups();
+		if ( isset( $other_args['group'] ) ) {
+			$this->setGroups();
 		}
 
 		$this->addJsInitFunctionData( 'bs_smwc_pf_input_usercombo_init', $this->getInitParams() );
@@ -22,7 +22,7 @@ class UserCombo extends \PFFormInput {
 	}
 
 	public function getHtmlText() {
-		$html = \Html::openElement(
+		$html = Html::openElement(
 			'span',
 			[
 				'id' => 'input_' . $this->mInputNumber . '_cnt',
@@ -30,15 +30,15 @@ class UserCombo extends \PFFormInput {
 				'style' => 'display:inline-block;'
 			]
 		);
-		$html .= \Html::input(
+		$html .= Html::input(
 			$this->mInputName,
-			$currentUser ? $currentUser->getName() : '',
+			$this->mCurrentValue,
 			'hidden',
 			[
 				'id' => 'input_' . $this->mInputNumber
 			]
 		);
-		$html .= \Html::closeElement( 'span' );
+		$html .= Html::closeElement( 'span' );
 
 		return $html;
 	}
@@ -49,15 +49,15 @@ class UserCombo extends \PFFormInput {
 		];
 	}
 
-	/**
-	 * If value is name of user page ( User: FooBar ), parse it
-	 * and set username as current value
-	 */
-	protected function parseCurrentValue() {
-		if ( !$user = User::newFromName( $this->mCurrentValue ) ) {
-			return;
+	protected function getUser() {
+		if ( !$this->mCurrentValue ) {
+			return null;
 		}
-		$this->currentUser = $user;
+		$username = array_pop( explode( ':', $this->mCurrentValue ) );
+		if ( !$user = User::newFromName( $username ) ) {
+			return null;
+		}
+		return $user;
 	}
 
 	/**
@@ -74,14 +74,29 @@ class UserCombo extends \PFFormInput {
 	}
 
 	protected function getInitParams() {
+		$user = $this->getUser();
 		$params = [
 			'input_name' => $this->mInputName,
 			'current_value' => $this->mCurrentValue
 		];
 
+		if ( $user instanceof User ) {
+			$params['userRecord'] = [
+				'user_id' => $user->getId(),
+				'user_name' => $user->getName(),
+				'user_real_name' => $user->getRealName(),
+				'user_registration' => $user->getRegistration(),
+				'user_editcount' => $user->getEditCount(),
+				'groups' => $user->getEffectiveGroups(),
+				'display_name' => $user->getRealName() ?: $user->getName(),
+				'page_prefixed_text' => $user->getUserPage()->getPrefixedText()
+			];
+		}
+
 		if ( !empty( $this->groups ) ) {
 			$params['groups'] = $this->groups;
 		}
+
 		return $params;
 	}
 }

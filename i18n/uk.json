@@ -5,5 +5,11 @@
 		]
 	},
 	"bs-bssmwconnector-desc": "Інтегрує SemanticMediaWiki в BlueSpice",
-	"bs-bssmwconnector-srf-printername-bsgrid": "Сітка BlueSpice"
+	"bs-bssmwconnector-srf-printername-bsgrid": "Сітка BlueSpice",
+	"bs-dlg-choosesmwprop-label": "Властивість",
+	"bs-dlg-choosesmwprop-type-smwprop": "Семантична властивість",
+	"bs-extendedsearch-add-filter-group-smwproperty-label": "Семантичні властивості",
+	"bs-extendedsearch-search-center-result-smwproperty-label": "Семантичні властивості:",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "Так",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Ні"
 }

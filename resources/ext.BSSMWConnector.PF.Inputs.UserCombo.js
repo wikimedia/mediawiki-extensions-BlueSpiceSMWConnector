@@ -8,6 +8,7 @@ bs_smwc_pf_input_usercombo_init = function( input_id, params ) {
 	function _initUserCombo( input_id, params ) {
 		var userCombo = Ext.create( 'BS.form.UserCombo', {
 			hideLabel: true,
+			value_field: 'user_name',
 			style: 'display: inline-block; background-color: transparent',
 			storeFilters: [
 				{
@@ -29,18 +30,15 @@ bs_smwc_pf_input_usercombo_init = function( input_id, params ) {
 
 		//Update hidden input on change
 		userCombo.addListener( 'select', function( sender, record ) {
-			if( record.length === 0 ) {
+			if( !record || !record.hasOwnProperty( 'data' ) ) {
 				$( '#' + input_id ).val('');
 			}
-
-			record = record[0];
-			$( '#' + input_id ).val( record.data.user_name );
+			$( '#' + input_id ).val( record.get( 'page_prefixed_text' ) );
 		} );
 
 		//Set value
-		if( params.current_value ) {
-			userCombo.setValueByUserName( params.current_value );
-			$( '#' + input_id ).val( params.current_value );
+		if( params.hasOwnProperty( 'userRecord' ) ) {
+			userCombo.setValue( Ext.create( 'BS.model.User', params.userRecord ) );
 		}
 	}
 };
