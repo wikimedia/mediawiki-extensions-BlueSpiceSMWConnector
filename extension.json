@@ -3,7 +3,7 @@
 	"descriptionmsg": "bs-bssmwconnector-desc",
 	"license-name": "GPL-3.0-only",
 	"type": "bluespice",
-	"version": "3.1.0",
+	"version": "3.2.0-alpha",
 	"author": [
 		"Robert Vogel",
 		"Leonid Verhovskij"
@@ -12,7 +12,7 @@
 	"requires": {
 		"MediaWiki": "~1.31",
 		"extensions": {
-			"BlueSpiceFoundation": "~3.1"
+			"BlueSpiceFoundation": "~3.2"
 		}
 	},
 	"attributes": {
