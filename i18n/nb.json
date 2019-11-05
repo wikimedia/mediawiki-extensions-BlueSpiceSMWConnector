@@ -7,6 +7,10 @@
 	},
 	"bs-bssmwconnector-desc": "Integrerer SemanticMediaWiki med BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice-rutenett",
+	"bs-dlg-choosesmwprop-label": "Egenskap",
+	"bs-dlg-choosesmwprop-type-smwprop": "Semantisk egenskap",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Semantiske egenskaper",
-	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantiske egenskaper"
+	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantiske egenskaper",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "Ja",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Nei"
 }
