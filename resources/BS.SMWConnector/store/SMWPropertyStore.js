@@ -6,7 +6,8 @@ Ext.define( 'BS.SMWConnector.store.SMWPropertyStore', {
 		url: mw.util.wikiScript('api'),
 		extraParams: {
 			format: 'json',
-			action: 'bs-smw-connector-smw-property-store'
+			action: 'bs-smw-connector-smw-property-store',
+			limit: 9999
 		},
 		reader: {
 			type: 'json',
