@@ -1,5 +1,5 @@
 bs_smwc_pf_input_usercombo_init = function( input_id, params ) {
-	mw.loader.using( 'ext.BSSMWConnector' ).done( function() {
+	mw.loader.using( [ 'ext.BSSMWConnector', 'ext.bluespice.extjs' ] ).done( function() {
 		Ext.onReady( function(){
 			_initUserCombo( input_id, params );
 		} );
