@@ -31,6 +31,12 @@ abstract class SMWStoreAfterQueryResultLookupComplete extends Hook {
 		$this->result =& $result;
 	}
 
+	/**
+	 *
+	 * @param \SMW\Store $store
+	 * @param \SMWQueryResult &$result
+	 * @return bool|null
+	 */
 	public static function callback( $store, &$result ) {
 		$className = static::class;
 		$hookHandler = new $className(

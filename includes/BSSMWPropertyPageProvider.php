@@ -9,6 +9,10 @@ class BSSMWPropertyPageProvider implements BlueSpice\BookshelfUI\MassAdd\IHandle
 	 */
 	protected $root;
 
+	/**
+	 *
+	 * @return array
+	 */
 	public function getData() {
 		$store = \SMW\StoreFactory::getStore();
 		$property = new \SMW\DIProperty( $this->root );
@@ -40,6 +44,10 @@ class BSSMWPropertyPageProvider implements BlueSpice\BookshelfUI\MassAdd\IHandle
 		return new self( $root );
 	}
 
+	/**
+	 *
+	 * @param string $root
+	 */
 	protected function __construct( $root ) {
 		$this->root = $root;
 	}

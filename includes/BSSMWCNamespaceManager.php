@@ -2,6 +2,11 @@
 
 class BSSMWCNamespaceManager {
 
+	/**
+	 *
+	 * @param array &$aMetaFields
+	 * @return bool
+	 */
 	public static function onGetMetaFields( &$aMetaFields ) {
 		$aMetaFields[] = [
 			'name' => 'smw',
@@ -14,20 +19,32 @@ class BSSMWCNamespaceManager {
 		return true;
 	}
 
+	/**
+	 *
+	 * @param array &$aResults
+	 * @return bool
+	 */
 	public static function onGetNamespaceData( &$aResults ) {
-		global $smwgNamespacesWithSemanticLinks;
-
 		$iResults = count( $aResults );
 		for ( $i = 0; $i < $iResults; $i++ ) {
 			$aResults[ $i ][ 'smw' ] =
-				isset( $smwgNamespacesWithSemanticLinks[  $aResults[ $i ][ 'id' ] ] )
-				? $smwgNamespacesWithSemanticLinks[  $aResults[ $i ][ 'id' ] ]
+				isset( $GLOBALS['smwgNamespacesWithSemanticLinks'][$aResults[ $i ][ 'id' ]] )
+				? $GLOBALS['smwgNamespacesWithSemanticLinks'][$aResults[ $i ][ 'id' ]]
 				: false;
 		}
 		return true;
 	}
 
-	public static function onEditNamespace( &$aNamespaceDefinitions, &$iNS, $aAdditionalSettings, $bUseInternalDefaults = false ) {
+	/**
+	 *
+	 * @param array &$aNamespaceDefinitions
+	 * @param int &$iNS
+	 * @param array $aAdditionalSettings
+	 * @param bool $bUseInternalDefaults
+	 * @return bool
+	 */
+	public static function onEditNamespace( &$aNamespaceDefinitions, &$iNS,
+		$aAdditionalSettings, $bUseInternalDefaults = false ) {
 		if ( !$bUseInternalDefaults && isset( $aAdditionalSettings['smw'] ) ) {
 			$aNamespaceDefinitions[$iNS][ 'smw' ] = $aAdditionalSettings['smw'];
 		} else {
@@ -36,14 +53,21 @@ class BSSMWCNamespaceManager {
 		return true;
 	}
 
-	public static function onWriteNamespaceConfiguration( &$sSaveContent, $sConstName, $iNsID, $aDefinition ) {
-		global $smwgNamespacesWithSemanticLinks;
-
+	/**
+	 *
+	 * @param string &$sSaveContent
+	 * @param string $sConstName
+	 * @param int $iNsID
+	 * @param array $aDefinition
+	 * @return bool
+	 */
+	public static function onWriteNamespaceConfiguration( &$sSaveContent, $sConstName, $iNsID,
+		$aDefinition ) {
 		if ( $iNsID === null ) {
 			return true;
 		}
-		$bCurrentlyActivated = isset( $smwgNamespacesWithSemanticLinks[ $iNsID ] )
-			? $smwgNamespacesWithSemanticLinks[ $iNsID ]
+		$bCurrentlyActivated = isset( $GLOBALS['smwgNamespacesWithSemanticLinks'][ $iNsID ] )
+			? $GLOBALS['smwgNamespacesWithSemanticLinks'][ $iNsID ]
 			: false;
 
 		$bExplicitlyDeactivated = false;

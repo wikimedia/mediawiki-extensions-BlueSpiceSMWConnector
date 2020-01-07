@@ -3,13 +3,30 @@
 namespace BlueSpice\SMWConnector\PageForms\Input;
 
 class UserTags extends \PFFormInput {
+
 	/**
 	 *
 	 * @var \User[]
 	 */
 	protected $users = [];
+
+	/**
+	 *
+	 * @var array
+	 */
 	protected $groups = [];
 
+	/**
+	 * @param string $input_number The number of the input in the form. For a simple HTML input
+	 *  element this should end up in the id attribute in the format 'input_<number>'.
+	 * @param string $cur_value The current value of the input field. For a simple HTML input
+	 *  element this should end up in the value attribute.
+	 * @param string $input_name The name of the input. For a simple HTML input element this should
+	 *  end up in the name attribute.
+	 * @param bool $disabled Is this input disabled?
+	 * @param array $other_args An associative array of other parameters that were present in the
+	 *  input definition.
+	 */
 	public function __construct( $input_number, $cur_value, $input_name, $disabled, $other_args ) {
 		parent::__construct( $input_number, $cur_value, $input_name, $disabled, $other_args );
 
@@ -22,10 +39,18 @@ class UserTags extends \PFFormInput {
 		$this->addJsInitFunctionData( 'bs_smwc_pf_input_usertags_init', $this->getInitParams() );
 	}
 
+	/**
+	 *
+	 * @return string
+	 */
 	public static function getName() {
 		return 'bs-usertags';
 	}
 
+	/**
+	 *
+	 * @return string
+	 */
 	public function getHtmlText() {
 		$html = \Html::openElement(
 			'span',
@@ -49,6 +74,10 @@ class UserTags extends \PFFormInput {
 		return $html;
 	}
 
+	/**
+	 *
+	 * @return string[]
+	 */
 	public function getResourceModuleNames() {
 		return [
 			'ext.BSSMWConnector.PF.Input.UserTags'
@@ -62,7 +91,8 @@ class UserTags extends \PFFormInput {
 	protected function parseCurrentValue() {
 		$this->mCurrentValue = explode( ',', $this->mCurrentValue );
 		foreach ( $this->mCurrentValue as $userName ) {
-			if ( !$user = \User::newFromName( $userName ) ) {
+			$user = \User::newFromName( $userName );
+			if ( !$user ) {
 				continue;
 			}
 			$this->users[] = $user;
@@ -82,6 +112,10 @@ class UserTags extends \PFFormInput {
 		$this->groups = $groups;
 	}
 
+	/**
+	 *
+	 * @return array
+	 */
 	protected function getInitParams() {
 		$params = [
 			'input_name' => $this->mInputName,

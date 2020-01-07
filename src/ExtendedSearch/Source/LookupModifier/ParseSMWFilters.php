@@ -24,6 +24,11 @@ class ParseSMWFilters extends Base {
 		}
 	}
 
+	/**
+	 *
+	 * @param string $key
+	 * @param array|string $value
+	 */
 	protected function addTermsFilter( $key, $value ) {
 		if ( is_array( $value ) === false ) {
 			$value = [ $value ];
@@ -59,6 +64,12 @@ class ParseSMWFilters extends Base {
 		return ltrim( $decodedKey, 'smwproperty:' );
 	}
 
+	/**
+	 *
+	 * @param atring $key
+	 * @param string[] $value
+	 * @return array
+	 */
 	protected function buildValues( $key, $value ) {
 		$res = [];
 		foreach ( $value as $singleValue ) {

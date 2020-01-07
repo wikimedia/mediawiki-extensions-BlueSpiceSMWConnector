@@ -101,6 +101,10 @@ class SMWWikiPage extends WikiPage {
 		}
 	}
 
+	/**
+	 *
+	 * @return array
+	 */
 	protected function getSemanticValueArray() {
 		$valueArray = [];
 		foreach ( $this->semanticData as $smwDataItem ) {
