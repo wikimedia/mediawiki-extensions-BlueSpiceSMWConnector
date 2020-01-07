@@ -5,6 +5,11 @@ namespace BlueSpice\SMWConnector\ExtendedSearch\Source\Formatter;
 use BS\ExtendedSearch\Source\Formatter\WikiPageFormatter;
 
 class SMWWikiPageFormatter extends WikiPageFormatter {
+	/**
+	 *
+	 * @param array $defaultResultStructure
+	 * @return array
+	 */
 	public function getResultStructure( $defaultResultStructure = [] ) {
 		$resultStructure = parent::getResultStructure( $defaultResultStructure );
 
@@ -16,6 +21,12 @@ class SMWWikiPageFormatter extends WikiPageFormatter {
 		return $resultStructure;
 	}
 
+	/**
+	 *
+	 * @param array &$result
+	 * @param \Elastica\Result $resultObject
+	 * @return null
+	 */
 	public function format( &$result, $resultObject ) {
 		if ( $this->source->getTypeKey() != $resultObject->getType() ) {
 			return;
@@ -50,7 +61,8 @@ class SMWWikiPageFormatter extends WikiPageFormatter {
 				$value
 			)->plain();
 		}
-		$boldLabel = "<b>" . wfMessage( 'bs-extendedsearch-search-center-result-smwproperty-label' )->plain() . "</b>";
+		$msg = wfMessage( 'bs-extendedsearch-search-center-result-smwproperty-label' );
+		$boldLabel = "<b>" . $msg->plain() . "</b>";
 		$result['smwproperty'] = $boldLabel . implode( ', ', $smwPropertyValues );
 	}
 
@@ -107,6 +119,11 @@ class SMWWikiPageFormatter extends WikiPageFormatter {
 		}
 	}
 
+	/**
+	 *
+	 * @param bool $boolValue
+	 * @return string
+	 */
 	protected function getBooleanLabel( $boolValue ) {
 		if ( $boolValue ) {
 			return wfMessage( 'bs-smwconnector-extendedsearch-boolean-property-true' )->plain();
@@ -115,6 +132,10 @@ class SMWWikiPageFormatter extends WikiPageFormatter {
 		}
 	}
 
+	/**
+	 *
+	 * @return bool
+	 */
 	protected function isSemanticFilterSet() {
 		$filters = $this->lookup->getFilters();
 

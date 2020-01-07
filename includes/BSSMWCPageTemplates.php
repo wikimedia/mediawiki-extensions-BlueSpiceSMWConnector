@@ -10,7 +10,8 @@ class BSSMWCPageTemplates {
 	 * @param Title $oTitle
 	 * @return bool
 	 */
-	public static function onBSPageTemplatesBeforeRender( $oSender, &$oPageTemplateList, &$oPageTemplateListRenderer, $oTitle ) {
+	public static function onBSPageTemplatesBeforeRender( $oSender, &$oPageTemplateList,
+		&$oPageTemplateListRenderer, $oTitle ) {
 		$aData = $oPageTemplateList->getAll();
 		foreach ( $aData as $iId => $aDataSet ) {
 			if ( (int)$aDataSet['pt_template_namespace'] === PF_NS_FORM ) {

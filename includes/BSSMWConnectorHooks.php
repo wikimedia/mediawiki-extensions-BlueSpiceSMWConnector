@@ -16,7 +16,8 @@ class BSSMWConnectorHooks {
 			$out->addModules( 'ext.BSSMWConnector.BookshelfUI' );
 		}
 
-		if ( !$out->getTitle()->isSpecial( 'FormEdit' ) && $out->getRequest()->getVal( 'action', 'view' ) !== 'formedit' ) {
+		if ( !$out->getTitle()->isSpecial( 'FormEdit' )
+			&& $out->getRequest()->getVal( 'action', 'view' ) !== 'formedit' ) {
 			return true;
 		}
 
@@ -34,7 +35,8 @@ class BSSMWConnectorHooks {
 	 * @param Parser $oParser
 	 * @return bool Always true to keep hook running
 	 */
-	public static function onBSBookshelfNodeTag( $sType, &$sNodeText, &$aAttribs, &$sElement, $oParser ) {
+	public static function onBSBookshelfNodeTag( $sType, &$sNodeText, &$aAttribs, &$sElement,
+		$oParser ) {
 		if ( $sType !== 'ask' ) {
 			return true;
 		}
@@ -56,8 +58,10 @@ class BSSMWConnectorHooks {
 	 * @param DOMXPath $oDOMXPath
 	 * @return bool Always true to keep hook running
 	 */
-	public static function onBSBookshelfExportTag( &$aDummyPage, &$aArticle, &$aTemplate, $oTOCList, $aBookMeta, &$aLinkMap, &$aBookPage, $oDOMXPath ) {
-		if ( !isset( $aArticle['bookshelf'] ) || !isset( $aArticle['bookshelf']['arguments']['type'] ) ) {
+	public static function onBSBookshelfExportTag( &$aDummyPage, &$aArticle, &$aTemplate,
+		$oTOCList, $aBookMeta, &$aLinkMap, &$aBookPage, $oDOMXPath ) {
+		if ( !isset( $aArticle['bookshelf'] )
+			|| !isset( $aArticle['bookshelf']['arguments']['type'] ) ) {
 			return true;
 		}
 		if ( strtolower( $aArticle['bookshelf']['arguments']['type'] ) !== 'ask' ) {
@@ -85,7 +89,11 @@ class BSSMWConnectorHooks {
 
 		// If there is no table of contents yet, we create one and add it to the '.bodyContent'
 		if ( $aDummyPage['toc-ul-element'] instanceof DOMElement === false ) {
-			$sId = str_replace( '#bs-ue-jumpmark-', '', $aDummyPage['bookmark-element']->getAttribute( 'href' ) );
+			$sId = str_replace(
+				'#bs-ue-jumpmark-',
+				'',
+				$aDummyPage['bookmark-element']->getAttribute( 'href' )
+			);
 			$sTocHeading = wfMessage( 'toc' )->plain();
 			$oTOCDOM = new DOMDocument();
 			$oTOCDOM->loadXML( <<<HERE

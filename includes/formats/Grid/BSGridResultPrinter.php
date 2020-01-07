@@ -1,14 +1,25 @@
 <?php
 
 class BSGridResultPrinter extends SMW\RawResultPrinter {
+
+	/**
+	 *
+	 * @return string
+	 */
 	public function getName() {
 		return $this->msg( 'bs-bssmwconnector-srf-printername-bsgrid' )->text();
 	}
 
+	/**
+	 *
+	 * @param array $data
+	 * @return string
+	 */
 	protected function getHtml( array $data ) {
 		$this->isHTML = true;
 		$id = $this->getId();
-		$this->encode( $id, $data ); // Creates a client side JS variable accessible via mw.config.get($id)
+		// Creates a client side JS variable accessible via mw.config.get($id)
+		$this->encode( $id, $data );
 		$this->addResources( 'ext.srf.bsextjsgrid' );
 
 		return Html::element(
@@ -16,7 +27,6 @@ class BSGridResultPrinter extends SMW\RawResultPrinter {
 			[
 				'id' => $id,
 				'class' => 'srf-bsextjsgrid',
-				# 'data-external-class' => ( $this->params['class'] ? $this->params['class'] : '' )
 			],
 			''
 		);

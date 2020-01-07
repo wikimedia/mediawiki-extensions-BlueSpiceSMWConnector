@@ -39,6 +39,13 @@ class SMWWikiPage extends WikiPages {
 		);
 	}
 
+	/**
+	 *
+	 * @param \BS\ExtendedSearch\Lookup $oLookup
+	 * @param \IContextSource $oContext
+	 * @param string $sType
+	 * @return ParseSMWFilters
+	 */
 	public function getLookupModifiers( $oLookup, $oContext, $sType = LookupModifier::TYPE_SEARCH ) {
 		$lookupModifiers = parent::getLookupModifiers( $oLookup, $oContext, $sType );
 
@@ -50,6 +57,10 @@ class SMWWikiPage extends WikiPages {
 		return $lookupModifiers;
 	}
 
+	/**
+	 *
+	 * @return SMWWikiPageFormatter
+	 */
 	public function getFormatter() {
 		return new SMWWikiPageFormatter( $this );
 	}

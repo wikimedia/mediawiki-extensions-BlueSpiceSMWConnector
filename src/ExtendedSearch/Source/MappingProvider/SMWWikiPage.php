@@ -5,6 +5,10 @@ namespace BlueSpice\SMWConnector\ExtendedSearch\Source\MappingProvider;
 use BS\ExtendedSearch\Source\MappingProvider\WikiPage;
 
 class SMWWikiPage extends WikiPage {
+	/**
+	 *
+	 * @return array
+	 */
 	public function getPropertyConfig() {
 		$aPC = $this->oDecoratedMP->getPropertyConfig();
 		$aPC = array_merge( $aPC, parent::getPropertyConfig() );

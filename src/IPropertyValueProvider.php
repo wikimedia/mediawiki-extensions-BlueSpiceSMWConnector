@@ -2,9 +2,9 @@
 
 namespace BlueSpice\SMWConnector;
 
-/**
- * See https://github.com/SemanticMediaWiki/SemanticExtraSpecialProperties/blob/master/docs/extension.md
- */
+// phpcs:ignore Generic.Files.LineLength.TooLong
+// See https://github.com/SemanticMediaWiki/SemanticExtraSpecialProperties/blob/master/docs/extension.md
+
 interface IPropertyValueProvider {
 
 	/**

@@ -18,7 +18,8 @@ class ApplySecurityTrimming extends SMWStoreAfterQueryResultLookupComplete {
 		foreach ( $this->resultItems as $wikiPageItem ) {
 			$title = $wikiPageItem->getTitle();
 			if ( $title === null ) {
-				$filteredItems[] = $wikiPageItem; // Leave it in result set
+				// Leave it in result set
+				$filteredItems[] = $wikiPageItem;
 				continue;
 			}
 			if ( !$title->userCan( 'read' ) ) {
