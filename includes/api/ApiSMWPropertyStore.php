@@ -2,6 +2,11 @@
 
 class ApiSMWPropertyStore extends BSApiExtJSStoreBase {
 
+	/**
+	 *
+	 * @param string $query
+	 * @return \stdClass[]
+	 */
 	protected function makeData( $query = '' ) {
 		$result = new stdClass();
 

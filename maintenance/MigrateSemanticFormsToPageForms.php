@@ -50,6 +50,10 @@ class MigrateSemanticFormsToPageForms extends Maintenance {
 		$this->output( "\n... done.\n" );
 	}
 
+	/**
+	 *
+	 * @param string $propName
+	 */
 	protected function executeAsk( $propName ) {
 		global $wgRequest;
 		 $api = new ApiMain(
@@ -73,6 +77,11 @@ class MigrateSemanticFormsToPageForms extends Maintenance {
 		}
 	}
 
+	/**
+	 *
+	 * @param string $pageName
+	 * @return string
+	 */
 	protected function replacePropertyByParserFunction( $pageName ) {
 		$this->output( "\n\t$pageName" );
 		$wikiPage = Wikipage::factory( Title::newFromText( $pageName ) );
@@ -106,6 +115,11 @@ class MigrateSemanticFormsToPageForms extends Maintenance {
 		}
 	}
 
+	/**
+	 *
+	 * @param string $formNameAndMaybeAlias
+	 * @return array
+	 */
 	protected function extractFormName( $formNameAndMaybeAlias ) {
 		// This is not actually necessary as
 		// {{#default_form:SomeForm|Alias}} (derived from [[Has default from::SomeForm|Alias]])

@@ -60,6 +60,11 @@ HERE
 		}
 	}
 
+	/**
+	 *
+	 * @param string $tableName
+	 * @param string $fieldName
+	 */
 	protected function fixNamespaceIds( $tableName, $fieldName ) {
 		foreach ( $this->namespaceIdMap as $oldNS => $newNS ) {
 			$this->output( "\nNamespace '$oldNS': " );
