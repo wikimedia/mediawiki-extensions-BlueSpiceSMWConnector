@@ -2,13 +2,13 @@
 
 namespace BlueSpice\SMWConnector\ExtendedSearch\Source;
 
-use BS\ExtendedSearch\Source\WikiPages;
-use BS\ExtendedSearch\Source\LookupModifier\Base as LookupModifier;
 use BlueSpice\SMWConnector\ExtendedSearch\Source;
-use BlueSpice\SMWConnector\ExtendedSearch\Source\LookupModifier\AddSourceFields;
-use BlueSpice\SMWConnector\ExtendedSearch\Source\LookupModifier\AddSMWAggregation;
-use BlueSpice\SMWConnector\ExtendedSearch\Source\LookupModifier\ParseSMWFilters;
 use BlueSpice\SMWConnector\ExtendedSearch\Source\Formatter\SMWWikiPageFormatter;
+use BlueSpice\SMWConnector\ExtendedSearch\Source\LookupModifier\AddSMWAggregation;
+use BlueSpice\SMWConnector\ExtendedSearch\Source\LookupModifier\AddSourceFields;
+use BlueSpice\SMWConnector\ExtendedSearch\Source\LookupModifier\ParseSMWFilters;
+use BS\ExtendedSearch\Source\LookupModifier\Base as LookupModifier;
+use BS\ExtendedSearch\Source\WikiPages;
 
 class SMWWikiPage extends WikiPages {
 	/**

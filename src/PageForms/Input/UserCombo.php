@@ -2,8 +2,8 @@
 
 namespace BlueSpice\SMWConnector\PageForms\Input;
 
-use User;
 use Html;
+use User;
 
 class UserCombo extends \PFFormInput {
 	/**

@@ -3,8 +3,8 @@
 namespace BlueSpice\SMWConnector\Hook\SMWStoreBeforeQueryResultLookupComplete;
 
 use BlueSpice\SMWConnector\Hook\SMWStoreBeforeQueryResultLookupComplete;
-use SMW\Query\Language\Disjunction;
 use SMW\Query\Language\Conjunction;
+use SMW\Query\Language\Disjunction;
 use SMW\Query\Language\NamespaceDescription;
 
 class AddPermissionBasedNamespaceFilters extends SMWStoreBeforeQueryResultLookupComplete {

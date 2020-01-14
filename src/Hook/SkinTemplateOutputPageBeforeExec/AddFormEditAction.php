@@ -23,7 +23,7 @@ class AddFormEditAction extends SkinTemplateOutputPageBeforeExec {
 	protected function skipProcessing() {
 		if ( empty( $this->template->data['content_navigation']['views']['formedit'] ) ) {
 			return true;
-		};
+		}
 		return false;
 	}
 }
