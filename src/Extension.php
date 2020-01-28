@@ -32,7 +32,7 @@ class Extension extends \BlueSpice\Extension {
 	/**
 	 * Register new result format
 	 */
-	public function setup() {
+	public static function setup() {
 		$GLOBALS['smwgResultFormats']['bsgrid'] = 'BSGridResultPrinter';
 	}
 }
