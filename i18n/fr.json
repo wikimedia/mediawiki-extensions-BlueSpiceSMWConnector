@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Wladek92",
-			"Gomoko"
+			"Gomoko",
+			"Derugon"
 		]
 	},
 	"bs-bssmwconnector-desc": "Intègre SemanticMediaWiki à BlueSpice",
@@ -12,5 +13,7 @@
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Propriétés sémantiques",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Propriétés sémantiques :",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Oui",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "Non"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Non",
+	"bs-bssmwconnector-nmmngr-label-smw": "MediaWiki Sémantique",
+	"bs-smwconnector-extendedsearch-smwproperty-result-value": "$1 : $2"
 }
