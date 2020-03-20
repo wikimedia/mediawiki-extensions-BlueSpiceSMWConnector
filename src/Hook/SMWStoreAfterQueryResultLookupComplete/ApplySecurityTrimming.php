@@ -15,6 +15,9 @@ class ApplySecurityTrimming extends SMWStoreAfterQueryResultLookupComplete {
 	protected function doProcess() {
 		$this->resultItems = $this->result->getResults();
 		$filteredItems = [];
+
+		$pm = \MediaWiki\MediaWikiServices::getInstance()->getPermissionManager();
+		$user = $this->getContext()->getUser();
 		foreach ( $this->resultItems as $wikiPageItem ) {
 			$title = $wikiPageItem->getTitle();
 			if ( $title === null ) {
@@ -22,7 +25,7 @@ class ApplySecurityTrimming extends SMWStoreAfterQueryResultLookupComplete {
 				$filteredItems[] = $wikiPageItem;
 				continue;
 			}
-			if ( !$title->userCan( 'read' ) ) {
+			if ( !$pm->userCan( 'read', $user, $title ) ) {
 				continue;
 			}
 

@@ -46,9 +46,12 @@ class AddPermissionBasedNamespaceFilters extends SMWStoreBeforeQueryResultLookup
 	protected function makeNamespaceFilterDisjunction() {
 		$readableNamespaceDescriptions = [];
 		$namespaceIds = $this->getContext()->getLanguage()->getNamespaceIds();
+
+		$pm = \MediaWiki\MediaWikiServices::getInstance()->getPermissionManager();
+		$user = $this->getContext()->getUser();
 		foreach ( $namespaceIds as $nmspText => $namespaceId ) {
 			$dummyTitle = \Title::makeTitle( $namespaceId, 'X' );
-			if ( $dummyTitle->userCan( 'read' ) ) {
+			if ( $pm->userCan( 'read', $user, $dummyTitle ) ) {
 				$readableNamespaceDescriptions[] = new NamespaceDescription( $namespaceId );
 			}
 		}
