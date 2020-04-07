@@ -1,12 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Facenapalm",
-			"Patrick Star",
-			"Okras",
 			"Evs",
-			"Vlad5250",
-			"Movses"
+			"Facenapalm",
+			"Movses",
+			"Okras",
+			"Patrick Star",
+			"Vlad5250"
 		]
 	},
 	"bs-bssmwconnector-desc": "Интегрирует SemanticMediaWiki в BlueSpice",

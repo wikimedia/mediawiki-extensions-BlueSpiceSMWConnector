@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Wladek92",
+			"Derugon",
 			"Gomoko",
-			"Derugon"
+			"Wladek92"
 		]
 	},
 	"bs-bssmwconnector-desc": "Intègre SemanticMediaWiki à BlueSpice",
