@@ -133,7 +133,8 @@
 		"BSPageTemplatesBeforeRender": "BSSMWCPageTemplates::onBSPageTemplatesBeforeRender",
 		"PageContentSaveComplete": "BSSMWConnectorHooks::onPageContentSaveComplete",
 		"SMW::Store::AfterQueryResultLookupComplete": "BlueSpice\\SMWConnector\\Hook\\SMWStoreAfterQueryResultLookupComplete\\ApplySecurityTrimming::callback",
-		"SkinTemplateOutputPageBeforeExec": "BlueSpice\\SMWConnector\\Hook\\SkinTemplateOutputPageBeforeExec\\AddFormEditAction::callback"
+		"SkinTemplateOutputPageBeforeExec": "BlueSpice\\SMWConnector\\Hook\\SkinTemplateOutputPageBeforeExec\\AddFormEditAction::callback",
+		"BSUEModulePDFcollectMetaData": "BlueSpice\\SMWConnector\\Hook\\BSUEModulePDFcollectMetaData\\AddSemanitcMetaData::callback"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
@@ -204,6 +205,12 @@
 			"scripts": [
 				"ext.BSSMWConnector.PageForms.DateTimePicker.fix.js"
 			]
+		}
+	},
+	"config_prefix": "bsg",
+	"config": {
+		"UEModulePDFsmwProperties": {
+			"value": {}
 		}
 	},
 	"load_composer_autoloader": true,
