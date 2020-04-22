@@ -1,6 +1,5 @@
 <?php
 
-
 namespace BlueSpice\SMWConnector\Hook\BeforePageDisplay;
 
 // TODO: when on 'master', derive from BlueSpice\Hook\BeforePageDisplay and remove redundant code
