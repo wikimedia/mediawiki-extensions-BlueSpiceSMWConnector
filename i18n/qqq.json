@@ -1,10 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robert Vogel <vogel@hallowelt.biz>",
 			"Hamilton Abreu",
-			"Umherirrender",
-			"Robby"
+			"Robby",
+			"Robert Vogel <vogel@hallowelt.biz>",
+			"Umherirrender"
 		]
 	},
 	"bs-bssmwconnector-desc": "{{desc|name=BlueSpiceSMWConnector|url=https://www.mediawiki.org/wiki/Extension:BlueSpiceSMWConnector}}",

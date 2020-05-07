@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robert Vogel <vogel@hallowelt.biz>",
+			"Hwboehm",
 			"Metalhead64",
-			"Hwboehm"
+			"Robert Vogel <vogel@hallowelt.biz>"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integriert SemanticMediaWiki in BlueSpice",
