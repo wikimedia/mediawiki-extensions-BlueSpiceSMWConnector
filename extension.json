@@ -198,7 +198,9 @@
 			],
 			"dependencies": [
 				"ext.BSSMWConnector",
-				"ext.smw.api"
+				"ext.smw.api",
+				"ext.bluespice.extjs",
+				"ext.extjsbase.ux"
 			]
 		},
 		"ext.BSSMWConnector.PageForms.DateTimePicker.fix": {
