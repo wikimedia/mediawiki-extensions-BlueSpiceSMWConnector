@@ -118,7 +118,7 @@ Ext.define( 'BS.SMWConnector.grid.AskResultPrinter', {
 			var rawDataset = res[subject];
 			var row = {
 				__id: subject,
-				__subjectDisplayText: rawDataset.displaytitle,
+				__subjectDisplayText: rawDataset.displaytitle || rawDataset.fulltext,
 				__subjectValue: rawDataset.title,
 				__subjectExists: rawDataset.exists,
 				__subjectFulltext: rawDataset.fulltext,
