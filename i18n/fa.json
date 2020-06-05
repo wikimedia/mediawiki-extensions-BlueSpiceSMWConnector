@@ -1,0 +1,13 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amir1arch"
+		]
+	},
+	"bs-dlg-choosesmwprop-label": "ویژگی",
+	"bs-dlg-choosesmwprop-type-smwprop": "ویژگی معنایی",
+	"bs-extendedsearch-add-filter-group-smwproperty-label": "ویژگی های معنایی",
+	"bs-extendedsearch-search-center-result-smwproperty-label": "ویژگی های معنایی:",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "بله",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "خیر"
+}
