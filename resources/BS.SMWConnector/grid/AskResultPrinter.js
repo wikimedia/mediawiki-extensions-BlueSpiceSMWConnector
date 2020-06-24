@@ -150,7 +150,10 @@ Ext.define( 'BS.SMWConnector.grid.AskResultPrinter', {
 				},
 				enablePaging: true
 			},
-			pageSize: this.pageSize
+			pageSize: this.pageSize,
+			remoteGroup: true,
+			remoteSort: true,
+			remoteFilter: true
 		});
 	},
 
