@@ -16,5 +16,7 @@
 	"bs-smwconnector-extendedsearch-smwproperty-result-value": "Helper message to show name and values of semantic property in search results. $1 - smw property name, $2 - smw property value",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Label for the field in search results showing all semantic properties of a page",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Textual representation of boolean \"true\" value for semantic properties\n{{Identical|Yes}}",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "Textual representation of boolean \"false\" value for semantic properties\n{{Identical|No}}"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Textual representation of boolean \"false\" value for semantic properties\n{{Identical|No}}",
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Label of _USERMENTIONS semantic special property.\n{{Identical|Content/User mentions}}\n Prefix and main part of this alias are separated by \"/\"",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Description of _USERMENTIONS semantic special property, that stores all user pages of the users, that have been mentioned on this page"
 }

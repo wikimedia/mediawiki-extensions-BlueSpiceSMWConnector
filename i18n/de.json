@@ -14,5 +14,7 @@
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Semantische Attribute",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantische Attribute:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Ja",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "Nein"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Nein",
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Inhalt/Benutzererwähnungen",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Benutzerseiten der Benutzer, welche auf dieser Seite erwähnt wurden"
 }
