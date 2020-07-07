@@ -78,6 +78,11 @@
 			"MassAddHandlerRegistry": {
 				"smwproperty": "BSSMWPropertyPageProvider::factory"
 			}
+		},
+		"BlueSpiceSMWConnector": {
+			"ExtraPropertyRegistry": {
+				"usermentions": "BlueSpice\\SMWConnector\\PropertyValueProvider\\UserMentions::factory"
+			}
 		}
 	},
 	"GroupPermissions": {

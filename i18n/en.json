@@ -13,5 +13,7 @@
 	"bs-smwconnector-extendedsearch-smwproperty-result-value": "$1: $2",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantic properties:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Yes",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "No"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "No",
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Content/User mentions",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "User pages of the users that have been mentioned on this page"
 }
