@@ -1,16 +1,16 @@
 <?php
 /**
- * Hook handler base class for SMW:RevisionGuard:IsApprovedRevision hook
+ * Hook handler base class for SMW:RevisionGuard:ChangeRevisionId hook
  * (https://doc.semantic-mediawiki.org/md_content_extensions_SemanticMediaWiki_docs_technical_hooks_hook_8revisionguard_8isapprovedrevision.html)
  */
-namespace BlueSpice\SMWConnector\Hook;
+namespace BlueSpice\SMWConnector\Hook\SMWRevisionGuard;
 
 use BlueSpice\Hook;
 use Config;
 use IContextSource;
 use Title;
 
-abstract class SMWRevisionGuardIsApprovedRevision extends Hook {
+abstract class ChangeRevisionId extends Hook {
 
 	/** @var Title */
 	protected $title;
@@ -20,10 +20,10 @@ abstract class SMWRevisionGuardIsApprovedRevision extends Hook {
 
 	/**
 	 * @param Title $title
-	 * @param int $latestRevID
+	 * @param int &$latestRevID
 	 * @return bool
 	 */
-	public static function callback( Title $title, $latestRevID ) {
+	public static function callback( Title $title, &$latestRevID ) {
 		$className = static::class;
 		$hookHandler = new $className(
 			null,
@@ -31,6 +31,7 @@ abstract class SMWRevisionGuardIsApprovedRevision extends Hook {
 			$title,
 			$latestRevID
 		);
+
 		return $hookHandler->process();
 	}
 
@@ -39,12 +40,12 @@ abstract class SMWRevisionGuardIsApprovedRevision extends Hook {
 	 * @param IContextSource $context
 	 * @param Config $config
 	 * @param Title $title
-	 * @param int $latestRevID
+	 * @param int &$latestRevID
 	 */
-	public function __construct( $context, $config, Title $title, $latestRevID ) {
+	public function __construct( $context, $config, Title $title, &$latestRevID ) {
 		parent::__construct( $context, $config );
 		$this->title = $title;
-		$this->latestRevID = $latestRevID;
+		$this->latestRevID = &$latestRevID;
 	}
 
 }
