@@ -138,7 +138,7 @@
 		"BSPageTemplatesBeforeRender": "BSSMWCPageTemplates::onBSPageTemplatesBeforeRender",
 		"PageContentSaveComplete": "BSSMWConnectorHooks::onPageContentSaveComplete",
 		"SMW::Store::AfterQueryResultLookupComplete": "BlueSpice\\SMWConnector\\Hook\\SMWStoreAfterQueryResultLookupComplete\\ApplySecurityTrimming::callback",
-		"SkinTemplateOutputPageBeforeExec": "BlueSpice\\SMWConnector\\Hook\\SkinTemplateOutputPageBeforeExec\\AddFormEditAction::callback",
+		"ChameleonSkinTemplateOutputPageBeforeExec": "BlueSpice\\SMWConnector\\Hook\\ChameleonSkinTemplateOutputPageBeforeExec\\AddFormEditAction::callback",
 		"BSUEModulePDFcollectMetaData": "BlueSpice\\SMWConnector\\Hook\\BSUEModulePDFcollectMetaData\\AddSemanitcMetaData::callback"
 	},
 	"ResourceFileModulePaths": {

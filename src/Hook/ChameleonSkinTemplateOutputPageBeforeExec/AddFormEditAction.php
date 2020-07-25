@@ -1,10 +1,10 @@
 <?php
-namespace BlueSpice\SMWConnector\Hook\SkinTemplateOutputPageBeforeExec;
+namespace BlueSpice\SMWConnector\Hook\ChameleonSkinTemplateOutputPageBeforeExec;
 
-use BlueSpice\Hook\SkinTemplateOutputPageBeforeExec;
+use BlueSpice\Calumma\Hook\ChameleonSkinTemplateOutputPageBeforeExec;
 use BlueSpice\SkinData;
 
-class AddFormEditAction extends SkinTemplateOutputPageBeforeExec {
+class AddFormEditAction extends ChameleonSkinTemplateOutputPageBeforeExec {
 
 	protected function doProcess() {
 		$link = [
