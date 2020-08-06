@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Tmv"
+		]
+	},
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "内容/ユーザーコメント",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "このページ上で言及されたユーザーたちのユーザーページ"
+}

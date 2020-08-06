@@ -13,5 +13,6 @@
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Propriedades semânticas",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Propriedades semânticas:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Sim",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "Não"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Não",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Páginas de usuários mencionadas nesta página"
 }

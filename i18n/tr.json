@@ -11,5 +11,7 @@
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Anlamsal özellikler",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Anlamsal özellikler:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Evet",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "Hayır"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Hayır",
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Içerik/Kullanıcı bahsetmeleri",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Bu sayfada adı geçen kullanıcıların kullanıcı sayfaları"
 }
