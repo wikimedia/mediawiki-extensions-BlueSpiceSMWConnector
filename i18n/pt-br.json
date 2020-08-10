@@ -14,5 +14,6 @@
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Propriedades semânticas:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Sim",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Não",
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Conteúdo/Menções do usuário",
 	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Páginas de usuários mencionadas nesta página"
 }
