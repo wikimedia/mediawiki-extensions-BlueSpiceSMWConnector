@@ -1,5 +1,8 @@
 <?php
 
+use MediaWiki\Revision\RevisionRecord;
+use MediaWiki\Revision\SlotRecord;
+
 class BSSMWConnectorHooks {
 
 	/**
@@ -165,21 +168,14 @@ HERE
 	 * [1] https://github.com/wikimedia/mediawiki/commit/072e3666d3fcd1738d4742930bbe3acd5e7519b2#diff-a0f7feeaae57e9d2c735c8919c16ad15R2198
 	 *
 	 * @param WikiPage $wikiPage
-	 * @param User $user
-	 * @param Content $content
+	 * @param MediaWiki\User\UserIdentity $user
 	 * @param string $summary
-	 * @param bool $isMinor
-	 * @param bool $isWatch
-	 * @param int $section
 	 * @param int $flags
-	 * @param int $revision
-	 * @param Status $status
-	 * @param int $baseRevId
+	 * @param RevisionRecord $revisionRecord
 	 * @return bool Always true to keep hook running
 	 */
-	public static function onPageContentSaveComplete( WikiPage $wikiPage, $user, $content,
-			$summary, $isMinor, $isWatch, $section, $flags, $revision, $status,
-			$baseRevId ) {
+	public static function onPageSaveComplete( WikiPage $wikiPage, $user, $summary, $flags, $revisionRecord ) {
+		$content = $revisionRecord->getContent( SlotRecord::MAIN, RevisionRecord::RAW );
 		DataUpdate::runUpdates(
 			$content->getSecondaryDataUpdates( $wikiPage->getTitle() )
 		);
