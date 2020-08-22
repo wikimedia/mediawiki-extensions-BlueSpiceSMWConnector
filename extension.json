@@ -136,7 +136,7 @@
 		"NamespaceManager::editNamespace": "BSSMWCNamespaceManager::onEditNamespace",
 		"NamespaceManager::writeNamespaceConfiguration": "BSSMWCNamespaceManager::onWriteNamespaceConfiguration",
 		"BSPageTemplatesBeforeRender": "BSSMWCPageTemplates::onBSPageTemplatesBeforeRender",
-		"PageContentSaveComplete": "BSSMWConnectorHooks::onPageContentSaveComplete",
+		"PageSaveComplete": "BSSMWConnectorHooks::onPageSaveComplete",
 		"SMW::Store::AfterQueryResultLookupComplete": "BlueSpice\\SMWConnector\\Hook\\SMWStoreAfterQueryResultLookupComplete\\ApplySecurityTrimming::callback",
 		"ChameleonSkinTemplateOutputPageBeforeExec": "BlueSpice\\SMWConnector\\Hook\\ChameleonSkinTemplateOutputPageBeforeExec\\AddFormEditAction::callback",
 		"BSUEModulePDFcollectMetaData": "BlueSpice\\SMWConnector\\Hook\\BSUEModulePDFcollectMetaData\\AddSemanitcMetaData::callback"
