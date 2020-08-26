@@ -4,7 +4,10 @@ bs_smwc_pf_mw_visualeditor_init = function( input_id, params ) {
 	});
 
 	function _initMWVisualEditor( input_id, params ) {
-		var value = bs_smwc_pf_mw_visualeditor_decode_pipe( params.current_value );
+		var value = '';
+		if ( params.current_value ) {
+			value = bs_smwc_pf_mw_visualeditor_decode_pipe( params.current_value );
+                }
 		mw.loader.using( 'ext.bluespice.visualEditorConnector' ).done( function() {
 			var cfg = {
 				placeholder: value,
