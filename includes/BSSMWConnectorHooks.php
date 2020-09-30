@@ -24,7 +24,10 @@ class BSSMWConnectorHooks {
 			return true;
 		}
 
-		$out->addModules( 'ext.BSSMWConnector.PageForms.DateTimePicker.fix' );
+		$out->addModules( [
+			'ext.BSSMWConnector.PageForms.DateTimePicker.fix',
+			'ext.BSSMWConnector.visualEditor'
+		] );
 
 		return true;
 	}

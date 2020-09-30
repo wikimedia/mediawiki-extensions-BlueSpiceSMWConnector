@@ -177,6 +177,14 @@
 				"ext.smw.api"
 			]
 		},
+		"ext.BSSMWConnector.visualEditor": {
+			"scripts": [
+				"ext.BSSMWConnector.smwc.ve.init.js"
+			],
+			"dependencies": [
+				"ext.bluespice"
+			]
+		},
 		"ext.BSSMWConnector.PF.Inputs.MWVisualEditor": {
 			"scripts": [
 				"ext.BSSMWConnector.PF.Inputs.MWVisualEditor.js"
