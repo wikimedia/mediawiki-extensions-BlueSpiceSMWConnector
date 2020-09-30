@@ -1,5 +1,5 @@
 ( function ( mw, $, bs, undefined ) {
-	mw.loader.using( 'ext.bluespice.visualEditorConnector.standalone' ).done( function() {
+	mw.loader.using( 'ext.bluespice.visualEditorConnector.standalone.bootstrap' ).done( function() {
 		var cfg = {
 			placeholder: $( '#pf_free_text' ).text(),
 			value: $( '#pf_free_text' ).text(),

@@ -9,7 +9,7 @@ bs_smwc_pf_mw_visualeditor_init = function( input_id, params ) {
 			value = bs_smwc_pf_mw_visualeditor_decode_pipe( params.current_value );
 		}
 
-		mw.loader.using( 'ext.bluespice.visualEditorConnector.standalone' ).done( function() {
+		mw.loader.using( 'ext.bluespice.visualEditorConnector.standalone.bootstrap' ).done( function() {
 			var cfg = {
 				placeholder: value,
 				value: value,
