@@ -1,5 +1,5 @@
 bs_smwc_pf_mw_visualeditor_init = function( input_id, params ) {
-	mw.loader.using( 'ext.BSSMWConnector' ).done( function() {
+	mw.loader.using( 'ext.BSSMWConnector.visualEditor' ).done( function() {
 		_initMWVisualEditor( input_id, params );
 	});
 
@@ -7,8 +7,9 @@ bs_smwc_pf_mw_visualeditor_init = function( input_id, params ) {
 		var value = '';
 		if ( params.current_value ) {
 			value = bs_smwc_pf_mw_visualeditor_decode_pipe( params.current_value );
-                }
-		mw.loader.using( 'ext.bluespice.visualEditorConnector' ).done( function() {
+		}
+
+		mw.loader.using( 'ext.bluespice.visualEditorConnector.standalone' ).done( function() {
 			var cfg = {
 				placeholder: value,
 				value: value,
@@ -28,7 +29,6 @@ bs_smwc_pf_mw_visualeditor_init = function( input_id, params ) {
 
 bs_smwc_pf_mw_visualeditor_validate = function( input_id, params ) {
 	var textToSubmit = bs.vec.getInstance( input_id + '_ve' ).getWikiTextSync();
-
 
 	if ( textToSubmit === false ) {
 		return false;
