@@ -16,7 +16,7 @@ abstract class ChangeRevision extends Hook {
 	/** @var Title */
 	protected $title;
 
-	/** @var int */
+	/** @var Revision|null */
 	protected $revision;
 
 	/**
@@ -24,7 +24,7 @@ abstract class ChangeRevision extends Hook {
 	 * @param Revision &$revision
 	 * @return bool
 	 */
-	public static function callback( Title $title, Revision &$revision ) {
+	public static function callback( Title $title, ?Revision &$revision ) {
 		$className = static::class;
 		$hookHandler = new $className(
 			null,
