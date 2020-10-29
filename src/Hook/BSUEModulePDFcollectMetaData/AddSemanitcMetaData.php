@@ -22,7 +22,7 @@ class AddSemanitcMetaData extends \BlueSpice\UEModulePDF\Hook\BSUEModulePDFcolle
 
 	/**
 	 * Output Format for DateTime of SMWDITime in $date of getPropertyValuesForTitle
-	 * @var String
+	 * @var string
 	 */
 	public static $dateFormat = "d.m.Y";
 
