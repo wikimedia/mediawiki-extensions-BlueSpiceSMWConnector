@@ -12,5 +12,7 @@
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Semantiske egenskaper",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantiske egenskaper",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Ja",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "Nei"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Nei",
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Nevninger av innhold/brukere",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Brukersidene til brukerne som har blitt nevnt på denne siden"
 }
