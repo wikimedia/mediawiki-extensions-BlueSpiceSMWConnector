@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
-			"Tmv"
+			"Tmv",
+			"Waki285"
 		]
 	},
 	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "内容/ユーザーコメント",
-	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "このページ上で言及されたユーザーたちのユーザーページ"
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "このページ上で言及されたユーザーたちのユーザーページ",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "はい",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "いいえ"
 }
