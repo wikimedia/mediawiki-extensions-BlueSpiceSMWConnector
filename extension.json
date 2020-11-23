@@ -87,6 +87,10 @@
 		"BlueSpiceSMWConnector": {
 			"ExtraPropertyRegistry": {
 				"usermentions": "BlueSpice\\SMWConnector\\PropertyValueProvider\\UserMentions::factory"
+			},
+			"AsyncAskHandlers": {
+				"grid": "\\BlueSpice\\SMWConnector\\AsyncAskHandler\\Grid::factory",
+				"tree": "\\BlueSpice\\SMWConnector\\AsyncAskHandler\\Tree::factory"
 			}
 		}
 	},
@@ -117,10 +121,15 @@
 		"ApiSMWPropertyStore": "includes/api/ApiSMWPropertyStore.php"
 	},
 	"APIModules": {
-		"bs-smw-connector-smw-property-store": "ApiSMWPropertyStore"
+		"bs-smw-connector-smw-property-store": "ApiSMWPropertyStore",
+		"bs-smw-connector-ask-store": "\\BlueSpice\\SMWConnector\\Api\\Store\\Ask",
+		"bs-smw-connector-tree-ask-store": "\\BlueSpice\\SMWConnector\\Api\\Store\\TreeAsk"
 	},
 	"MessagesDirs": {
 		"BSSMWConnectorHooks": "i18n"
+	},
+	"ExtensionMessagesFiles": {
+		"BlueSpiceSMWConnectorMagic": "BlueSpiceSMWConnector.magic.php"
 	},
 	"ExtensionFunctions": [
 		"BlueSpice\\SMWConnector\\Extension::setup",
@@ -144,7 +153,8 @@
 		"PageContentSaveComplete": "BSSMWConnectorHooks::onPageContentSaveComplete",
 		"SMW::Store::AfterQueryResultLookupComplete": "BlueSpice\\SMWConnector\\Hook\\SMWStoreAfterQueryResultLookupComplete\\ApplySecurityTrimming::callback",
 		"SkinTemplateOutputPageBeforeExec": "BlueSpice\\SMWConnector\\Hook\\SkinTemplateOutputPageBeforeExec\\AddFormEditAction::callback",
-		"BSUEModulePDFcollectMetaData": "BlueSpice\\SMWConnector\\Hook\\BSUEModulePDFcollectMetaData\\AddSemanitcMetaData::callback"
+		"BSUEModulePDFcollectMetaData": "BlueSpice\\SMWConnector\\Hook\\BSUEModulePDFcollectMetaData\\AddSemanitcMetaData::callback",
+		"ParserFirstCallInit": "BlueSpice\\SMWConnector\\Hook\\ParserFirstCallInit\\AsyncAsk::callback"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
@@ -211,6 +221,24 @@
 				"ext.smw.api",
 				"ext.bluespice.extjs",
 				"ext.extjsbase.ux"
+			]
+		},
+		"ext.BSSMWConnector.async.grid": {
+			"scripts": "ext.BSSMWConnector.async.grid.js",
+			"dependencies": [
+				"ext.bluespice.extjs"
+			],
+			"messages": [
+				"bs-smw-connector-async-error"
+			]
+		},
+		"ext.BSSMWConnector.async.tree": {
+			"scripts": "ext.BSSMWConnector.async.tree.js",
+			"dependencies": [
+				"ext.bluespice.extjs"
+			],
+			"messages": [
+				"bs-smw-connector-async-error"
 			]
 		},
 		"ext.BSSMWConnector.PageForms.DateTimePicker.fix": {
