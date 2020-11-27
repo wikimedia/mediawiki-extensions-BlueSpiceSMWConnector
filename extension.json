@@ -223,6 +223,13 @@
 	"config": {
 		"UEModulePDFsmwProperties": {
 			"value": {}
+		},
+		"ESSMWPropertyFilter": {
+			"description": "Which SMW properties to offer as filters. List of regex-es. Properties are matched against the names as written in ES filter list",
+			"value": {
+				"type": "blacklist",
+				"props": []
+			}
 		}
 	},
 	"load_composer_autoloader": true,
