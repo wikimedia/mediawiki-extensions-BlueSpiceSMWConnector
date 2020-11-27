@@ -3,6 +3,7 @@
 namespace BlueSpice\SMWConnector\ExtendedSearch\Source\Formatter;
 
 use BS\ExtendedSearch\Source\Formatter\WikiPageFormatter;
+use MediaWiki\MediaWikiServices;
 
 class SMWWikiPageFormatter extends WikiPageFormatter {
 	/**
@@ -83,6 +84,11 @@ class SMWWikiPageFormatter extends WikiPageFormatter {
 				return;
 			}
 
+			$config = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'bsg' );
+			$filterConfig = $config->get( 'ESSMWPropertyFilter' );
+			$filterType = isset( $filterConfig['type'] ) ? $filterConfig['type'] : 'blacklist';
+			$filterValues = isset( $filterConfig['props'] ) ? $filterConfig['props'] : [];
+
 			$smwAgg = $smwAgg['name'];
 			foreach ( $smwAgg['buckets'] as $bucket ) {
 				if ( !isset( $bucket['value']['buckets'][0] ) ) {
@@ -107,6 +113,19 @@ class SMWWikiPageFormatter extends WikiPageFormatter {
 				// of an element, encode value is always alphanumeric
 				$key = base64_encode( 'smwproperty:' . $bucket['key'] );
 				$key = rtrim( $key, '=' );
+
+				if (
+					$filterType === 'whitelist' &&
+					!$this->inFilterValues( $bucket['key'], $filterValues )
+				) {
+					continue;
+				}
+				if (
+					$filterType === 'blacklist' &&
+					$this->inFilterValues( $bucket['key'], $filterValues )
+				) {
+					continue;
+				}
 
 				$filterCfg[$key] = [
 					'buckets' => $bucket['value']['buckets'],
@@ -146,6 +165,23 @@ class SMWWikiPageFormatter extends WikiPageFormatter {
 		foreach ( $filters['terms'] as $key => $value ) {
 			$decodedKey = base64_decode( $key );
 			if ( strpos( $decodedKey, 'smwproperty:' ) === 0 ) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * Check if prop name is in the list of allowed/blocked props
+	 *
+	 * @param string $key
+	 * @param array $values
+	 * @return bool
+	 */
+	private function inFilterValues( $key, $values ) {
+		foreach ( $values as $value ) {
+			if ( preg_match( "/$value/", $key ) ) {
 				return true;
 			}
 		}
