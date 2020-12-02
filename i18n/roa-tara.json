@@ -11,5 +11,7 @@
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Probbietà semandeche",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Probbietà semandeche:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Sìne",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "None"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "None",
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Menziune de condenute/utende",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Pàggene utinde de l'utinde ca onne state menzionate sus a sta pàgene"
 }
