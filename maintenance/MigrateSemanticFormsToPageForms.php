@@ -4,6 +4,7 @@ require '../../../maintenance/Maintenance.php';
 
 class MigrateSemanticFormsToPageForms extends Maintenance {
 
+	/** @var string */
 	protected $propHasDefaultFormVariants = [
 		'لديه استمارة افتراضية',
 		'Fa servir el formulari per defecte',
@@ -23,6 +24,7 @@ class MigrateSemanticFormsToPageForms extends Maintenance {
 		'預設表單'
 	];
 
+	/** @var true[] */
 	protected $pagesToChange = [];
 
 	public function __construct() {

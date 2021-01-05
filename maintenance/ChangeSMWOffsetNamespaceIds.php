@@ -4,6 +4,7 @@ require __DIR__ . '/../../../maintenance/Maintenance.php';
 
 class ChangeSMWOffsetNamespaceIds extends Maintenance {
 
+	/** @var int[] */
 	protected $namespaceIdMap = [
 		700 => 100,
 		701 => 101,
@@ -14,6 +15,7 @@ class ChangeSMWOffsetNamespaceIds extends Maintenance {
 		706 => 106
 	];
 
+	/** @var string[][] */
 	protected $tablesAndFields = [
 		'archive' => [ 'ar_namespace' ],
 		'page' => [ 'page_namespace' ],

@@ -5,6 +5,7 @@ namespace BlueSpice\SMWConnector\ExtendedSearch\Source\DocumentProvider;
 use BS\ExtendedSearch\Source\DocumentProvider\WikiPage;
 
 class SMWWikiPage extends WikiPage {
+	/** @var array */
 	protected $semanticData = [];
 
 	/**

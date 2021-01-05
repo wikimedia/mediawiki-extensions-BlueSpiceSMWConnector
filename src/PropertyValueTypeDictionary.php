@@ -6,6 +6,7 @@ use SMWDataItem;
 
 class PropertyValueTypeDictionary {
 
+	/** @var string[] */
 	public static $types = [
 		// Text type
 		SMWDataItem::TYPE_BLOB => '_txt',

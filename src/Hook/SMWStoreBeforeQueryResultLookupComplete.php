@@ -21,6 +21,7 @@ abstract class SMWStoreBeforeQueryResultLookupComplete extends Hook {
 	/**
 	 * ATTENTION: THE PARAMETER IS NULL DURING THE HOOK CALL, BUT IF RETURNING
 	 * FALSE THIS MUST BE SET TO \SMWQueryResult
+	 * @var \SMWQueryResult|null
 	 */
 	protected $result = null;
 
