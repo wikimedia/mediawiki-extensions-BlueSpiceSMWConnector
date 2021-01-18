@@ -5,5 +5,6 @@
 		]
 	},
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Այո",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "Ոչ"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Ոչ",
+	"bs-swm-connector-ask-store-page-label": "Էջ"
 }

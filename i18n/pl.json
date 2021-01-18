@@ -1,11 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Chrumps"
+			"Chrumps",
+			"Kareyac"
 		]
 	},
 	"bs-dlg-choosesmwprop-label": "Właściwość",
 	"bs-dlg-choosesmwprop-type-smwprop": "Właściwość semantyczna",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Tak",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "Nie"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Nie",
+	"bs-swm-connector-ask-store-page-label": "Strona"
 }

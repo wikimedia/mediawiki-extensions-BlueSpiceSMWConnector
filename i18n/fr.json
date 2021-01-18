@@ -18,5 +18,7 @@
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Oui",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Non",
 	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Contenu/Mentions d'utilisateur",
-	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Les pages utilisateur d'utilisateurs ayant été mentionnés sur cette page"
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Les pages utilisateur d'utilisateurs ayant été mentionnés sur cette page",
+	"bs-swm-connector-ask-store-page-label": "Page",
+	"bs-smw-connector-async-ask-unknown-handler": "Le gestionnaire du format « $1 » n'est pas enregistré ou n'est pas valide"
 }
