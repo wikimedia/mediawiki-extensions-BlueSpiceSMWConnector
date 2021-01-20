@@ -13,5 +13,8 @@
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Sìne",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "None",
 	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Menziune de condenute/utende",
-	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Pàggene utinde de l'utinde ca onne state menzionate sus a sta pàgene"
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Pàggene utinde de l'utinde ca onne state menzionate sus a sta pàgene",
+	"apihelp-bs-smw-connector-ask-store-summary": "'U negozie ExtJS-combatibbele pe eseguì le 'nderrogaziune semandeche",
+	"bs-swm-connector-ask-store-page-label": "Pàgene",
+	"bs-smw-connector-async-ask-unknown-handler": "'U gestore pu formate \"$1\" non g'è reggistrate o non g'è valide"
 }
