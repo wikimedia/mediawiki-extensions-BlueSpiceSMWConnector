@@ -15,6 +15,8 @@
 	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Menziune de condenute/utende",
 	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Pàggene utinde de l'utinde ca onne state menzionate sus a sta pàgene",
 	"apihelp-bs-smw-connector-ask-store-summary": "'U negozie ExtJS-combatibbele pe eseguì le 'nderrogaziune semandeche",
+	"apihelp-bs-smw-connector-ask-store-props-param": "Probbietà da annullà. Chidde probbietà corresponnene a 'u scheme e a le date turnate. Le coppi echiave-valore, 'a chiave jè 'u nome de mò d'a probbietà, 'u valore l'etichette desiderate (JSON)",
 	"bs-swm-connector-ask-store-page-label": "Pàgene",
-	"bs-smw-connector-async-ask-unknown-handler": "'U gestore pu formate \"$1\" non g'è reggistrate o non g'è valide"
+	"bs-smw-connector-async-ask-unknown-handler": "'U gestore pu formate \"$1\" non g'è reggistrate o non g'è valide",
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Valore d'u node ca sostituisce 'u segnaposte  <nowiki>{{{node}}}</nowiki> jndr'à l'inderrogazione"
 }
