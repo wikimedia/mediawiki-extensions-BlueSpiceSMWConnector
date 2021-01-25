@@ -118,8 +118,18 @@ class AsyncAsk extends ParserFirstCallInit {
 		}
 
 		$order = array_filter( $order, function ( $item ) {
-			return in_array( strtolower( $item ), [ 'asc', 'desc' ] );
+			return in_array( strtolower( $item ), [ 'asc', 'desc', 'n-asc', 'n-desc' ] );
 		} );
+		$order = array_map( function ( $item ) {
+			if ( $item === 'n-asc' ) {
+				return 'asc';
+			}
+			if ( $item === 'n-desc' ) {
+				return 'desc';
+			}
+
+			return $item;
+		}, $order );
 
 		if ( !$order ) {
 			$order = [ 'asc' ];
