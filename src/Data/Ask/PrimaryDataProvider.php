@@ -89,7 +89,7 @@ class PrimaryDataProvider implements IPrimaryDataProvider {
 			$smwOrder = [];
 			foreach ( $bsSortItems as $bsSortItem ) {
 				$smwSort[] = $bsSortItem->getProperty();
-				$smwOrder[] = strtolower( $bsSortItem->getDirection() );
+				$smwOrder[] = $this->convertSortDirection( $bsSortItem->getDirection() );
 			}
 
 			$res[] = 'sort=' . implode( ',', $smwSort );
@@ -278,5 +278,23 @@ class PrimaryDataProvider implements IPrimaryDataProvider {
 			$dataValue->setOutputFormat( $def[Schema::PROPERTY_FORMAT] );
 		}
 		return $dataValue->getShortWikiText();
+	}
+
+	/**
+	 * Covert to natural sorting
+	 *
+	 * @param string $direction
+	 * @return string
+	 */
+	private function convertSortDirection( $direction ) {
+		$direction = strtolower( $direction );
+		if ( $direction === 'asc' ) {
+			return 'n-asc';
+		}
+		if ( $direction === 'desc' ) {
+			return 'n-desc';
+		}
+
+		return $direction;
 	}
 }
