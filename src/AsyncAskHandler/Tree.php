@@ -6,6 +6,7 @@ use BlueSpice\SMWConnector\Hook\ParserFirstCallInit\AsyncAsk;
 use BlueSpice\SMWConnector\IAsyncAskHandler;
 use FormatJson;
 use Html;
+use Message;
 
 class Tree implements IAsyncAskHandler {
 
@@ -25,10 +26,13 @@ class Tree implements IAsyncAskHandler {
 			'storeAction' => $this->getStoreAction(),
 		] );
 
-		return Html::element( 'div', [
+		return Html::rawElement( 'div', [
 			'class' => 'bs-smw-connector-async-ask-tree-container',
 			'data-query' => FormatJson::encode( $data )
-		] );
+		], Html::element( 'span', [
+				'class' => 'loading-text',
+			], Message::newFromKey( 'bs-extjs-loading' )->text() )
+		);
 	}
 
 	/**
