@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Agaafd",
-			"BaRaN6161 TURK"
+			"BaRaN6161 TURK",
+			"Joseph"
 		]
 	},
 	"bs-bssmwconnector-desc": "SemanticMediaWiki'yi BlueSpice ile bütünleştirir",
@@ -15,5 +16,6 @@
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Hayır",
 	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Içerik/Kullanıcı bahsetmeleri",
 	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Bu sayfada adı geçen kullanıcıların kullanıcı sayfaları",
+	"apihelp-bs-smw-connector-ask-store-summary": "Anlamsal sorguları çalıştırmak için ExtJS-uyumlu mağaza",
 	"bs-swm-connector-ask-store-page-label": "Sayfa"
 }
