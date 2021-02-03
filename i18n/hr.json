@@ -1,0 +1,19 @@
+{
+	"@metadata": {
+		"authors": [
+			"Bugoslav"
+		]
+	},
+	"bs-bssmwconnector-desc": "Integrira Semantički MediaWiki u BlueSpice",
+	"bs-bssmwconnector-srf-printername-bsgrid": "Matrica BlueSpicea",
+	"bs-bssmwconnector-nmmngr-label-smw": "Semantički MediaWiki",
+	"bs-dlg-choosesmwprop-label": "Svojstvo",
+	"bs-dlg-choosesmwprop-type-smwprop": "Semantičko svojstvo",
+	"bs-extendedsearch-add-filter-group-smwproperty-label": "Semantička svojstva",
+	"bs-smwconnector-extendedsearch-smwproperty-result-value": "$1, $2",
+	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantička svojstva:",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "Da",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Ne",
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Spominjanja sadržaja/suradnika",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Suradničke stranice suradnika koji su bili spomenuti na ovoj stranici"
+}

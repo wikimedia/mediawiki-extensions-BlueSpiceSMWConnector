@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
-			"Facenapalm",
-			"Patrick Star",
-			"Okras",
 			"Evs",
-			"Vlad5250",
-			"Movses"
+			"Facenapalm",
+			"Kareyac",
+			"Movses",
+			"Okras",
+			"Patrick Star",
+			"Vlad5250"
 		]
 	},
 	"bs-bssmwconnector-desc": "Интегрирует SemanticMediaWiki в BlueSpice",
@@ -16,5 +17,6 @@
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Семантические свойства:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Да",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Нет",
-	"bs-dlg-choosesmwprop-type-smwprop": "Семантическое свойство"
+	"bs-dlg-choosesmwprop-type-smwprop": "Семантическое свойство",
+	"bs-swm-connector-ask-store-page-label": "Страница"
 }

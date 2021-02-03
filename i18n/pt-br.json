@@ -13,5 +13,12 @@
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Propriedades semânticas",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Propriedades semânticas:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Sim",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "Não"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Não",
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Conteúdo/Menções do usuário",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Páginas de usuários mencionadas nesta página",
+	"apihelp-bs-smw-connector-ask-store-summary": "Armazenamento compatível com ExtJS para executar consultas semânticas",
+	"apihelp-bs-smw-connector-ask-store-props-param": "Propriedades a serem recuperadas. Essas propriedades corresponderão ao esquema e aos dados retornados. Pares de valor-chave, chave é o nome real da propriedade, valor é o rótulo desejado (JSON)",
+	"bs-swm-connector-ask-store-page-label": "Página",
+	"bs-smw-connector-async-ask-unknown-handler": "O manipulador para o formato \"$1\" não está registrado ou não é válido",
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Valor do nó que irá substituir o marcador <nowiki>{{{node}}}</nowiki> de posição na consulta"
 }

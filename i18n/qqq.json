@@ -1,27 +1,27 @@
 {
 	"@metadata": {
 		"authors": [
-			"Robert Vogel <vogel@hallowelt.biz>",
 			"Hamilton Abreu",
-			"Umherirrender",
-			"Robby"
+			"Robby",
+			"Robert Vogel <vogel@hallowelt.biz>",
+			"Umherirrender"
 		]
 	},
 	"bs-bssmwconnector-desc": "{{desc|name=BlueSpiceSMWConnector|url=https://www.mediawiki.org/wiki/Extension:BlueSpiceSMWConnector}}",
 	"bs-bssmwconnector-srf-printername-bsgrid": "Name of a Semantic Result Format that uses BlueSpice/ExtJS\n\n'''Related messages:'''\n*{{msg-mw|Srf-paramdesc-theme}}",
-	"bs-bssmwconnector-nmmngr-label-smw": "Label for column in grid of NamespaceManager extension",
+	"bs-bssmwconnector-nmmngr-label-smw": "{{optional}}\nLabel for column in grid of NamespaceManager extension",
 	"bs-dlg-choosesmwprop-label": "Label for combobox for choosing semantic properties\n{{Identical|Property}}",
 	"bs-dlg-choosesmwprop-type-smwprop": "Text for SemanticProperty type BookshelfUI extension",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Label for the group holding semantic properties filters in the dialog for adding filters",
-	"bs-smwconnector-extendedsearch-smwproperty-result-value": "Helper message to show name and values of semantic property in search results. $1 - smw property name, $2 - smw property value",
+	"bs-smwconnector-extendedsearch-smwproperty-result-value": "{{optional}}\nHelper message to show name and values of semantic property in search results. $1 - smw property name, $2 - smw property value",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Label for the field in search results showing all semantic properties of a page",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Textual representation of boolean \"true\" value for semantic properties\n{{Identical|Yes}}",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Textual representation of boolean \"false\" value for semantic properties\n{{Identical|No}}",
 	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Label of _USERMENTIONS semantic special property.\n{{Identical|Content/User mentions}}\n Prefix and main part of this alias are separated by \"/\"",
 	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Description of _USERMENTIONS semantic special property, that stores all user pages of the users, that have been mentioned on this page",
-	"apihelp-bs-smw-connector-ask-store-summary": "{{doc-apihelp-description|bs-smw-connector-ask-store}}",
+	"apihelp-bs-smw-connector-ask-store-summary": "{{doc-apihelp-summary|bs-smw-connector-ask-store}}",
 	"apihelp-bs-smw-connector-ask-store-props-param": "{{doc-apihelp-param|bs-smw-connector-ask-store|props}}",
-	"bs-swm-connector-ask-store-page-label": "Default label for the main column in async-ask query",
+	"bs-swm-connector-ask-store-page-label": "Default label for the main column in async-ask query\n{{identical|Page}}",
 	"bs-smw-connector-async-ask-unknown-handler": "Error message when handler for given format in async ask query is not valid. \n$1 - format name",
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "{{doc-apihelp-param|bs-smw-connector-tree-ask-store|node}}"
 }

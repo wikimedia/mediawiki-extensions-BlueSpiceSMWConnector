@@ -1,8 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Macofe",
-			"Fitoschido"
+			"Fitoschido",
+			"Macofe"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integra SemanticMediaWiki en BlueSpice",
@@ -12,5 +12,6 @@
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Propiedades semánticas",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Propiedades semánticas:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Sí",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "No"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "No",
+	"bs-swm-connector-ask-store-page-label": "Página"
 }

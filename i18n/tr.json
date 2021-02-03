@@ -1,15 +1,21 @@
 {
 	"@metadata": {
 		"authors": [
-			"BaRaN6161 TURK"
+			"Agaafd",
+			"BaRaN6161 TURK",
+			"Joseph"
 		]
 	},
 	"bs-bssmwconnector-desc": "SemanticMediaWiki'yi BlueSpice ile bütünleştirir",
-	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice Kafesi",
+	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice Izgarası",
 	"bs-dlg-choosesmwprop-label": "Özellik",
 	"bs-dlg-choosesmwprop-type-smwprop": "Anlamsal özellik",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Anlamsal özellikler",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Anlamsal özellikler:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Evet",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "Hayır"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Hayır",
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Içerik/Kullanıcı bahsetmeleri",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Bu sayfada adı geçen kullanıcıların kullanıcı sayfaları",
+	"apihelp-bs-smw-connector-ask-store-summary": "Anlamsal sorguları çalıştırmak için ExtJS-uyumlu mağaza",
+	"bs-swm-connector-ask-store-page-label": "Sayfa"
 }

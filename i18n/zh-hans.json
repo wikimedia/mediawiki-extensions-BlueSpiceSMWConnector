@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Liuxinyu970226"
+			"Liuxinyu970226",
+			"列维劳德"
 		]
 	},
 	"bs-bssmwconnector-desc": "将语义MediaWiki结合进BlueSpice",
@@ -11,5 +12,9 @@
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "语义属性",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "语义属性：",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "是",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "否"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "否",
+	"apihelp-bs-smw-connector-ask-store-summary": "ExtJS-compatible 存储用于执行语义查询",
+	"bs-swm-connector-ask-store-page-label": "页面",
+	"bs-smw-connector-async-ask-unknown-handler": "格式“$1”的处理器未注册或不可用",
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Query 中会替代占位符 <nowiki>{{{node}}}</nowiki> 的 node 值"
 }
