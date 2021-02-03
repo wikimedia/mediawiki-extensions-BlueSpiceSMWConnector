@@ -82,7 +82,6 @@ class MigrateSemanticFormsToPageForms extends Maintenance {
 	/**
 	 *
 	 * @param string $pageName
-	 * @return string
 	 */
 	protected function replacePropertyByParserFunction( $pageName ) {
 		$this->output( "\n\t$pageName" );

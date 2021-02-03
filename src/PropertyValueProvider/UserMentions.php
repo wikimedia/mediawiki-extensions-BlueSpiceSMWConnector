@@ -58,7 +58,6 @@ class UserMentions extends PropertyValueProvider {
 	 * @param AppFactory $appFactory
 	 * @param DIProperty $property
 	 * @param SemanticData $semanticData
-	 * @return null
 	 */
 	public function addAnnotation( $appFactory, $property, $semanticData ) {
 		$wikiPage = WikiPage::factory( $semanticData->getSubject()->getTitle() );
