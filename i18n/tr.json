@@ -17,5 +17,6 @@
 	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Içerik/Kullanıcı bahsetmeleri",
 	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Bu sayfada adı geçen kullanıcıların kullanıcı sayfaları",
 	"apihelp-bs-smw-connector-ask-store-summary": "Anlamsal sorguları çalıştırmak için ExtJS-uyumlu mağaza",
+	"apihelp-bs-smw-connector-ask-store-props-param": "Çekilecek özellikler. Bu özellikler getirilecek düzen ve veriye karşılık gelir. Anahtar-değer çiftleri, anahtar asıl özellik adı, değer istenen etikettir (JSON)",
 	"bs-swm-connector-ask-store-page-label": "Sayfa"
 }
