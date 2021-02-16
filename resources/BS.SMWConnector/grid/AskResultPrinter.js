@@ -268,7 +268,7 @@ Ext.define( 'BS.SMWConnector.grid.AskResultPrinter', {
 
 	makePagingToolbar: function( items ) {
 		this.cbPageSize = new Ext.form.ComboBox({
-			fieldLabel: mw.message ( 'bs-filerepo-pagesize' ).plain(),
+			fieldLabel: mw.message ( 'bs-extjs-pageSize' ).plain(),
 			labelAlign: 'right',
 			autoSelect: true,
 			forceSelection: true,

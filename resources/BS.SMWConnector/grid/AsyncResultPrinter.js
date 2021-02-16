@@ -59,7 +59,6 @@ Ext.define( 'BS.SMWConnector.grid.AsyncResultPrinter', {
 
 	makeTopToolbar: function( items ) {
 		this.sfFilter = new MWExt.form.field.Search( {
-			fieldLabel: mw.message( 'bs-filerepo-labelfilter' ).plain(),
 			labelAlign: 'right',
 			flex: 3,
 			store: this.store,
