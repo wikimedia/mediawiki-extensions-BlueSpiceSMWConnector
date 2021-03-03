@@ -2,6 +2,7 @@
 
 namespace BlueSpice\SMWConnector\Data\Ask;
 
+use BlueSpice\Data\NullSorter;
 use BlueSpice\Data\NullTrimmer;
 use BlueSpice\Data\Reader as BaseReader;
 use BlueSpice\Data\ResultSet;
@@ -48,6 +49,13 @@ class Reader extends BaseReader {
 		}
 
 		return $this->schema;
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	protected function makeSorter( $params ) {
+		return new NullSorter( $params->getSort() );
 	}
 
 	/**
