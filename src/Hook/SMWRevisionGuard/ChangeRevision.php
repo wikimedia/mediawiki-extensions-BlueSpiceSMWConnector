@@ -21,10 +21,10 @@ abstract class ChangeRevision extends Hook {
 
 	/**
 	 * @param Title $title
-	 * @param Revision &$revision
+	 * @param Revision|null &$revision
 	 * @return bool
 	 */
-	public static function callback( Title $title, Revision &$revision ) {
+	public static function callback( Title $title, &$revision ) {
 		$className = static::class;
 		$hookHandler = new $className(
 			null,
