@@ -14,5 +14,10 @@
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Ja",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Nei",
 	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Nevninger av innhold/brukere",
-	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Brukersidene til brukerne som har blitt nevnt på denne siden"
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Brukersidene til brukerne som har blitt nevnt på denne siden",
+	"apihelp-bs-smw-connector-ask-store-summary": "ExtJS-kompatibelt lager for å kjøre semantiske spørringer",
+	"apihelp-bs-smw-connector-ask-store-props-param": "Egenskaper som skal hentes. Disse egenskapene korresponderer til skjemaet og dataene som returneres. Nøkkel–verdi-par, nøkkelen er egenskapsnavnet og verdien er den ønskede etiketten (JSON)",
+	"bs-swm-connector-ask-store-page-label": "Side",
+	"bs-smw-connector-async-ask-unknown-handler": "Behandling for formatet «$1» er ikke registrert eller ikke gyldig",
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Nodeverdier som vil erstatte <nowiki>{{{node}}}</nowiki> i spørringen"
 }
