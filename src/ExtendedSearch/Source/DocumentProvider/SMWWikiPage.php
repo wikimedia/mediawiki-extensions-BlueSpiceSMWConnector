@@ -16,7 +16,10 @@ class SMWWikiPage extends WikiPage {
 	public function getDataConfig( $uri, $wikipage ) {
 		$aDC = $this->oDecoratedDP->getDataConfig( $uri, $wikipage );
 
-		$aDC = array_merge( $aDC, parent::getDataConfig( $uri, $wikipage ) );
+		$parent = parent::getDataConfig( $uri, $wikipage );
+		if ( $parent ) {
+			$aDC = array_merge( $aDC, $parent );
+		}
 		$this->getSemanticData( $wikipage );
 
 		$aDC = array_merge( [
