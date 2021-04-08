@@ -13,5 +13,6 @@
 	"bs-smwconnector-extendedsearch-boolean-property-true": "是",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "否",
 	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "內容/使用者提及",
-	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "在此頁面上所提到的使用者之用戶頁面"
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "在此頁面上所提到的使用者之用戶頁面",
+	"bs-swm-connector-ask-store-page-label": "頁面"
 }
