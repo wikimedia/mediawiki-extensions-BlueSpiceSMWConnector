@@ -8,5 +8,6 @@
 	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice Grid",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Ja",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Nee",
-	"bs-dlg-choosesmwprop-label": "Eigenschap"
+	"bs-dlg-choosesmwprop-label": "Eigenschap",
+	"bs-swm-connector-ask-store-page-label": "Pagina"
 }
