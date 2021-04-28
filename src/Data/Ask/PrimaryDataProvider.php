@@ -142,26 +142,22 @@ class PrimaryDataProvider implements IPrimaryDataProvider {
 	 * @return Disjunction|null
 	 */
 	private function getGlobalDisjunction( Filter $filter ) {
-		$split = explode( ' ', $filter->getValue() );
-		$allDescriptions = [];
-		foreach ( $split as $item ) {
-			$descriptions = [];
-			// Always "ct" comparison
-			foreach ( (array)$this->schema as $key => $def ) {
-				if ( !isset( $def[Schema::PROPERTY_TYPE] ) ) {
-					continue;
-				}
-				$type = $def[Schema::PROPERTY_TYPE];
-
-				if ( !in_array( $type, [ '_txt', '_wpg', '_ema', '_tel', '_str' ] ) ) {
-					continue;
-				}
-				$descriptions[] = new AnyDescription(
-					$def[Schema::PROPERTY_NAME], $item
-				);
+		$descriptions = [];
+		// Always "ct" comparison
+		foreach ( (array)$this->schema as $key => $def ) {
+			if ( !isset( $def[Schema::PROPERTY_TYPE] ) ) {
+				continue;
 			}
-			$allDescriptions[] = new Disjunction( $descriptions );
+			$type = $def[Schema::PROPERTY_TYPE];
+
+			if ( !in_array( $type, [ '_txt', '_wpg', '_ema', '_tel', '_str' ] ) ) {
+				continue;
+			}
+			$descriptions[] = new AnyDescription(
+				$def[Schema::PROPERTY_NAME], $filter->getValue()
+			);
 		}
+		$allDescriptions[] = new Disjunction( $descriptions );
 
 		return new Disjunction( $allDescriptions );
 	}
