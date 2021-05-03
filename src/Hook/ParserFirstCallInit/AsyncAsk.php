@@ -67,7 +67,7 @@ class AsyncAsk extends ParserFirstCallInit {
 		foreach ( $this->params as $param ) {
 			if ( strpos( trim( $param ), "$search=" ) === 0 ) {
 				$value = explode( ',', str_replace( "$search=", '', $param ) );
-				array_walk( $value, function ( $item ) {
+				array_walk( $value, static function ( $item ) {
 					return trim( $item );
 				} );
 
@@ -120,10 +120,10 @@ class AsyncAsk extends ParserFirstCallInit {
 			$order = [ 'n-asc' ];
 		}
 
-		$order = array_filter( $order, function ( $item ) {
+		$order = array_filter( $order, static function ( $item ) {
 			return in_array( strtolower( $item ), [ 'asc', 'desc', 'n-asc', 'n-desc' ] );
 		} );
-		$order = array_map( function ( $item ) {
+		$order = array_map( static function ( $item ) {
 			if ( $item === 'n-asc' ) {
 				return 'asc';
 			}

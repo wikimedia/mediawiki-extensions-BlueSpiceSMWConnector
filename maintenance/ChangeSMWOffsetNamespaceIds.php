@@ -85,7 +85,7 @@ HERE
 			$this->output( "Found: $numberOfEntriesToChange\n" );
 			$this->output( "Changing ..." );
 
-			$this->getDB( DB_MASTER )->update(
+			$this->getDB( DB_PRIMARY )->update(
 				$tableName,
 				[
 					$fieldName => $newNS
