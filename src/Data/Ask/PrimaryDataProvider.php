@@ -158,9 +158,8 @@ class PrimaryDataProvider implements IPrimaryDataProvider {
 				$def[Schema::PROPERTY_NAME], $filter->getValue()
 			);
 		}
-		$allDescriptions[] = new Disjunction( $descriptions );
 
-		return new Disjunction( $allDescriptions );
+		return new Disjunction( $descriptions );
 	}
 
 	/**
