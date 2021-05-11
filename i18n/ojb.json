@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Aandeginini"
+		]
+	},
+	"apihelp-bs-smw-connector-ask-store-summary": "Gaapii-onaakosidoon anokii wiji-wiin ataason ozhitoon ikidowin gagwedwewin",
+	"bs-swm-connector-ask-store-page-label": "Mazina'igan",
+	"bs-smw-connector-async-ask-unknown-handler": "Ininigaade ayaan \"$1\" giiwiin daangigwanenan gemaa giiwiin aapidendi",
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Mazinaabikiwebinigan apiitendaagozi waa- mamaw danakamigad <nowiki>{{{node}}}</nowiki> danakamigad-dakon biindig gagwedwe"
+}

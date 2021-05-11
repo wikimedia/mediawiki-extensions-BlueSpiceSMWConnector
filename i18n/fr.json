@@ -4,6 +4,7 @@
 			"Derugon",
 			"Golmore",
 			"Gomoko",
+			"Verdy p",
 			"Wladek92"
 		]
 	},
@@ -12,16 +13,16 @@
 	"bs-dlg-choosesmwprop-label": "Propriété",
 	"bs-dlg-choosesmwprop-type-smwprop": "Propriété sémantique",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Propriétés sémantiques",
-	"bs-extendedsearch-search-center-result-smwproperty-label": "Propriétés sémantiques :",
+	"bs-extendedsearch-search-center-result-smwproperty-label": "Propriétés sémantiques :",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Oui",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Non",
 	"bs-bssmwconnector-nmmngr-label-smw": "MediaWiki Sémantique",
 	"bs-smwconnector-extendedsearch-smwproperty-result-value": "$1 : $2",
-	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Contenu/Mentions d'utilisateur",
-	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Les pages utilisateur d'utilisateurs ayant été mentionnés sur cette page",
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Contenu/Mentions d’utilisateur",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Les pages utilisateur d’utilisateurs ayant été mentionnés sur cette page",
 	"apihelp-bs-smw-connector-ask-store-summary": "Stockage compatible ExtJS pour exécuter des requêtes sémantiques",
 	"apihelp-bs-smw-connector-ask-store-props-param": "Propriétés à récupérer. Ces propriétés correspondront au schéma et aux données renvoyées. Paires de clé-valeur, la clé est le nom exact de la propriété, la valeur est le libellé souhaité (JSON)",
 	"bs-swm-connector-ask-store-page-label": "Page",
-	"bs-smw-connector-async-ask-unknown-handler": "Le gestionnaire du format « $1 » n'est pas enregistré ou n'est pas valide",
+	"bs-smw-connector-async-ask-unknown-handler": "Le gestionnaire du format « $1 » n’est pas enregistré ou n’est pas valide",
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Valeur du nœud qui remplacera le paramètre <nowiki>{{{node}}}</nowiki> dans la requête"
 }
