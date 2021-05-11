@@ -117,22 +117,12 @@ class AsyncAsk extends ParserFirstCallInit {
 			return [];
 		}
 		if ( !$order ) {
-			$order = [ 'n-asc' ];
+			$order = [ 'asc' ];
 		}
 
 		$order = array_filter( $order, static function ( $item ) {
-			return in_array( strtolower( $item ), [ 'asc', 'desc', 'n-asc', 'n-desc' ] );
+			return in_array( strtolower( $item ), [ 'asc', 'desc' ] );
 		} );
-		$order = array_map( static function ( $item ) {
-			if ( $item === 'n-asc' ) {
-				return 'asc';
-			}
-			if ( $item === 'n-desc' ) {
-				return 'desc';
-			}
-
-			return $item;
-		}, $order );
 
 		if ( !$order ) {
 			$order = [ 'asc' ];
