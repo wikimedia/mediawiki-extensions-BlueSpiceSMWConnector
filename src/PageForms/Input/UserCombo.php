@@ -3,6 +3,7 @@
 namespace BlueSpice\SMWConnector\PageForms\Input;
 
 use Html;
+use MediaWiki\MediaWikiServices;
 use User;
 
 class UserCombo extends \PFFormInput {
@@ -11,6 +12,11 @@ class UserCombo extends \PFFormInput {
 	 * @var array
 	 */
 	protected $groups = [];
+
+	/**
+	 * @var UserGroupManager
+	 */
+	private $userGroupManager;
 
 	/**
 	 * @param string $input_number The number of the input in the form. For a simple HTML input
@@ -25,6 +31,9 @@ class UserCombo extends \PFFormInput {
 	 */
 	public function __construct( $input_number, $cur_value, $input_name, $disabled, $other_args ) {
 		parent::__construct( $input_number, $cur_value, $input_name, $disabled, $other_args );
+
+		$this->userGroupManager = MediaWikiServices::getInstance()->getUserGroupManager();
+
 		if ( isset( $other_args['group'] ) ) {
 			$this->setGroups();
 		}
@@ -123,7 +132,7 @@ class UserCombo extends \PFFormInput {
 				'user_real_name' => $user->getRealName(),
 				'user_registration' => $user->getRegistration(),
 				'user_editcount' => $user->getEditCount(),
-				'groups' => $user->getEffectiveGroups(),
+				'groups' => $this->userGroupManager->getUserEffectiveGroups( $user ),
 				'display_name' => $user->getRealName() ?: $user->getName(),
 				'page_prefixed_text' => $user->getUserPage()->getPrefixedText()
 			];
