@@ -9,5 +9,6 @@
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Semantesch Eegenschaften",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantesch Eegenschaften:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Jo",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "Neen"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Neen",
+	"bs-swm-connector-ask-store-page-label": "Säit"
 }

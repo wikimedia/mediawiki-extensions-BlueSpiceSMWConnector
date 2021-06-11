@@ -1,9 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Ameisenigel",
 			"Hwboehm",
 			"Metalhead64",
-			"Robert Vogel <vogel@hallowelt.biz>"
+			"Mglaser",
+			"Robert Vogel <vogel@hallowelt.biz>",
+			"Umherirrender"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integriert SemanticMediaWiki in BlueSpice",
@@ -16,5 +19,10 @@
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Ja",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Nein",
 	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Inhalt/Benutzererwähnungen",
-	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Benutzerseiten der Benutzer, welche auf dieser Seite erwähnt wurden"
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Benutzerseiten der Benutzer, welche auf dieser Seite erwähnt wurden",
+	"apihelp-bs-smw-connector-ask-store-summary": "ExtJS-kompatibler Datenspeicher für die Ausführung semantischer Abfragen",
+	"apihelp-bs-smw-connector-ask-store-props-param": "Eigenschaften, die abgefragt werden sollen. Diese Eigenschaften entsprechen dem Rückgabeschema und den zurückgegebenen Daten. Schlüssel-Wert-Paare. Der Schlüssel ist der eigentliche Name der Eigenschaft, der Wert ist die gewünschte Beschriftung (JSON)",
+	"bs-swm-connector-ask-store-page-label": "Seite",
+	"bs-smw-connector-async-ask-unknown-handler": "Der Handler für das Format „$1“ ist nicht registriert oder nicht gültig",
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Wert des Knotens, der <nowiki>{{{node}}}</nowiki> in der Abfrage ersetzen wird"
 }

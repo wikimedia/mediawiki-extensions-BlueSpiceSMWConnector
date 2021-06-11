@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Kareyac",
 			"StanProg"
 		]
 	},
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Да",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "Не"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Не",
+	"bs-swm-connector-ask-store-page-label": "Страница"
 }

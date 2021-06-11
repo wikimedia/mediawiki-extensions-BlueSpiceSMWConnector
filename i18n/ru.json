@@ -3,6 +3,7 @@
 		"authors": [
 			"Evs",
 			"Facenapalm",
+			"Kareyac",
 			"Movses",
 			"Okras",
 			"Patrick Star",
@@ -16,5 +17,6 @@
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Семантические свойства",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Семантические свойства:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Да",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "Нет"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Нет",
+	"bs-swm-connector-ask-store-page-label": "Страница"
 }
