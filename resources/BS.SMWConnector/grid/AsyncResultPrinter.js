@@ -139,6 +139,7 @@ Ext.define( 'BS.SMWConnector.grid.AsyncResultPrinter', {
 			}
 			def = meta[key];
 			columnConfig = {
+				flex: 1,
 				sortable: def.sortable || false,
 				filterable: def.filterable || false,
 				dataIndex: key,
@@ -149,7 +150,7 @@ Ext.define( 'BS.SMWConnector.grid.AsyncResultPrinter', {
  				columnConfig.hidden = true;
 			}
 			if ( key === 'page' ) {
-				columnConfig.flex = 1;
+				columnConfig.flex = 2;
 				columnConfig.sortable = false;
 				if ( this.queryData.mainlabel ) {
 					columnConfig.header = this.queryData.mainlabel;
