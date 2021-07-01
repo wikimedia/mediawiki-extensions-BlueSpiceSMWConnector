@@ -20,5 +20,6 @@
 	"apihelp-bs-smw-connector-ask-store-props-param": "Properties to be retrieved. Those properties will correspond to the schema and data returned. Key-value pairs, key is the actual property name, value is desired label (JSON)",
 	"bs-swm-connector-ask-store-page-label": "Page",
 	"bs-smw-connector-async-ask-unknown-handler": "Handler for format \"$1\" is not registered or not valid",
-	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Node value that will replace <nowiki>{{{node}}}</nowiki> placeholder in the query"
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Node value that will replace <nowiki>{{{node}}}</nowiki> placeholder in the query",
+	"bs-smwconnector-extendedsearch-anon-user-label":  "Anonymous user"
 }
