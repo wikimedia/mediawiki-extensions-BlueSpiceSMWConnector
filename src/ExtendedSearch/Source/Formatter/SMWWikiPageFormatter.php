@@ -2,8 +2,12 @@
 
 namespace BlueSpice\SMWConnector\ExtendedSearch\Source\Formatter;
 
+use BlueSpice\UtilityFactory;
 use BS\ExtendedSearch\Source\Formatter\WikiPageFormatter;
 use MediaWiki\MediaWikiServices;
+use Message;
+use Title;
+use User;
 
 class SMWWikiPageFormatter extends WikiPageFormatter {
 	/**
@@ -127,7 +131,7 @@ class SMWWikiPageFormatter extends WikiPageFormatter {
 				}
 
 				$filterCfg[$key] = [
-					'buckets' => $bucket['value']['buckets'],
+					'buckets' => $this->formatBuckets( $bucket['value']['buckets'] ),
 					'label' => $bucket['key'],
 					'valueLabel' => $bucket['key'] . ':',
 					'isANDEnabled' => 0,
@@ -135,6 +139,45 @@ class SMWWikiPageFormatter extends WikiPageFormatter {
 				];
 			}
 		}
+	}
+
+	/**
+	 * @param array $buckets
+	 * @return array
+	 */
+	private function formatBuckets( $buckets ) {
+		foreach ( $buckets as &$bucket ) {
+			if ( $bucket['type'] === 'title' ) {
+				$bucket['label'] = $this->checkAndFormatUsername( $bucket['key'] );
+			}
+		}
+
+		return $buckets;
+	}
+
+	/**
+	 * Check if page is a user page, and try to get user display text
+	 *
+	 * @param string $titleKey
+	 * @return string
+	 */
+	private function checkAndFormatUsername( $titleKey ) {
+		$title = Title::newFromText( $titleKey );
+		if ( !$title instanceof Title || $title->getNamespace() !== NS_USER ) {
+			return $titleKey;
+		}
+
+		if ( User::isIP( $title->getDBkey() ) ) {
+			return Message::newFromKey( "bs-smwconnector-extendedsearch-anon-user-label" )->text();
+		}
+		$user = User::newFromName( $title->getDBkey() );
+		if ( $user instanceof User ) {
+			/** @var UtilityFactory $utilFactory */
+			$utilFactory = MediaWikiServices::getInstance()->getService( 'BSUtilityFactory' );
+			return $utilFactory->getUserHelper( $user )->getDisplayName();
+		}
+
+		return $titleKey;
 	}
 
 	/**
