@@ -23,5 +23,6 @@
 	"apihelp-bs-smw-connector-ask-store-props-param": "{{doc-apihelp-param|bs-smw-connector-ask-store|props}}",
 	"bs-swm-connector-ask-store-page-label": "Default label for the main column in async-ask query\n{{identical|Page}}",
 	"bs-smw-connector-async-ask-unknown-handler": "Error message when handler for given format in async ask query is not valid. \n$1 - format name",
-	"apihelp-bs-smw-connector-ask-tree-store-node-param": "{{doc-apihelp-param|bs-smw-connector-tree-ask-store|node}}"
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "{{doc-apihelp-param|bs-smw-connector-tree-ask-store|node}}",
+	"bs-smwconnector-extendedsearch-anon-user-label": "Label for the search filter option when user is anon"
 }
