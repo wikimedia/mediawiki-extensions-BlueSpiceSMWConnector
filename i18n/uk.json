@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"DDPAT",
 			"Piramidion"
 		]
 	},
@@ -11,5 +12,6 @@
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Семантичні властивості",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Семантичні властивості:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Так",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "Ні"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Ні",
+	"bs-swm-connector-ask-store-page-label": "Сторінка"
 }
