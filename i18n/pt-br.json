@@ -3,7 +3,8 @@
 		"authors": [
 			"!Silent",
 			"Eduardo Addad de Oliveira",
-			"Eduardoaddad"
+			"Eduardoaddad",
+			"Isabelle Belato"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integra o SemanticMediaWiki no BlueSpice",
@@ -21,5 +22,6 @@
 	"apihelp-bs-smw-connector-ask-store-props-param": "Propriedades a serem recuperadas. Essas propriedades corresponderão ao esquema e aos dados retornados. Pares de valor-chave, chave é o nome real da propriedade, valor é o rótulo desejado (JSON)",
 	"bs-swm-connector-ask-store-page-label": "Página",
 	"bs-smw-connector-async-ask-unknown-handler": "O manipulador para o formato \"$1\" não está registrado ou não é válido",
-	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Valor do nó que irá substituir o marcador <nowiki>{{{node}}}</nowiki> de posição na consulta"
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Valor do nó que irá substituir o marcador <nowiki>{{{node}}}</nowiki> de posição na consulta",
+	"bs-smwconnector-extendedsearch-anon-user-label": "Usuário anônimo"
 }
