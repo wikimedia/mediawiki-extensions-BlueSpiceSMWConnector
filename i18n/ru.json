@@ -18,5 +18,6 @@
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Семантические свойства:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Да",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Нет",
-	"bs-swm-connector-ask-store-page-label": "Страница"
+	"bs-swm-connector-ask-store-page-label": "Страница",
+	"bs-smwconnector-extendedsearch-anon-user-label": "Анонимный участник"
 }
