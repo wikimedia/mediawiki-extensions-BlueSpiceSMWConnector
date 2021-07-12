@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Dr. Mohammed",
 			"Meno25",
 			"ديفيد",
 			"محمد أحمد عبد الفتاح"
@@ -14,5 +15,6 @@
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "الخصائص الدلالية",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "الخصائص الدلالية:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "نعم",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "لا"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "لا",
+	"bs-smwconnector-extendedsearch-anon-user-label": "مستخدم مجهول"
 }

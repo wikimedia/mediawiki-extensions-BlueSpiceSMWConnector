@@ -2,10 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"Aftabuzzaman",
+			"Yahya",
 			"আফতাবুজ্জামান"
 		]
 	},
 	"bs-dlg-choosesmwprop-label": "বৈশিষ্ট্য",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "হ্যাঁ",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "না"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "না",
+	"bs-smwconnector-extendedsearch-anon-user-label": "বেনামী ব্যবহারকারী"
 }

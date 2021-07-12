@@ -21,5 +21,5 @@
 	"bs-swm-connector-ask-store-page-label": "Page",
 	"bs-smw-connector-async-ask-unknown-handler": "Handler for format \"$1\" is not registered or not valid",
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Node value that will replace <nowiki>{{{node}}}</nowiki> placeholder in the query",
-	"bs-smwconnector-extendedsearch-anon-user-label":  "Anonymous user"
+	"bs-smwconnector-extendedsearch-anon-user-label": "Anonymous user"
 }

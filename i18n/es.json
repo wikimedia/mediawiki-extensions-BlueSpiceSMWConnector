@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Fitoschido",
+			"Jackiezelaya",
 			"Macofe"
 		]
 	},
@@ -13,5 +14,6 @@
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Propiedades semánticas:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Sí",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "No",
-	"bs-swm-connector-ask-store-page-label": "Página"
+	"bs-swm-connector-ask-store-page-label": "Página",
+	"bs-smwconnector-extendedsearch-anon-user-label": "Usuario anónimo"
 }
