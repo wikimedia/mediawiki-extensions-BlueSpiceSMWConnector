@@ -13,5 +13,12 @@
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Семантичні властивості:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Так",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Ні",
-	"bs-swm-connector-ask-store-page-label": "Сторінка"
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Вміст/Згадки користувачів",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Сторінки користувачів тих користувачів, які були згадані на цій сторінці",
+	"apihelp-bs-smw-connector-ask-store-summary": "ExtJS-сумісний магазин для виконання семантичних запитів",
+	"apihelp-bs-smw-connector-ask-store-props-param": "Властивості, які необхідно витягти. Ці властивості будуть відповідати схемі і даних, які будуть повертатися. Пари «Ключ-значення». Ключ — власне, назва властивості, значення — вказані дані (JSON)",
+	"bs-swm-connector-ask-store-page-label": "Сторінка",
+	"bs-smw-connector-async-ask-unknown-handler": "Обробник для формату \"$1\" не зареєстрований або неприпустимий",
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Значення вузла, яке замінить <nowiki>{{{node}}}</nowiki> заповнювач у запиті",
+	"bs-smwconnector-extendedsearch-anon-user-label": "Анонімний користувач"
 }
