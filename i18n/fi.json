@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"MITO",
 			"Nike",
 			"Pyscowicz",
 			"Surjection"
@@ -13,5 +14,6 @@
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Semanttiset ominaisuudet",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Semanttiset ominaisuudet:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Kyllä",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "Ei"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Ei",
+	"bs-smwconnector-extendedsearch-anon-user-label": "Anonyymi käyttäjä"
 }
