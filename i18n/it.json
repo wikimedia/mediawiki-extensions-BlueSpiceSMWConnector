@@ -13,5 +13,6 @@
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Proprietà semantiche:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Sì",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "No",
-	"bs-swm-connector-ask-store-page-label": "Pagina"
+	"bs-swm-connector-ask-store-page-label": "Pagina",
+	"bs-smwconnector-extendedsearch-anon-user-label": "Utente anonimo"
 }

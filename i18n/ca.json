@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Fitoschido"
+			"Fitoschido",
+			"Vfc"
 		]
 	},
 	"bs-dlg-choosesmwprop-label": "Propietat",
-	"bs-dlg-choosesmwprop-type-smwprop": "Propietat semàntica"
+	"bs-dlg-choosesmwprop-type-smwprop": "Propietat semàntica",
+	"bs-smwconnector-extendedsearch-anon-user-label": "Usuaris/es anònims"
 }

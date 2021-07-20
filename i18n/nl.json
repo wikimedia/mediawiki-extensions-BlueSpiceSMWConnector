@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Mainframe98"
+			"Mainframe98",
+			"Romaine"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integreert SemanticMediaWiki in BlueSpice",
@@ -9,5 +10,9 @@
 	"bs-dlg-choosesmwprop-label": "Eigenschap",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Ja",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Nee",
-	"bs-swm-connector-ask-store-page-label": "Pagina"
+	"bs-swm-connector-ask-store-page-label": "Pagina",
+	"bs-dlg-choosesmwprop-type-smwprop": "Semantische eigenschap",
+	"bs-extendedsearch-add-filter-group-smwproperty-label": "Semantische eigenschappen",
+	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantische eigenschappen:",
+	"bs-smwconnector-extendedsearch-anon-user-label": "Anonieme gebruiker"
 }

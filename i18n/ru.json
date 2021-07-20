@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"DDPAT",
 			"Evs",
 			"Facenapalm",
 			"Kareyac",
@@ -18,5 +19,7 @@
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Семантические свойства:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Да",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Нет",
-	"bs-swm-connector-ask-store-page-label": "Страница"
+	"bs-swm-connector-ask-store-page-label": "Страница",
+	"apihelp-bs-smw-connector-ask-store-props-param": "Свойства, которые необходимо извлечь. Эти свойства будут соответствовать возвращаемой схеме и данным. Пары «Ключ-значение». Ключ — собственно, название свойства, значение — указанные данные (JSON)",
+	"bs-smwconnector-extendedsearch-anon-user-label": "Анонимный участник"
 }

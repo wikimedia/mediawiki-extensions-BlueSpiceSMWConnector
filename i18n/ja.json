@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"MathXplore",
 			"Tmv",
 			"Waki285"
 		]
@@ -9,5 +10,6 @@
 	"bs-smwconnector-extendedsearch-boolean-property-false": "いいえ",
 	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "内容/ユーザーコメント",
 	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "このページ上で言及されたユーザーたちのユーザーページ",
-	"bs-swm-connector-ask-store-page-label": "ページ"
+	"bs-swm-connector-ask-store-page-label": "ページ",
+	"bs-smwconnector-extendedsearch-anon-user-label": "匿名利用者"
 }

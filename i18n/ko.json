@@ -12,5 +12,6 @@
 	"bs-smwconnector-extendedsearch-boolean-property-true": "예",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "아니오",
 	"bs-swm-connector-ask-store-page-label": "페이지",
-	"bs-smw-connector-async-ask-unknown-handler": "\"$1\" 포맷의 핸들러가 등록되어 있지 않거나 유효하지 않습니다"
+	"bs-smw-connector-async-ask-unknown-handler": "\"$1\" 포맷의 핸들러가 등록되어 있지 않거나 유효하지 않습니다",
+	"bs-smwconnector-extendedsearch-anon-user-label": "익명 사용자"
 }
