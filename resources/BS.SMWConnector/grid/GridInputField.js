@@ -20,7 +20,6 @@ Ext.define( 'BS.SMWConnector.grid.GridInputField', {
 	makeDockedItems: function() {
 		this.btnAdd = new Ext.Button( {
 			iconCls: 'bs-icon-plus-circle contructive',
-			glyph: 1,
 			handler: this.onAddClick,
 			scope: this
 		} );
@@ -144,7 +143,11 @@ Ext.define( 'BS.SMWConnector.grid.GridInputField', {
 			var record = records[i];
 			wikiTextTemplateCall = '{{' + this.templateName;
 
-			for( var fieldName in records[i].getData() ) {
+			for( var fieldName in record.getData() ) {
+				// Skip dynamically generated store IDs. No need to persist them into the wikitext
+				if ( fieldName === record.getIdProperty() ) {
+					continue;
+				}
 				var val = '';
 				if( typeof record.get( fieldName ) !== "undefined" ) {
 					val = record.get( fieldName );
@@ -158,7 +161,9 @@ Ext.define( 'BS.SMWConnector.grid.GridInputField', {
 	},
 
 	onAddClick: function() {
-		this.getStore().add( {} );
+		this.getStore().add( {
+			id: this.getStore().getCount() + 1
+		} );
 		this.cellEditing.startEditByPosition({
 			row: this.getStore().getCount() - 1,
 			column: 0
