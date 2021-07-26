@@ -118,7 +118,7 @@ Ext.define( 'BS.SMWConnector.grid.GridInputField', {
 	makeStoreDataFromFieldValue: function() {
 		var wikiText = this.$formField.val();
 		var records = [];
-
+		var me = this;
 
 		wikiText.replace( /{{(.*?)}}/g, function( fullMatch, inner ) {
 			var record = {};
@@ -126,7 +126,12 @@ Ext.define( 'BS.SMWConnector.grid.GridInputField', {
 			kvPairs.shift();
 			for ( var i = 0; i < kvPairs.length; i++ ) {
 				var kvPair = kvPairs[i].split( '=' );
-				record[kvPair[0]] = kvPair[1];
+				var fieldName = kvPair[0];
+				var val = kvPair[1];
+				if ( me.isDateField( fieldName ) ) {
+					val = me.parseDate( fieldName, val );
+				}
+				record[fieldName] = val;
 			}
 			records.push( record );
 		} );
@@ -152,6 +157,9 @@ Ext.define( 'BS.SMWConnector.grid.GridInputField', {
 				if( typeof record.get( fieldName ) !== "undefined" ) {
 					val = record.get( fieldName );
 				}
+				if ( this.isDateField( fieldName ) ) {
+					val = this.formatDate( fieldName, val );
+				}
 				wikiTextTemplateCall += '|' + fieldName + '=' + val;
 			}
 			wikiTextTemplateCall += '}}';
@@ -173,5 +181,35 @@ Ext.define( 'BS.SMWConnector.grid.GridInputField', {
 	onRemoveClick: function( grid, rowIndex){
 		this.getStore().removeAt( rowIndex );
 		this.setFieldValueFromStoreData();
-	}
+	},
+
+	isDateField: function ( fieldName ) {
+		for( var i = 0; i < this.colDef.length; i++ ) {
+			if ( this.colDef[i].dataIndex === fieldName ) {
+				if ( this.colDef[i].xtype === 'datecolumn' ) {
+					return true;
+				}
+			}
+		}
+		return false;
+	},
+
+	formatDate: function ( fieldName, val ) {
+		var format = this.getDateFormat( fieldName );
+		return Ext.Date.format( val, format );
+	},
+
+	parseDate: function ( fieldName, val ) {
+		var format = this.getDateFormat( fieldName );
+		return Ext.Date.parse( val, format );
+	},
+
+	getDateFormat: function ( fieldName ) {
+		for( var i = 0; i < this.colDef.length; i++ ) {
+			if ( this.colDef[i].dataIndex === fieldName ) {
+				return this.colDef[i].format || 'Y-m-d';
+			}
+		}
+		return 'Y-m-d';
+	},
 } );
