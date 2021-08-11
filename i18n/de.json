@@ -3,6 +3,7 @@
 		"authors": [
 			"Ameisenigel",
 			"Hwboehm",
+			"Krabina",
 			"Metalhead64",
 			"Mglaser",
 			"Robert Vogel <vogel@hallowelt.biz>",
@@ -15,6 +16,7 @@
 	"bs-dlg-choosesmwprop-label": "Attribut",
 	"bs-dlg-choosesmwprop-type-smwprop": "Semantisches Attribut",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Semantische Attribute",
+	"bs-smwconnector-extendedsearch-smwproperty-result-value": "$1: $2",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantische Attribute:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Ja",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Nein",
