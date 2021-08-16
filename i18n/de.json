@@ -3,6 +3,7 @@
 		"authors": [
 			"Ameisenigel",
 			"Hwboehm",
+			"Krabina",
 			"Metalhead64",
 			"Mglaser",
 			"Robert Vogel <vogel@hallowelt.biz>",
@@ -25,5 +26,6 @@
 	"apihelp-bs-smw-connector-ask-store-props-param": "Eigenschaften, die abgefragt werden sollen. Diese Eigenschaften entsprechen dem Rückgabeschema und den zurückgegebenen Daten. Schlüssel-Wert-Paare. Der Schlüssel ist der eigentliche Name der Eigenschaft, der Wert ist die gewünschte Beschriftung (JSON)",
 	"bs-smw-connector-async-ask-unknown-handler": "Der Handler für das Format „$1“ ist nicht registriert oder nicht gültig",
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Wert des Knotens, der <nowiki>{{{node}}}</nowiki> in der Abfrage ersetzen wird",
-	"bs-smwconnector-extendedsearch-anon-user-label": "Anonymer Benutzer"
+	"bs-smwconnector-extendedsearch-anon-user-label": "Anonymer Benutzer",
+	"bs-smwconnector-extendedsearch-smwproperty-result-value": "$1: $2"
 }
