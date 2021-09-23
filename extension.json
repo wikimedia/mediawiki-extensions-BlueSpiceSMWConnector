@@ -135,6 +135,11 @@
 		"BlueSpice\\SMWConnector\\Extension::setup",
 		"BlueSpice\\SMWConnector\\PropertyValueProvidersRegistration::addExtensions"
 	],
+	"HookHandlers": {
+		"discovery-skin": {
+			"class": "\\BlueSpice\\SMWConnector\\HookHandler\\DiscoverySkin"
+		}
+	},
 	"Hooks": {
 		"BeforePageDisplay": [
 			"BSSMWConnectorHooks::onBeforePageDisplay",
@@ -154,7 +159,8 @@
 		"SMW::Store::AfterQueryResultLookupComplete": "BlueSpice\\SMWConnector\\Hook\\SMWStoreAfterQueryResultLookupComplete\\ApplySecurityTrimming::callback",
 		"ChameleonSkinTemplateOutputPageBeforeExec": "BlueSpice\\SMWConnector\\Hook\\ChameleonSkinTemplateOutputPageBeforeExec\\AddFormEditAction::callback",
 		"BSUEModulePDFcollectMetaData": "BlueSpice\\SMWConnector\\Hook\\BSUEModulePDFcollectMetaData\\AddSemanitcMetaData::callback",
-		"ParserFirstCallInit": "BlueSpice\\SMWConnector\\Hook\\ParserFirstCallInit\\AsyncAsk::callback"
+		"ParserFirstCallInit": "BlueSpice\\SMWConnector\\Hook\\ParserFirstCallInit\\AsyncAsk::callback",
+		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
