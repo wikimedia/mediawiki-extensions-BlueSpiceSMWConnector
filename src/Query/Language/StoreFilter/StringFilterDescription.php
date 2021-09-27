@@ -22,7 +22,7 @@ class StringFilterDescription extends FilterDescription {
 			case 'ct':
 			default:
 				return ( new AnyDescription( $filter->getField(), $filter->getValue() ) )
-					->getQueryString( $asValue );
+					->getQueryString( true );
 		}
 	}
 }
