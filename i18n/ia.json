@@ -1,0 +1,23 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"bs-bssmwconnector-desc": "Integra SemanticMediaWiki in BlueSpice",
+	"bs-bssmwconnector-srf-printername-bsgrid": "Grillia BlueSpice",
+	"bs-dlg-choosesmwprop-label": "Proprietate",
+	"bs-dlg-choosesmwprop-type-smwprop": "Proprietate semantic",
+	"bs-extendedsearch-add-filter-group-smwproperty-label": "Proprietates semantic",
+	"bs-extendedsearch-search-center-result-smwproperty-label": "Proprietates semantic:",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "Si",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "No",
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Contento/Mentiones del usator",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Paginas de usator del usatores que ha essite mentionate sur iste pagina",
+	"apihelp-bs-smw-connector-ask-store-summary": "Magazin compatibile con ExtJS pro executar consultas semantic",
+	"apihelp-bs-smw-connector-ask-store-props-param": "Proprietates a recuperar. Ille proprietates correspondera al schema e datos retornate. Pares clave-valor: le clave es le nomine real del proprietate e le valor es le etiquetta desirate (JSON).",
+	"bs-swm-connector-ask-store-page-label": "Pagina",
+	"bs-smw-connector-async-ask-unknown-handler": "Le gestor del formato \"$1\" non es registrate o non es valide",
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Valor de nodo que reimplaciara le marcator de position <nowiki>{{{node}}}</nowiki> in le consulta",
+	"bs-smwconnector-extendedsearch-anon-user-label": "Usator anonyme"
+}
