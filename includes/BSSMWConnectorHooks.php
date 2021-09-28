@@ -1,7 +1,6 @@
 <?php
 
 use MediaWiki\Revision\RevisionRecord;
-use MediaWiki\Revision\SlotRecord;
 
 class BSSMWConnectorHooks {
 
@@ -158,10 +157,10 @@ HERE
 	 * @return bool Always true to keep hook running
 	 */
 	public static function onPageSaveComplete( WikiPage $wikiPage, $user, $summary, $flags, $revisionRecord ) {
-		$content = $revisionRecord->getContent( SlotRecord::MAIN, RevisionRecord::RAW );
-		DataUpdate::runUpdates(
-			$content->getSecondaryDataUpdates( $wikiPage->getTitle() )
-		);
+		$wikiPage->doSecondaryDataUpdates( [
+			'recursive' => false,
+			'defer' => DeferredUpdates::POSTSEND,
+		] );
 		return true;
 	}
 }
