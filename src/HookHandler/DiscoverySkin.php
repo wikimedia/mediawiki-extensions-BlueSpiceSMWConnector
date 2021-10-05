@@ -14,6 +14,6 @@ class DiscoverySkin implements BlueSpiceDiscoveryTemplateDataProviderAfterInit {
 	 */
 	public function onBlueSpiceDiscoveryTemplateDataProviderAfterInit( $registry ): void {
 		$registry->unregister( 'toolbox', 't-smwbrowselink' );
-		$registry->register( 'actions_details', 't-smwbrowselink' );
+		$registry->register( 'details', 't-smwbrowselink' );
 	}
 }
