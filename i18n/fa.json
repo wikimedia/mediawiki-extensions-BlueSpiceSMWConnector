@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Amir1arch"
+			"Amir1arch",
+			"Jeeputer"
 		]
 	},
 	"bs-dlg-choosesmwprop-label": "ویژگی",
@@ -9,5 +10,6 @@
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "ویژگی های معنایی",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "ویژگی های معنایی:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "بله",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "خیر"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "خیر",
+	"bs-swm-connector-ask-store-page-label": "صفحه"
 }
