@@ -34,26 +34,6 @@ class BSSMWConnectorHooks {
 
 	/**
 	 *
-	 * @param string $sType The type of the node that gets processed
-	 * @param string &$sNodeText HTML element value to be rendered (RAW)
-	 * @param array &$aAttribs HTML attributes to be rendered
-	 * @param string &$sElement HTML element name to be rendered
-	 * @param Parser $oParser
-	 * @return bool Always true to keep hook running
-	 */
-	public static function onBSBookshelfNodeTag( $sType, &$sNodeText, &$aAttribs, &$sElement,
-		$oParser ) {
-		if ( $sType !== 'ask' ) {
-			return true;
-		}
-
-		$aAttribs['class'] .= ' bs-smw-node-ask';
-
-		return true;
-	}
-
-	/**
-	 *
 	 * @param array &$aDummyPage
 	 * @param array &$aArticle
 	 * @param array &$aTemplate
