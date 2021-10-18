@@ -148,7 +148,6 @@
 		"PageForms::FormPrinterSetup": [
 			"BlueSpice\\SMWConnector\\Hook\\PFFormPrinterSetup\\RegisterInputTypes::callback"
 		],
-		"BSBookshelfNodeTag": "BSSMWConnectorHooks::onBSBookshelfNodeTag",
 		"BSBookshelfExportTag": "BSSMWConnectorHooks::onBSBookshelfExportTag",
 		"NamespaceManager::getMetaFields": "BSSMWCNamespaceManager::onGetMetaFields",
 		"BSApiNamespaceStoreMakeData": "BSSMWCNamespaceManager::onGetNamespaceData",
