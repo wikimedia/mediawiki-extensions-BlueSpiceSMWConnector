@@ -20,5 +20,7 @@
 	"bs-swm-connector-ask-store-page-label": "Сторінка",
 	"bs-smw-connector-async-ask-unknown-handler": "Обробник для формату \"$1\" не зареєстрований або неприпустимий",
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Значення вузла, яке замінить <nowiki>{{{node}}}</nowiki> заповнювач у запиті",
-	"bs-smwconnector-extendedsearch-anon-user-label": "Анонімний користувач"
+	"bs-smwconnector-extendedsearch-anon-user-label": "Анонімний користувач",
+	"bs-bssmwconnector-nmmngr-label-smw": "Семантична MediaWiki",
+	"bs-smwconnector-extendedsearch-smwproperty-result-value": "$1: $2"
 }
