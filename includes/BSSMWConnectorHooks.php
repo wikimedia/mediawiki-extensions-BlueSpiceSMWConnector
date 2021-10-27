@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 class BSSMWConnectorHooks {
 
 	/**
@@ -180,9 +182,8 @@ HERE
 	public static function onPageContentSaveComplete( WikiPage $wikiPage, $user, $content,
 			$summary, $isMinor, $isWatch, $section, $flags, $revision, $status,
 			$baseRevId ) {
-		DataUpdate::runUpdates(
-			$content->getSecondaryDataUpdates( $wikiPage->getTitle() )
-		);
+		$dataUpdater = MediaWikiServices::getInstance()->getService( 'BSSecondaryDataUpdater' );
+		$dataUpdater->run( $wikiPage->getTitle() );
 		return true;
 	}
 }
