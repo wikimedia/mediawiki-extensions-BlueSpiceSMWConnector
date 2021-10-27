@@ -1,5 +1,6 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Revision\RevisionRecord;
 
 class BSSMWConnectorHooks {
@@ -157,10 +158,8 @@ HERE
 	 * @return bool Always true to keep hook running
 	 */
 	public static function onPageSaveComplete( WikiPage $wikiPage, $user, $summary, $flags, $revisionRecord ) {
-		$wikiPage->doSecondaryDataUpdates( [
-			'recursive' => false,
-			'defer' => DeferredUpdates::POSTSEND,
-		] );
+		$dataUpdater = MediaWikiServices::getInstance()->getService( 'BSSecondaryDataUpdater' );
+		$dataUpdater->run( $wikiPage->getTitle() );
 		return true;
 	}
 }
