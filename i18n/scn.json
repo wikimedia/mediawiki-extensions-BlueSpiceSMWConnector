@@ -1,0 +1,12 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ajeje Brazorf"
+		]
+	},
+	"bs-dlg-choosesmwprop-label": "Prupità",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "Sì",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "No",
+	"bs-swm-connector-ask-store-page-label": "Pàggina",
+	"bs-smwconnector-extendedsearch-anon-user-label": "Utenti anònimu"
+}
