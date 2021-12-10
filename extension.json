@@ -95,6 +95,17 @@
 				"grid": "\\BlueSpice\\SMWConnector\\AsyncAskHandler\\Grid::factory",
 				"tree": "\\BlueSpice\\SMWConnector\\AsyncAskHandler\\Tree::factory"
 			}
+		},
+		"BlueSpiceDiscovery": {
+			"BreadcrumbDataProviderRegistry": {
+				"special-browse": {
+					"class": "BlueSpice\\SMWConnector\\BreadcrumbDataProvider\\SpecialBrowseProvider"
+				},
+				"special-ask": {
+					"class": "BlueSpice\\SMWConnector\\BreadcrumbDataProvider\\SpecialAskProvider",
+					"services": [ "SpecialPageFactory" ]
+				}
+			}
 		}
 	},
 	"GroupPermissions": {
