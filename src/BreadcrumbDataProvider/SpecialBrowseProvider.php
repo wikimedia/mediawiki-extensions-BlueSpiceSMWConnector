@@ -2,10 +2,10 @@
 
 namespace BlueSpice\SMWConnector\BreadcrumbDataProvider;
 
-use BlueSpice\Discovery\BreadcrumbDataProvider;
+use BlueSpice\Discovery\BreadcrumbDataProvider\BaseBreadcrumbDataProvider;
 use Title;
 
-class SpecialBrowseProvider extends BreadcrumbDataProvider {
+class SpecialBrowseProvider extends BaseBreadcrumbDataProvider {
 
 	/**
 	 * @param Title $title
@@ -34,7 +34,6 @@ class SpecialBrowseProvider extends BreadcrumbDataProvider {
 	}
 
 	/**
-	 *
 	 * @param Title $title
 	 * @return bool
 	 */

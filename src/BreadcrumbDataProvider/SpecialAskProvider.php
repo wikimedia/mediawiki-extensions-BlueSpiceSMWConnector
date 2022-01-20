@@ -2,11 +2,11 @@
 
 namespace BlueSpice\SMWConnector\BreadcrumbDataProvider;
 
-use BlueSpice\Discovery\BreadcrumbDataProvider;
+use BlueSpice\Discovery\BreadcrumbDataProvider\BaseBreadcrumbDataProvider;
 use MediaWiki\SpecialPage\SpecialPageFactory;
 use Title;
 
-class SpecialAskProvider extends BreadcrumbDataProvider {
+class SpecialAskProvider extends BaseBreadcrumbDataProvider {
 
 	/** @var SpecialPageFactory */
 	private $specialPageFactory;
