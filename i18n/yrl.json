@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Karapananguasú Kururú Teremembé"
+		]
+	},
+	"bs-bssmwconnector-nmmngr-label-smw": "MediaWiki Semantika",
+	"bs-dlg-choosesmwprop-label": "Yaradawa",
+	"bs-dlg-choosesmwprop-type-smwprop": "Yaradawa semantika",
+	"bs-extendedsearch-add-filter-group-smwproperty-label": "Yaradawa semantika'etá",
+	"bs-smwconnector-extendedsearch-smwproperty-result-value": "$1: $2",
+	"bs-extendedsearch-search-center-result-smwproperty-label": "Yaradawa'etá semantika:",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "Ẽẽ",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Ãã",
+	"bs-swm-connector-ask-store-page-label": "Sowa",
+	"bs-smwconnector-extendedsearch-anon-user-label": "Puruçara kanhẽma"
+}
