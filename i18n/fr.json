@@ -18,7 +18,7 @@
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Oui",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Non",
 	"bs-bssmwconnector-nmmngr-label-smw": "MediaWiki Sémantique",
-	"bs-smwconnector-extendedsearch-smwproperty-result-value": "$1 : $2",
+	"bs-smwconnector-extendedsearch-smwproperty-result-value": "$1 : $2",
 	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Contenu/Mentions d’utilisateur",
 	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Les pages utilisateur d’utilisateurs ayant été mentionnés sur cette page",
 	"apihelp-bs-smw-connector-ask-store-summary": "Stockage compatible ExtJS pour exécuter des requêtes sémantiques",

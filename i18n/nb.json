@@ -19,5 +19,6 @@
 	"apihelp-bs-smw-connector-ask-store-props-param": "Egenskaper som skal hentes. Disse egenskapene korresponderer til skjemaet og dataene som returneres. Nøkkel–verdi-par, nøkkelen er egenskapsnavnet og verdien er den ønskede etiketten (JSON)",
 	"bs-swm-connector-ask-store-page-label": "Side",
 	"bs-smw-connector-async-ask-unknown-handler": "Behandling for formatet «$1» er ikke registrert eller ikke gyldig",
-	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Nodeverdier som vil erstatte <nowiki>{{{node}}}</nowiki> i spørringen"
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Nodeverdier som vil erstatte <nowiki>{{{node}}}</nowiki> i spørringen",
+	"bs-smwconnector-extendedsearch-anon-user-label": "Anonym bruker"
 }
