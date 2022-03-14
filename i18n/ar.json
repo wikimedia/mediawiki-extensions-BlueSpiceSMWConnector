@@ -4,7 +4,8 @@
 			"Dr. Mohammed",
 			"Meno25",
 			"ديفيد",
-			"محمد أحمد عبد الفتاح"
+			"محمد أحمد عبد الفتاح",
+			"FiberAhmed"
 		]
 	},
 	"bs-bssmwconnector-desc": "يدمج SemanticMediaWiki في BlueSpice",
@@ -16,5 +17,6 @@
 	"bs-extendedsearch-search-center-result-smwproperty-label": "الخصائص الدلالية:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "نعم",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "لا",
+	"bs-swm-connector-ask-store-page-label": "الصفحة",
 	"bs-smwconnector-extendedsearch-anon-user-label": "مستخدم مجهول"
 }
