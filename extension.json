@@ -272,6 +272,15 @@
 			"scripts": [
 				"ext.BSSMWConnector.PageForms.DateTimePicker.fix.js"
 			]
+		},
+		"ext.BSSMWConnector.widgets": {
+			"scripts": [
+				"ui/widget/SMWPropertyInputWidget.js"
+			],
+			"dependencies": [
+				"oojs-ui",
+				"ext.bluespice"
+			]
 		}
 	},
 	"config_prefix": "bsg",
