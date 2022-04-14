@@ -1,4 +1,5 @@
 {
+	"name": "BlueSpiceSMWConnector",
 	"private": true,
 	"scripts": {
 		"test": "grunt test"
