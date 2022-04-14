@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"DiegoAmbrocio",
 			"Fitoschido",
 			"Jackiezelaya",
 			"Macofe"
@@ -14,6 +15,9 @@
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Propiedades semánticas:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Sí",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "No",
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Contenido / Menciones de los usuarios",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Páginas de los usuarios que han sido mencionados en esta página",
 	"bs-swm-connector-ask-store-page-label": "Página",
+	"bs-smw-connector-async-ask-unknown-handler": "El manejador para el formato \"$1\" no está registrado o no es válido",
 	"bs-smwconnector-extendedsearch-anon-user-label": "Usuario anónimo"
 }
