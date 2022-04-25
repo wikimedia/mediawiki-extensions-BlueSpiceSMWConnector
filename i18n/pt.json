@@ -15,5 +15,11 @@
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Sim",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Não",
 	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Conteúdo/Menções do utilizador",
-	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Páginas dos utilizadores que foram mencionados nesta página"
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Páginas dos utilizadores que foram mencionados nesta página",
+	"apihelp-bs-smw-connector-ask-store-summary": "Armazenamento compatível com ExtJS para executar consultas semânticas",
+	"apihelp-bs-smw-connector-ask-store-props-param": "Propriedades a serem obtidas. Essas propriedades corresponderão ao esquema e dados devolvidos. Pares chave-valor, em que chave é o nome real da propriedade e valor é a etiqueta desejada (JSON)",
+	"bs-swm-connector-ask-store-page-label": "Página",
+	"bs-smw-connector-async-ask-unknown-handler": "A rotina de tratamento (''handler'') para o formato \"$1\" não está registada ou é inválida",
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Valor do nó, que irá substituir o espaço reservado <nowiki>{{{node}}}</nowiki> na consulta",
+	"bs-smwconnector-extendedsearch-anon-user-label": "Utilizador anónimo"
 }

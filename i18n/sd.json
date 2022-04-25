@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
+			"Mehtab ahmed",
 			"Tweety"
 		]
 	},
 	"bs-smwconnector-extendedsearch-boolean-property-true": "ها",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "نہ"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "نہ",
+	"bs-swm-connector-ask-store-page-label": "صفحو"
 }
