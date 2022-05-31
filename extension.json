@@ -146,8 +146,7 @@
 		"BlueSpiceSMWConnectorMagic": "BlueSpiceSMWConnector.magic.php"
 	},
 	"ExtensionFunctions": [
-		"BlueSpice\\SMWConnector\\Extension::setup",
-		"BlueSpice\\SMWConnector\\PropertyValueProvidersRegistration::addExtensions"
+		"BlueSpice\\SMWConnector\\Extension::setup"
 	],
 	"HookHandlers": {
 		"discovery-skin": {
@@ -155,6 +154,7 @@
 		}
 	},
 	"Hooks": {
+		"SetupAfterCache": "BlueSpice\\SMWConnector\\PropertyValueProvidersRegistration::addExtensions",
 		"BeforePageDisplay": [
 			"BSSMWConnectorHooks::onBeforePageDisplay",
 			"BlueSpice\\SMWConnector\\Hook\\BeforePageDisplay\\AddModules::callback"
