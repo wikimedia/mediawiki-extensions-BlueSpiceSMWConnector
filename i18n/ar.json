@@ -2,10 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Dr. Mohammed",
+			"FiberAhmed",
 			"Meno25",
+			"أَحمد",
 			"ديفيد",
-			"محمد أحمد عبد الفتاح",
-			"FiberAhmed"
+			"محمد أحمد عبد الفتاح"
 		]
 	},
 	"bs-bssmwconnector-desc": "يدمج SemanticMediaWiki في BlueSpice",
