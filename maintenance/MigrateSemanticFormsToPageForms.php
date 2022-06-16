@@ -131,5 +131,5 @@ class MigrateSemanticFormsToPageForms extends Maintenance {
 	}
 }
 
-$maintClass = 'MigrateSemanticFormsToPageForms';
+$maintClass = MigrateSemanticFormsToPageForms::class;
 require_once RUN_MAINTENANCE_IF_MAIN;

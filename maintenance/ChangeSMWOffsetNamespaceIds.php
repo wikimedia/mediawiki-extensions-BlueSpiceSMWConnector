@@ -100,5 +100,5 @@ HERE
 
 }
 
-$maintClass = 'ChangeSMWOffsetNamespaceIds';
+$maintClass = ChangeSMWOffsetNamespaceIds::class;
 require_once RUN_MAINTENANCE_IF_MAIN;

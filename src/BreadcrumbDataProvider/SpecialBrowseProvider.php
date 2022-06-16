@@ -14,7 +14,7 @@ class SpecialBrowseProvider extends BaseBreadcrumbDataProvider {
 	public function getRelevantTitle( $title ): Title {
 		$bits = explode( '/', $title->getText() );
 		$pagename = array_pop( $bits );
-		if ( class_exists( 'SMW\Encoder' ) ) {
+		if ( class_exists( \SMW\Encoder::class ) ) {
 			$decoded = \SMW\Encoder::decode( $pagename );
 			if ( $decoded ) {
 				$pagename = $decoded;
