@@ -2,6 +2,8 @@
 
 namespace BlueSpice\SMWConnector\PageForms\Input;
 
+use MediaWiki\MediaWikiServices;
+
 class Grid extends \PFFormInput {
 
 	/**
@@ -94,7 +96,8 @@ class Grid extends \PFFormInput {
 	 */
 	protected function makeDataAttributes() {
 		$colDefSource = $this->mOtherArgs['colDef'];
-		$wikiPage = \WikiPage::factory( \Title::newFromText( $colDefSource ) );
+		$wikiPage = MediaWikiServices::getInstance()->getWikiPageFactory()
+			->newFromTitle( \Title::newFromText( $colDefSource ) );
 		$content = $wikiPage->getContent();
 		$colDef = \FormatJson::decode( $content->getNativeData() );
 

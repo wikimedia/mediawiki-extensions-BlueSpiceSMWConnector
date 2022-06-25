@@ -2,6 +2,8 @@
 
 require '../../../maintenance/Maintenance.php';
 
+use MediaWiki\MediaWikiServices;
+
 class MigrateSemanticFormsToPageForms extends Maintenance {
 
 	/** @var string */
@@ -85,7 +87,8 @@ class MigrateSemanticFormsToPageForms extends Maintenance {
 	 */
 	protected function replacePropertyByParserFunction( $pageName ) {
 		$this->output( "\n\t$pageName" );
-		$wikiPage = Wikipage::factory( Title::newFromText( $pageName ) );
+		$wikiPage = MediaWikiServices::getInstance()->getWikiPageFactory()
+			->newFromTitle( Title::newFromText( $pageName ) );
 		$content = $wikiPage->getContent();
 		if ( $content instanceof WikitextContent === false ) {
 			$this->output( "--> No WikiText. Can not modify." );
