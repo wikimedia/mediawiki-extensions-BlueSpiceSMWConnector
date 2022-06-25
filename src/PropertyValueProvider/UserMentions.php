@@ -3,6 +3,7 @@
 namespace BlueSpice\SMWConnector\PropertyValueProvider;
 
 use BlueSpice\SMWConnector\PropertyValueProvider;
+use MediaWiki\MediaWikiServices;
 use SESP\AppFactory;
 use SMW\DIProperty;
 use SMW\SemanticData;
@@ -60,7 +61,8 @@ class UserMentions extends PropertyValueProvider {
 	 * @param SemanticData $semanticData
 	 */
 	public function addAnnotation( $appFactory, $property, $semanticData ) {
-		$wikiPage = WikiPage::factory( $semanticData->getSubject()->getTitle() );
+		$wikiPage = MediaWikiServices::getInstance()->getWikiPageFactory()
+			->newFromTitle( $semanticData->getSubject()->getTitle() );
 		if ( !$wikiPage instanceof WikiPage ) {
 			// no file or category pages
 			return;
