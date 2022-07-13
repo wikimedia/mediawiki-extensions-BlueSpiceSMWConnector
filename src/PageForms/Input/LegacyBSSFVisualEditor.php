@@ -14,7 +14,7 @@ class LegacyBSSFVisualEditor extends MWVisualEditor {
 	 *
 	 * @return string
 	 */
-	public static function getName() {
+	public static function getName(): string {
 		return 'bsvisualeditor';
 	}
 
