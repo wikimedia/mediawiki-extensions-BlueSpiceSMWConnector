@@ -34,7 +34,7 @@ class MWVisualEditor extends PFTextAreaInput {
 	 *
 	 * @return string
 	 */
-	public static function getName() {
+	public static function getName(): string {
 		return 'bs-mwvisualeditor';
 	}
 
@@ -42,7 +42,7 @@ class MWVisualEditor extends PFTextAreaInput {
 	 *
 	 * @return string
 	 */
-	public function getHtmlText() {
+	public function getHtmlText(): string {
 		$html = \Html::openElement(
 			'div',
 			[
