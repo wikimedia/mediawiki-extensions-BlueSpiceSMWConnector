@@ -11,5 +11,6 @@
 	"bs-extendedsearch-search-center-result-smwproperty-label": "ویژگی های معنایی:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "بله",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "خیر",
-	"bs-swm-connector-ask-store-page-label": "صفحه"
+	"bs-swm-connector-ask-store-page-label": "صفحه",
+	"bs-smwconnector-extendedsearch-anon-user-label": "کاربر ناشناس"
 }
