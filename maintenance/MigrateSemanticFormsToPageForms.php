@@ -6,7 +6,7 @@ use MediaWiki\MediaWikiServices;
 
 class MigrateSemanticFormsToPageForms extends Maintenance {
 
-	/** @var string */
+	/** @var string[] */
 	protected $propHasDefaultFormVariants = [
 		'لديه استمارة افتراضية',
 		'Fa servir el formulari per defecte',
