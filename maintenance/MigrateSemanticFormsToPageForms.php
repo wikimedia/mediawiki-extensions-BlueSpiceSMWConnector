@@ -1,8 +1,9 @@
 <?php
 
-require '../../../maintenance/Maintenance.php';
-
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Revision\SlotRecord;
+
+require '../../../maintenance/Maintenance.php';
 
 class MigrateSemanticFormsToPageForms extends Maintenance {
 
@@ -107,11 +108,19 @@ class MigrateSemanticFormsToPageForms extends Maintenance {
 			},
 			$wikiText
 		);
-		$status = $wikiPage->doEditContent(
-			ContentHandler::makeContent( $wikiText, $wikiPage->getTitle() ),
-			"SemanticForms to PageForms, done by " . self::class
-		);
-
+		$user = MediaWikiServices::getInstance()->getService( 'BSUtilityFactory' )
+			->getMaintenanceUser()->getUser();
+		$updater = $wikiPage->newPageUpdater( $user );
+		$content = ContentHandler::makeContent( $wikiText, $wikiPage->getTitle() );
+		$updater->setContent( SlotRecord::MAIN, $content );
+		$summary = "SemanticForms to PageForms, done by " . self::class;
+		$comment = CommentStoreComment::newUnsavedComment( $summary );
+		try {
+			$updater->saveRevision( $comment );
+		} catch ( Exception $e ) {
+			$this->output( "EXCEPTION:\n" . $e->getMessage() );
+		}
+		$status = $updater->getStatus();
 		if ( $status->isOK() ) {
 			$this->output( ' OK.' );
 		} else {
