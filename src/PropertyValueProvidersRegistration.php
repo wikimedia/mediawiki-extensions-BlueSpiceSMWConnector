@@ -7,6 +7,10 @@ use BlueSpice\ExtensionAttributeBasedRegistry;
 class PropertyValueProvidersRegistration {
 
 	public static function addExtensions() {
+		if ( defined( 'MW_PHPUNIT_TEST' ) ) {
+			return true;
+		}
+
 		if ( !isset( $GLOBALS['sespgLocalDefinitions'] ) ) {
 			$GLOBALS['sespgLocalDefinitions'] = [];
 		}
