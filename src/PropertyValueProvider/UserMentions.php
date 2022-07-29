@@ -73,7 +73,9 @@ class UserMentions extends PropertyValueProvider {
 			// support links
 			return;
 		}
-		$links = $content->getParserOutput( $semanticData->getSubject()->getTitle() )->getLinks();
+		$contentRenderer = MediaWikiServices::getInstance()->getContentRenderer();
+		$links = $contentRenderer->getParserOutput( $content, $semanticData->getSubject()->getTitle() )
+			->getLinks();
 		if ( empty( $links[NS_USER] ) ) {
 			return;
 		}
