@@ -56,7 +56,6 @@ class MigrateSemanticFormsToPageForms extends Maintenance {
 	}
 
 	/**
-	 *
 	 * @param string $propName
 	 */
 	protected function executeAsk( $propName ) {
@@ -83,7 +82,6 @@ class MigrateSemanticFormsToPageForms extends Maintenance {
 	}
 
 	/**
-	 *
 	 * @param string $pageName
 	 */
 	protected function replacePropertyByParserFunction( $pageName ) {
@@ -95,7 +93,7 @@ class MigrateSemanticFormsToPageForms extends Maintenance {
 			$this->output( "--> No WikiText. Can not modify." );
 			return;
 		}
-		$wikiText = $content->getNativeData();
+		$wikiText = ( $content instanceof TextContent ) ? $content->getText() : '';
 		$wikiText = preg_replace_callback(
 			'#\[\[(.*?)::(.*?)\]\]#',
 			function ( $matches ) {
@@ -129,7 +127,6 @@ class MigrateSemanticFormsToPageForms extends Maintenance {
 	}
 
 	/**
-	 *
 	 * @param string $formNameAndMaybeAlias
 	 * @return array
 	 */

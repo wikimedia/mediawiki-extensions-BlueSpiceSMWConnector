@@ -3,6 +3,7 @@
 namespace BlueSpice\SMWConnector\PageForms\Input;
 
 use MediaWiki\MediaWikiServices;
+use TextContent;
 
 class Grid extends \PFFormInput {
 
@@ -27,7 +28,6 @@ class Grid extends \PFFormInput {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public static function getName() {
@@ -35,7 +35,6 @@ class Grid extends \PFFormInput {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getHtmlText() {
@@ -62,7 +61,6 @@ class Grid extends \PFFormInput {
 	}
 
 	/**
-	 *
 	 * @return string[]
 	 */
 	public function getResourceModuleNames() {
@@ -72,7 +70,6 @@ class Grid extends \PFFormInput {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public static function getParameters() {
@@ -91,7 +88,6 @@ class Grid extends \PFFormInput {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	protected function makeDataAttributes() {
@@ -99,7 +95,8 @@ class Grid extends \PFFormInput {
 		$wikiPage = MediaWikiServices::getInstance()->getWikiPageFactory()
 			->newFromTitle( \Title::newFromText( $colDefSource ) );
 		$content = $wikiPage->getContent();
-		$colDef = \FormatJson::decode( $content->getNativeData() );
+		$contentText = ( $content instanceof TextContent ) ? $content->getText() : '{}';
+		$colDef = \FormatJson::decode( $contentText );
 
 		$dataAttribs = [
 			'data-template' => $this->mOtherArgs['template'],
@@ -108,5 +105,4 @@ class Grid extends \PFFormInput {
 
 		return $dataAttribs;
 	}
-
 }
