@@ -172,7 +172,7 @@ Ext.define( 'BS.SMWConnector.grid.AsyncResultPrinter', {
 	renderPageLink: function( value, meta, record ) {
 		if ( record.data.hasOwnProperty( this.key + '_link' ) ) {
 			value = record.data[this.key + '_link' ];
-			if ( $.isArray( value ) ) {
+			if ( Array.isArray( value ) ) {
 				return value.join( ', ' );
 			}
 		}
