@@ -167,13 +167,14 @@ class SMWWikiPageFormatter extends WikiPageFormatter {
 			return $titleKey;
 		}
 
-		if ( User::isIP( $title->getDBkey() ) ) {
+		$services = MediaWikiServices::getInstance();
+		if ( $services->getUserNameUtils()->isIP( $title->getDBkey() ) ) {
 			return Message::newFromKey( "bs-smwconnector-extendedsearch-anon-user-label" )->text();
 		}
 		$user = User::newFromName( $title->getDBkey() );
 		if ( $user instanceof User ) {
 			/** @var UtilityFactory $utilFactory */
-			$utilFactory = MediaWikiServices::getInstance()->getService( 'BSUtilityFactory' );
+			$utilFactory = $services->getService( 'BSUtilityFactory' );
 			return $utilFactory->getUserHelper( $user )->getDisplayName();
 		}
 
