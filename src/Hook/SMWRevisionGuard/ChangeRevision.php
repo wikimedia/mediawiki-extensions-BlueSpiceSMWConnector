@@ -8,7 +8,7 @@ namespace BlueSpice\SMWConnector\Hook\SMWRevisionGuard;
 use BlueSpice\Hook;
 use Config;
 use IContextSource;
-use Revision;
+use MediaWiki\Revision\RevisionRecord;
 use Title;
 
 abstract class ChangeRevision extends Hook {
@@ -16,12 +16,12 @@ abstract class ChangeRevision extends Hook {
 	/** @var Title */
 	protected $title;
 
-	/** @var Revision|null */
+	/** @var RevisionRecord|null */
 	protected $revision;
 
 	/**
 	 * @param Title $title
-	 * @param Revision|null &$revision
+	 * @param RevisionRecord|null &$revision
 	 * @return bool
 	 */
 	public static function callback( Title $title, &$revision ) {
@@ -40,7 +40,7 @@ abstract class ChangeRevision extends Hook {
 	 * @param IContextSource $context
 	 * @param Config $config
 	 * @param Title $title
-	 * @param Revision &$revision
+	 * @param RevisionRecord &$revision
 	 */
 	public function __construct( $context, $config, Title $title, &$revision ) {
 		parent::__construct( $context, $config );
