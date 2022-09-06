@@ -4,6 +4,7 @@ namespace BlueSpice\SMWConnector\PageForms\Input;
 
 use Html;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\User\UserGroupManager;
 use User;
 
 class UserCombo extends \PFFormInput {
@@ -93,7 +94,8 @@ class UserCombo extends \PFFormInput {
 		if ( !$this->mCurrentValue ) {
 			return null;
 		}
-		$username = array_pop( explode( ':', $this->mCurrentValue ) );
+		$usernames = explode( ':', $this->mCurrentValue );
+		$username = array_pop( $usernames );
 		$user = User::newFromName( $username );
 		if ( !$user ) {
 			return null;
