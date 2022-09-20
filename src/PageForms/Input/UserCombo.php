@@ -19,6 +19,9 @@ class UserCombo extends \PFFormInput {
 	 */
 	private $userGroupManager;
 
+	/** @var MediaWikiServices */
+	protected $services = null;
+
 	/**
 	 * @param string $input_number The number of the input in the form. For a simple HTML input
 	 *  element this should end up in the id attribute in the format 'input_<number>'.
@@ -33,7 +36,8 @@ class UserCombo extends \PFFormInput {
 	public function __construct( $input_number, $cur_value, $input_name, $disabled, $other_args ) {
 		parent::__construct( $input_number, $cur_value, $input_name, $disabled, $other_args );
 
-		$this->userGroupManager = MediaWikiServices::getInstance()->getUserGroupManager();
+		$this->services = MediaWikiServices::getInstance();
+		$this->userGroupManager = $this->services->getUserGroupManager();
 
 		if ( isset( $other_args['group'] ) ) {
 			$this->setGroups();
@@ -96,7 +100,7 @@ class UserCombo extends \PFFormInput {
 		}
 		$usernames = explode( ':', $this->mCurrentValue );
 		$username = array_pop( $usernames );
-		$user = User::newFromName( $username );
+		$user = $this->services->getUserFactory()->newFromName( $username );
 		if ( !$user ) {
 			return null;
 		}
