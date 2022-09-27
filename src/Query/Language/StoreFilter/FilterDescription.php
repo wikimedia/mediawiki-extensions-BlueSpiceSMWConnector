@@ -2,7 +2,7 @@
 
 namespace BlueSpice\SMWConnector\Query\Language\StoreFilter;
 
-use BlueSpice\Data\Filter;
+use MWStake\MediaWiki\Component\DataStore\Filter;
 use SMW\Query\Language\Description;
 
 class FilterDescription extends Description {

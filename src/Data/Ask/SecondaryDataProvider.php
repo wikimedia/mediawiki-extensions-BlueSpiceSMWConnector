@@ -2,9 +2,9 @@
 
 namespace BlueSpice\SMWConnector\Data\Ask;
 
-use BlueSpice\Data\ISecondaryDataProvider;
-use BlueSpice\Data\Record;
 use MediaWiki\MediaWikiServices;
+use MWStake\MediaWiki\Component\DataStore\ISecondaryDataProvider;
+use MWStake\MediaWiki\Component\DataStore\Record;
 use Title;
 
 class SecondaryDataProvider implements ISecondaryDataProvider {

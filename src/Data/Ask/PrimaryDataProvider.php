@@ -2,15 +2,15 @@
 
 namespace BlueSpice\SMWConnector\Data\Ask;
 
-use BlueSpice\Data\Filter;
-use BlueSpice\Data\Filter\Date;
-use BlueSpice\Data\Filter\Numeric;
-use BlueSpice\Data\IPrimaryDataProvider;
-use BlueSpice\Data\Record;
 use BlueSpice\SMWConnector\Query\Language\AnyDescription;
 use BlueSpice\SMWConnector\Query\Language\StoreFilter\DateFilterDescription;
 use BlueSpice\SMWConnector\Query\Language\StoreFilter\FilterDescription;
 use BlueSpice\SMWConnector\Query\Language\StoreFilter\StringFilterDescription;
+use MWStake\MediaWiki\Component\DataStore\Filter;
+use MWStake\MediaWiki\Component\DataStore\Filter\Date;
+use MWStake\MediaWiki\Component\DataStore\Filter\Numeric;
+use MWStake\MediaWiki\Component\DataStore\IPrimaryDataProvider;
+use MWStake\MediaWiki\Component\DataStore\Record;
 use SMW\ApplicationFactory;
 use SMW\DataValueFactory;
 use SMW\DIProperty;
