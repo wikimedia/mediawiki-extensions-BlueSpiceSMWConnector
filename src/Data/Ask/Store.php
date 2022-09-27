@@ -2,8 +2,8 @@
 
 namespace BlueSpice\SMWConnector\Data\Ask;
 
-use BlueSpice\Data\IStore;
 use Exception;
+use MWStake\MediaWiki\Component\DataStore\IStore;
 
 class Store implements IStore {
 	/**

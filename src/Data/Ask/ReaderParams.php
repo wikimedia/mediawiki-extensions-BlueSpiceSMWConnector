@@ -3,8 +3,9 @@
 namespace BlueSpice\SMWConnector\Data\Ask;
 
 use FormatJson;
+use MWStake\MediaWiki\Component\DataStore\ReaderParams as BaseReaderParams;
 
-class ReaderParams extends \BlueSpice\Data\ReaderParams {
+class ReaderParams extends BaseReaderParams {
 	public const PARAM_PROPS = 'props';
 	/** @var array */
 	protected $props = [];

@@ -2,11 +2,11 @@
 
 namespace BlueSpice\SMWConnector\Data\Ask;
 
-use BlueSpice\Data\NullSorter;
-use BlueSpice\Data\NullTrimmer;
-use BlueSpice\Data\Reader as BaseReader;
-use BlueSpice\Data\ResultSet;
 use MWException;
+use MWStake\MediaWiki\Component\DataStore\NullSorter;
+use MWStake\MediaWiki\Component\DataStore\NullTrimmer;
+use MWStake\MediaWiki\Component\DataStore\Reader as BaseReader;
+use MWStake\MediaWiki\Component\DataStore\ResultSet;
 use RuntimeException;
 
 class Reader extends BaseReader {
