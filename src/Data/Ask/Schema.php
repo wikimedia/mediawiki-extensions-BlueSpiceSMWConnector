@@ -2,11 +2,12 @@
 
 namespace BlueSpice\SMWConnector\Data\Ask;
 
-use BlueSpice\Data\FieldType;
 use Message;
+use MWStake\MediaWiki\Component\DataStore\FieldType;
+use MWStake\MediaWiki\Component\DataStore\Schema as DataStoreSchema;
 use SMW\DIProperty;
 
-class Schema extends \BlueSpice\Data\Schema {
+class Schema extends DataStoreSchema {
 	public const PAGE = 'page';
 	public const PAGE_LINK = 'page_link';
 	public const PROPERTY_NAME = 'property_name';
