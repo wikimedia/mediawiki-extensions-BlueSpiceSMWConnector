@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Mainframe98",
-			"Romaine"
+			"Romaine",
+			"McDutchie"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integreert SemanticMediaWiki in BlueSpice",
@@ -13,6 +14,12 @@
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantische eigenschappen:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Ja",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Nee",
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Inhoud/Gebruikersvermeldingen",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Gebruikerspagina's van de gebruikers die op deze pagina zijn genoemd",
+	"apihelp-bs-smw-connector-ask-store-summary": "ExtJS-compatibele opslag voor het uitvoeren van semantische zoekopdrachten",
+	"apihelp-bs-smw-connector-ask-store-props-param": "De op te vragen eigenschappen. Die eigenschappen komen overeen met het schema en de geretourneerde gegevens. Sleutel-waardeparen. De sleutel is de werkelijke eigenschapsnaam; de waarde is het gewenste label (JSON).",
 	"bs-swm-connector-ask-store-page-label": "Pagina",
+	"bs-smw-connector-async-ask-unknown-handler": "Afhandelaar voor formaat \"$1\" is niet geregistreerd of niet geldig.",
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Knooppuntwaarde die de plaatshouder <nowiki>{{{node}}}</nowiki> in de query vervangt.",
 	"bs-smwconnector-extendedsearch-anon-user-label": "Anonieme gebruiker"
 }
