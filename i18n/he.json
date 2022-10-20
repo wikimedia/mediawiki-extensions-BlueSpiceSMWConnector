@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Erelon",
-			"Guycn2"
+			"Guycn2",
+			"Amire80"
 		]
 	},
 	"bs-bssmwconnector-desc": "שילוב ההרחבה SemanticMediaWiki בתוך BlueSpice",
@@ -13,5 +14,13 @@
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "מאפיינים סמנטיים",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "מאפיינים סמנטיים:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "כן",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "לא"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "לא",
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "אזכורים של תוכן/משתמש",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "דפי משתמש של משתמשים שאוזכרו בדף הזה",
+	"apihelp-bs-smw-connector-ask-store-summary": "אחסון תואם ExtJS לביצוע שאילתות סמנטיות",
+	"apihelp-bs-smw-connector-ask-store-props-param": "מאפיינים לאחזור. המאפיינים האלה יתאימו לסכֵמה ולנתונים שהוחזרו. צמדי מפתח־ערך, המפתח הוא שם המאפיין בפועל, הערך הוא התווית הרצויה (JSON)",
+	"bs-swm-connector-ask-store-page-label": "דף",
+	"bs-smw-connector-async-ask-unknown-handler": "המטפל עבור התסדיר \"$1\" אינו רשום או אינו תקין",
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "ערך הצומת שיחליף את מציין המיקום <nowiki>{{{node}}}</nowiki> בשאילתה",
+	"bs-smwconnector-extendedsearch-anon-user-label": "משתמש אלמוני"
 }
