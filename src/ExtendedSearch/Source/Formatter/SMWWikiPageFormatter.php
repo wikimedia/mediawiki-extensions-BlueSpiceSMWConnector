@@ -171,7 +171,7 @@ class SMWWikiPageFormatter extends WikiPageFormatter {
 		if ( $services->getUserNameUtils()->isIP( $title->getDBkey() ) ) {
 			return Message::newFromKey( "bs-smwconnector-extendedsearch-anon-user-label" )->text();
 		}
-		$user = User::newFromName( $title->getDBkey() );
+		$user = $services->getUserFactory()->newFromName( $title->getDBkey() );
 		if ( $user instanceof User ) {
 			/** @var UtilityFactory $utilFactory */
 			$utilFactory = $services->getService( 'BSUtilityFactory' );

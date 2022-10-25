@@ -2,6 +2,8 @@
 
 namespace BlueSpice\SMWConnector\PageForms\Input;
 
+use MediaWiki\MediaWikiServices;
+
 class UserTags extends \PFFormInput {
 
 	/**
@@ -90,8 +92,9 @@ class UserTags extends \PFFormInput {
 	 */
 	protected function parseCurrentValue() {
 		$this->mCurrentValue = explode( ',', $this->mCurrentValue );
+		$userFactory = MediaWikiServices::getInstance()->getUserFactory();
 		foreach ( $this->mCurrentValue as $userName ) {
-			$user = \User::newFromName( $userName );
+			$user = $userFactory->newFromName( $userName );
 			if ( !$user ) {
 				continue;
 			}
