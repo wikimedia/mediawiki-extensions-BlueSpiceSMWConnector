@@ -39,7 +39,7 @@ class Tree implements IAsyncAskHandler {
 	 * @inheritDoc
 	 */
 	public function getRLModules() {
-		return 'ext.BSSMWConnector.async.tree';
+		return [ 'ext.BSSMWConnector.async.tree' ];
 	}
 
 	/**
