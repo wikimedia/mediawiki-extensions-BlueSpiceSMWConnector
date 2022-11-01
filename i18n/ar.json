@@ -18,6 +18,12 @@
 	"bs-extendedsearch-search-center-result-smwproperty-label": "الخصائص الدلالية:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "نعم",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "لا",
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "المحتوى / يذكر المستخدم",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "صفحات المستخدمين الخاصة بالمستخدمين المذكورين في هذه الصفحة",
+	"apihelp-bs-smw-connector-ask-store-summary": "متجر متوافق مع ExtJS لتنفيذ الاستعلامات الدلالية",
+	"apihelp-bs-smw-connector-ask-store-props-param": "الخصائص المراد استرجاعها. ستتوافق هذه الخصائص مع المخطط والبيانات التي تم إرجاعها. أزواج مفتاح القيمة ، المفتاح هو اسم الخاصية الفعلي ، القيمة هي التسمية المطلوبة (JSON)",
 	"bs-swm-connector-ask-store-page-label": "الصفحة",
+	"bs-smw-connector-async-ask-unknown-handler": "معالج التنسيق \" $1 \" غير مسجل أو غير صالح",
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "قيمة العقدة التي ستحل محل<nowiki> {{{العقدة}}}</nowiki> عنصر نائب في الاستعلام",
 	"bs-smwconnector-extendedsearch-anon-user-label": "مستخدم مجهول"
 }
