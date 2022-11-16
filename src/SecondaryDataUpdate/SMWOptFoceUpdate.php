@@ -3,7 +3,6 @@
 namespace BlueSpice\SMWConnector\SecondaryDataUpdate;
 
 use BlueSpice\SecondaryDataUpdate;
-
 use Content;
 use DeferredUpdates;
 use LinksUpdate;
