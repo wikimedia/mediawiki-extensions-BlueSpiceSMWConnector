@@ -21,5 +21,8 @@
 	"bs-swm-connector-ask-store-page-label": "Page",
 	"bs-smw-connector-async-ask-unknown-handler": "Handler for format \"$1\" is not registered or not valid",
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Node value that will replace <nowiki>{{{node}}}</nowiki> placeholder in the query",
-	"bs-smwconnector-extendedsearch-anon-user-label": "Anonymous user"
+	"bs-smwconnector-extendedsearch-anon-user-label": "Anonymous user",
+	"apihelp-bs-smw-connector-smw-property-store-summary": "ExtJS-compatible store to get property values",
+	"apihelp-bs-smw-connector-tree-ask-store-summary": "ExtJS-compatible tree store to execute semantic queries",
+	"bs-smw-connector-async-error": "Data yould not be fetched"
 }
