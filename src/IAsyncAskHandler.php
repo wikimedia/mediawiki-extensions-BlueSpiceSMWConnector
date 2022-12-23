@@ -16,7 +16,7 @@ interface IAsyncAskHandler {
 	/**
 	 * Get required RL modules to load
 	 *
-	 * @return string|array
+	 * @return string[]
 	 */
 	public function getRLModules();
 }

@@ -38,7 +38,7 @@ class Grid implements IAsyncAskHandler {
 	 * @inheritDoc
 	 */
 	public function getRLModules() {
-		return 'ext.BSSMWConnector.async.grid';
+		return [ 'ext.BSSMWConnector.async.grid' ];
 	}
 
 	/**
