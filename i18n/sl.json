@@ -4,5 +4,22 @@
 			"Eleassar"
 		]
 	},
-	"bs-dlg-choosesmwprop-label": "Lastnost"
+	"bs-bssmwconnector-desc": "Integrira Semantični MediaWiki v BlueSpice",
+	"bs-bssmwconnector-srf-printername-bsgrid": "Mreža BlueSpice",
+	"bs-bssmwconnector-nmmngr-label-smw": "Semantični MediaWiki",
+	"bs-dlg-choosesmwprop-label": "Lastnost",
+	"bs-dlg-choosesmwprop-type-smwprop": "Semantična lastnost",
+	"bs-extendedsearch-add-filter-group-smwproperty-label": "Semantične lastnosti",
+	"bs-smwconnector-extendedsearch-smwproperty-result-value": "$1: $2",
+	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantične lastnosti:",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "Da",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Ne",
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Vsebina/Omembe uporabnikov",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Uporabniške strani uporabnikov, ki so bili omenjeni na tej strani",
+	"apihelp-bs-smw-connector-ask-store-summary": "Shramba, združljiva z ExtJS, za izvajanje semantičnih poizvedb",
+	"apihelp-bs-smw-connector-ask-store-props-param": "Lastnosti, ki naj se pridobijo. Te lastnosti bodo ustrezale vrnjeni shemi in podatkom. Pari ključ-vrednost; ključ je dejansko ime lastnosti, vrednost je želena oznaka (JSON).",
+	"bs-swm-connector-ask-store-page-label": "Stran",
+	"bs-smw-connector-async-ask-unknown-handler": "Obravnavalnik za format »$1« ni registriran ali ni veljaven",
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Vrednost vozlišča, ki bo v poizvedbi zamenjala nadomestno besedilo <nowiki>{{{node}}}</nowiki>",
+	"bs-smwconnector-extendedsearch-anon-user-label": "Anonimni uporabnik"
 }
