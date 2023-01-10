@@ -51,5 +51,10 @@
 	},
 	"extra": {
 		"installer-name": "BlueSpiceSMWConnector"
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true
+		}
 	}
 }
