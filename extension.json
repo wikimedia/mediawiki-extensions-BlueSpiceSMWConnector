@@ -82,6 +82,14 @@
 				"smw:opt.forced.update": "\\BlueSpice\\SMWConnector\\SecondaryDataUpdate\\SMWOptFoceUpdate::factory"
 			}
 		},
+		"BlueSpiceSmartList": {
+			"ModeRegistry": {
+				"smwreport": {
+					"class": "BlueSpice\\SMWConnector\\SmartListMode\\SMWReportMode",
+					"services": [ "PermissionManager", "DBLoadBalancer", "TitleFactory" ]
+				}
+			}
+		},
 		"BlueSpiceBookshelfUI": {
 			"MassAddHandlerRegistry": {
 				"smwproperty": "BSSMWPropertyPageProvider::factory"
