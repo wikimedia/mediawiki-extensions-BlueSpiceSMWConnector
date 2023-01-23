@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
+			"Kimberli Mäkäräinen (WMNO)",
 			"Yupik"
 		]
 	},
-	"bs-smwconnector-extendedsearch-anon-user-label": "Anonyma geavaheaddji"
+	"bs-smwconnector-extendedsearch-anon-user-label": "Anonyma geavaheaddji",
+	"bs-dlg-choosesmwprop-label": "Iešvuohta"
 }
