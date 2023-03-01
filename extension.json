@@ -77,9 +77,6 @@
 						"structuremanager"
 					]
 				}
-			},
-			"SecondaryDataUpdateRegistry": {
-				"smw:opt.forced.update": "\\BlueSpice\\SMWConnector\\SecondaryDataUpdate\\SMWOptFoceUpdate::factory"
 			}
 		},
 		"BlueSpiceSmartList": {
@@ -159,6 +156,9 @@
 	"HookHandlers": {
 		"discovery-skin": {
 			"class": "\\BlueSpice\\SMWConnector\\HookHandler\\DiscoverySkin"
+		},
+		"forceLinksUpdate": {
+			"class": "\\BlueSpice\\SMWConnector\\HookHandler\\ForceLinksUpdates"
 		}
 	},
 	"Hooks": {
@@ -181,7 +181,8 @@
 		"ChameleonSkinTemplateOutputPageBeforeExec": "BlueSpice\\SMWConnector\\Hook\\ChameleonSkinTemplateOutputPageBeforeExec\\AddFormEditAction::callback",
 		"BSUEModulePDFcollectMetaData": "BlueSpice\\SMWConnector\\Hook\\BSUEModulePDFcollectMetaData\\AddSemanitcMetaData::callback",
 		"ParserFirstCallInit": "BlueSpice\\SMWConnector\\Hook\\ParserFirstCallInit\\AsyncAsk::callback",
-		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin"
+		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
+		"RevisionDataUpdates": "forceLinksUpdate"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
