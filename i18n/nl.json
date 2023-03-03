@@ -21,5 +21,8 @@
 	"apihelp-bs-smw-connector-ask-store-summary": "ExtJS-compatibele opslag voor het uitvoeren van semantische zoekopdrachten",
 	"apihelp-bs-smw-connector-ask-store-props-param": "De op te vragen eigenschappen. Die eigenschappen komen overeen met het schema en de geretourneerde gegevens. Sleutel-waardeparen. De sleutel is de werkelijke eigenschapsnaam; de waarde is het gewenste label (JSON).",
 	"bs-smw-connector-async-ask-unknown-handler": "Afhandelaar voor formaat \"$1\" is niet geregistreerd of niet geldig.",
-	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Knooppuntwaarde die de plaatshouder <nowiki>{{{node}}}</nowiki> in de query vervangt."
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Knooppuntwaarde die de plaatshouder <nowiki>{{{node}}}</nowiki> in de query vervangt.",
+	"apihelp-bs-smw-connector-smw-property-store-summary": "ExtJS-compatibele opslag om eigenschapswaarden op te halen",
+	"apihelp-bs-smw-connector-tree-ask-store-summary": "ExtJS-compatibele boomopslag voor het uitvoeren van semantische zoekopdrachten",
+	"bs-smw-connector-async-error": "Gegevens konden niet worden opgehaald"
 }
