@@ -8,7 +8,7 @@
 		"Robert Vogel",
 		"Leonid Verhovskij"
 	],
-	"url": "https://en.wiki.bluespice.com/wiki/Reference:SMWConnector",
+	"url": "https://en.wiki.bluespice.com/wiki/Reference:BlueSpiceSMWConnector",
 	"requires": {
 		"MediaWiki": ">= 1.35.0",
 		"extensions": {
