@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"*Surak*",
 			"Ameisenigel",
 			"Hwboehm",
 			"Krabina",
@@ -27,5 +28,7 @@
 	"bs-swm-connector-ask-store-page-label": "Seite",
 	"bs-smw-connector-async-ask-unknown-handler": "Der Handler für das Format „$1“ ist nicht registriert oder nicht gültig",
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Wert des Knotens, der <nowiki>{{{node}}}</nowiki> in der Abfrage ersetzen wird",
-	"bs-smwconnector-extendedsearch-anon-user-label": "Anonymer Benutzer"
+	"bs-smwconnector-extendedsearch-anon-user-label": "Anonymer Benutzer",
+	"apihelp-bs-smw-connector-smw-property-store-summary": "ExtJS-kompatibler Speicher zum Abrufen von Eigenschaftswerten",
+	"apihelp-bs-smw-connector-tree-ask-store-summary": "ExtJS-kompatibler Baumspeicher zum Ausführen semantischer Abfragen"
 }

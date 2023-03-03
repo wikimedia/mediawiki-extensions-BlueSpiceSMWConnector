@@ -21,5 +21,8 @@
 	"bs-swm-connector-ask-store-page-label": "Stran",
 	"bs-smw-connector-async-ask-unknown-handler": "Obravnavalnik za format »$1« ni registriran ali ni veljaven",
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Vrednost vozlišča, ki bo v poizvedbi zamenjala nadomestno besedilo <nowiki>{{{node}}}</nowiki>",
-	"bs-smwconnector-extendedsearch-anon-user-label": "Anonimni uporabnik"
+	"bs-smwconnector-extendedsearch-anon-user-label": "Anonimni uporabnik",
+	"apihelp-bs-smw-connector-smw-property-store-summary": "Shramba, združljiva z ExtJS, za pridobivanje vrednosti lastnosti",
+	"apihelp-bs-smw-connector-tree-ask-store-summary": "Drevesna shramba, združljiva z ExtJS, za izvajanje semantičnih poizvedb",
+	"bs-smw-connector-async-error": "Podatkov ni bilo mogoče pridobiti"
 }

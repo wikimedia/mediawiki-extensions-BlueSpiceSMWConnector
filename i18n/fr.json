@@ -26,5 +26,8 @@
 	"bs-swm-connector-ask-store-page-label": "Page",
 	"bs-smw-connector-async-ask-unknown-handler": "Le gestionnaire du format « $1 » n’est pas enregistré ou n’est pas valide",
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Valeur du nœud qui remplacera le paramètre <nowiki>{{{node}}}</nowiki> dans la requête",
-	"bs-smwconnector-extendedsearch-anon-user-label": "Utilisateur anonyme"
+	"bs-smwconnector-extendedsearch-anon-user-label": "Utilisateur anonyme",
+	"apihelp-bs-smw-connector-smw-property-store-summary": "Stockage compatible ExtJS pour obtenir les valeurs de propriété",
+	"apihelp-bs-smw-connector-tree-ask-store-summary": "Stockage arborescent compatible ExtJS pour exécuter les requêtes sémantiques",
+	"bs-smw-connector-async-error": "Les données ne seront pas récupérées"
 }

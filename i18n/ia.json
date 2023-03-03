@@ -19,5 +19,8 @@
 	"bs-swm-connector-ask-store-page-label": "Pagina",
 	"bs-smw-connector-async-ask-unknown-handler": "Le gestor del formato \"$1\" non es registrate o non es valide",
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Valor de nodo que reimplaciara le marcator de position <nowiki>{{{node}}}</nowiki> in le consulta",
-	"bs-smwconnector-extendedsearch-anon-user-label": "Usator anonyme"
+	"bs-smwconnector-extendedsearch-anon-user-label": "Usator anonyme",
+	"apihelp-bs-smw-connector-smw-property-store-summary": "Magazin compatibile con ExtJS pro obtener valores de proprietates",
+	"apihelp-bs-smw-connector-tree-ask-store-summary": "Magazin arborescente compatibile con ExtJS pro executar consultas semantic",
+	"bs-smw-connector-async-error": "Datos non poteva esser recuperate"
 }
