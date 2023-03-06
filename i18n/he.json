@@ -22,5 +22,7 @@
 	"bs-swm-connector-ask-store-page-label": "דף",
 	"bs-smw-connector-async-ask-unknown-handler": "המטפל עבור התסדיר \"$1\" אינו רשום או אינו תקין",
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "ערך הצומת שיחליף את מציין המיקום <nowiki>{{{node}}}</nowiki> בשאילתה",
-	"bs-smwconnector-extendedsearch-anon-user-label": "משתמש אלמוני"
+	"bs-smwconnector-extendedsearch-anon-user-label": "משתמש אלמוני",
+	"apihelp-bs-smw-connector-smw-property-store-summary": "אחסון תואם ExtJS כדי לקבל ערכי מאפיינים",
+	"apihelp-bs-smw-connector-tree-ask-store-summary": "אחסון עץ תואם ExtJS לביצוע שאילתות סמנטיות"
 }
