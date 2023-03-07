@@ -21,5 +21,8 @@
 	"bs-swm-connector-ask-store-page-label": "Pagina",
 	"bs-smw-connector-async-ask-unknown-handler": "Afhandelaar voor formaat \"$1\" is niet geregistreerd of niet geldig.",
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Knooppuntwaarde die de plaatshouder <nowiki>{{{node}}}</nowiki> in de query vervangt.",
-	"bs-smwconnector-extendedsearch-anon-user-label": "Anonieme gebruiker"
+	"bs-smwconnector-extendedsearch-anon-user-label": "Anonieme gebruiker",
+	"apihelp-bs-smw-connector-smw-property-store-summary": "ExtJS-compatibele opslag om eigenschapswaarden op te halen",
+	"apihelp-bs-smw-connector-tree-ask-store-summary": "ExtJS-compatibele boomopslag voor het uitvoeren van semantische zoekopdrachten",
+	"bs-smw-connector-async-error": "Gegevens konden niet worden opgehaald"
 }
