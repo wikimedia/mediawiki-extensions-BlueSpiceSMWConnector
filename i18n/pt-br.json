@@ -4,7 +4,8 @@
 			"!Silent",
 			"Eduardo Addad de Oliveira",
 			"Eduardoaddad",
-			"Isabelle Belato"
+			"Isabelle Belato",
+			"Re demz"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integra o SemanticMediaWiki no BlueSpice",
@@ -23,5 +24,6 @@
 	"bs-swm-connector-ask-store-page-label": "Página",
 	"bs-smw-connector-async-ask-unknown-handler": "O manipulador para o formato \"$1\" não está registrado ou não é válido",
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Valor do nó que irá substituir o marcador <nowiki>{{{node}}}</nowiki> de posição na consulta",
-	"bs-smwconnector-extendedsearch-anon-user-label": "Usuário anônimo"
+	"bs-smwconnector-extendedsearch-anon-user-label": "Usuário anônimo",
+	"bs-smw-connector-async-error": "Não foi possível buscar dados"
 }
