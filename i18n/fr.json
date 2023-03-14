@@ -6,7 +6,8 @@
 			"Golmore",
 			"Gomoko",
 			"Verdy p",
-			"Wladek92"
+			"Wladek92",
+			"Naheulf"
 		]
 	},
 	"bs-bssmwconnector-desc": "Intègre SemanticMediaWiki à BlueSpice",
@@ -29,5 +30,5 @@
 	"bs-smwconnector-extendedsearch-anon-user-label": "Utilisateur anonyme",
 	"apihelp-bs-smw-connector-smw-property-store-summary": "Stockage compatible avec ExtJS pour obtenir des valeurs de propriété",
 	"apihelp-bs-smw-connector-tree-ask-store-summary": "Stockage arborescent compatible avec ExtJS pour exécuter des requêtes sémantiques",
-	"bs-smw-connector-async-error": "Les données ne seront pas récupérées"
+	"bs-smw-connector-async-error": "Les données n'ont pas pu être récupérées"
 }
