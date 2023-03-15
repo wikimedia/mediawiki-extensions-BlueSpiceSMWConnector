@@ -24,5 +24,6 @@
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "ערך הצומת שיחליף את מציין המיקום <nowiki>{{{node}}}</nowiki> בשאילתה",
 	"bs-smwconnector-extendedsearch-anon-user-label": "משתמש אלמוני",
 	"apihelp-bs-smw-connector-smw-property-store-summary": "אחסון תואם ExtJS כדי לקבל ערכי מאפיינים",
-	"apihelp-bs-smw-connector-tree-ask-store-summary": "אחסון עץ תואם ExtJS לביצוע שאילתות סמנטיות"
+	"apihelp-bs-smw-connector-tree-ask-store-summary": "אחסון עץ תואם ExtJS לביצוע שאילתות סמנטיות",
+	"bs-smw-connector-async-error": "לא ניתן היה לאחזר נתונים"
 }

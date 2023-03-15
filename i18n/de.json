@@ -4,6 +4,7 @@
 			"*Surak*",
 			"Ameisenigel",
 			"Hwboehm",
+			"Justman10000",
 			"Krabina",
 			"Metalhead64",
 			"Mglaser",
@@ -30,5 +31,6 @@
 	"bs-smwconnector-extendedsearch-anon-user-label": "Anonymer Benutzer",
 	"bs-smwconnector-extendedsearch-smwproperty-result-value": "$1: $2",
 	"apihelp-bs-smw-connector-smw-property-store-summary": "ExtJS-kompatibler Speicher zum Abrufen von Eigenschaftswerten",
-	"apihelp-bs-smw-connector-tree-ask-store-summary": "ExtJS-kompatibler Baumspeicher zum Ausführen semantischer Abfragen"
+	"apihelp-bs-smw-connector-tree-ask-store-summary": "ExtJS-kompatibler Baumspeicher zum Ausführen semantischer Abfragen",
+	"bs-smw-connector-async-error": "Daten konnten nicht abgerufen werden"
 }
