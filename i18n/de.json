@@ -8,7 +8,8 @@
 			"Metalhead64",
 			"Mglaser",
 			"Robert Vogel <vogel@hallowelt.biz>",
-			"Umherirrender"
+			"Umherirrender",
+			"Justman10000"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integriert SemanticMediaWiki in BlueSpice",
@@ -30,5 +31,6 @@
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Wert des Knotens, der <nowiki>{{{node}}}</nowiki> in der Abfrage ersetzen wird",
 	"bs-smwconnector-extendedsearch-anon-user-label": "Anonymer Benutzer",
 	"apihelp-bs-smw-connector-smw-property-store-summary": "ExtJS-kompatibler Speicher zum Abrufen von Eigenschaftswerten",
-	"apihelp-bs-smw-connector-tree-ask-store-summary": "ExtJS-kompatibler Baumspeicher zum Ausführen semantischer Abfragen"
+	"apihelp-bs-smw-connector-tree-ask-store-summary": "ExtJS-kompatibler Baumspeicher zum Ausführen semantischer Abfragen",
+	"bs-smw-connector-async-error": "Daten konnten nicht abgerufen werden"
 }
