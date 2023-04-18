@@ -81,8 +81,8 @@
 		},
 		"BlueSpiceSmartList": {
 			"ModeRegistry": {
-				"smwreport": {
-					"class": "BlueSpice\\SMWConnector\\SmartListMode\\SMWReportMode",
+				"dataquery": {
+					"class": "BlueSpice\\SMWConnector\\SmartListMode\\DataQueryMode",
 					"services": [ "PermissionManager", "DBLoadBalancer", "TitleFactory" ]
 				}
 			}
@@ -129,7 +129,8 @@
 		}
 	},
 	"AutoloadNamespaces": {
-		"BlueSpice\\SMWConnector\\": "src/"
+		"BlueSpice\\SMWConnector\\": "src/",
+		"BlueSpice\\SMWConnector\\Tests\\": "tests/phpunit/"
 	},
 	"AutoloadClasses": {
 		"BSSMWConnectorHooks": "includes/BSSMWConnectorHooks.php",
