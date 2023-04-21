@@ -34,6 +34,9 @@
 					"package": "BlueSpice Pro"
 				}
 			},
+			"TagRegistry": {
+				"dataquery": "\\BlueSpice\\SMWConnector\\Tag\\DataQuery"
+			},
 			"PermissionRegistry": {
 				"createclass": {
 					"type": "global",
@@ -109,6 +112,18 @@
 				"special-ask": {
 					"class": "BlueSpice\\SMWConnector\\BreadcrumbDataProvider\\SpecialAskProvider",
 					"services": [ "SpecialPageFactory" ]
+				}
+			}
+		},
+		"VisualEditor": {
+			"PluginModules": [
+				"ext.BSSMWConnector.DataQuery.visualEditor"
+			]
+		},
+		"ContentDroplets": {
+			"Droplets": {
+				"dataquery": {
+					"class": "\\BlueSpice\\SMWConnector\\ContentDroplets\\DataQueryDroplet"
 				}
 			}
 		}
@@ -290,6 +305,38 @@
 			"dependencies": [
 				"oojs-ui",
 				"ext.bluespice"
+			]
+		},
+		"ext.BSSMWConnector.DataQuery.visualEditor": {
+			"scripts": [
+				"nodes/bs.smwconnector.ce.DataQueryNode.js",
+				"nodes/bs.smwconnector.dm.DataQueryNode.js",
+				"nodes/bs.smwconnector.ui.DataQueryInspector.js",
+				"nodes/bs.smwconnector.ui.DataQueryInspectorTool.js"
+			],
+			"styles": "stylesheets/droplet.dataquery.css",
+			"messages": [
+				"bs-smwconnector-dataquery-name",
+				"bs-smwconnector-dataquery-desc",
+				"bs-smwconnector-dataquery-category-label",
+				"bs-smwconnector-dataquery-category-help",
+				"bs-smwconnector-dataquery-namespace-label",
+				"bs-smwconnector-dataquery-namespace-help",
+				"bs-smwconnector-dataquery-modified-operator-label",
+				"bs-smwconnector-dataquery-modified-operator-help",
+				"bs-smwconnector-dataquery-modified-operator-all",
+				"bs-smwconnector-dataquery-modified-operator-since",
+				"bs-smwconnector-dataquery-modified-operator-before",
+				"bs-smwconnector-dataquery-modified-operator-except",
+				"bs-smwconnector-dataquery-modified-date-label",
+				"bs-smwconnector-dataquery-modified-date-help",
+				"bs-smwconnector-dataquery-printouts-label",
+				"bs-smwconnector-dataquery-printouts-help",
+				"bs-smwconnector-dataquery-count-label",
+				"bs-smwconnector-dataquery-count-help"
+			],
+			"dependencies": [
+				"ext.visualEditor.mwcore"
 			]
 		}
 	},
