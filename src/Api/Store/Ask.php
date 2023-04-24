@@ -4,6 +4,7 @@ namespace BlueSpice\SMWConnector\Api\Store;
 use BlueSpice\Api\Store;
 use BlueSpice\SMWConnector\Data\Ask\ReaderParams;
 use BlueSpice\SMWConnector\Data\Ask\Store as AskStore;
+use Wikimedia\ParamValidator\ParamValidator;
 
 class Ask extends Store {
 	/** @var string */
@@ -22,9 +23,9 @@ class Ask extends Store {
 	public function getAllowedParams() {
 		return parent::getAllowedParams() + [
 			'props' => [
-				static::PARAM_TYPE => 'string',
-				static::PARAM_REQUIRED => false,
-				static::PARAM_DFLT => '{}',
+				ParamValidator::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_REQUIRED => false,
+				ParamValidator::PARAM_DEFAULT => '{}',
 				static::PARAM_HELP_MSG => 'apihelp-bs-smw-connector-ask-store-props-param',
 			]
 		];
