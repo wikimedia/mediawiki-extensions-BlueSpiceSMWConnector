@@ -2,9 +2,9 @@
 
 namespace BlueSpice\SMWConnector\Hook\BSUEModulePDFcollectMetaData;
 
-use SMW\ApplicationFactory;
 use SMW\DataValueFactory;
 use SMW\DIProperty;
+use SMW\Services\ServicesFactory;
 use SMWDITime;
 
 class AddSemanitcMetaData extends \BlueSpice\UEModulePDF\Hook\BSUEModulePDFcollectMetaData {
@@ -50,8 +50,8 @@ class AddSemanitcMetaData extends \BlueSpice\UEModulePDF\Hook\BSUEModulePDFcolle
 	protected function getPropertyValuesForTitle( \Title $title = null ) {
 		if ( !empty( $title ) ) {
 
-			$subject = DataValueFactory::getInstance()->newTypeIDValue( '_wpg', $title->getFullText() );
-			$store = ApplicationFactory::getInstance()->getStore();
+			$subject = DataValueFactory::getInstance()->newDataValueByType( '_wpg', $title->getFullText() );
+			$store = ServicesFactory::getInstance()->getStore();
 
 			$pagesSemanticData = $store->getSemanticData( $subject->getDataItem() );
 

@@ -11,9 +11,9 @@ use BS\ExtendedSearch\Source\LookupModifier\Base;
  *
  */
 class ParseSMWFilters extends Base {
-	/** @var string[] */
+	/** @var array */
 	protected $originalFilters = [ 'terms' => [], 'term' => [] ];
-	/** @var string[] */
+	/** @var array */
 	protected $parsedFilters = [ 'terms' => [], 'term' => [] ];
 
 	public function apply() {

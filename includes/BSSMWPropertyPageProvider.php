@@ -1,6 +1,6 @@
 <?php
 
-class BSSMWPropertyPageProvider implements BlueSpice\BookshelfUI\MassAdd\IHandler {
+class BSSMWPropertyPageProvider implements BlueSpice\Bookshelf\MassAdd\IHandler {
 	/**
 	 * Property based on which pages
 	 * should be retieved

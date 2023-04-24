@@ -3,6 +3,7 @@ namespace BlueSpice\SMWConnector\Api\Store;
 
 use BlueSpice\SMWConnector\Data\TreeAsk\ReaderParams;
 use BlueSpice\SMWConnector\Data\TreeAsk\Store;
+use Wikimedia\ParamValidator\ParamValidator;
 
 class TreeAsk extends Ask {
 
@@ -19,7 +20,7 @@ class TreeAsk extends Ask {
 	public function getAllowedParams() {
 		return parent::getAllowedParams() + [
 			'node' => [
-				static::PARAM_TYPE => 'string',
+				ParamValidator::PARAM_TYPE => 'string',
 				static::PARAM_HELP_MSG => 'apihelp-bs-smw-connector-ask-tree-store-node-param',
 			],
 		];
