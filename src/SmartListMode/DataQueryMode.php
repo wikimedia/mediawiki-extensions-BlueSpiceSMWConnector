@@ -5,57 +5,24 @@ namespace BlueSpice\SMWConnector\SmartListMode;
 use BlueSpice\ParamProcessor\ParamDefinition;
 use BlueSpice\ParamProcessor\ParamType;
 use BlueSpice\SmartList\Mode\BaseMode;
-use MediaWiki\Permissions\PermissionManager;
-use MessageLocalizer;
 use RequestContext;
 use SMW\Query\QueryResult;
 use SMW\Services\ServicesFactory;
 use SMWQuery;
 use SMWQueryProcessor;
-use TitleFactory;
-use Wikimedia\Rdbms\ILoadBalancer;
 
-class SMWReportMode extends BaseMode {
+class DataQueryMode extends BaseMode {
 
 	public const ATTR_CATEGORIES = 'categories';
 	public const ATTR_NAMESPACES = 'namespaces';
 	public const ATTR_MODIFIED = 'modified';
 	public const ATTR_PRINTOUTS = 'printouts';
 
-	/** @var PermissionManager */
-	private $permissionManager;
-
-	/** @var ILoadBalancer */
-	private $lb;
-
-	/** @var TitleFactory */
-	private $titleFactory;
-
-	/** @var MessageLocalizer */
-	private $messageLocalizer;
-
-	/**
-	 *
-	 * @param PermissionManager $permissionManager
-	 * @param ILoadBalancer $lb
-	 * @param TitleFactory $titleFactory
-	 */
-	public function __construct(
-		PermissionManager $permissionManager,
-		ILoadBalancer $lb,
-		TitleFactory $titleFactory
-	) {
-		$this->permissionManager = $permissionManager;
-		$this->lb = $lb;
-		$this->titleFactory = $titleFactory;
-		$this->messageLocalizer = RequestContext::getMain();
-	}
-
 	/**
 	 * @return string
 	 */
 	public function getKey(): string {
-		return 'whatlinkshere';
+		return 'dataquery';
 	}
 
 	/**
@@ -98,25 +65,51 @@ class SMWReportMode extends BaseMode {
 	 * @return array
 	 */
 	public function getList( $args, $context ): array {
-		$args['categories'] = $args[self::ATTR_CATEGORIES];
-		$args['namespaces'] = $args[self::ATTR_NAMESPACES];
-		$args['modified'] = $args[self::ATTR_MODIFIED];
-		$args['printouts'] = $args[self::ATTR_PRINTOUTS];
-
-		$categories = $this->createSMWformat( $args['categories'], 'categories' );
-		$namespaces = $this->createSMWformat( $args['namespaces'], 'namespaces' );
-		$modified = $this->createSMWformat( $args['modified'], 'modified' );
-		$printouts = $this->createSMWformat( $args['printouts'], 'printouts' );
+		$categories = $this->createSMWformat( $args[self::ATTR_CATEGORIES], 'categories' );
+		$namespaces = $this->createSMWformat( $args[self::ATTR_NAMESPACES], 'namespaces' );
+		$modified = $this->createSMWformat( $args[self::ATTR_MODIFIED], 'modified' );
+		$printouts = $this->createSMWformat( $args[self::ATTR_PRINTOUTS], 'printouts' );
 
 		$query = '{{#ask:' . $categories . $namespaces . $modified . $printouts . '}}';
 		$queryResult = $this->runSMWQuery( $query, $args['count'] );
 		$results = $queryResult->getResults();
 
+		$printoutsArray = explode( '|', $args[self::ATTR_PRINTOUTS] );
+		$printoutsArray = array_map( 'strtolower', $printoutsArray );
+		$store = ServicesFactory::getInstance()->getStore();
 		$list = [];
-		foreach ( $results as $wikiPage ) {
-			$title = $this->titleFactory->newFromDBkey( $wikiPage->getDBkey() );
+		foreach ( $results as $DIWikiPage ) {
+			$title = $DIWikiPage->getTitle();
+			$DIProperties = $store->getProperties( $DIWikiPage );
+			$multiple = false;
+			$smwData = '';
+			/** @var \SMW\DIProperty $DIProperty */
+			foreach ( $DIProperties as $DIProperty ) {
+				$property = $DIProperty->getKey();
+				if ( in_array( strtolower( $property ), $printoutsArray ) ) {
+					$DIValues = $store->getPropertyValues( $DIWikiPage, $DIProperty );
+					$values = [];
+					/** @var \SMW\DIWikiPage $DIValue */
+					foreach ( $DIValues as $DIValue ) {
+						$values[] = $DIValue->getDBkey();
+					}
+					$values = implode( ',', $values );
+					if ( $multiple ) {
+						$smwData .= ', ';
+					} else {
+						$smwData .= '(';
+					}
+					$smwData .= $property . ':' . $values;
+					$multiple = true;
+				}
+			}
+			if ( $smwData ) {
+				$smwData .= ')';
+			}
+
 			$data = [
-				'PREFIXEDTITLE' => $title->getPrefixedText()
+				'PREFIXEDTITLE' => $title->getPrefixedText(),
+				'META' => $smwData
 			];
 			$list[] = $data;
 		}
@@ -129,22 +122,34 @@ class SMWReportMode extends BaseMode {
 	 * @param string $format
 	 * @return string
 	 */
-	private function createSMWformat( $args, $format ): string {
+	public function createSMWformat( $args, $format ): string {
 		if ( empty( $args ) ) {
 			return '';
 		}
 
 		$argsArray = explode( '|', $args );
 		$argsString = '';
+		$multiple = false;
 		switch ( $format ) {
 			case 'categories':
 				foreach ( $argsArray as $arg ) {
+					if ( $multiple ) {
+						$argsString .= 'OR';
+					}
 					$argsString .= '[[Category:' . $arg . ']]';
+					$multiple = true;
 				}
 				break;
 			case 'namespaces':
 				foreach ( $argsArray as $arg ) {
+					if ( $multiple ) {
+						$argsString .= 'OR';
+					}
+					if ( strtolower( $arg ) === 'main' ) {
+						$arg = '';
+					}
 					$argsString .= '[[' . $arg . ':+]]';
+					$multiple = true;
 				}
 				break;
 			case 'modified':
