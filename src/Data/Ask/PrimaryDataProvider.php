@@ -8,14 +8,14 @@ use BlueSpice\SMWConnector\Query\Language\StoreFilter\FilterDescription;
 use BlueSpice\SMWConnector\Query\Language\StoreFilter\StringFilterDescription;
 use MWStake\MediaWiki\Component\DataStore\Filter;
 use MWStake\MediaWiki\Component\DataStore\Filter\Date;
-use MWStake\MediaWiki\Component\DataStore\Filter\Numeric;
+use MWStake\MediaWiki\Component\DataStore\Filter\NumericValue;
 use MWStake\MediaWiki\Component\DataStore\IPrimaryDataProvider;
 use MWStake\MediaWiki\Component\DataStore\Record;
-use SMW\ApplicationFactory;
 use SMW\DataValueFactory;
 use SMW\DIProperty;
 use SMW\Query\Language\Conjunction;
 use SMW\Query\Language\Disjunction;
+use SMW\Services\ServicesFactory;
 use SMW\StoreFactory;
 use SMWDataItem;
 use SMWDIWikiPage;
@@ -125,7 +125,7 @@ class PrimaryDataProvider implements IPrimaryDataProvider {
 			} else {
 				if ( $filter instanceof Date ) {
 					$filters[] = new DateFilterDescription( $filter );
-				} elseif ( $filter instanceof Numeric ) {
+				} elseif ( $filter instanceof NumericValue ) {
 					$filters[] = new FilterDescription( $filter );
 				} else {
 					$filters[] = new StringFilterDescription( $filter );
@@ -183,7 +183,7 @@ class PrimaryDataProvider implements IPrimaryDataProvider {
 		$baseQuery->setDescription( $description );
 		$query = $this->getQuery( $queryParam, $params, $baseQuery->getQueryString() );
 
-		return ApplicationFactory::getInstance()->getStore()->getQueryResult( $query );
+		return ServicesFactory::getInstance()->getStore()->getQueryResult( $query );
 	}
 
 	/**
