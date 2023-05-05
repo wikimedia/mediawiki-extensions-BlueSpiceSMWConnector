@@ -5,5 +5,10 @@
 		]
 	},
 	"bs-smwconnector-extendedsearch-boolean-property-true": "جیا",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "کو"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "کو",
+	"bs-smwconnector-dataquery-category-label": "ونکی",
+	"bs-smwconnector-dataquery-namespace-label": "ناں جاہ",
+	"bs-smwconnector-dataquery-modified-operator-all": "یکے",
+	"bs-smwconnector-dataquery-modified-operator-before": "پہلے",
+	"bs-smwconnector-dataquery-count-label": "عدد"
 }

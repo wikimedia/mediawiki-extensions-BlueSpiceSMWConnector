@@ -13,5 +13,9 @@
 	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "このページ上で言及されたユーザーたちのユーザーページ",
 	"bs-swm-connector-ask-store-page-label": "ページ",
 	"bs-smwconnector-extendedsearch-anon-user-label": "匿名利用者",
-	"bs-smw-connector-async-error": "取得不能なデータ"
+	"bs-smw-connector-async-error": "取得不能なデータ",
+	"bs-smwconnector-dataquery-category-label": "カテゴリ",
+	"bs-smwconnector-dataquery-namespace-label": "名前空間",
+	"bs-smwconnector-dataquery-modified-operator-all": "すべて",
+	"bs-smwconnector-dataquery-modified-date-label": "日付"
 }
