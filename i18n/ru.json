@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Coring",
 			"DDPAT",
 			"Evs",
 			"Facenapalm",
@@ -22,5 +23,9 @@
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Нет",
 	"apihelp-bs-smw-connector-ask-store-props-param": "Свойства, которые необходимо извлечь. Эти свойства будут соответствовать возвращаемой схеме и данным. Пары «Ключ-значение». Ключ — собственно, название свойства, значение — указанные данные (JSON)",
 	"bs-swm-connector-ask-store-page-label": "Страница",
-	"bs-smwconnector-extendedsearch-anon-user-label": "Анонимный участник"
+	"bs-smwconnector-extendedsearch-anon-user-label": "Анонимный участник",
+	"bs-smwconnector-dataquery-category-label": "Категория",
+	"bs-smwconnector-dataquery-modified-operator-label": "Изменено",
+	"bs-smwconnector-dataquery-modified-operator-all": "Всё",
+	"bs-smwconnector-dataquery-count-label": "Номер"
 }
