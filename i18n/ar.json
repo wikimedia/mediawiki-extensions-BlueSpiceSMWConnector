@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Alshamiri1",
 			"Dr. Mohammed",
 			"FiberAhmed",
 			"Meno25",
@@ -25,5 +26,25 @@
 	"apihelp-bs-smw-connector-ask-store-summary": "متجر متوافق مع ExtJS لتنفيذ الاستعلامات الدلالية",
 	"apihelp-bs-smw-connector-ask-store-props-param": "الخصائص المراد استرجاعها. ستتوافق هذه الخصائص مع المخطط والبيانات التي تم إرجاعها. أزواج مفتاح القيمة ، المفتاح هو اسم الخاصية الفعلي ، القيمة هي التسمية المطلوبة (JSON)",
 	"bs-smw-connector-async-ask-unknown-handler": "معالج التنسيق \" $1 \" غير مسجل أو غير صالح",
-	"apihelp-bs-smw-connector-ask-tree-store-node-param": "قيمة العقدة التي ستحل محل<nowiki> {{{العقدة}}}</nowiki> عنصر نائب في الاستعلام"
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "قيمة العقدة التي ستحل محل<nowiki> {{{العقدة}}}</nowiki> عنصر نائب في الاستعلام",
+	"apihelp-bs-smw-connector-smw-property-store-summary": "متجر متوافق مع ExtJS للحصول على قيم الممتلكات",
+	"apihelp-bs-smw-connector-tree-ask-store-summary": "مخزن شجرة متوافق مع ExtJS لتنفيذ الاستعلامات الدلالية",
+	"bs-smw-connector-async-error": "لا يمكن جلب البيانات",
+	"bs-smwconnector-dataquery-name": "الاستعلام عن البيانات",
+	"bs-smwconnector-dataquery-desc": "لتمكين الاستعلامات عن المحتوى في wiki",
+	"bs-smwconnector-dataquery-category-label": "التصنيف",
+	"bs-smwconnector-dataquery-category-help": "تصفية حسب الفئة (الفئات) ، مع فصل الإدخالات المتعددة باستخدام \"|\". على سبيل المثال ، يؤدي استخدام \"cat1 | cat2\" إلى عرض صفحات في فئات \"cat1\" أو \"cat2\".",
+	"bs-smwconnector-dataquery-namespace-label": "النطاق",
+	"bs-smwconnector-dataquery-namespace-help": "تصفية حسب النطاق (النطاقات) ، مع فصل الإدخالات المتعددة باستخدام \"|\". على سبيل المثال ، يؤدي 'ns1 | ns2' إلى عرض صفحات في مساحات الأسماء 'ns1' OR 'ns2'.",
+	"bs-smwconnector-dataquery-modified-operator-label": "المعدل",
+	"bs-smwconnector-dataquery-modified-operator-help": "التصفية قبل / منذ / باستثناء تاريخ التعديل",
+	"bs-smwconnector-dataquery-modified-operator-all": "الكل",
+	"bs-smwconnector-dataquery-modified-operator-since": "منذ",
+	"bs-smwconnector-dataquery-modified-operator-before": "قبل",
+	"bs-smwconnector-dataquery-modified-operator-except": "يستثني",
+	"bs-smwconnector-dataquery-modified-date-label": "التاريخ",
+	"bs-smwconnector-dataquery-modified-date-help": "التاريخ المستخدم للتصفية المعدلة",
+	"bs-smwconnector-dataquery-printouts-label": "بيانات المطبوعات",
+	"bs-smwconnector-dataquery-printouts-help": "عرض خاصية (خصائص) ، مع فصل إدخالات متعددة باستخدام \"|\". على سبيل المثال ، يُرجع 'prop1 | prop2' قيم خاصية 'prop1' & 'prop2' للصفحة.",
+	"bs-smwconnector-dataquery-count-help": "حدد عدد النتائج التي تم إرجاعها"
 }
