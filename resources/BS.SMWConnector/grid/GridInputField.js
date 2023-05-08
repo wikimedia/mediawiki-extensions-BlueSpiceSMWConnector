@@ -12,7 +12,7 @@ Ext.define( 'BS.SMWConnector.grid.GridInputField', {
 		this.plugins = this.makePlugins();
 
 		this.on( 'validateedit', this.onValidateEdit, this );
-		this.on( 'edit', this.onEdit, this );
+		this.on( 'focusleave', this.onEdit, this );
 
 		return this.callParent( arguments );
 	},
@@ -128,6 +128,9 @@ Ext.define( 'BS.SMWConnector.grid.GridInputField', {
 				var kvPair = kvPairs[i].split( '=' );
 				var fieldName = kvPair[0];
 				var val = kvPair[1];
+				if ( val === 'true' || val === 'false' ) {
+					val = ( val === 'true' );
+				}
 				if ( me.isDateField( fieldName ) ) {
 					val = me.parseDate( fieldName, val );
 				}
