@@ -8,7 +8,7 @@
 	bs.smwconnector.ui.DataQueryInspectorTool.static.name = 'dataqueryTool';
 	bs.smwconnector.ui.DataQueryInspectorTool.static.group = 'none';
 	bs.smwconnector.ui.DataQueryInspectorTool.static.autoAddToCatchall = false;
-	bs.smwconnector.ui.DataQueryInspectorTool.static.icon = 'users';
+	bs.smwconnector.ui.DataQueryInspectorTool.static.icon = 'bluespice';
 	bs.smwconnector.ui.DataQueryInspectorTool.static.title = OO.ui.deferMsg( 'bs-smwconnector-dataquery-name' );
 	bs.smwconnector.ui.DataQueryInspectorTool.static.modelClasses = [ bs.smwconnector.dm.DataQueryNode ];
 	bs.smwconnector.ui.DataQueryInspectorTool.static.commandName = 'dataqueryCommand';
