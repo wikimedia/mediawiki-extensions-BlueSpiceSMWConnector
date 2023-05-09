@@ -46,5 +46,6 @@
 	"bs-smwconnector-dataquery-modified-date-help": "التاريخ المستخدم للتصفية المعدلة",
 	"bs-smwconnector-dataquery-printouts-label": "بيانات المطبوعات",
 	"bs-smwconnector-dataquery-printouts-help": "عرض خاصية (خصائص) ، مع فصل إدخالات متعددة باستخدام \"|\". على سبيل المثال ، يُرجع 'prop1 | prop2' قيم خاصية 'prop1' & 'prop2' للصفحة.",
-	"bs-smwconnector-dataquery-count-help": "حدد عدد النتائج التي تم إرجاعها"
+	"bs-smwconnector-dataquery-count-help": "حدد عدد النتائج التي تم إرجاعها",
+	"bs-smwconnector-dataquery-count-label": "رقم"
 }
