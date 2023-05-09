@@ -7,5 +7,7 @@
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Այո",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Ոչ",
 	"bs-swm-connector-ask-store-page-label": "Էջ",
-	"bs-smwconnector-extendedsearch-anon-user-label": "Անանուն մասնակից"
+	"bs-smwconnector-extendedsearch-anon-user-label": "Անանուն մասնակից",
+	"bs-smwconnector-dataquery-category-label": "Կատեգորիա",
+	"bs-smwconnector-dataquery-namespace-label": "Անվանատարածք"
 }

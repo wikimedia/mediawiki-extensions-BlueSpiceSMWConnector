@@ -1,9 +1,16 @@
 {
 	"@metadata": {
 		"authors": [
-			"BadDog"
+			"BadDog",
+			"Milicevic01"
 		]
 	},
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Да",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "Не"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Не",
+	"bs-smwconnector-dataquery-category-label": "Категорија",
+	"bs-smwconnector-dataquery-namespace-label": "Именски простор",
+	"bs-smwconnector-dataquery-modified-operator-all": "Све",
+	"bs-smwconnector-dataquery-modified-operator-since": "Од",
+	"bs-smwconnector-dataquery-modified-date-label": "Датум",
+	"bs-smwconnector-dataquery-count-label": "Број"
 }
