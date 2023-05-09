@@ -3,6 +3,7 @@
 		"authors": [
 			"*Surak*",
 			"Ameisenigel",
+			"DraconicDark",
 			"Hwboehm",
 			"Justman10000",
 			"Krabina",
@@ -32,5 +33,23 @@
 	"bs-smwconnector-extendedsearch-smwproperty-result-value": "$1: $2",
 	"apihelp-bs-smw-connector-smw-property-store-summary": "ExtJS-kompatibler Speicher zum Abrufen von Eigenschaftswerten",
 	"apihelp-bs-smw-connector-tree-ask-store-summary": "ExtJS-kompatibler Baumspeicher zum Ausführen semantischer Abfragen",
-	"bs-smw-connector-async-error": "Daten konnten nicht abgerufen werden"
+	"bs-smw-connector-async-error": "Daten konnten nicht abgerufen werden",
+	"bs-smwconnector-dataquery-name": "Datenabfrage",
+	"bs-smwconnector-dataquery-desc": "Ermöglicht Abfragen von Inhalten im Wiki",
+	"bs-smwconnector-dataquery-category-label": "Kategorie",
+	"bs-smwconnector-dataquery-category-help": "Filtere nach Kategorie(n) und trenne mehrere Einträge mit '|'. Z.B. 'cat1|cat2' gibt Seiten in den Kategorien 'cat1' ODER 'cat2' zurück.",
+	"bs-smwconnector-dataquery-namespace-label": "Namensraum",
+	"bs-smwconnector-dataquery-namespace-help": "Filtere nach Namensraum(en), indem du mehrere Einträge mit '|' trennst. Beispiel: \"ns1|ns2\" gibt Seiten in den Namensräumen \"ns1\" ODER \"ns2\" zurück.",
+	"bs-smwconnector-dataquery-modified-operator-label": "Geändert",
+	"bs-smwconnector-dataquery-modified-operator-help": "Filter vor/nach/außer einem Änderungsdatum",
+	"bs-smwconnector-dataquery-modified-operator-all": "Alle",
+	"bs-smwconnector-dataquery-modified-operator-since": "Seit",
+	"bs-smwconnector-dataquery-modified-operator-before": "Vor",
+	"bs-smwconnector-dataquery-modified-operator-except": "Außer",
+	"bs-smwconnector-dataquery-modified-date-label": "Datum",
+	"bs-smwconnector-dataquery-modified-date-help": "Datum des geänderten Filters",
+	"bs-smwconnector-dataquery-printouts-label": "Ausgedruckte Erklärungen",
+	"bs-smwconnector-dataquery-printouts-help": "Eigenschaft(en) anzeigen, wobei mehrere Einträge mit '|' getrennt werden. Z. B. gibt 'prop1|prop2' die Eigenschaftswerte 'prop1' & 'prop2' der Seite zurück.",
+	"bs-smwconnector-dataquery-count-label": "Anzahl",
+	"bs-smwconnector-dataquery-count-help": "Begrenzung der Anzahl der zurückgegebenen Ergebnisse"
 }
