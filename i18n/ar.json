@@ -6,7 +6,8 @@
 			"Meno25",
 			"أَحمد",
 			"ديفيد",
-			"محمد أحمد عبد الفتاح"
+			"محمد أحمد عبد الفتاح",
+			"Alshamiri1"
 		]
 	},
 	"bs-bssmwconnector-desc": "يدمج SemanticMediaWiki في BlueSpice",
@@ -25,5 +26,8 @@
 	"bs-swm-connector-ask-store-page-label": "الصفحة",
 	"bs-smw-connector-async-ask-unknown-handler": "معالج التنسيق \" $1 \" غير مسجل أو غير صالح",
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "قيمة العقدة التي ستحل محل<nowiki> {{{العقدة}}}</nowiki> عنصر نائب في الاستعلام",
-	"bs-smwconnector-extendedsearch-anon-user-label": "مستخدم مجهول"
+	"bs-smwconnector-extendedsearch-anon-user-label": "مستخدم مجهول",
+	"apihelp-bs-smw-connector-smw-property-store-summary": "متجر متوافق مع ExtJS للحصول على قيم الممتلكات",
+	"apihelp-bs-smw-connector-tree-ask-store-summary": "مخزن شجرة متوافق مع ExtJS لتنفيذ الاستعلامات الدلالية",
+	"bs-smw-connector-async-error": "لا يمكن جلب البيانات"
 }
