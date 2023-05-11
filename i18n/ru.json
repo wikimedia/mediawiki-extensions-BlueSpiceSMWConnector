@@ -27,5 +27,6 @@
 	"bs-smwconnector-dataquery-category-label": "Категория",
 	"bs-smwconnector-dataquery-modified-operator-label": "Изменено",
 	"bs-smwconnector-dataquery-modified-operator-all": "Всё",
-	"bs-smwconnector-dataquery-count-label": "Номер"
+	"bs-smwconnector-dataquery-count-label": "Номер",
+	"bs-smwconnector-dataquery-namespace-label": "Пространство имён"
 }
