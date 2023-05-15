@@ -7,5 +7,7 @@
 	},
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Да",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Не",
-	"bs-swm-connector-ask-store-page-label": "Страница"
+	"bs-swm-connector-ask-store-page-label": "Страница",
+	"bs-smwconnector-dataquery-category-label": "Категория",
+	"bs-smwconnector-dataquery-namespace-label": "Именно пространство"
 }
