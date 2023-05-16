@@ -43,6 +43,10 @@
 	"bs-smwconnector-dataquery-modified-date-help": "Help message for modified date picker widget",
 	"bs-smwconnector-dataquery-printouts-label": "Label for printouts text field",
 	"bs-smwconnector-dataquery-printouts-help": "Help message for printouts text field",
+	"bs-smwconnector-dataquery-format-label": "Label for format dropdown",
+	"bs-smwconnector-dataquery-format-help": "Help message for format dropdown",
+	"bs-smwconnector-dataquery-format-bulleted-list": "Label for format dropdown 'Bulleted list' option",
+	"bs-smwconnector-dataquery-format-numbered-list": "Label for format dropdown 'Numbered list' option",
 	"bs-smwconnector-dataquery-count-label": "Label for count number input field",
 	"bs-smwconnector-dataquery-count-help": "Help message for count number input field"
 }
