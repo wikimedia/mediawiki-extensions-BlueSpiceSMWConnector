@@ -65,6 +65,21 @@
 			$overlay: true
 		} );
 		this.printoutsInput = new OO.ui.TextInputWidget();
+		this.formatInput = new OO.ui.DropdownWidget( {
+			menu: {
+				items: [
+					new OO.ui.MenuOptionWidget( {
+						data: 'ul',
+						label: ve.msg( 'bs-smwconnector-dataquery-format-bulleted-list' )
+					} ),
+					new OO.ui.MenuOptionWidget( {
+						data: 'ol',
+						label: ve.msg( 'bs-smwconnector-dataquery-format-numbered-list' )
+					} )
+				]
+			}
+		} );
+		this.formatInput.getMenu().selectItemByData( 'ul' );
 		this.countInput = new OO.ui.NumberInputWidget( {
 			value: 10
 		} );
@@ -95,6 +110,11 @@
 			label: ve.msg( 'bs-smwconnector-dataquery-printouts-label' ),
 			help: ve.msg( 'bs-smwconnector-dataquery-printouts-help' )
 		} );
+		this.formatLayout = new OO.ui.FieldLayout( this.formatInput, {
+			align: 'left',
+			label: ve.msg( 'bs-smwconnector-dataquery-format-label' ),
+			help: ve.msg( 'bs-smwconnector-dataquery-format-help' )
+		} );
 		this.countLayout = new OO.ui.FieldLayout( this.countInput, {
 			align: 'left',
 			label: ve.msg( 'bs-smwconnector-dataquery-count-label' ),
@@ -107,6 +127,7 @@
 			this.modifiedOperatorLayout.$element,
 			this.modifiedDateLayout.$element,
 			this.printoutsLayout.$element,
+			this.formatLayout.$element,
 			this.countLayout.$element,
 			this.generatedContentsError.$element
 		);
@@ -131,6 +152,7 @@
 				}
 
 				var date = '';
+				this.modifiedDateLayout.toggle( false );
 				if( attributes.modified ) {
 					var operator = '';
 					for ( var i = 0; i < attributes.modified.length; i++ ) {
@@ -154,6 +176,9 @@
 				if( attributes.printouts ) {
 					this.printoutsInput.setValue( attributes.printouts );
 				}
+				if( attributes.format ) {
+					this.formatInput.getMenu().selectItemByData( attributes.format );
+				}
 				if( attributes.count ) {
 					this.countInput.setValue( attributes.count );
 				}
@@ -173,6 +198,11 @@
 
 				this.modifiedDateInput.on( 'change', this.onChangeHandler );
 				this.printoutsInput.on( 'change', this.onChangeHandler );
+
+				this.formatInput.getMenu().on( 'select', function() {
+					formatValue = this.formatInput.getMenu().findSelectedItem().getData();
+				}.bind( this ) );
+
 				this.countInput.on( 'change', this.onChangeHandler );
 
 				//Get this out of here
@@ -206,6 +236,8 @@
 		} else {
 			delete( mwData.attrs.printouts );
 		}
+
+		mwData.attrs.format = this.formatInput.getMenu().findSelectedItem().getData();
 
 		if ( this.countInput.getValue() ) {
 			mwData.attrs.count = this.countInput.getValue();

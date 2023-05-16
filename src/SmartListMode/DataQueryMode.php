@@ -6,8 +6,15 @@ use BlueSpice\ParamProcessor\ParamDefinition;
 use BlueSpice\ParamProcessor\ParamType;
 use BlueSpice\SmartList\Mode\BaseMode;
 use RequestContext;
+use SMW\DIProperty;
+use SMW\DIWikiPage;
 use SMW\Query\QueryResult;
 use SMW\Services\ServicesFactory;
+use SMW\Store;
+use SMWDataItem;
+use SMWDIBoolean;
+use SMWDITime;
+use SMWDIWikiPage;
 use SMWQuery;
 use SMWQueryProcessor;
 
@@ -17,6 +24,10 @@ class DataQueryMode extends BaseMode {
 	public const ATTR_NAMESPACES = 'namespaces';
 	public const ATTR_MODIFIED = 'modified';
 	public const ATTR_PRINTOUTS = 'printouts';
+	public const ATTR_FORMAT = 'format';
+
+	/** @var string */
+	private string $listType = 'ul';
 
 	/**
 	 * @return string
@@ -55,6 +66,11 @@ class DataQueryMode extends BaseMode {
 				ParamType::STRING,
 				static::ATTR_PRINTOUTS,
 				''
+			),
+			new ParamDefinition(
+				ParamType::STRING,
+				static::ATTR_FORMAT,
+				'ul'
 			)
 		] );
 	}
@@ -65,53 +81,37 @@ class DataQueryMode extends BaseMode {
 	 * @return array
 	 */
 	public function getList( $args, $context ): array {
+		$this->listType = $args[self::ATTR_FORMAT];
+
 		$categories = $this->createSMWformat( $args[self::ATTR_CATEGORIES], 'categories' );
 		$namespaces = $this->createSMWformat( $args[self::ATTR_NAMESPACES], 'namespaces' );
 		$modified = $this->createSMWformat( $args[self::ATTR_MODIFIED], 'modified' );
 		$printouts = $this->createSMWformat( $args[self::ATTR_PRINTOUTS], 'printouts' );
 
+		$printoutsArray = explode( '|', $args[self::ATTR_PRINTOUTS] );
+		$printoutsArray = array_map( 'strtolower', $printoutsArray );
+
 		$query = '{{#ask:' . $categories . $namespaces . $modified . $printouts . '}}';
 		$queryResult = $this->runSMWQuery( $query, $args['count'] );
 		$results = $queryResult->getResults();
 
-		$printoutsArray = explode( '|', $args[self::ATTR_PRINTOUTS] );
-		$printoutsArray = array_map( 'strtolower', $printoutsArray );
 		$store = ServicesFactory::getInstance()->getStore();
 		$list = [];
 		foreach ( $results as $DIWikiPage ) {
 			$title = $DIWikiPage->getTitle();
-			$DIProperties = $store->getProperties( $DIWikiPage );
-			$multiple = false;
-			$smwData = '';
-			/** @var \SMW\DIProperty $DIProperty */
-			foreach ( $DIProperties as $DIProperty ) {
-				$property = $DIProperty->getKey();
-				if ( in_array( strtolower( $property ), $printoutsArray ) ) {
-					$DIValues = $store->getPropertyValues( $DIWikiPage, $DIProperty );
-					$values = [];
-					/** @var \SMW\DIWikiPage $DIValue */
-					foreach ( $DIValues as $DIValue ) {
-						$values[] = $DIValue->getDBkey();
-					}
-					$values = implode( ',', $values );
-					if ( $multiple ) {
-						$smwData .= ', ';
-					} else {
-						$smwData .= '(';
-					}
-					$smwData .= $property . ':' . $values;
-					$multiple = true;
-				}
-			}
-			if ( $smwData ) {
-				$smwData .= ')';
+			if ( $title === null ) {
+				continue;
 			}
 
-			$data = [
+			$smwData = '';
+			if ( $printouts ) {
+				$smwData .= $this->getProperties( $DIWikiPage, $printoutsArray, $store );
+			}
+
+			$list[] = [
 				'PREFIXEDTITLE' => $title->getPrefixedText(),
 				'META' => $smwData
 			];
-			$list[] = $data;
 		}
 
 		return $list;
@@ -122,7 +122,7 @@ class DataQueryMode extends BaseMode {
 	 * @param string $format
 	 * @return string
 	 */
-	public function createSMWformat( $args, $format ): string {
+	public function createSMWformat( string $args, string $format ): string {
 		if ( empty( $args ) ) {
 			return '';
 		}
@@ -168,11 +168,11 @@ class DataQueryMode extends BaseMode {
 	}
 
 	/**
-	 * @param array $query
+	 * @param string $query
 	 * @param int $count
 	 * @return QueryResult
 	 */
-	private function runSMWQuery( $query, $count ): QueryResult {
+	private function runSMWQuery( string $query, int $count ): QueryResult {
 			[ $qs, $parameters, $printouts ] =
 				SMWQueryProcessor::getComponentsFromFunctionParams(
 					[ $query ], false
@@ -192,9 +192,87 @@ class DataQueryMode extends BaseMode {
 	}
 
 	/**
+	 * @param DIWikiPage $DIWikiPage
+	 * @param array $printouts
+	 * @param Store $store
+	 * @return string
+	 */
+	public function getProperties( DIWikiPage $DIWikiPage, array $printouts, Store $store ): string {
+		$propertiesData = [];
+		$semanticData = $store->getSemanticData( $DIWikiPage );
+		$DIProperties = $semanticData->getProperties();
+		/** @var \SMW\DIProperty $standardProperty */
+		foreach ( $DIProperties as $DIProperty ) {
+			$propertiesData[] = $this->getPropertyData( $DIWikiPage, $DIProperty, $printouts, $store );
+		}
+
+		$first = true;
+		$data = '';
+		foreach ( $propertiesData as $propertyData ) {
+			if ( $propertyData === '' ) {
+				continue;
+			}
+
+			if ( $first ) {
+				$data .= '(';
+			} else {
+				$data .= ', ';
+			}
+			$data .= $propertyData;
+			$first = false;
+		}
+		$data .= ')';
+
+		return $data;
+	}
+
+	/**
+	 * @param DIWikiPage $DIWikiPage
+	 * @param DIProperty $DIProperty
+	 * @param array $printouts
+	 * @param Store $store
+	 * @return string
+	 */
+	public function getPropertyData(
+		DIWikiPage $DIWikiPage, DIProperty $DIProperty, array $printouts, Store $store
+	): string {
+		$property = $DIProperty->getCanonicalLabel();
+		if ( !in_array( strtolower( $property ), $printouts ) ) {
+			return '';
+		}
+
+		$DIValues = $store->getPropertyValues( $DIWikiPage, $DIProperty );
+		$values = [];
+		foreach ( $DIValues as $DIValue ) {
+			if ( $DIValue instanceof SMWDITime ) {
+				$timestamp = $DIValue->getMwTimestamp();
+				$values[] = date( 'd F Y H:i:s', $timestamp );
+			} elseif ( $DIValue instanceof SMWDIBoolean ) {
+				$values[] = $DIValue->getBoolean() ? 'true' : 'false';
+			} elseif ( $DIValue instanceof SMWDIWikiPage ) {
+				$values[] = '[[' . $DIValue->getDBkey() . ']]';
+			} else {
+				$value = $DIValue->getSerialization();
+				$hashPosition = strpos( $value, '#' );
+				if ( $hashPosition ) {
+					$value = substr( $value, 0, $hashPosition );
+				}
+				if ( $DIValue->getDIType() === SMWDataItem::TYPE_WIKIPAGE ) {
+					$values[] = '[[' . $value . ']]';
+				} else {
+					$values[] = $value;
+				}
+			}
+		}
+		$values = implode( ',', $values );
+
+		return "[[Property:$property|$property]]" . ': ' . $values;
+	}
+
+	/**
 	 * @return string
 	 */
 	public function getListType(): string {
-		return 'ul';
+		return $this->listType;
 	}
 }
