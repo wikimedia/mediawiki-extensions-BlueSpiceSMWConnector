@@ -40,6 +40,10 @@
 	"bs-smwconnector-dataquery-modified-date-help": "Date used for modified filter",
 	"bs-smwconnector-dataquery-printouts-label": "Printout statements",
 	"bs-smwconnector-dataquery-printouts-help": "Display property(ies), separating multiple entries with '|'. E.g. 'prop1|prop2' returns the 'prop1' & 'prop2' property values of the page.",
+	"bs-smwconnector-dataquery-format-label": "Format",
+	"bs-smwconnector-dataquery-format-help": "Format used for printouts",
+	"bs-smwconnector-dataquery-format-bulleted-list": "Bulleted list",
+	"bs-smwconnector-dataquery-format-numbered-list": "Numbered list",
 	"bs-smwconnector-dataquery-count-label": "Number",
 	"bs-smwconnector-dataquery-count-help": "Limit the number of result(s) returned"
 }

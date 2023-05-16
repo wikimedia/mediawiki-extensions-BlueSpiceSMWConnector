@@ -331,6 +331,10 @@
 				"bs-smwconnector-dataquery-modified-date-help",
 				"bs-smwconnector-dataquery-printouts-label",
 				"bs-smwconnector-dataquery-printouts-help",
+				"bs-smwconnector-dataquery-format-label",
+				"bs-smwconnector-dataquery-format-help",
+				"bs-smwconnector-dataquery-format-bulleted-list",
+				"bs-smwconnector-dataquery-format-numbered-list",
 				"bs-smwconnector-dataquery-count-label",
 				"bs-smwconnector-dataquery-count-help"
 			],
