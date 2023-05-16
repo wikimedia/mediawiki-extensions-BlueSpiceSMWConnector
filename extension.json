@@ -327,7 +327,6 @@
 				"bs-smwconnector-dataquery-modified-operator-all",
 				"bs-smwconnector-dataquery-modified-operator-since",
 				"bs-smwconnector-dataquery-modified-operator-before",
-				"bs-smwconnector-dataquery-modified-operator-except",
 				"bs-smwconnector-dataquery-modified-date-label",
 				"bs-smwconnector-dataquery-modified-date-help",
 				"bs-smwconnector-dataquery-printouts-label",
