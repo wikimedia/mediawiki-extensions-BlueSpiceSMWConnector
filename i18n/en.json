@@ -32,7 +32,7 @@
 	"bs-smwconnector-dataquery-namespace-label": "Namespace",
 	"bs-smwconnector-dataquery-namespace-help": "Filter by namespace(s), separating multiple entries with '|'. E.g. 'ns1|ns2' returns pages in namespaces 'ns1' OR 'ns2'.",
 	"bs-smwconnector-dataquery-modified-operator-label": "Modified",
-	"bs-smwconnector-dataquery-modified-operator-help": "Filter before/since/except a modification date",
+	"bs-smwconnector-dataquery-modified-operator-help": "Filter before/since a modification date",
 	"bs-smwconnector-dataquery-modified-operator-all": "All",
 	"bs-smwconnector-dataquery-modified-operator-since": "Since",
 	"bs-smwconnector-dataquery-modified-operator-before": "Before",
