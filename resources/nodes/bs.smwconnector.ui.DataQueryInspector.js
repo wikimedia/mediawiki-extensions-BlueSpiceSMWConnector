@@ -56,10 +56,6 @@
 					new OO.ui.MenuOptionWidget( {
 						data: '<=',
 						label: ve.msg( 'bs-smwconnector-dataquery-modified-operator-before' )
-					} ),
-					new OO.ui.MenuOptionWidget( {
-						data: '!=',
-						label: ve.msg( 'bs-smwconnector-dataquery-modified-operator-except' )
 					} )
 				]
 			}
