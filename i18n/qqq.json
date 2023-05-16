@@ -39,7 +39,6 @@
 	"bs-smwconnector-dataquery-modified-operator-all": "Label for modified date operator dropdown 'All' option",
 	"bs-smwconnector-dataquery-modified-operator-since": "Label for modified date operator dropdown 'Since' option",
 	"bs-smwconnector-dataquery-modified-operator-before": "Label for modified date operator dropdown 'Before' option",
-	"bs-smwconnector-dataquery-modified-operator-except": "Label for modified date operator dropdown 'Except' option",
 	"bs-smwconnector-dataquery-modified-date-label": "Label for modified date picker widget",
 	"bs-smwconnector-dataquery-modified-date-help": "Help message for modified date picker widget",
 	"bs-smwconnector-dataquery-printouts-label": "Label for printouts text field",
