@@ -41,7 +41,6 @@
 	"bs-smwconnector-dataquery-modified-operator-all": "الكل",
 	"bs-smwconnector-dataquery-modified-operator-since": "منذ",
 	"bs-smwconnector-dataquery-modified-operator-before": "قبل",
-	"bs-smwconnector-dataquery-modified-operator-except": "يستثني",
 	"bs-smwconnector-dataquery-modified-date-label": "التاريخ",
 	"bs-smwconnector-dataquery-modified-date-help": "التاريخ المستخدم للتصفية المعدلة",
 	"bs-smwconnector-dataquery-printouts-label": "بيانات المطبوعات",
