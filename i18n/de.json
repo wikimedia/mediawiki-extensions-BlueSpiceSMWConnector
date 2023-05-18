@@ -9,6 +9,7 @@
 			"Krabina",
 			"Metalhead64",
 			"Mglaser",
+			"Mschlindwein",
 			"Robert Vogel <vogel@hallowelt.biz>",
 			"Umherirrender"
 		]
@@ -41,7 +42,7 @@
 	"bs-smwconnector-dataquery-namespace-label": "Namensraum",
 	"bs-smwconnector-dataquery-namespace-help": "Filtere nach Namensraum(en), indem du mehrere Einträge mit '|' trennst. Beispiel: \"ns1|ns2\" gibt Seiten in den Namensräumen \"ns1\" ODER \"ns2\" zurück.",
 	"bs-smwconnector-dataquery-modified-operator-label": "Geändert",
-	"bs-smwconnector-dataquery-modified-operator-help": "Filter vor/nach/außer einem Änderungsdatum",
+	"bs-smwconnector-dataquery-modified-operator-help": "Filter vor/nach einem Änderungsdatum",
 	"bs-smwconnector-dataquery-modified-operator-all": "Alle",
 	"bs-smwconnector-dataquery-modified-operator-since": "Seit",
 	"bs-smwconnector-dataquery-modified-operator-before": "Vor",
