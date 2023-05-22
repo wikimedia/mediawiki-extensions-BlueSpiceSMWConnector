@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"MathXplore",
+			"Shirayuki",
 			"Tmv",
 			"Waki285",
 			"もなー(偽物)"
@@ -9,8 +10,8 @@
 	},
 	"bs-smwconnector-extendedsearch-boolean-property-true": "はい",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "いいえ",
-	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "内容/ユーザーコメント",
-	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "このページ上で言及されたユーザーたちのユーザーページ",
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "内容/利用者の言及",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "このページ上で言及された利用者たちの利用者ページ",
 	"bs-swm-connector-ask-store-page-label": "ページ",
 	"bs-smwconnector-extendedsearch-anon-user-label": "匿名利用者",
 	"bs-smw-connector-async-error": "取得不能なデータ",
