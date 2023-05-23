@@ -52,40 +52,4 @@ class BSSMWCNamespaceManager {
 		}
 		return true;
 	}
-
-	/**
-	 *
-	 * @param string &$sSaveContent
-	 * @param string $sConstName
-	 * @param int $iNsID
-	 * @param array $aDefinition
-	 * @return bool
-	 */
-	public static function onWriteNamespaceConfiguration( &$sSaveContent, $sConstName, $iNsID,
-		$aDefinition ) {
-		if ( $iNsID === null ) {
-			return true;
-		}
-		$bCurrentlyActivated = isset( $GLOBALS['smwgNamespacesWithSemanticLinks'][ $iNsID ] )
-			? $GLOBALS['smwgNamespacesWithSemanticLinks'][ $iNsID ]
-			: false;
-
-		$bExplicitlyDeactivated = false;
-		if ( isset( $aDefinition[ 'smw' ] ) && $aDefinition[ 'smw' ] === false ) {
-			$bExplicitlyDeactivated = true;
-		}
-
-		$bExplicitlyActivated = false;
-		if ( isset( $aDefinition[ 'smw' ] ) && $aDefinition[ 'smw' ] === true ) {
-			$bExplicitlyActivated = true;
-		}
-
-		if ( ( $bCurrentlyActivated && !$bExplicitlyDeactivated ) || $bExplicitlyActivated ) {
-			$sSaveContent .= "\$GLOBALS['smwgNamespacesWithSemanticLinks'][{$sConstName}] = true;\n";
-		} else {
-			$sSaveContent .= "\$GLOBALS['smwgNamespacesWithSemanticLinks'][{$sConstName}] = false;\n";
-		}
-
-		return true;
-	}
 }
