@@ -42,5 +42,9 @@
 	"bs-smwconnector-dataquery-printouts-label": "Izpisane izjave",
 	"bs-smwconnector-dataquery-printouts-help": "Prikaz lastnosti, pri čemer več vnosov ločite z navpičnico (»|«). Npr. »prop1|prop2« vrne vrednosti lastnosti »prop1« in »prop2« strani.",
 	"bs-smwconnector-dataquery-count-label": "Številka",
-	"bs-smwconnector-dataquery-count-help": "Omejitev števila vrnjenih zadetkov"
+	"bs-smwconnector-dataquery-count-help": "Omejitev števila vrnjenih zadetkov",
+	"bs-smwconnector-dataquery-format-label": "Format",
+	"bs-smwconnector-dataquery-format-help": "Format, uporabljen za izpise",
+	"bs-smwconnector-dataquery-format-bulleted-list": "Označen seznam",
+	"bs-smwconnector-dataquery-format-numbered-list": "Oštevilčen seznam"
 }

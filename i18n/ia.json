@@ -40,5 +40,9 @@
 	"bs-smwconnector-dataquery-printouts-label": "Declarationes a imprimer",
 	"bs-smwconnector-dataquery-printouts-help": "Monstrar proprietate(s), separante plure entratas per '|'. P.ex., 'prop1|prop2' restitue le valores del proprietates 'prop1' e 'prop2' del pagina.",
 	"bs-smwconnector-dataquery-count-label": "Numero",
-	"bs-smwconnector-dataquery-count-help": "Limitar le numero de resultato(s) restituite"
+	"bs-smwconnector-dataquery-count-help": "Limitar le numero de resultato(s) restituite",
+	"bs-smwconnector-dataquery-format-label": "Formato",
+	"bs-smwconnector-dataquery-format-help": "Le formato usate pro impressiones",
+	"bs-smwconnector-dataquery-format-bulleted-list": "Lista a punctos",
+	"bs-smwconnector-dataquery-format-numbered-list": "Lista numerate"
 }
