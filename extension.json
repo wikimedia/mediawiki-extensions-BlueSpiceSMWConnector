@@ -175,6 +175,9 @@
 		},
 		"forceLinksUpdate": {
 			"class": "\\BlueSpice\\SMWConnector\\HookHandler\\ForceLinksUpdates"
+		},
+		"writeNamespaceConfiguration": {
+			"class": "\\BlueSpice\\SMWConnector\\Hook\\WriteNamespaceConfiguration"
 		}
 	},
 	"Hooks": {
@@ -190,7 +193,7 @@
 		"NamespaceManager::getMetaFields": "BSSMWCNamespaceManager::onGetMetaFields",
 		"BSApiNamespaceStoreMakeData": "BSSMWCNamespaceManager::onGetNamespaceData",
 		"NamespaceManager::editNamespace": "BSSMWCNamespaceManager::onEditNamespace",
-		"NamespaceManager::writeNamespaceConfiguration": "BSSMWCNamespaceManager::onWriteNamespaceConfiguration",
+		"NamespaceManagerBeforePersistSettings": "writeNamespaceConfiguration",
 		"BSPageTemplatesBeforeRender": "BSSMWCPageTemplates::onBSPageTemplatesBeforeRender",
 		"PageSaveComplete": "BSSMWConnectorHooks::onPageSaveComplete",
 		"SMW::Store::AfterQueryResultLookupComplete": "BlueSpice\\SMWConnector\\Hook\\SMWStoreAfterQueryResultLookupComplete\\ApplySecurityTrimming::callback",
