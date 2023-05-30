@@ -46,6 +46,10 @@
 	"bs-smwconnector-dataquery-modified-date-help": "Date utilisée pour le filtre sur la date de modification",
 	"bs-smwconnector-dataquery-printouts-label": "Déclarations imprimées",
 	"bs-smwconnector-dataquery-printouts-help": "Afficher une ou plusieurs propriétés, en séparant les entrées multiples avec une barre verticale « | ». Par ex. « prop1|prop2 » retourne les valeurs des propriétés « prop1 » et « prop2 » de la page.",
+	"bs-smwconnector-dataquery-format-label": "Format",
+	"bs-smwconnector-dataquery-format-help": "Format utilisé pour les impressions",
+	"bs-smwconnector-dataquery-format-bulleted-list": "Liste à puces",
+	"bs-smwconnector-dataquery-format-numbered-list": "Liste numérotée",
 	"bs-smwconnector-dataquery-count-label": "Nombre",
 	"bs-smwconnector-dataquery-count-help": "Limiter le nombre de résultat(s) retourné(s)"
 }

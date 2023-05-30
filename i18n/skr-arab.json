@@ -8,9 +8,13 @@
 	"bs-smwconnector-extendedsearch-boolean-property-false": "کو",
 	"bs-smwconnector-dataquery-category-label": "ونکی",
 	"bs-smwconnector-dataquery-namespace-label": "ناں جاہ",
+	"bs-smwconnector-dataquery-modified-operator-label": "تبدیل تھی ڳیا",
 	"bs-smwconnector-dataquery-modified-operator-all": "یکے",
 	"bs-smwconnector-dataquery-modified-operator-since": "کنوں",
 	"bs-smwconnector-dataquery-modified-operator-before": "پہلے",
 	"bs-smwconnector-dataquery-modified-date-label": "تریخ",
+	"bs-smwconnector-dataquery-format-label": "فارمیٹ",
+	"bs-smwconnector-dataquery-format-bulleted-list": "ڳولی لڳی تندیر",
+	"bs-smwconnector-dataquery-format-numbered-list": "عدد لڳی تندیر",
 	"bs-smwconnector-dataquery-count-label": "عدد"
 }
