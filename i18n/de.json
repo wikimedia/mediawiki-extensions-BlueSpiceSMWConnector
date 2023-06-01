@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"*Surak*",
+			"Abcdefg",
 			"Ameisenigel",
 			"DraconicDark",
 			"Hwboehm",
@@ -52,5 +53,9 @@
 	"bs-smwconnector-dataquery-printouts-label": "Ausgedruckte Erklärungen",
 	"bs-smwconnector-dataquery-printouts-help": "Eigenschaft(en) anzeigen, wobei mehrere Einträge mit '|' getrennt werden. Z. B. gibt 'prop1|prop2' die Eigenschaftswerte 'prop1' & 'prop2' der Seite zurück.",
 	"bs-smwconnector-dataquery-count-label": "Anzahl",
-	"bs-smwconnector-dataquery-count-help": "Begrenzung der Anzahl der zurückgegebenen Ergebnisse"
+	"bs-smwconnector-dataquery-count-help": "Begrenzung der Anzahl der zurückgegebenen Ergebnisse",
+	"bs-smwconnector-dataquery-format-label": "Format",
+	"bs-smwconnector-dataquery-format-help": "Format für Ausdrucke",
+	"bs-smwconnector-dataquery-format-bulleted-list": "Liste (Auflistung)",
+	"bs-smwconnector-dataquery-format-numbered-list": "Nummerierte Liste"
 }
