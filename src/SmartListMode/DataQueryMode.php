@@ -99,7 +99,7 @@ class DataQueryMode extends BaseMode {
 		$list = [];
 		foreach ( $results as $DIWikiPage ) {
 			$title = $DIWikiPage->getTitle();
-			if ( $title === null ) {
+			if ( $title === null || !$title->exists() ) {
 				continue;
 			}
 
@@ -136,7 +136,7 @@ class DataQueryMode extends BaseMode {
 					if ( $multiple ) {
 						$argsString .= 'OR';
 					}
-					$argsString .= '[[Category:' . $arg . ']]';
+					$argsString .= "[[Category:$arg]]";
 					$multiple = true;
 				}
 				break;
@@ -148,18 +148,18 @@ class DataQueryMode extends BaseMode {
 					if ( strtolower( $arg ) === 'main' ) {
 						$arg = '';
 					}
-					$argsString .= '[[' . $arg . ':+]]';
+					$argsString .= "[[$arg:+]]";
 					$multiple = true;
 				}
 				break;
 			case 'modified':
 				foreach ( $argsArray as $arg ) {
-					$argsString .= '[[Modification date::' . $arg . ']]';
+					$argsString .= "[[Modification date::$arg]]";
 				}
 				break;
 			case 'printouts':
 				foreach ( $argsArray as $arg ) {
-					$argsString .= '|?' . $arg;
+					$argsString .= "|?$arg";
 				}
 				break;
 		}
@@ -250,7 +250,7 @@ class DataQueryMode extends BaseMode {
 			} elseif ( $DIValue instanceof SMWDIBoolean ) {
 				$values[] = $DIValue->getBoolean() ? 'true' : 'false';
 			} elseif ( $DIValue instanceof SMWDIWikiPage ) {
-				$values[] = '[[' . $DIValue->getDBkey() . ']]';
+				$values[] = "[[{$DIValue->getTitle()->getPrefixedText()}]]";
 			} else {
 				$value = $DIValue->getSerialization();
 				$hashPosition = strpos( $value, '#' );
@@ -258,7 +258,7 @@ class DataQueryMode extends BaseMode {
 					$value = substr( $value, 0, $hashPosition );
 				}
 				if ( $DIValue->getDIType() === SMWDataItem::TYPE_WIKIPAGE ) {
-					$values[] = '[[' . $value . ']]';
+					$values[] = "[[$value]]";
 				} else {
 					$values[] = $value;
 				}
@@ -266,7 +266,7 @@ class DataQueryMode extends BaseMode {
 		}
 		$values = implode( ',', $values );
 
-		return "[[Property:$property|$property]]" . ': ' . $values;
+		return "[[Property:$property|''$property'']]: $values";
 	}
 
 	/**
