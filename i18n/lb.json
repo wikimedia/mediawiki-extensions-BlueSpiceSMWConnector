@@ -13,5 +13,7 @@
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Neen",
 	"bs-swm-connector-ask-store-page-label": "Säit",
 	"bs-smwconnector-extendedsearch-anon-user-label": "Anonymme Benotzer",
-	"bs-smwconnector-dataquery-category-label": "Kategorie"
+	"bs-smwconnector-dataquery-category-label": "Kategorie",
+	"bs-smwconnector-dataquery-format-label": "Format",
+	"bs-smwconnector-dataquery-format-numbered-list": "Nummeréiert Lëscht"
 }
