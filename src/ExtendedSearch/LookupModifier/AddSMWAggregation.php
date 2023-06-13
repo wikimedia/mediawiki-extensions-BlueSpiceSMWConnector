@@ -1,13 +1,13 @@
 <?php
 
-namespace BlueSpice\SMWConnector\ExtendedSearch\Source\LookupModifier;
+namespace BlueSpice\SMWConnector\ExtendedSearch\LookupModifier;
 
-use BS\ExtendedSearch\Source\LookupModifier\Base;
+use BS\ExtendedSearch\Source\LookupModifier\LookupModifier;
 
-class AddSMWAggregation extends Base {
+class AddSMWAggregation extends LookupModifier {
 
 	public function apply() {
-		$this->oLookup['aggs']['smwproperty'] = [
+		$this->lookup['aggs']['smwproperty'] = [
 			"nested" => [
 				"path" => "smwproperty"
 			],
@@ -44,9 +44,9 @@ class AddSMWAggregation extends Base {
 	 * by this modifier, in case they should not be sent to client
 	 */
 	public function undo() {
-		if ( !isset( $this->oLookup['aggs'] ) ) {
+		if ( !isset( $this->lookup['aggs'] ) ) {
 			return;
 		}
-		unset( $this->oLookup['aggs']['smwproperty'] );
+		unset( $this->lookup['aggs']['smwproperty'] );
 	}
 }

@@ -17,13 +17,10 @@
 	},
 	"attributes": {
 		"BlueSpiceExtendedSearch": {
-			"Sources": {
-				"wikipage": "\\BlueSpice\\SMWConnector\\ExtendedSearch\\Source\\SMWWikiPage::create"
-			},
-			"LookupModifierRegistry": {
-				"smw-source-fields": "\\BlueSpice\\SMWConnector\\ExtendedSearch\\Source\\LookupModifier\\AddSourceFields::factory",
-				"smw-aggregation": "\\BlueSpice\\SMWConnector\\ExtendedSearch\\Source\\LookupModifier\\AddSMWAggregation::factory",
-				"smw-filter-parser": "\\BlueSpice\\SMWConnector\\ExtendedSearch\\Source\\LookupModifier\\ParseSMWFilters::factory"
+			"PluginRegistry": {
+				"smw": {
+					"class": "BlueSpice\\SMWConnector\\ExtendedSearch\\SMWData"
+				}
 			}
 		},
 		"BlueSpiceFoundation": {
@@ -178,6 +175,9 @@
 		},
 		"writeNamespaceConfiguration": {
 			"class": "\\BlueSpice\\SMWConnector\\Hook\\WriteNamespaceConfiguration"
+		},
+		"integrateSMWDataIntoSearch": {
+			"class": "\\BlueSpice\\SMWConnector\\Hook\\IntegrateSMWDataIntoSearch"
 		}
 	},
 	"Hooks": {
