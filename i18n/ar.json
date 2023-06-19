@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Alshamiri1",
+			"Asma",
 			"Dr. Mohammed",
 			"FiberAhmed",
 			"Meno25",
@@ -47,5 +48,9 @@
 	"bs-smwconnector-dataquery-printouts-label": "بيانات المطبوعات",
 	"bs-smwconnector-dataquery-printouts-help": "عرض خاصية (خصائص) ، مع فصل إدخالات متعددة باستخدام \"|\". على سبيل المثال ، يُرجع 'prop1 | prop2' قيم خاصية 'prop1' & 'prop2' للصفحة.",
 	"bs-smwconnector-dataquery-count-help": "حدد عدد النتائج التي تم إرجاعها",
-	"bs-smwconnector-dataquery-count-label": "رقم"
+	"bs-smwconnector-dataquery-count-label": "رقم",
+	"bs-smwconnector-dataquery-format-label": "الصيغة",
+	"bs-smwconnector-dataquery-format-help": "التنسيق المستخدم للمطبوعات",
+	"bs-smwconnector-dataquery-format-bulleted-list": "قائمة منقطة",
+	"bs-smwconnector-dataquery-format-numbered-list": "قائمة مرقمة"
 }
