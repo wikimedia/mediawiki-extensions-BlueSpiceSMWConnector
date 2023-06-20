@@ -113,6 +113,11 @@
 					"class": "BlueSpice\\SMWConnector\\BreadcrumbDataProvider\\SpecialAskProvider",
 					"services": [ "SpecialPageFactory" ]
 				}
+			},
+			"TitleActionPrimaryActionModifier": {
+				"form-edit": {
+					"class": "BlueSpice\\SMWConnector\\TitleActionModifier"
+				}
 			}
 		},
 		"VisualEditor": {
