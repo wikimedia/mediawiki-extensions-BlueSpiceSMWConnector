@@ -131,6 +131,11 @@
 					"class": "\\BlueSpice\\SMWConnector\\ContentDroplets\\DataQueryDroplet"
 				}
 			}
+		},
+		"BlueSpicePrivacy": {
+			"Handlers": [
+				"\\BlueSpice\\SMWConnector\\Privacy\\Handler"
+			]
 		}
 	},
 	"GroupPermissions": {
