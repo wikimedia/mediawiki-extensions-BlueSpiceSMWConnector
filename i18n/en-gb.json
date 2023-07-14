@@ -1,0 +1,8 @@
+{
+	"@metadata": {
+		"authors": [
+			"Piano1forte2"
+		]
+	},
+	"bs-smw-connector-async-ask-unknown-handler": "Handler for format '$1' is not registered or not valid"
+}
