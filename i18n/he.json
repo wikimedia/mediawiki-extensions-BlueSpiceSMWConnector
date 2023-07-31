@@ -32,7 +32,7 @@
 	"bs-smwconnector-dataquery-category-help": "סינון לפי קטגוריות, תוך הפרדת ערכים מרובים עם \"|\". למשל, \"cat1|cat2\" מחזיר דפים בקטגוריות \"cat1\" או \"cat2\".",
 	"bs-smwconnector-dataquery-namespace-label": "מרחב שם",
 	"bs-smwconnector-dataquery-namespace-help": "סינון לפי מרחבי שם, תוך הפרדת ערכים מרובים באמצעות \"|\". למשל, \"ns1|ns2\" מחזיר דפים במרחבי השמות \"ns1\" או \"ns2\".",
-	"bs-smwconnector-dataquery-modified-operator-label": "שוּנה",
+	"bs-smwconnector-dataquery-modified-operator-label": "זמן השינוי",
 	"bs-smwconnector-dataquery-modified-operator-help": "סינון לפני/מאז תאריך שינוי",
 	"bs-smwconnector-dataquery-modified-operator-all": "הכול",
 	"bs-smwconnector-dataquery-modified-operator-since": "מאז",
