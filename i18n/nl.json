@@ -24,5 +24,19 @@
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Knooppuntwaarde die de plaatshouder <nowiki>{{{node}}}</nowiki> in de query vervangt.",
 	"apihelp-bs-smw-connector-smw-property-store-summary": "ExtJS-compatibele opslag om eigenschapswaarden op te halen",
 	"apihelp-bs-smw-connector-tree-ask-store-summary": "ExtJS-compatibele boomopslag voor het uitvoeren van semantische zoekopdrachten",
-	"bs-smw-connector-async-error": "Gegevens konden niet worden opgehaald"
+	"bs-smw-connector-async-error": "Gegevens konden niet worden opgehaald",
+	"bs-smwconnector-dataquery-name": "Gegevensopvraag",
+	"bs-smwconnector-dataquery-desc": "Maakt het opvragen van inhoud in de wiki mogelijk",
+	"bs-smwconnector-dataquery-category-label": "Categorie",
+	"bs-smwconnector-dataquery-category-help": "Op categorie(ën) filteren, waarbij meerdere vermeldingen met '|' worden gescheiden. Bijvoorbeeld: 'cat1|cat2' geeft pagina's terug in categorieën 'cat1' OF 'cat2'.",
+	"bs-smwconnector-dataquery-namespace-label": "Naamruimte",
+	"bs-smwconnector-dataquery-namespace-help": "Op naamruimte(n) filteren, waarbij meerdere vermeldingen met '|' worden gescheiden. Bijvoorbeeld: 'ns1|ns2' geeft pagina's terug in naamruimten 'ns1' OF 'ns2'.",
+	"bs-smwconnector-dataquery-modified-operator-label": "Gewijzigd",
+	"bs-smwconnector-dataquery-modified-operator-help": "Filter voor/na een wijzigingsdatum",
+	"bs-smwconnector-dataquery-modified-operator-all": "Alle",
+	"bs-smwconnector-dataquery-modified-operator-since": "Sinds",
+	"bs-smwconnector-dataquery-modified-operator-before": "Voor",
+	"bs-smwconnector-dataquery-modified-date-label": "Datum",
+	"bs-smwconnector-dataquery-modified-date-help": "Voor aangepast filter gebruikte datum",
+	"bs-smwconnector-dataquery-printouts-label": "Afdrukoverzichten"
 }
