@@ -1,13 +1,13 @@
 <?php
 
-namespace BlueSpice\SMWConnector\ExtendedSearch\Source\LookupModifier;
+namespace BlueSpice\SMWConnector\ExtendedSearch\LookupModifier;
 
-use BS\ExtendedSearch\Source\LookupModifier\Base;
+use BS\ExtendedSearch\Source\LookupModifier\LookupModifier;
 
-class AddSourceFields extends Base {
+class AddSourceFields extends LookupModifier {
 
 	public function apply() {
-		$simpleQS = $this->oLookup->getQueryString();
+		$simpleQS = $this->lookup->getQueryString();
 		// Search in basename field and boost it by 3
 		$fields = [ 'smwproperty' ];
 		if ( isset( $simpleQS['fields'] ) && is_array( $simpleQS['fields'] ) ) {
@@ -16,16 +16,16 @@ class AddSourceFields extends Base {
 			$simpleQS['fields'] = $fields;
 		}
 
-		$this->oLookup->setQueryString( $simpleQS );
+		$this->lookup->setQueryString( $simpleQS );
 	}
 
 	public function undo() {
-		$simpleQS = $this->oLookup->getQueryString();
+		$simpleQS = $this->lookup->getQueryString();
 
 		if ( isset( $simpleQS['fields'] ) && is_array( $simpleQS['fields'] ) ) {
 			$simpleQS['fields'] = array_diff( $simpleQS['fields'], [ 'smwproperty' ] );
 		}
 
-		$this->oLookup->setQueryString( $simpleQS );
+		$this->lookup->setQueryString( $simpleQS );
 	}
 }

@@ -1,8 +1,8 @@
 <?php
 
-namespace BlueSpice\SMWConnector\ExtendedSearch\Source\LookupModifier;
+namespace BlueSpice\SMWConnector\ExtendedSearch\LookupModifier;
 
-use BS\ExtendedSearch\Source\LookupModifier\Base;
+use BS\ExtendedSearch\Source\LookupModifier\LookupModifier;
 
 /**
  * Class ParseSMWFilters
@@ -10,15 +10,15 @@ use BS\ExtendedSearch\Source\LookupModifier\Base;
  * converts them to filters usable by Elastic
  *
  */
-class ParseSMWFilters extends Base {
+class ParseSMWFilters extends LookupModifier {
 	/** @var array */
 	protected $originalFilters = [ 'terms' => [], 'term' => [] ];
 	/** @var array */
 	protected $parsedFilters = [ 'terms' => [], 'term' => [] ];
 
 	public function apply() {
-		$filters = $this->oLookup->getFilters();
-		$terms = isset( $filters['terms'] ) ? $filters['terms'] : [];
+		$filters = $this->lookup->getFilters();
+		$terms = $filters['terms'] ?? [];
 		foreach ( $terms as $key => $value ) {
 			if ( $this->getSMWKey( $key ) ) {
 				$this->addTermsFilter( $key, $value );
@@ -37,12 +37,12 @@ class ParseSMWFilters extends Base {
 		}
 
 		// remove the original
-		$this->oLookup->removeTermsFilter( $key, $value );
+		$this->lookup->removeTermsFilter( $key, $value );
 		$this->originalFilters['terms'][$key] = $value;
 
 		$parsedKey = $this->getSMWKey( $key );
 		$builtValues = $this->buildValues( $parsedKey, $value );
-		$this->oLookup['query']['bool']['filter'][] = [
+		$this->lookup['query']['bool']['filter'][] = [
 			"terms" => [
 				"smwproperty_agg" => $builtValues
 			]
@@ -68,7 +68,7 @@ class ParseSMWFilters extends Base {
 
 	/**
 	 *
-	 * @param atring $key
+	 * @param string $key
 	 * @param string[] $value
 	 * @return array
 	 */
@@ -83,11 +83,11 @@ class ParseSMWFilters extends Base {
 	public function undo() {
 		// Restore original filters
 		foreach ( $this->originalFilters['terms'] as $key => $value ) {
-			$this->oLookup->addTermsFilter( $key, $value );
+			$this->lookup->addTermsFilter( $key, $value );
 		}
 		// Remove filters we added here
 		foreach ( $this->parsedFilters['terms'] as $value ) {
-			$this->oLookup->removeTermsFilter( 'smwproperty_agg', $value );
+			$this->lookup->removeTermsFilter( 'smwproperty_agg', $value );
 		}
 	}
 }
