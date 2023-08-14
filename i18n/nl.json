@@ -38,5 +38,12 @@
 	"bs-smwconnector-dataquery-modified-operator-before": "Voor",
 	"bs-smwconnector-dataquery-modified-date-label": "Datum",
 	"bs-smwconnector-dataquery-modified-date-help": "Voor aangepast filter gebruikte datum",
-	"bs-smwconnector-dataquery-printouts-label": "Afdrukoverzichten"
+	"bs-smwconnector-dataquery-printouts-label": "Afdrukoverzichten",
+	"bs-smwconnector-dataquery-printouts-help": "Eigenschap(pen) weergeven. Meerdere vermeldingen scheiden met '|'. Bijv. 'prop1|prop2' retourneert de eigenschapswaarden 'prop1' & 'prop2' van de pagina.",
+	"bs-smwconnector-dataquery-format-label": "Formaat",
+	"bs-smwconnector-dataquery-format-help": "Formaat voor afdrukken",
+	"bs-smwconnector-dataquery-format-bulleted-list": "Ongenummerde lijst",
+	"bs-smwconnector-dataquery-format-numbered-list": "Genummerde lijst",
+	"bs-smwconnector-dataquery-count-label": "Getal",
+	"bs-smwconnector-dataquery-count-help": "Het aantal geretourneerde resultaten beperken"
 }
