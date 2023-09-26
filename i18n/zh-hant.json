@@ -21,5 +21,7 @@
 	"bs-smwconnector-dataquery-modified-operator-all": "全部",
 	"bs-smwconnector-dataquery-format-label": "格式",
 	"bs-smwconnector-dataquery-format-bulleted-list": "符號清單",
-	"bs-smwconnector-dataquery-format-numbered-list": "編號清單"
+	"bs-smwconnector-dataquery-format-numbered-list": "編號清單",
+	"bs-smwconnector-dataquery-modified-operator-label": "已修改",
+	"bs-smwconnector-dataquery-modified-date-label": "日期"
 }
