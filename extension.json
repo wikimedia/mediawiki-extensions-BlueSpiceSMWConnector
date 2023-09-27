@@ -82,8 +82,7 @@
 		"BlueSpiceSmartList": {
 			"ModeRegistry": {
 				"dataquery": {
-					"class": "BlueSpice\\SMWConnector\\SmartListMode\\DataQueryMode",
-					"services": [ "PermissionManager", "DBLoadBalancer", "TitleFactory" ]
+					"class": "BlueSpice\\SMWConnector\\SmartListMode\\DataQueryMode"
 				}
 			}
 		},
