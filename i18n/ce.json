@@ -4,5 +4,19 @@
 			"Умар"
 		]
 	},
-	"bs-swm-connector-ask-store-page-label": "АгӀо"
+	"bs-dlg-choosesmwprop-label": "Билгало",
+	"bs-dlg-choosesmwprop-type-smwprop": "Семантикийн хӀума",
+	"bs-extendedsearch-add-filter-group-smwproperty-label": "Семантикийн хӀума",
+	"bs-extendedsearch-search-center-result-smwproperty-label": "Семантикийн хӀума",
+	"bs-smwconnector-extendedsearch-boolean-property-true": "ХӀаъ",
+	"bs-smwconnector-extendedsearch-boolean-property-false": "ХӀан-хӀа",
+	"bs-swm-connector-ask-store-page-label": "АгӀо",
+	"bs-smwconnector-extendedsearch-anon-user-label": "Аноним декъашхо",
+	"bs-smwconnector-dataquery-category-label": "Категори",
+	"bs-smwconnector-dataquery-namespace-label": "ЦӀерийн меттиг",
+	"bs-smwconnector-dataquery-modified-operator-label": "Хийцина",
+	"bs-smwconnector-dataquery-modified-operator-all": "Йерриге",
+	"bs-smwconnector-dataquery-modified-date-label": "Терахь",
+	"bs-smwconnector-dataquery-format-label": "Формат",
+	"bs-smwconnector-dataquery-count-label": "Лоьмар"
 }
