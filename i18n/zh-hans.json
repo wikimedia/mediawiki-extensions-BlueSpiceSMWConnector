@@ -5,6 +5,7 @@
 			"Kishinsagi",
 			"LittlePaw365",
 			"Liuxinyu970226",
+			"Xyb",
 			"列维劳德"
 		]
 	},
@@ -24,5 +25,18 @@
 	"bs-smw-connector-async-error": "无法获取数据",
 	"bs-smwconnector-dataquery-format-bulleted-list": "无序列表",
 	"bs-smwconnector-dataquery-format-numbered-list": "有序列表",
-	"bs-smwconnector-dataquery-count-help": "限制返回的结果数"
+	"bs-smwconnector-dataquery-count-help": "限制返回的结果数",
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "内容/用户提及",
+	"bs-smwconnector-dataquery-name": "数据查询",
+	"bs-smwconnector-dataquery-desc": "启用对 wiki 中内容的查询",
+	"bs-smwconnector-dataquery-category-label": "分类",
+	"bs-smwconnector-dataquery-modified-operator-label": "已修改",
+	"bs-smwconnector-dataquery-modified-operator-help": "在修改日期之前/之后过滤",
+	"bs-smwconnector-dataquery-modified-operator-all": "全部",
+	"bs-smwconnector-dataquery-modified-operator-since": "自从",
+	"bs-smwconnector-dataquery-modified-operator-before": "早于",
+	"bs-smwconnector-dataquery-modified-date-label": "日期",
+	"bs-smwconnector-dataquery-format-label": "格式",
+	"bs-smwconnector-dataquery-format-help": "用于打印输出的格式",
+	"bs-smwconnector-dataquery-count-label": "数字"
 }
