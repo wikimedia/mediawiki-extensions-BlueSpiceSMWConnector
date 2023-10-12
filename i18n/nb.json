@@ -20,5 +20,8 @@
 	"bs-swm-connector-ask-store-page-label": "Side",
 	"bs-smw-connector-async-ask-unknown-handler": "Behandling for formatet «$1» er ikke registrert eller ikke gyldig",
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Nodeverdier som vil erstatte <nowiki>{{{node}}}</nowiki> i spørringen",
-	"bs-smwconnector-extendedsearch-anon-user-label": "Anonym bruker"
+	"bs-smwconnector-extendedsearch-anon-user-label": "Anonym bruker",
+	"apihelp-bs-smw-connector-smw-property-store-summary": "ExtJS-kompatibelt lager for å hente egenskapsverdier",
+	"apihelp-bs-smw-connector-tree-ask-store-summary": "ExtJS-kompatibelt trelager for å utføre semantiske spørringer",
+	"bs-smw-connector-async-error": "Dataene kunne ikke hentes"
 }
