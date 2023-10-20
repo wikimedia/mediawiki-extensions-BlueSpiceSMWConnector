@@ -1,0 +1,29 @@
+.decisionOverview-table {
+	width: 100%;
+	margin: 1em 0;
+	border: 1px solid #a2a9b1;
+	border-collapse: collapse;
+}
+.decisionOverview-table td {
+	padding: 8px;
+	border: 1px solid #a2a9b1;
+}
+.decisionOverview-table th {
+	padding: 8px;
+	background-color: #eaecf0;
+	border: 1px solid #a2a9b1;
+}
+
+.cd-decision {
+	padding: 14px;
+	margin: 1em 0;
+	display: block;
+	clear: both;
+	background-color: #e9e9ee;
+}
+
+.cd-decision::before {
+	content: "\f058";
+	color: #94c11f;
+	font-family: "fontawesome";
+}

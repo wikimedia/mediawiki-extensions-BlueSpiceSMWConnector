@@ -56,5 +56,14 @@
 	"bs-smwconnector-dataquery-format-bulleted-list": "Liste (Auflistung)",
 	"bs-smwconnector-dataquery-format-numbered-list": "Nummerierte Liste",
 	"bs-smwconnector-dataquery-count-label": "Anzahl",
-	"bs-smwconnector-dataquery-count-help": "Begrenzung der Anzahl der zurückgegebenen Ergebnisse"
+	"bs-smwconnector-dataquery-count-help": "Begrenzung der Anzahl der zurückgegebenen Ergebnisse",
+	"bs-smwconnector-decision-overview-categories-label": "Kategorien",
+	"bs-smwconnector-decision-overview-categories-help": "Filtere nach einer oder mehreren Kategorien, wobei mehrere Einträge mit '|' getrennt werden.",
+	"bs-smwconnector-decision-overview-namespaces-label": "Namensräume",
+	"bs-smwconnector-decision-overview-namespaces-help": "Filtere nach einem oder mehreren Namensräumen, wobei mehrere Einträge mit '|' getrennt werden.",
+	"bs-smwconnector-decision-overview-prefix-label": "Präfix",
+	"bs-smwconnector-decision-overview-prefix-help": "Filtere nach eigenem Präfix, wobei mehrere Einträge mit '|' getrennt werden.",
+	"bs-smwconnector-decision-overview-title": "Entscheidungsübersicht",
+	"bs-smwconnector-decision-overview-droplet-title": "Entscheidungsübersicht",
+	"bs-smwconnector-decision-overview-droplet-description": "Ermöglicht Abfragen, um eine Übersicht an Entscheidungen zu erhalten"
 }

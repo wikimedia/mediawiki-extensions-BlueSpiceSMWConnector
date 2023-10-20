@@ -32,7 +32,8 @@
 				}
 			},
 			"TagRegistry": {
-				"dataquery": "\\BlueSpice\\SMWConnector\\Tag\\DataQuery"
+				"dataquery": "\\BlueSpice\\SMWConnector\\Tag\\DataQuery",
+				"decisionOverview": "\\BlueSpice\\SMWConnector\\Tag\\DecisionOverview"
 			},
 			"PermissionRegistry": {
 				"createclass": {
@@ -118,13 +119,17 @@
 		},
 		"VisualEditor": {
 			"PluginModules": [
-				"ext.BSSMWConnector.DataQuery.visualEditor"
+				"ext.BSSMWConnector.DataQuery.visualEditor",
+				"ext.BSSMWConnector.decisionOverview.visualEditor"
 			]
 		},
 		"ContentDroplets": {
 			"Droplets": {
 				"dataquery": {
 					"class": "\\BlueSpice\\SMWConnector\\ContentDroplets\\DataQueryDroplet"
+				},
+				"decisionOverview": {
+					"class": "\\BlueSpice\\SMWConnector\\ContentDroplets\\DecisionOverviewDroplet"
 				}
 			}
 		},
@@ -352,6 +357,32 @@
 			],
 			"dependencies": [
 				"ext.visualEditor.mwcore"
+			]
+		},
+		"ext.BSSMWConnector.decisionOverview.visualEditor": {
+			"scripts": [
+				"nodes/bs.smwconnector.ce.DecisionOverviewNode.js",
+				"nodes/bs.smwconnector.dm.DecisionOverviewNode.js",
+				"nodes/bs.smwconnector.ui.DecisionOverviewInspector.js",
+				"nodes/bs.smwconnector.ui.DecisionOverviewInspectorTool.js"
+			],
+			"styles": "stylesheets/droplet.decisionoverview.css",
+			"messages": [
+				"bs-smwconnector-decision-overview-title",
+				"bs-smwconnector-decision-overview-categories-label",
+				"bs-smwconnector-decision-overview-categories-help",
+				"bs-smwconnector-decision-overview-namespaces-label",
+				"bs-smwconnector-decision-overview-namespaces-help",
+				"bs-smwconnector-decision-overview-prefix-label",
+				"bs-smwconnector-decision-overview-prefix-help"
+			],
+			"dependencies": [
+				"ext.visualEditor.mwcore"
+			]
+		},
+		"ext.BSSMWConnector.decisionOverview.styles": {
+			"styles": [
+				"ext.BSSSMWConnector.decisionOverview.css"
 			]
 		}
 	},
