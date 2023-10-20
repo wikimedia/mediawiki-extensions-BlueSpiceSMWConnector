@@ -45,5 +45,15 @@
 	"bs-smwconnector-dataquery-format-bulleted-list": "Bulleted list",
 	"bs-smwconnector-dataquery-format-numbered-list": "Numbered list",
 	"bs-smwconnector-dataquery-count-label": "Number",
-	"bs-smwconnector-dataquery-count-help": "Limit the number of result(s) returned"
+	"bs-smwconnector-dataquery-count-help": "Limit the number of result(s) returned",
+	"bs-smwconnector-decision-overview-categories-label": "Categories",
+	"bs-smwconnector-decision-overview-categories-help": "Filter by one or multiple categories, separating multiple entries with '|'.",
+	"bs-smwconnector-decision-overview-namespaces-label": "Namespaces",
+	"bs-smwconnector-decision-overview-namespaces-help": "Filter by one or multiple namespaces, separating multiple entries with '|'.",
+	"bs-smwconnector-decision-overview-prefix-label": "Prefix",
+	"bs-smwconnector-decision-overview-prefix-help": "Filter by own prefix(es), separating multiple entries with '|'.",
+	"bs-smwconnector-decision-overview-title": "Decision overview",
+	"bs-smwconnector-decision-overview-no-result": "No decisions found with current filters",
+	"bs-smwconnector-decision-overview-droplet-title": "Decision overview",
+	"bs-smwconnector-decision-overview-droplet-description": "Enables queries to get an overview of decisions"
 }
