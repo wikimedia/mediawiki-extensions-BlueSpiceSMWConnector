@@ -49,5 +49,15 @@
 	"bs-smwconnector-dataquery-format-label": "Label for format dropdown",
 	"bs-smwconnector-dataquery-format-help": "Help message for format dropdown",
 	"bs-smwconnector-dataquery-format-bulleted-list": "Label for format dropdown 'Bulleted list' option",
-	"bs-smwconnector-dataquery-format-numbered-list": "Label for format dropdown 'Numbered list' option"
+	"bs-smwconnector-dataquery-format-numbered-list": "Label for format dropdown 'Numbered list' option",
+	"bs-smwconnector-decision-overview-categories-label": "Label for category multi select input widget",
+	"bs-smwconnector-decision-overview-categories-help": "Help message for category multi select input widget",
+	"bs-smwconnector-decision-overview-namespaces-label": "Label for namespace multi select input widget",
+	"bs-smwconnector-decision-overview-namespaces-help": "Help message for namespace multi select input widget",
+	"bs-smwconnector-decision-overview-prefix-label": "Label for prefix text field",
+	"bs-smwconnector-decision-overview-prefix-help": "Help message for prefix text field",
+	"bs-smwconnector-decision-overview-title": "Label for decision overview inspector dialog",
+	"bs-smwconnector-decision-overview-no-result": "Label for decision overview visible if no decision could be found",
+	"bs-smwconnector-decision-overview-droplet-title": "Title for decision overview droplet card",
+	"bs-smwconnector-decision-overview-droplet-description": "Label for description of decision overview droplet card"
 }
