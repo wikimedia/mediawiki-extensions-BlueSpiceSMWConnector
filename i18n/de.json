@@ -4,6 +4,7 @@
 			"*Surak*",
 			"Abcdefg",
 			"Ameisenigel",
+			"Brettchenweber",
 			"DraconicDark",
 			"Hwboehm",
 			"Justman10000",
@@ -66,5 +67,5 @@
 	"bs-smwconnector-decision-overview-prefix-help": "Filtere nach eigenem Präfix, wobei mehrere Einträge mit '|' getrennt werden.",
 	"bs-smwconnector-decision-overview-title": "Entscheidungsübersicht",
 	"bs-smwconnector-decision-overview-droplet-title": "Entscheidungsübersicht",
-	"bs-smwconnector-decision-overview-droplet-description": "Ermöglicht Abfragen, um eine Übersicht an Entscheidungen zu erhalten"
+	"bs-smwconnector-decision-overview-droplet-description": "Ermöglicht Abfragen, um eine Übersicht von Entscheidungen zu erhalten"
 }

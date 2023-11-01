@@ -15,5 +15,8 @@
 	"bs-smwconnector-extendedsearch-anon-user-label": "Anonymme Benotzer",
 	"bs-smwconnector-dataquery-category-label": "Kategorie",
 	"bs-smwconnector-dataquery-format-label": "Format",
-	"bs-smwconnector-dataquery-format-numbered-list": "Nummeréiert Lëscht"
+	"bs-smwconnector-dataquery-format-numbered-list": "Nummeréiert Lëscht",
+	"bs-smwconnector-decision-overview-categories-label": "Kategorien",
+	"bs-smwconnector-decision-overview-namespaces-label": "Nummraim",
+	"bs-smwconnector-decision-overview-prefix-label": "Prefix"
 }
