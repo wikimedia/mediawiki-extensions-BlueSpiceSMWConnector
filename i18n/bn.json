@@ -11,5 +11,6 @@
 	"bs-smwconnector-extendedsearch-boolean-property-false": "না",
 	"bs-smwconnector-extendedsearch-anon-user-label": "বেনামী ব্যবহারকারী",
 	"bs-smwconnector-dataquery-namespace-label": "নামস্থান",
-	"bs-smwconnector-dataquery-modified-operator-label": "পরিবর্তিত"
+	"bs-smwconnector-dataquery-modified-operator-label": "পরিবর্তিত",
+	"bs-smwconnector-decision-overview-namespaces-label": "নামস্থান"
 }

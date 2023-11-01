@@ -44,5 +44,15 @@
 	"bs-smwconnector-dataquery-format-label": "Formato",
 	"bs-smwconnector-dataquery-format-help": "Le formato usate pro impressiones",
 	"bs-smwconnector-dataquery-format-bulleted-list": "Lista a punctos",
-	"bs-smwconnector-dataquery-format-numbered-list": "Lista numerate"
+	"bs-smwconnector-dataquery-format-numbered-list": "Lista numerate",
+	"bs-smwconnector-decision-overview-categories-label": "Categorias",
+	"bs-smwconnector-decision-overview-categories-help": "Filtrar per un o plure categorias, separante plure entratas con ‘|’.",
+	"bs-smwconnector-decision-overview-namespaces-label": "Spatios de nomines",
+	"bs-smwconnector-decision-overview-namespaces-help": "Filtrar per un o plure spatios de nomines, separante plure entratas con ‘|’.",
+	"bs-smwconnector-decision-overview-prefix-label": "Prefixo",
+	"bs-smwconnector-decision-overview-prefix-help": "Filtrar per proprie prefixo(s), separante plure entratas con ‘|’.",
+	"bs-smwconnector-decision-overview-title": "Vista general de decisiones",
+	"bs-smwconnector-decision-overview-no-result": "Necun decision trovate con filtros actual",
+	"bs-smwconnector-decision-overview-droplet-title": "Vista general de decisiones",
+	"bs-smwconnector-decision-overview-droplet-description": "Permitte que consultas recipe un vista general de decisiones"
 }
