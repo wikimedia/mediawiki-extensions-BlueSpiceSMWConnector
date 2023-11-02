@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Aftabuzzaman",
+			"Borhan",
 			"Yahya",
 			"আফতাবুজ্জামান"
 		]
@@ -12,5 +13,11 @@
 	"bs-smwconnector-extendedsearch-anon-user-label": "বেনামী ব্যবহারকারী",
 	"bs-smwconnector-dataquery-namespace-label": "নামস্থান",
 	"bs-smwconnector-dataquery-modified-operator-label": "পরিবর্তিত",
-	"bs-smwconnector-decision-overview-namespaces-label": "নামস্থান"
+	"bs-smwconnector-decision-overview-namespaces-label": "নামস্থান",
+	"bs-smwconnector-decision-overview-categories-label": "বিষয়শ্রেণীসমূহ",
+	"bs-smwconnector-decision-overview-prefix-label": "উপসর্গ",
+	"bs-smwconnector-decision-overview-title": "সিদ্ধান্তের সংক্ষিপ্ত বিবরণ",
+	"bs-smwconnector-decision-overview-no-result": "বর্তমান ছাঁকনিগুলির সাথে কোন সিদ্ধান্ত পাওয়া যায়নি৷",
+	"bs-smwconnector-decision-overview-droplet-title": "সিদ্ধান্তের সংক্ষিপ্ত বিবরণ",
+	"bs-smwconnector-decision-overview-droplet-description": "সিদ্ধান্তগুলির একটি সংক্ষিপ্ত বিবরণ পেতে প্রশ্নগুলো সক্রিয় করুন"
 }
