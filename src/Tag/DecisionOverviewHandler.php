@@ -165,7 +165,7 @@ class DecisionOverviewHandler extends Handler {
 		] );
 		foreach ( $decision['decisions'] as $decisionValue ) {
 			$html .= Html::element( 'div', [
-				'class' => 'cd-decision'
+				'class' => 'cd-decision-entry'
 			], $decisionValue );
 		}
 		$html .= Html::closeElement( 'td' );
