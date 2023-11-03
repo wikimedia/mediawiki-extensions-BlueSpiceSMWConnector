@@ -14,7 +14,7 @@
 	border: 1px solid #a2a9b1;
 }
 
-.cd-decision {
+.cd-decision-entry {
 	padding: 14px;
 	margin: 1em 0;
 	display: block;
@@ -22,8 +22,9 @@
 	background-color: #e9e9ee;
 }
 
-.cd-decision::before {
+.cd-decision-entry::before {
 	content: "\f058";
 	color: #94c11f;
 	font-family: "fontawesome";
+	margin-right: 5px;
 }
