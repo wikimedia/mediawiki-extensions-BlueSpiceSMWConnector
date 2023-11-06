@@ -22,5 +22,6 @@
 	"bs-smwconnector-dataquery-modified-operator-all": "모두",
 	"bs-smwconnector-dataquery-modified-operator-before": "이전",
 	"bs-smwconnector-dataquery-modified-date-label": "날짜",
-	"bs-smwconnector-dataquery-count-label": "번호"
+	"bs-smwconnector-dataquery-count-label": "번호",
+	"bs-smwconnector-decision-overview-categories-label": "분류"
 }
