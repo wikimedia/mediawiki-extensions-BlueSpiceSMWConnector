@@ -2,8 +2,11 @@
 	"@metadata": {
 		"authors": [
 			"Flyplanevn27",
-			"Nghiemtrongdai VN"
+			"Nghiemtrongdai VN",
+			"Pisceskaze"
 		]
 	},
-	"bs-swm-connector-ask-store-page-label": "Trang"
+	"bs-swm-connector-ask-store-page-label": "Trang",
+	"bs-smwconnector-decision-overview-title": "Tổng quan về quyết định",
+	"bs-smwconnector-decision-overview-droplet-title": "Tổng quan về quyết định"
 }

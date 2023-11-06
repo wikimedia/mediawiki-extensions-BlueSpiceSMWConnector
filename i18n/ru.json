@@ -28,5 +28,7 @@
 	"bs-smwconnector-dataquery-modified-operator-label": "Изменено",
 	"bs-smwconnector-dataquery-modified-operator-all": "Всё",
 	"bs-smwconnector-dataquery-count-label": "Номер",
-	"bs-smwconnector-dataquery-namespace-label": "Пространство имён"
+	"bs-smwconnector-dataquery-namespace-label": "Пространство имён",
+	"bs-smwconnector-decision-overview-categories-label": "Категории",
+	"bs-smwconnector-decision-overview-prefix-label": "Префикс"
 }
