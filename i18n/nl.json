@@ -45,5 +45,15 @@
 	"bs-smwconnector-dataquery-format-bulleted-list": "Ongenummerde lijst",
 	"bs-smwconnector-dataquery-format-numbered-list": "Genummerde lijst",
 	"bs-smwconnector-dataquery-count-label": "Getal",
-	"bs-smwconnector-dataquery-count-help": "Het aantal geretourneerde resultaten beperken"
+	"bs-smwconnector-dataquery-count-help": "Het aantal geretourneerde resultaten beperken",
+	"bs-smwconnector-decision-overview-categories-label": "Categorieën",
+	"bs-smwconnector-decision-overview-categories-help": "Filteren op één of meerdere categorieën, waarbij u meerdere vermeldingen scheidt met ‘|’.",
+	"bs-smwconnector-decision-overview-namespaces-label": "Naamruimten",
+	"bs-smwconnector-decision-overview-namespaces-help": "Filter op één of meerdere naamruimten, waarbij u meerdere vermeldingen scheidt met ‘|’.",
+	"bs-smwconnector-decision-overview-prefix-label": "Voorvoegsel",
+	"bs-smwconnector-decision-overview-prefix-help": "Filter op eigen voorvoegsel(s), waarbij u meerdere vermeldingen scheidt met ‘|’.",
+	"bs-smwconnector-decision-overview-title": "Beslissingsoverzicht",
+	"bs-smwconnector-decision-overview-no-result": "Geen beslissingen gevonden met de huidige filters",
+	"bs-smwconnector-decision-overview-droplet-title": "Beslissingsoverzicht",
+	"bs-smwconnector-decision-overview-droplet-description": "Maakt het mogelijk dat query’s een overzicht van beslissingen krijgen"
 }

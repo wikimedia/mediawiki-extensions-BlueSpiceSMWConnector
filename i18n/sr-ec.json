@@ -15,5 +15,8 @@
 	"bs-smwconnector-dataquery-format-label": "Формат",
 	"bs-smwconnector-dataquery-format-bulleted-list": "Набројиви списак",
 	"bs-smwconnector-dataquery-format-numbered-list": "Нумерисани списак",
-	"bs-smwconnector-dataquery-count-label": "Број"
+	"bs-smwconnector-dataquery-count-label": "Број",
+	"bs-smwconnector-decision-overview-categories-label": "Категорије",
+	"bs-smwconnector-decision-overview-namespaces-label": "Именски простори",
+	"bs-smwconnector-decision-overview-prefix-label": "Префикс"
 }
