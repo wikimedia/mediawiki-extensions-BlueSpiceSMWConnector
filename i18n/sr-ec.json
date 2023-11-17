@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"BadDog",
+			"Kizule",
 			"Milicevic01"
 		]
 	},
@@ -18,5 +19,13 @@
 	"bs-smwconnector-dataquery-format-label": "Формат",
 	"bs-smwconnector-decision-overview-categories-label": "Категорије",
 	"bs-smwconnector-decision-overview-namespaces-label": "Именски простори",
-	"bs-smwconnector-decision-overview-prefix-label": "Префикс"
+	"bs-smwconnector-decision-overview-prefix-label": "Префикс",
+	"bs-dlg-choosesmwprop-label": "Својство",
+	"bs-dlg-choosesmwprop-type-smwprop": "Семантичко својство",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Корисничке странице корисника који су поменути на овој страници",
+	"bs-swm-connector-ask-store-page-label": "Страница",
+	"bs-smwconnector-extendedsearch-anon-user-label": "Анониман корисник",
+	"bs-smwconnector-dataquery-modified-operator-label": "Измењено",
+	"bs-smwconnector-dataquery-modified-operator-before": "Пре",
+	"bs-smwconnector-dataquery-modified-date-help": "Датум коришћен за измењен филтер"
 }
