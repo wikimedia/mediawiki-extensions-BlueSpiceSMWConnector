@@ -2,6 +2,26 @@
 	"@metadata": {
 		"authors": []
 	},
+	"bs-dlg-choosesmwprop-label": "Svojstvo",
+	"bs-dlg-choosesmwprop-type-smwprop": "Semantičko svojstvo",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Da",
-	"bs-smwconnector-extendedsearch-boolean-property-false": "Ne"
+	"bs-smwconnector-extendedsearch-boolean-property-false": "Ne",
+	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Korisničke stranice korisnika koji su pomenuti na ovoj stranici",
+	"bs-swm-connector-ask-store-page-label": "Stranica",
+	"bs-smwconnector-extendedsearch-anon-user-label": "Anoniman korisnik",
+	"bs-smwconnector-dataquery-category-label": "Kategorija",
+	"bs-smwconnector-dataquery-namespace-label": "Imenski prostor",
+	"bs-smwconnector-dataquery-modified-operator-label": "Izmenjeno",
+	"bs-smwconnector-dataquery-modified-operator-all": "Sve",
+	"bs-smwconnector-dataquery-modified-operator-since": "Od",
+	"bs-smwconnector-dataquery-modified-operator-before": "Pre",
+	"bs-smwconnector-dataquery-modified-date-label": "Datum",
+	"bs-smwconnector-dataquery-modified-date-help": "Datum korišćen za izmenjen filter",
+	"bs-smwconnector-dataquery-format-label": "Format",
+	"bs-smwconnector-dataquery-format-bulleted-list": "Nabrojivi spisak",
+	"bs-smwconnector-dataquery-format-numbered-list": "Numerisani spisak",
+	"bs-smwconnector-dataquery-count-label": "Broj",
+	"bs-smwconnector-decision-overview-categories-label": "Kategorije",
+	"bs-smwconnector-decision-overview-namespaces-label": "Imenski prostori",
+	"bs-smwconnector-decision-overview-prefix-label": "Prefiks"
 }
