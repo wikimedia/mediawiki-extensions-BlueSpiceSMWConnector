@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Coring",
 			"DDPAT",
 			"Evs",
 			"Facenapalm",
@@ -9,8 +10,7 @@
 			"Movses",
 			"Okras",
 			"Patrick Star",
-			"Vlad5250",
-			"Coring"
+			"Vlad5250"
 		]
 	},
 	"bs-bssmwconnector-desc": "Интегрирует SemanticMediaWiki в BlueSpice",

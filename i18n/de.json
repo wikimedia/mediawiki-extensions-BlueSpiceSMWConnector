@@ -1,19 +1,19 @@
 {
 	"@metadata": {
 		"authors": [
+			"*Surak*",
+			"Abcdefg",
 			"Ameisenigel",
+			"Brettchenweber",
+			"DraconicDark",
 			"Hwboehm",
+			"Justman10000",
 			"Krabina",
 			"Metalhead64",
 			"Mglaser",
-			"Robert Vogel <vogel@hallowelt.biz>",
-			"Umherirrender",
-			"*Surak*",
-			"Justman10000",
-			"DraconicDark",
 			"Mschlindwein",
-			"Abcdefg",
-			"Brettchenweber"
+			"Robert Vogel <vogel@hallowelt.biz>",
+			"Umherirrender"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integriert SemanticMediaWiki in BlueSpice",

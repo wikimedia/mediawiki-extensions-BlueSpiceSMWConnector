@@ -1,14 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"Alshamiri1",
+			"Asma",
 			"Dr. Mohammed",
 			"FiberAhmed",
 			"Meno25",
 			"أَحمد",
 			"ديفيد",
-			"محمد أحمد عبد الفتاح",
-			"Alshamiri1",
-			"Asma"
+			"محمد أحمد عبد الفتاح"
 		]
 	},
 	"bs-bssmwconnector-desc": "يدمج SemanticMediaWiki في BlueSpice",
