@@ -15,5 +15,13 @@
 	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "이 문서에 언급된 사용자의 사용자 문서",
 	"bs-swm-connector-ask-store-page-label": "페이지",
 	"bs-smw-connector-async-ask-unknown-handler": "\"$1\" 포맷의 핸들러가 등록되어 있지 않거나 유효하지 않습니다",
-	"bs-smwconnector-extendedsearch-anon-user-label": "익명 사용자"
+	"bs-smwconnector-extendedsearch-anon-user-label": "익명 사용자",
+	"bs-smwconnector-dataquery-category-label": "분류",
+	"bs-smwconnector-dataquery-namespace-label": "이름공간",
+	"bs-smwconnector-dataquery-modified-operator-help": "수정일 전후 필터링",
+	"bs-smwconnector-dataquery-modified-operator-all": "모두",
+	"bs-smwconnector-dataquery-modified-operator-before": "이전",
+	"bs-smwconnector-dataquery-modified-date-label": "날짜",
+	"bs-smwconnector-dataquery-count-label": "번호",
+	"bs-smwconnector-decision-overview-categories-label": "분류"
 }

@@ -22,5 +22,9 @@
 	"bs-smwconnector-dataquery-modified-operator-since": "Da",
 	"bs-smwconnector-dataquery-modified-date-label": "Data",
 	"bs-smwconnector-dataquery-count-label": "Numero",
-	"bs-smwconnector-dataquery-count-help": "Limita il numero dei risultati restituiti"
+	"bs-smwconnector-dataquery-count-help": "Limita il numero dei risultati restituiti",
+	"bs-smwconnector-dataquery-format-label": "Formato",
+	"bs-smwconnector-dataquery-format-bulleted-list": "Elenco puntato",
+	"bs-smwconnector-decision-overview-categories-label": "Categorie",
+	"bs-smwconnector-decision-overview-namespaces-label": "Namespace"
 }

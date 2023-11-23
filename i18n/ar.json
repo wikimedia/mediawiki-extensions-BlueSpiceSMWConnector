@@ -1,13 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"Alshamiri1",
+			"Asma",
 			"Dr. Mohammed",
 			"FiberAhmed",
 			"Meno25",
 			"أَحمد",
 			"ديفيد",
-			"محمد أحمد عبد الفتاح",
-			"Alshamiri1"
+			"محمد أحمد عبد الفتاح"
 		]
 	},
 	"bs-bssmwconnector-desc": "يدمج SemanticMediaWiki في BlueSpice",
@@ -46,5 +47,10 @@
 	"bs-smwconnector-dataquery-modified-date-help": "التاريخ المستخدم للتصفية المعدلة",
 	"bs-smwconnector-dataquery-printouts-label": "بيانات المطبوعات",
 	"bs-smwconnector-dataquery-printouts-help": "عرض خاصية (خصائص) ، مع فصل إدخالات متعددة باستخدام \"|\". على سبيل المثال ، يُرجع 'prop1 | prop2' قيم خاصية 'prop1' & 'prop2' للصفحة.",
-	"bs-smwconnector-dataquery-count-help": "حدد عدد النتائج التي تم إرجاعها"
+	"bs-smwconnector-dataquery-count-help": "حدد عدد النتائج التي تم إرجاعها",
+	"bs-smwconnector-dataquery-format-label": "الصيغة",
+	"bs-smwconnector-dataquery-format-help": "التنسيق المستخدم للمطبوعات",
+	"bs-smwconnector-dataquery-format-bulleted-list": "قائمة منقطة",
+	"bs-smwconnector-dataquery-format-numbered-list": "قائمة مرقمة",
+	"bs-smwconnector-dataquery-count-label": "رقم"
 }

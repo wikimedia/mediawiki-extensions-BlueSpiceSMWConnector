@@ -1,0 +1,14 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ajiniyaz Nurniyazov"
+		]
+	},
+	"bs-smwconnector-dataquery-category-label": "Kategoriya",
+	"bs-smwconnector-dataquery-namespace-label": "Atamalar kópligi",
+	"bs-smwconnector-dataquery-modified-operator-all": "Hámmesi",
+	"bs-smwconnector-dataquery-modified-date-label": "Sáne",
+	"bs-smwconnector-dataquery-format-label": "Format",
+	"bs-smwconnector-dataquery-format-bulleted-list": "Tańbalı dizim",
+	"bs-smwconnector-dataquery-count-label": "San"
+}

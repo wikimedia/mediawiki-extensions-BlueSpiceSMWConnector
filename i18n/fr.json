@@ -5,9 +5,9 @@
 			"DreZhsh",
 			"Golmore",
 			"Gomoko",
+			"Naheulf",
 			"Verdy p",
-			"Wladek92",
-			"Naheulf"
+			"Wladek92"
 		]
 	},
 	"bs-bssmwconnector-desc": "Intègre SemanticMediaWiki à BlueSpice",
@@ -38,7 +38,7 @@
 	"bs-smwconnector-dataquery-namespace-label": "Espace de noms",
 	"bs-smwconnector-dataquery-namespace-help": "Filtrer par un ou plusieurs espaces de noms, en séparant les entrées multiples par une barre verticale « | ». Par ex. « ns1|ns2 » renvoie des pages dans les espaces de noms « ns1 » OU « ns2 ».",
 	"bs-smwconnector-dataquery-modified-operator-label": "Modifié",
-	"bs-smwconnector-dataquery-modified-operator-help": "Filtrer par date de modification effectuée avant, depuis ou à l’exception d’une date donnée",
+	"bs-smwconnector-dataquery-modified-operator-help": "Filtrer par date de modification effectuée avant ou depuis une date donnée",
 	"bs-smwconnector-dataquery-modified-operator-all": "Tous",
 	"bs-smwconnector-dataquery-modified-operator-since": "Depuis",
 	"bs-smwconnector-dataquery-modified-operator-before": "Avant",
@@ -48,5 +48,9 @@
 	"bs-smwconnector-dataquery-printouts-label": "Déclarations imprimées",
 	"bs-smwconnector-dataquery-printouts-help": "Afficher une ou plusieurs propriétés, en séparant les entrées multiples avec une barre verticale « | ». Par ex. « prop1|prop2 » retourne les valeurs des propriétés « prop1 » et « prop2 » de la page.",
 	"bs-smwconnector-dataquery-count-label": "Nombre",
-	"bs-smwconnector-dataquery-count-help": "Limiter le nombre de résultat(s) retourné(s)"
+	"bs-smwconnector-dataquery-count-help": "Limiter le nombre de résultat(s) retourné(s)",
+	"bs-smwconnector-dataquery-format-label": "Format",
+	"bs-smwconnector-dataquery-format-help": "Format utilisé pour les impressions",
+	"bs-smwconnector-dataquery-format-bulleted-list": "Liste à puces",
+	"bs-smwconnector-dataquery-format-numbered-list": "Liste numérotée"
 }

@@ -16,5 +16,12 @@
 	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "內容/使用者提及",
 	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "在此頁面上所提到的使用者之用戶頁面",
 	"bs-swm-connector-ask-store-page-label": "頁面",
-	"bs-smwconnector-extendedsearch-anon-user-label": "匿名使用者"
+	"bs-smwconnector-extendedsearch-anon-user-label": "匿名使用者",
+	"bs-smwconnector-dataquery-category-label": "分類",
+	"bs-smwconnector-dataquery-modified-operator-label": "已修改",
+	"bs-smwconnector-dataquery-modified-operator-all": "全部",
+	"bs-smwconnector-dataquery-modified-date-label": "日期",
+	"bs-smwconnector-dataquery-format-label": "格式",
+	"bs-smwconnector-dataquery-format-bulleted-list": "符號清單",
+	"bs-smwconnector-dataquery-format-numbered-list": "編號清單"
 }
