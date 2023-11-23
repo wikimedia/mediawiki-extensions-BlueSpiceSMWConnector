@@ -1,9 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Erelon",
-			"Guycn2",
-			"Amire80"
+			"Guycn2"
 		]
 	},
 	"bs-bssmwconnector-desc": "שילוב ההרחבה SemanticMediaWiki בתוך BlueSpice",
@@ -46,5 +46,15 @@
 	"bs-smwconnector-dataquery-format-bulleted-list": "רשימה עם תבליטים",
 	"bs-smwconnector-dataquery-format-numbered-list": "רשימה ממוספרת",
 	"bs-smwconnector-dataquery-count-label": "מספר",
-	"bs-smwconnector-dataquery-count-help": "הגבלה על מספר התוצאות שתוחזרנה"
+	"bs-smwconnector-dataquery-count-help": "הגבלה על מספר התוצאות שתוחזרנה",
+	"bs-smwconnector-decision-overview-categories-label": "קטגוריות",
+	"bs-smwconnector-decision-overview-categories-help": "לסנן לפי קטגוריה אחת או יותר, תוך הפרדת ערכים מרובים באמצעות '|'.",
+	"bs-smwconnector-decision-overview-namespaces-label": "מרחבי שם",
+	"bs-smwconnector-decision-overview-namespaces-help": "לסנן לפי מרחב שם אחד או יותר, תוך הפרדת ערכים מרובים באמצעות '|'.",
+	"bs-smwconnector-decision-overview-prefix-label": "תחילית",
+	"bs-smwconnector-decision-overview-prefix-help": "לסנן לפי תחילית אחת או יותר, תוך הפרדת ערכים מרובים באמצעות '|'.",
+	"bs-smwconnector-decision-overview-title": "סקירת החלטה",
+	"bs-smwconnector-decision-overview-no-result": "לא נמצאו החלטות עם המסננים הנוכחיים",
+	"bs-smwconnector-decision-overview-droplet-title": "סקירת החלטה",
+	"bs-smwconnector-decision-overview-droplet-description": "זה מאפשר לשאילתות לקבל סקירה כללית של החלטות"
 }
