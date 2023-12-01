@@ -170,7 +170,7 @@ class SMWData implements
 		$lang = RequestContext::getMain()->getLanguage();
 		$user = RequestContext::getMain()->getUser();
 
-		$smwProperties = $resultObject->getSourceParam( 'smwproperty' );
+		$smwProperties = $resultObject->getSourceParam( 'smwproperty' ) ?? [];
 		$smwPropertyValues = [];
 		foreach ( $smwProperties as $property ) {
 			$value = $property['value'];
