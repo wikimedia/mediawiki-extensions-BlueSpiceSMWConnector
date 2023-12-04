@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Eleassar"
+			"Eleassar",
+			"Upwinxp"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integrira Semantični MediaWiki v BlueSpice",
@@ -45,5 +46,15 @@
 	"bs-smwconnector-dataquery-format-bulleted-list": "Označen seznam",
 	"bs-smwconnector-dataquery-format-numbered-list": "Oštevilčen seznam",
 	"bs-smwconnector-dataquery-count-label": "Številka",
-	"bs-smwconnector-dataquery-count-help": "Omejitev števila vrnjenih zadetkov"
+	"bs-smwconnector-dataquery-count-help": "Omejitev števila vrnjenih zadetkov",
+	"bs-smwconnector-decision-overview-categories-label": "Kategorije",
+	"bs-smwconnector-decision-overview-categories-help": "Filtriranje po enem ali več imenskih prostorih, pri čemer več vnosov ločite z »|«.",
+	"bs-smwconnector-decision-overview-namespaces-label": "Imenski prostori",
+	"bs-smwconnector-decision-overview-namespaces-help": "Filtrirajte po enem ali več imenskih prostorih, pri čemer več vnosov ločite z '|'.",
+	"bs-smwconnector-decision-overview-prefix-label": "Predpona",
+	"bs-smwconnector-decision-overview-prefix-help": "Filtriranje po lastnih predponah, pri čemer več vnosov ločite z »|«.",
+	"bs-smwconnector-decision-overview-title": "Pregled odločitev",
+	"bs-smwconnector-decision-overview-no-result": "S trenutnimi filtri ni bilo mogoče najti nobene odločitve",
+	"bs-smwconnector-decision-overview-droplet-title": "Pregled odločitev",
+	"bs-smwconnector-decision-overview-droplet-description": "Omogoča poizvedbe za pregled odločitev"
 }
