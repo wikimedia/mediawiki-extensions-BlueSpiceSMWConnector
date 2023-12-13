@@ -52,5 +52,6 @@
 	"bs-smwconnector-dataquery-format-label": "Format",
 	"bs-smwconnector-dataquery-format-help": "Format utilisé pour les impressions",
 	"bs-smwconnector-dataquery-format-bulleted-list": "Liste à puces",
-	"bs-smwconnector-dataquery-format-numbered-list": "Liste numérotée"
+	"bs-smwconnector-dataquery-format-numbered-list": "Liste numérotée",
+	"bs-smwconnector-decision-overview-categories-label": "Catégories"
 }
