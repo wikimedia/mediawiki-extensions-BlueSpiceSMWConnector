@@ -51,5 +51,6 @@
 	"bs-smwconnector-dataquery-format-bulleted-list": "Liste à puces",
 	"bs-smwconnector-dataquery-format-numbered-list": "Liste numérotée",
 	"bs-smwconnector-dataquery-count-label": "Nombre",
-	"bs-smwconnector-dataquery-count-help": "Limiter le nombre de résultat(s) retourné(s)"
+	"bs-smwconnector-dataquery-count-help": "Limiter le nombre de résultat(s) retourné(s)",
+	"bs-smwconnector-decision-overview-categories-label": "Catégories"
 }
