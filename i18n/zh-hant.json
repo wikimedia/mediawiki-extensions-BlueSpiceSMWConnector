@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Kly",
+			"SunAfterRain",
 			"Winston Sung"
 		]
 	},
@@ -15,8 +16,13 @@
 	"bs-smwconnector-extendedsearch-boolean-property-false": "否",
 	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "內容/使用者提及",
 	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "在此頁面上所提到的使用者之用戶頁面",
+	"apihelp-bs-smw-connector-ask-store-summary": "執行語意查詢的ExtJS相容儲存",
+	"apihelp-bs-smw-connector-ask-store-props-param": "要檢索的屬性。這些屬性會與返回的模式和資料相對應。鍵-值對，鍵是實際屬性名稱，值是想要的標籤（JSON）",
 	"bs-swm-connector-ask-store-page-label": "頁面",
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "會替換查詢內<nowiki>{{{node}}}</nowiki>預留位置的節點值",
 	"bs-smwconnector-extendedsearch-anon-user-label": "匿名使用者",
+	"apihelp-bs-smw-connector-smw-property-store-summary": "取得屬性值的ExtJS相容儲存",
+	"apihelp-bs-smw-connector-tree-ask-store-summary": "執行語意查詢的ExtJS相容樹儲存",
 	"bs-smwconnector-dataquery-category-label": "分類",
 	"bs-smwconnector-dataquery-modified-operator-label": "已修改",
 	"bs-smwconnector-dataquery-modified-operator-all": "全部",

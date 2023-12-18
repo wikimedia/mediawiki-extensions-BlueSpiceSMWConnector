@@ -6,6 +6,7 @@
 			"Dr. Mohammed",
 			"FiberAhmed",
 			"Meno25",
+			"NEHAOUA",
 			"أَحمد",
 			"ديفيد",
 			"محمد أحمد عبد الفتاح"
@@ -51,5 +52,6 @@
 	"bs-smwconnector-dataquery-format-bulleted-list": "قائمة منقطة",
 	"bs-smwconnector-dataquery-format-numbered-list": "قائمة مرقمة",
 	"bs-smwconnector-dataquery-count-label": "رقم",
-	"bs-smwconnector-dataquery-count-help": "حدد عدد النتائج التي تم إرجاعها"
+	"bs-smwconnector-dataquery-count-help": "حدد عدد النتائج التي تم إرجاعها",
+	"bs-smwconnector-decision-overview-categories-label": "التصنيفات"
 }
