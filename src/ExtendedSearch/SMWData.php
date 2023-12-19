@@ -34,6 +34,9 @@ class SMWData implements
 	ILookupModifierProvider
 {
 
+	/** @var array */
+	protected $semanticData = [];
+
 	/**
 	 * @inheritDoc
 	 */
