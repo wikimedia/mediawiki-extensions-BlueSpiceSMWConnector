@@ -50,7 +50,7 @@
 	"bs-smwconnector-decision-overview-categories-label": "Kategorije",
 	"bs-smwconnector-decision-overview-categories-help": "Filtriranje po enem ali več imenskih prostorih, pri čemer več vnosov ločite z »|«.",
 	"bs-smwconnector-decision-overview-namespaces-label": "Imenski prostori",
-	"bs-smwconnector-decision-overview-namespaces-help": "Filtrirajte po enem ali več imenskih prostorih, pri čemer več vnosov ločite z '|'.",
+	"bs-smwconnector-decision-overview-namespaces-help": "Filtrirajte po enem ali več imenskih prostorih, pri čemer več vnosov ločite z »|«.",
 	"bs-smwconnector-decision-overview-prefix-label": "Predpona",
 	"bs-smwconnector-decision-overview-prefix-help": "Filtriranje po lastnih predponah, pri čemer več vnosov ločite z »|«.",
 	"bs-smwconnector-decision-overview-title": "Pregled odločitev",
