@@ -4,6 +4,7 @@
 			"DiegoAmbrocio",
 			"Fitoschido",
 			"Jackiezelaya",
+			"Jmabel",
 			"Macofe"
 		]
 	},
@@ -29,5 +30,6 @@
 	"bs-smwconnector-dataquery-format-help": "Formato usado para las impresiones",
 	"bs-smwconnector-dataquery-format-bulleted-list": "Lista de topos",
 	"bs-smwconnector-dataquery-format-numbered-list": "Lista numerada",
-	"bs-smwconnector-dataquery-count-label": "Número"
+	"bs-smwconnector-dataquery-count-label": "Número",
+	"bs-smwconnector-decision-overview-namespaces-label": "Espacios de nombres"
 }
