@@ -31,5 +31,8 @@
 	"bs-smwconnector-dataquery-format-bulleted-list": "Lista de topos",
 	"bs-smwconnector-dataquery-format-numbered-list": "Lista numerada",
 	"bs-smwconnector-dataquery-count-label": "Número",
-	"bs-smwconnector-decision-overview-namespaces-label": "Espacios de nombres"
+	"bs-smwconnector-decision-overview-namespaces-label": "Espacios de nombres",
+	"bs-smwconnector-dataquery-modified-operator-label": "Modificada",
+	"bs-smwconnector-dataquery-modified-date-label": "Fecha",
+	"bs-smwconnector-decision-overview-categories-label": "Categorías"
 }
