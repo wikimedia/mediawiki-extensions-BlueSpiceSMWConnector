@@ -4,7 +4,8 @@
 			"DiegoAmbrocio",
 			"Fitoschido",
 			"Jackiezelaya",
-			"Macofe"
+			"Macofe",
+			"Jmabel"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integra SemanticMediaWiki en BlueSpice",
@@ -22,12 +23,16 @@
 	"bs-smwconnector-extendedsearch-anon-user-label": "Usuario anónimo",
 	"bs-smwconnector-dataquery-category-label": "Categoría",
 	"bs-smwconnector-dataquery-namespace-label": "Espacio de nombres",
+	"bs-smwconnector-dataquery-modified-operator-label": "Modificada",
 	"bs-smwconnector-dataquery-modified-operator-all": "Todo",
 	"bs-smwconnector-dataquery-modified-operator-since": "Desde",
 	"bs-smwconnector-dataquery-modified-operator-before": "Antes",
+	"bs-smwconnector-dataquery-modified-date-label": "Fecha",
 	"bs-smwconnector-dataquery-count-label": "Número",
 	"bs-smwconnector-dataquery-format-label": "Formato",
 	"bs-smwconnector-dataquery-format-help": "Formato usado para las impresiones",
 	"bs-smwconnector-dataquery-format-bulleted-list": "Lista de topos",
-	"bs-smwconnector-dataquery-format-numbered-list": "Lista numerada"
+	"bs-smwconnector-dataquery-format-numbered-list": "Lista numerada",
+	"bs-smwconnector-decision-overview-categories-label": "Categorías",
+	"bs-smwconnector-decision-overview-namespaces-label": "Espacios de nombres"
 }
