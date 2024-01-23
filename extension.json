@@ -356,7 +356,8 @@
 				"bs-smwconnector-dataquery-count-help"
 			],
 			"dependencies": [
-				"ext.visualEditor.mwcore"
+				"ext.visualEditor.mwcore",
+				"ext.bluespice"
 			]
 		},
 		"ext.BSSMWConnector.decisionOverview.visualEditor": {
@@ -377,7 +378,8 @@
 				"bs-smwconnector-decision-overview-prefix-help"
 			],
 			"dependencies": [
-				"ext.visualEditor.mwcore"
+				"ext.visualEditor.mwcore",
+				"ext.bluespice"
 			]
 		},
 		"ext.BSSMWConnector.decisionOverview.styles": {
