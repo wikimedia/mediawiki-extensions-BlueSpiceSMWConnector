@@ -7,6 +7,7 @@
 			"Facenapalm",
 			"Ice bulldog",
 			"Kareyac",
+			"Mitte27",
 			"Movses",
 			"Okras",
 			"Patrick Star",
@@ -30,5 +31,7 @@
 	"bs-smwconnector-dataquery-modified-operator-all": "Всё",
 	"bs-smwconnector-dataquery-count-label": "Номер",
 	"bs-smwconnector-decision-overview-categories-label": "Категории",
-	"bs-smwconnector-decision-overview-prefix-label": "Префикс"
+	"bs-smwconnector-decision-overview-prefix-label": "Префикс",
+	"bs-smwconnector-dataquery-modified-date-label": "Дата",
+	"bs-smwconnector-dataquery-format-label": "Формат"
 }
