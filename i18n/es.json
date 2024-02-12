@@ -20,10 +20,15 @@
 	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Páginas de los usuarios que han sido mencionados en esta página",
 	"bs-swm-connector-ask-store-page-label": "Página",
 	"bs-smw-connector-async-ask-unknown-handler": "El manejador para el formato \"$1\" no está registrado o no es válido",
+	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Valor del nodo que reemplazará marcador de posición <nowiki> {{{nodo}}}</nowiki> en la consulta",
 	"bs-smwconnector-extendedsearch-anon-user-label": "Usuario anónimo",
+	"bs-smw-connector-async-error": "No se pudo obtener los datos",
+	"bs-smwconnector-dataquery-name": "consulta de datos",
+	"bs-smwconnector-dataquery-desc": "Activa las consultas sobre el contenido en la wiki",
 	"bs-smwconnector-dataquery-category-label": "Categoría",
 	"bs-smwconnector-dataquery-namespace-label": "Espacio de nombres",
 	"bs-smwconnector-dataquery-modified-operator-label": "Modificada",
+	"bs-smwconnector-dataquery-modified-operator-help": "Filtrar antes/desde una fecha de modificación",
 	"bs-smwconnector-dataquery-modified-operator-all": "Todo",
 	"bs-smwconnector-dataquery-modified-operator-since": "Desde",
 	"bs-smwconnector-dataquery-modified-operator-before": "Antes",
@@ -33,6 +38,8 @@
 	"bs-smwconnector-dataquery-format-bulleted-list": "Lista de topos",
 	"bs-smwconnector-dataquery-format-numbered-list": "Lista numerada",
 	"bs-smwconnector-dataquery-count-label": "Número",
+	"bs-smwconnector-dataquery-count-help": "Límite en el número de resultados que devolver",
 	"bs-smwconnector-decision-overview-categories-label": "Categorías",
-	"bs-smwconnector-decision-overview-namespaces-label": "Espacios de nombres"
+	"bs-smwconnector-decision-overview-namespaces-label": "Espacios de nombres",
+	"bs-smwconnector-decision-overview-prefix-label": "Prefijo"
 }
