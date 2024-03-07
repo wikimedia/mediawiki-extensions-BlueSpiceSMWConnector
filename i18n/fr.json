@@ -5,6 +5,7 @@
 			"DreZhsh",
 			"Golmore",
 			"Gomoko",
+			"MacOS Weed",
 			"Naheulf",
 			"Verdy p",
 			"Wladek92"
@@ -52,5 +53,7 @@
 	"bs-smwconnector-dataquery-format-numbered-list": "Liste numérotée",
 	"bs-smwconnector-dataquery-count-label": "Nombre",
 	"bs-smwconnector-dataquery-count-help": "Limiter le nombre de résultat(s) retourné(s)",
-	"bs-smwconnector-decision-overview-categories-label": "Catégories"
+	"bs-smwconnector-decision-overview-categories-label": "Catégories",
+	"bs-smwconnector-decision-overview-namespaces-label": "Espaces de noms",
+	"bs-smwconnector-decision-overview-prefix-label": "Préfixe"
 }
