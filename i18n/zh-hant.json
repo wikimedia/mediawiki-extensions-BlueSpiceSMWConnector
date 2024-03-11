@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Arielyurusova",
 			"Kly",
 			"SunAfterRain",
 			"Winston Sung"
@@ -29,5 +30,30 @@
 	"apihelp-bs-smw-connector-ask-store-props-param": "要檢索的屬性。這些屬性會與返回的模式和資料相對應。鍵-值對，鍵是實際屬性名稱，值是想要的標籤（JSON）",
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "會替換查詢內<nowiki>{{{node}}}</nowiki>預留位置的節點值",
 	"apihelp-bs-smw-connector-smw-property-store-summary": "取得屬性值的ExtJS相容儲存",
-	"apihelp-bs-smw-connector-tree-ask-store-summary": "執行語意查詢的ExtJS相容樹儲存"
+	"apihelp-bs-smw-connector-tree-ask-store-summary": "執行語意查詢的ExtJS相容樹儲存",
+	"bs-smw-connector-async-ask-unknown-handler": "格式「 $1 」的處理程序未註冊或無效",
+	"bs-smw-connector-async-error": "無法取得數據",
+	"bs-smwconnector-dataquery-name": "資料查詢",
+	"bs-smwconnector-dataquery-desc": "啟用對 wiki 中內容的查詢",
+	"bs-smwconnector-dataquery-category-help": "依類別過濾，以「|」分隔多個條目。例如，「cat1|cat2」傳回類別「cat1」或「cat2」中的頁面。",
+	"bs-smwconnector-dataquery-namespace-label": "命名空間",
+	"bs-smwconnector-dataquery-namespace-help": "依命名空間過濾，用“|”分隔多個條目。例如，「ns1|ns2」傳回命名空間「ns1」或「ns2」中的頁面。",
+	"bs-smwconnector-dataquery-modified-operator-help": "在修改日期之前/之後過濾",
+	"bs-smwconnector-dataquery-modified-operator-since": "自從",
+	"bs-smwconnector-dataquery-modified-operator-before": "之前",
+	"bs-smwconnector-dataquery-modified-date-help": "修改過濾器的日期",
+	"bs-smwconnector-dataquery-printouts-label": "列印報表",
+	"bs-smwconnector-dataquery-printouts-help": "顯示屬性，用「|」分隔多個條目。例如，「prop1|prop2」傳回頁面的「prop1」和「prop2」屬性值。",
+	"bs-smwconnector-dataquery-format-help": "用於列印輸出的格式",
+	"bs-smwconnector-dataquery-count-label": "數字",
+	"bs-smwconnector-dataquery-count-help": "回傳的結果限制數目",
+	"bs-smwconnector-decision-overview-categories-label": "類別",
+	"bs-smwconnector-decision-overview-categories-help": "以一個或多個類別過濾，以“|”分隔多個條目。",
+	"bs-smwconnector-decision-overview-namespaces-label": "命名空間",
+	"bs-smwconnector-decision-overview-namespaces-help": "以一個或多個命名空間過濾，以「|」分隔多個條目。",
+	"bs-smwconnector-decision-overview-prefix-label": "字首",
+	"bs-smwconnector-decision-overview-prefix-help": "依自己的前綴過濾，用“|”分隔多個條目。",
+	"bs-smwconnector-decision-overview-title": "決策概述",
+	"bs-smwconnector-decision-overview-no-result": "當前過濾器未找到任何決策",
+	"bs-smwconnector-decision-overview-droplet-title": "決策概述"
 }
