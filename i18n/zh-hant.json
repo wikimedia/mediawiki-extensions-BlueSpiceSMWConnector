@@ -55,5 +55,6 @@
 	"bs-smwconnector-decision-overview-prefix-help": "依自己的前綴過濾，用“|”分隔多個條目。",
 	"bs-smwconnector-decision-overview-title": "決策概述",
 	"bs-smwconnector-decision-overview-no-result": "當前過濾器未找到任何決策",
-	"bs-smwconnector-decision-overview-droplet-title": "決策概述"
+	"bs-smwconnector-decision-overview-droplet-title": "決策概述",
+	"bs-smwconnector-decision-overview-droplet-description": "允許查詢以取得決策概覽"
 }
