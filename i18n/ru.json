@@ -11,7 +11,8 @@
 			"Movses",
 			"Okras",
 			"Patrick Star",
-			"Vlad5250"
+			"Vlad5250",
+			"Yurina Tatiana"
 		]
 	},
 	"bs-bssmwconnector-desc": "Интегрирует SemanticMediaWiki в BlueSpice",
@@ -29,6 +30,7 @@
 	"bs-smwconnector-dataquery-namespace-label": "Пространство имён",
 	"bs-smwconnector-dataquery-modified-operator-label": "Изменено",
 	"bs-smwconnector-dataquery-modified-operator-all": "Всё",
+	"bs-smwconnector-dataquery-modified-operator-before": "До",
 	"bs-smwconnector-dataquery-modified-date-label": "Дата",
 	"bs-smwconnector-dataquery-format-label": "Формат",
 	"bs-smwconnector-dataquery-count-label": "Номер",
