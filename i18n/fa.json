@@ -2,13 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"Amir1arch",
+			"Ebraminio",
 			"Jeeputer"
 		]
 	},
 	"bs-dlg-choosesmwprop-label": "ویژگی",
 	"bs-dlg-choosesmwprop-type-smwprop": "ویژگی معنایی",
-	"bs-extendedsearch-add-filter-group-smwproperty-label": "ویژگی های معنایی",
-	"bs-extendedsearch-search-center-result-smwproperty-label": "ویژگی های معنایی:",
+	"bs-extendedsearch-add-filter-group-smwproperty-label": "ویژگی‌های معنایی",
+	"bs-extendedsearch-search-center-result-smwproperty-label": "ویژگی‌های معنایی:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "بله",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "خیر",
 	"bs-swm-connector-ask-store-page-label": "صفحه",
