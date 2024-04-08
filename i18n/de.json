@@ -13,7 +13,8 @@
 			"Mglaser",
 			"Mschlindwein",
 			"Robert Vogel <vogel@hallowelt.biz>",
-			"Umherirrender"
+			"Umherirrender",
+			"TomatoCake"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integriert SemanticMediaWiki in BlueSpice",
@@ -65,6 +66,7 @@
 	"bs-smwconnector-decision-overview-prefix-label": "Präfix",
 	"bs-smwconnector-decision-overview-prefix-help": "Filtere nach eigenem Präfix, wobei mehrere Einträge mit '|' getrennt werden.",
 	"bs-smwconnector-decision-overview-title": "Entscheidungsübersicht",
+	"bs-smwconnector-decision-overview-no-result": "Mit den aktuellen Filtern wurden keine Entscheidungen gefunden",
 	"bs-smwconnector-decision-overview-droplet-title": "Entscheidungsübersicht",
 	"bs-smwconnector-decision-overview-droplet-description": "Ermöglicht Abfragen, um eine Übersicht von Entscheidungen zu erhalten"
 }
