@@ -65,7 +65,11 @@ class AddModules {
 	 * @return bool
 	 */
 	protected function skipProcessing() {
-		$onSpecialFormEdit = $this->out->getTitle()->isSpecial( 'FormEdit' );
+		$title = $this->out->getTitle();
+		if ( !$title ) {
+			return true;
+		}
+		$onSpecialFormEdit = $title->isSpecial( 'FormEdit' );
 		$inViewFormEdit =
 			$this->out->getRequest()->getVal( 'action', 'view' ) === 'formedit';
 
