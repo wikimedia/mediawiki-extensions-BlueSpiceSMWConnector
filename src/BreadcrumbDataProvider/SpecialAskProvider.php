@@ -4,6 +4,7 @@ namespace BlueSpice\SMWConnector\BreadcrumbDataProvider;
 
 use BlueSpice\Discovery\BreadcrumbDataProvider\BaseBreadcrumbDataProvider;
 use MediaWiki\SpecialPage\SpecialPageFactory;
+use MWException;
 use Title;
 
 class SpecialAskProvider extends BaseBreadcrumbDataProvider {
@@ -28,9 +29,14 @@ class SpecialAskProvider extends BaseBreadcrumbDataProvider {
 	/**
 	 * @param Title $title
 	 * @return Title
+	 * @throws MWException If the "Ask" page doesn't exist
 	 */
 	public function getRelevantTitle( $title ): Title {
-		return $this->specialPageFactory->getPage( 'Ask' )->getPageTitle();
+		$specialPage = $this->specialPageFactory->getPage( 'Ask' );
+		if ( !$specialPage ) {
+			throw new MWException( 'The "Ask" page doesn\'t exist' );
+		}
+		return $specialPage->getPageTitle();
 	}
 
 	/**
