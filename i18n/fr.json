@@ -8,7 +8,8 @@
 			"MacOS Weed",
 			"Naheulf",
 			"Verdy p",
-			"Wladek92"
+			"Wladek92",
+			"Alien333"
 		]
 	},
 	"bs-bssmwconnector-desc": "Intègre SemanticMediaWiki à BlueSpice",
@@ -54,6 +55,13 @@
 	"bs-smwconnector-dataquery-count-label": "Nombre",
 	"bs-smwconnector-dataquery-count-help": "Limiter le nombre de résultat(s) retourné(s)",
 	"bs-smwconnector-decision-overview-categories-label": "Catégories",
+	"bs-smwconnector-decision-overview-categories-help": "Filtrer par une ou plusieurs catégories, en séparant des entrées multiples avec \"|\".",
 	"bs-smwconnector-decision-overview-namespaces-label": "Espaces de noms",
-	"bs-smwconnector-decision-overview-prefix-label": "Préfixe"
+	"bs-smwconnector-decision-overview-namespaces-help": "Filtrer par un ou plusieurs espaces de noms, en séparant des entrées multiples avec \"|\".",
+	"bs-smwconnector-decision-overview-prefix-label": "Préfixe",
+	"bs-smwconnector-decision-overview-prefix-help": "Filtrer par vos propres préfixes, en séparant des entrées multiples avec \"|\".",
+	"bs-smwconnector-decision-overview-title": "Aperçu de décision",
+	"bs-smwconnector-decision-overview-no-result": "Aucune décision trouvée avec les filtres actuels",
+	"bs-smwconnector-decision-overview-droplet-title": "Aperçu de décision",
+	"bs-smwconnector-decision-overview-droplet-description": "Permet aux requêtes d'obtenir un aperçu des décisions"
 }
