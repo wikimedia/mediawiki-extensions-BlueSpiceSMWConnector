@@ -33,7 +33,10 @@
 	"bs-smwconnector-dataquery-modified-operator-before": "До",
 	"bs-smwconnector-dataquery-modified-date-label": "Дата",
 	"bs-smwconnector-dataquery-format-label": "Формат",
+	"bs-smwconnector-dataquery-format-bulleted-list": "Маркированный список",
+	"bs-smwconnector-dataquery-format-numbered-list": "Нумерованный список",
 	"bs-smwconnector-dataquery-count-label": "Номер",
 	"bs-smwconnector-decision-overview-categories-label": "Категории",
+	"bs-smwconnector-decision-overview-namespaces-label": "Пространства имён",
 	"bs-smwconnector-decision-overview-prefix-label": "Префикс"
 }
