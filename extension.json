@@ -226,18 +226,6 @@
 				"ext.BSSMWConnector.css"
 			]
 		},
-		"ext.BSSMWConnector.BookshelfUI": {
-			"scripts": [
-				"ext.BSSMWConnector.BookshelfUI.js"
-			],
-			"dependencies": [
-				"ext.bluespice.extjs"
-			],
-			"messages": [
-				"bs-dlg-choosesmwprop-label",
-				"bs-dlg-choosesmwprop-type-smwprop"
-			]
-		},
 		"ext.BSSMWConnector": {
 			"scripts": [
 				"ext.BSSMWConnector.smwc.js",

@@ -7,8 +7,6 @@
 	"bs-bssmwconnector-desc": "Integrates SemanticMediaWiki into BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice Grid",
 	"bs-bssmwconnector-nmmngr-label-smw": "Semantic MediaWiki",
-	"bs-dlg-choosesmwprop-label": "Property",
-	"bs-dlg-choosesmwprop-type-smwprop": "Semantic property",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Semantic properties",
 	"bs-smwconnector-extendedsearch-smwproperty-result-value": "$1: $2",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantic properties:",
