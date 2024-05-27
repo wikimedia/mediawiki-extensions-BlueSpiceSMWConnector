@@ -10,8 +10,6 @@
 	"bs-bssmwconnector-desc": "{{desc|name=BlueSpiceSMWConnector|url=https://www.mediawiki.org/wiki/Extension:BlueSpiceSMWConnector}}",
 	"bs-bssmwconnector-srf-printername-bsgrid": "Name of a Semantic Result Format that uses BlueSpice/ExtJS\n\n'''Related messages:'''\n*{{msg-mw|Srf-paramdesc-theme}}",
 	"bs-bssmwconnector-nmmngr-label-smw": "{{optional}}\nLabel for column in grid of NamespaceManager extension",
-	"bs-dlg-choosesmwprop-label": "Label for combobox for choosing semantic properties\n{{Identical|Property}}",
-	"bs-dlg-choosesmwprop-type-smwprop": "Text for SemanticProperty type BookshelfUI extension",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Label for the group holding semantic properties filters in the dialog for adding filters",
 	"bs-smwconnector-extendedsearch-smwproperty-result-value": "{{optional}}\nHelper message to show name and values of semantic property in search results. $1 - smw property name, $2 - smw property value",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Label for the field in search results showing all semantic properties of a page",

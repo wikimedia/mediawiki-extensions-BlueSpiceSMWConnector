@@ -16,10 +16,6 @@ class BSSMWConnectorHooks {
 		$out->addModules( 'ext.BSSMWConnector' );
 
 		$title = $out->getTitle();
-		if ( $title && $title->isSpecial( 'BookshelfBookUI' ) ) {
-			$out->addModules( 'ext.BSSMWConnector.BookshelfUI' );
-		}
-
 		if ( $title && !$title->isSpecial( 'FormEdit' )
 			&& $out->getRequest()->getVal( 'action', 'view' ) !== 'formedit' ) {
 			return true;
