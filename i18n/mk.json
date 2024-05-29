@@ -7,8 +7,6 @@
 	},
 	"bs-bssmwconnector-desc": "Го вградува Семантички МедијаВики во BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice-мрежа",
-	"bs-dlg-choosesmwprop-label": "Својство",
-	"bs-dlg-choosesmwprop-type-smwprop": "Семантичко својство",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Семантички својства",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Семантички својства:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Да",

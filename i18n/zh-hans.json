@@ -12,8 +12,6 @@
 	"bs-bssmwconnector-desc": "把语义MediaWiki集成到BlueSpice内",
 	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice网格",
 	"bs-bssmwconnector-nmmngr-label-smw": "语义MediaWiki",
-	"bs-dlg-choosesmwprop-label": "属性",
-	"bs-dlg-choosesmwprop-type-smwprop": "语义属性",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "语义属性",
 	"bs-smwconnector-extendedsearch-smwproperty-result-value": "$1：$2",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "语义属性：",

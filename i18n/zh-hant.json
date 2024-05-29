@@ -9,8 +9,6 @@
 	},
 	"bs-bssmwconnector-desc": "整合 Semantic MediaWiki 至 BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice 網格",
-	"bs-dlg-choosesmwprop-label": "屬性",
-	"bs-dlg-choosesmwprop-type-smwprop": "語意屬性：",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "語意屬性",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "語意屬性：",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "是",

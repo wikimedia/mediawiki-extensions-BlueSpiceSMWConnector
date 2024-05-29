@@ -15,8 +15,6 @@
 	"bs-bssmwconnector-desc": "يدمج SemanticMediaWiki في BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "شبكة BlueSpice",
 	"bs-bssmwconnector-nmmngr-label-smw": "سيمانتيك ميدياويكي",
-	"bs-dlg-choosesmwprop-label": "الخاصية",
-	"bs-dlg-choosesmwprop-type-smwprop": "الخاصية الدلالية",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "الخصائص الدلالية",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "الخصائص الدلالية:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "نعم",

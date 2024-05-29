@@ -15,8 +15,6 @@
 	"bs-bssmwconnector-desc": "Intègre SemanticMediaWiki à BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "Grille BlueSpice",
 	"bs-bssmwconnector-nmmngr-label-smw": "MediaWiki Sémantique",
-	"bs-dlg-choosesmwprop-label": "Propriété",
-	"bs-dlg-choosesmwprop-type-smwprop": "Propriété sémantique",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Propriétés sémantiques",
 	"bs-smwconnector-extendedsearch-smwproperty-result-value": "$1 : $2",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Propriétés sémantiques :",

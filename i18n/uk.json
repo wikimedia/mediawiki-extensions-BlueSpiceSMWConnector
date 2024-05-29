@@ -9,8 +9,6 @@
 	"bs-bssmwconnector-desc": "Інтегрує SemanticMediaWiki в BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "Сітка BlueSpice",
 	"bs-bssmwconnector-nmmngr-label-smw": "Семантична MediaWiki",
-	"bs-dlg-choosesmwprop-label": "Властивість",
-	"bs-dlg-choosesmwprop-type-smwprop": "Семантична властивість",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Семантичні властивості",
 	"bs-smwconnector-extendedsearch-smwproperty-result-value": "$1: $2",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Семантичні властивості:",

@@ -2,8 +2,6 @@
 	"@metadata": {
 		"authors": []
 	},
-	"bs-dlg-choosesmwprop-label": "Svojstvo",
-	"bs-dlg-choosesmwprop-type-smwprop": "Semantičko svojstvo",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Da",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Ne",
 	"bs-smwconnector-propertyvalueprovider-usermentions-desc": "Korisničke stranice korisnika koji su pomenuti na ovoj stranici",

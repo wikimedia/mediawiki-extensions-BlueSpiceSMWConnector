@@ -7,8 +7,6 @@
 	},
 	"bs-bssmwconnector-desc": "Indegre SemanticMediaWiki jndr'à BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "Grate de BlueSpice",
-	"bs-dlg-choosesmwprop-label": "Probbietà",
-	"bs-dlg-choosesmwprop-type-smwprop": "Probbietà semandeche",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Probbietà semandeche",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Probbietà semandeche:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Sìne",
