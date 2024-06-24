@@ -40,4 +40,21 @@ class SpecialBrowseProvider extends BaseBreadcrumbDataProvider {
 	public function applies( Title $title ): bool {
 		return $title->isSpecial( 'Browse' );
 	}
+
+	/**
+	 * @param Title $title
+	 * @return array
+	 */
+	public function getNodes( Title $title ): array {
+		$parentNodes = parent::getNodes( $title );
+		$nodes = [];
+		foreach ( $parentNodes as $node ) {
+			if ( isset( $node['current'] ) ) {
+				unset( $node['current'] );
+			}
+			$nodes[] = $node;
+		}
+
+		return $nodes;
+	}
 }
