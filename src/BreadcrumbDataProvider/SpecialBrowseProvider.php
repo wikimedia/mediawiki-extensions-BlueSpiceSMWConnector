@@ -3,6 +3,7 @@
 namespace BlueSpice\SMWConnector\BreadcrumbDataProvider;
 
 use BlueSpice\Discovery\BreadcrumbDataProvider\BaseBreadcrumbDataProvider;
+use RequestContext;
 use Title;
 
 class SpecialBrowseProvider extends BaseBreadcrumbDataProvider {
@@ -19,6 +20,12 @@ class SpecialBrowseProvider extends BaseBreadcrumbDataProvider {
 			if ( $decoded ) {
 				$pagename = $decoded;
 			}
+		}
+
+		// Page title is set in article param if accessed via Special:Browse
+		$article = RequestContext::getMain()->getRequest()->getText( 'article', '' );
+		if ( !empty( $article ) ) {
+			$pagename = $article;
 		}
 		return $this->titleFactory->newFromText( $pagename );
 	}
