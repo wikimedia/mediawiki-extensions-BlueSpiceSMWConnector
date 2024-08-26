@@ -4,8 +4,8 @@
 			"Умар"
 		]
 	},
-	"bs-extendedsearch-add-filter-group-smwproperty-label": "Семантикийн хӀума",
-	"bs-extendedsearch-search-center-result-smwproperty-label": "Семантикийн хӀума",
+	"bs-extendedsearch-add-filter-group-smwproperty-label": "Семантикин башхаллаш",
+	"bs-extendedsearch-search-center-result-smwproperty-label": "Семантикин башхалла:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "ХӀаъ",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "ХӀан-хӀа",
 	"bs-swm-connector-ask-store-page-label": "АгӀо",
