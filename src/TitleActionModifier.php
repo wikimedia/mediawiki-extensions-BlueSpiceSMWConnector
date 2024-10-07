@@ -12,7 +12,7 @@ class TitleActionModifier implements ITitleActionPrimaryActionModifier {
 	 * @return string
 	 */
 	public function getActionId( array $ids, string $primaryId ): string {
-		if ( isset( $ids['ca-formedit'] ) ) {
+		if ( in_array( 'ca-formedit', $ids ) ) {
 			return 'ca-formedit';
 		}
 
