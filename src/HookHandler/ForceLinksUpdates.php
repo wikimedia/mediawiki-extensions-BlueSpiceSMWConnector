@@ -19,7 +19,12 @@ class ForceLinksUpdates implements RevisionDataUpdatesHook {
 	 * @throws MWException
 	 */
 	public function onRevisionDataUpdates( $title, $renderedRevision, &$updates ) {
-		$renderedRevision->getRevisionParserOutput()->setExtensionData( 'smw:opt.forced.update', true );
+		$parserOutput = $renderedRevision->getRevisionParserOutput();
+		$currentValue = $parserOutput->getExtensionData( 'smw:opt.forced.update' );
+		if ( $currentValue !== null ) {
+			return;
+		}
+		$parserOutput->setExtensionData( 'smw:opt.forced.update', true );
 		$updates[] = new LinksUpdate( $title, $renderedRevision->getRevisionParserOutput() );
 	}
 }
