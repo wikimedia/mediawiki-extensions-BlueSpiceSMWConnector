@@ -104,11 +104,11 @@ class DecisionOverviewHandler extends Handler {
 
 		$html .= Html::element( 'th', [
 			'class' => 'decisionOverview-header-cell'
-		], 'Page' );
+		], wfMessage( 'bs-smwconnector-decision-overview-table-heading-page-label' )->plain() );
 
 		$html .= Html::element( 'th', [
 			'class' => 'decisionOverview-header-cell'
-		], 'Decisions' );
+		], wfMessage( 'bs-smwconnector-decision-overview-table-heading-decisions-label' )->plain() );
 
 		$html .= Html::closeElement( 'tr' );
 		$html .= Html::closeElement( 'thead' );

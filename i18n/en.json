@@ -53,5 +53,7 @@
 	"bs-smwconnector-decision-overview-title": "Decision overview",
 	"bs-smwconnector-decision-overview-no-result": "No decisions found with current filters",
 	"bs-smwconnector-decision-overview-droplet-title": "Decision overview",
-	"bs-smwconnector-decision-overview-droplet-description": "Enables queries to get an overview of decisions"
+	"bs-smwconnector-decision-overview-droplet-description": "Enables queries to get an overview of decisions",
+	"bs-smwconnector-decision-overview-table-heading-page-label": "Page",
+	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Decisions"
 }
