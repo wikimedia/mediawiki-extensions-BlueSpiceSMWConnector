@@ -56,5 +56,7 @@
 	"bs-smwconnector-decision-overview-title": "Label for decision overview inspector dialog",
 	"bs-smwconnector-decision-overview-no-result": "Label for decision overview visible if no decision could be found",
 	"bs-smwconnector-decision-overview-droplet-title": "Title for decision overview droplet card",
-	"bs-smwconnector-decision-overview-droplet-description": "Label for description of decision overview droplet card"
+	"bs-smwconnector-decision-overview-droplet-description": "Label for description of decision overview droplet card",
+	"bs-smwconnector-decision-overview-table-heading-page-label": "Table heading for decision overview for column page which contains page links",
+	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Table heading for decision overview for column decisions which contains decisions made on the page"
 }
