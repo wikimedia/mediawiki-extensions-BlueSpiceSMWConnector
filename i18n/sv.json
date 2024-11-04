@@ -4,8 +4,6 @@
 			"WikiPhoenix"
 		]
 	},
-	"bs-dlg-choosesmwprop-label": "Egenskap",
-	"bs-dlg-choosesmwprop-type-smwprop": "Semantic-egenskap",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Ja",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Nej",
 	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Innehåll/användaromnämningar"

@@ -7,8 +7,6 @@
 	},
 	"bs-bssmwconnector-desc": "Integra SemanticMediaWiki in BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "Griglia di BlueSpice",
-	"bs-dlg-choosesmwprop-label": "Proprietà",
-	"bs-dlg-choosesmwprop-type-smwprop": "Proprietà semantica",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Proprietà semantiche",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Proprietà semantiche:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Sì",
@@ -26,5 +24,6 @@
 	"bs-smwconnector-dataquery-count-label": "Numero",
 	"bs-smwconnector-dataquery-count-help": "Limita il numero dei risultati restituiti",
 	"bs-smwconnector-decision-overview-categories-label": "Categorie",
-	"bs-smwconnector-decision-overview-namespaces-label": "Namespace"
+	"bs-smwconnector-decision-overview-namespaces-label": "Namespace",
+	"bs-smwconnector-decision-overview-table-heading-page-label": "Pagina"
 }

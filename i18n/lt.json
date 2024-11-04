@@ -7,8 +7,6 @@
 	},
 	"bs-bssmwconnector-desc": "Integruoja SemanticMediaWiki į BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice Tinklelis",
-	"bs-dlg-choosesmwprop-label": "Savybė",
-	"bs-dlg-choosesmwprop-type-smwprop": "Semantinė savybė",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Semantinės savybės",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantinės savybės:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Taip",

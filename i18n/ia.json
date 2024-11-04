@@ -6,8 +6,6 @@
 	},
 	"bs-bssmwconnector-desc": "Integra SemanticMediaWiki in BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "Grillia BlueSpice",
-	"bs-dlg-choosesmwprop-label": "Proprietate",
-	"bs-dlg-choosesmwprop-type-smwprop": "Proprietate semantic",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Proprietates semantic",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Proprietates semantic:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Si",

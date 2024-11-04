@@ -8,8 +8,6 @@
 	},
 	"bs-bssmwconnector-desc": "Integreert SemanticMediaWiki in BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice Grid",
-	"bs-dlg-choosesmwprop-label": "Eigenschap",
-	"bs-dlg-choosesmwprop-type-smwprop": "Semantische eigenschap",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Semantische eigenschappen",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantische eigenschappen:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Ja",

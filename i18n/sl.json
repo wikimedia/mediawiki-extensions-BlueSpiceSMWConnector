@@ -8,8 +8,6 @@
 	"bs-bssmwconnector-desc": "Integrira Semantični MediaWiki v BlueSpice",
 	"bs-bssmwconnector-srf-printername-bsgrid": "Mreža BlueSpice",
 	"bs-bssmwconnector-nmmngr-label-smw": "Semantični MediaWiki",
-	"bs-dlg-choosesmwprop-label": "Lastnost",
-	"bs-dlg-choosesmwprop-type-smwprop": "Semantična lastnost",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Semantične lastnosti",
 	"bs-smwconnector-extendedsearch-smwproperty-result-value": "$1: $2",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Semantične lastnosti:",
