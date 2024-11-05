@@ -192,6 +192,9 @@
 		},
 		"integrateSMWDataIntoSearch": {
 			"class": "\\BlueSpice\\SMWConnector\\Hook\\IntegrateSMWDataIntoSearch"
+		},
+		"registerModules": {
+			"class": "\\BlueSpice\\SMWConnector\\HookHandler\\RegisterModules"
 		}
 	},
 	"Hooks": {
@@ -214,7 +217,8 @@
 		"BSUEModulePDFcollectMetaData": "BlueSpice\\SMWConnector\\Hook\\BSUEModulePDFcollectMetaData\\AddSemanitcMetaData::callback",
 		"ParserFirstCallInit": "BlueSpice\\SMWConnector\\Hook\\ParserFirstCallInit\\AsyncAsk::callback",
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
-		"RevisionDataUpdates": "forceLinksUpdate"
+		"RevisionDataUpdates": "forceLinksUpdate",
+		"ResourceLoaderRegisterModules": "registerModules"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
