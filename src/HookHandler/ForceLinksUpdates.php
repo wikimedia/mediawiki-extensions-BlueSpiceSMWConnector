@@ -10,6 +10,9 @@ use Title;
 
 class ForceLinksUpdates implements RevisionDataUpdatesHook {
 
+	/** @var array */
+	private $alreadyHandeledTitles = [];
+
 	/**
 	 * @param Title $title
 	 * @param RenderedRevision $renderedRevision
@@ -19,12 +22,13 @@ class ForceLinksUpdates implements RevisionDataUpdatesHook {
 	 * @throws MWException
 	 */
 	public function onRevisionDataUpdates( $title, $renderedRevision, &$updates ) {
+		$titleDBkey = $title->getPrefixedDBkey();
 		$parserOutput = $renderedRevision->getRevisionParserOutput();
-		$currentValue = $parserOutput->getExtensionData( 'smw:opt.forced.update' );
-		if ( $currentValue !== null ) {
+		if ( isset( $this->alreadyHandeledTitles[$titleDBkey] ) ) {
 			return;
 		}
 		$parserOutput->setExtensionData( 'smw:opt.forced.update', true );
-		$updates[] = new LinksUpdate( $title, $renderedRevision->getRevisionParserOutput() );
+		$updates[] = new LinksUpdate( $title, $parserOutput );
+		$this->alreadyHandeledTitles[$titleDBkey] = true;
 	}
 }
