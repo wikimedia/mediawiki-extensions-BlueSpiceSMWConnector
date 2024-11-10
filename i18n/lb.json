@@ -19,5 +19,7 @@
 	"bs-smwconnector-dataquery-format-numbered-list": "Nummeréiert Lëscht",
 	"bs-smwconnector-decision-overview-categories-label": "Kategorien",
 	"bs-smwconnector-decision-overview-namespaces-label": "Nummraim",
-	"bs-smwconnector-decision-overview-prefix-label": "Prefix"
+	"bs-smwconnector-decision-overview-prefix-label": "Prefix",
+	"bs-smwconnector-decision-overview-table-heading-page-label": "Säit",
+	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Decisiounen"
 }
