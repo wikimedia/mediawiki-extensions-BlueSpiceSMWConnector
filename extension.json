@@ -53,15 +53,6 @@
 						"maintenanceadmin"
 					]
 				},
-				"geocode": {
-					"type": "global",
-					"roles": [
-						"admin",
-						"author",
-						"editor",
-						"maintenanceadmin"
-					]
-				},
 				"smw-admin": {
 					"type": "global",
 					"roles": [
@@ -139,21 +130,6 @@
 			]
 		}
 	},
-	"GroupPermissions": {
-		"sysop": {
-			"smw-admin": true,
-			"smw-patternedit": true,
-			"smw-pageedit": true,
-			"geocode": true,
-			"editrestrictedfields": true
-		},
-		"*": {
-			"viewedittab": true
-		},
-		"user": {
-			"createclass": true
-		}
-	},
 	"AutoloadNamespaces": {
 		"BlueSpice\\SMWConnector\\": "src/",
 		"BlueSpice\\SMWConnector\\Tests\\": "tests/phpunit/"
@@ -192,9 +168,6 @@
 		},
 		"integrateSMWDataIntoSearch": {
 			"class": "\\BlueSpice\\SMWConnector\\Hook\\IntegrateSMWDataIntoSearch"
-		},
-		"registerModules": {
-			"class": "\\BlueSpice\\SMWConnector\\HookHandler\\RegisterModules"
 		}
 	},
 	"Hooks": {
@@ -217,8 +190,7 @@
 		"BSUEModulePDFcollectMetaData": "BlueSpice\\SMWConnector\\Hook\\BSUEModulePDFcollectMetaData\\AddSemanitcMetaData::callback",
 		"ParserFirstCallInit": "BlueSpice\\SMWConnector\\Hook\\ParserFirstCallInit\\AsyncAsk::callback",
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
-		"RevisionDataUpdates": "forceLinksUpdate",
-		"ResourceLoaderRegisterModules": "registerModules"
+		"RevisionDataUpdates": "forceLinksUpdate"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
@@ -240,9 +212,9 @@
 				"bs-extendedsearch-search-center-result-smwproperty-label"
 			],
 			"dependencies": [
-				"ext.bluespice",
-				"ext.smw.api"
-			]
+				"ext.bluespice"
+			],
+			"class": "\\BlueSpice\\SMWConnector\\ResourceModule\\SMWApiModule"
 		},
 		"ext.BSSMWConnector.visualEditor": {
 			"scripts": [
@@ -278,10 +250,10 @@
 			],
 			"dependencies": [
 				"ext.BSSMWConnector",
-				"ext.smw.api",
 				"ext.bluespice.extjs",
 				"ext.extjsbase.ux"
-			]
+			],
+			"class": "\\BlueSpice\\SMWConnector\\ResourceModule\\SMWApiModule"
 		},
 		"ext.BSSMWConnector.async.grid": {
 			"scripts": "ext.BSSMWConnector.async.grid.js",
