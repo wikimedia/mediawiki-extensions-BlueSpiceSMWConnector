@@ -37,7 +37,7 @@
 	"bs-smwconnector-dataquery-namespace-label": "النطاق",
 	"bs-smwconnector-dataquery-namespace-help": "تصفية حسب النطاق (النطاقات) ، مع فصل الإدخالات المتعددة باستخدام \"|\". على سبيل المثال ، يؤدي 'ns1 | ns2' إلى عرض صفحات في مساحات الأسماء 'ns1' OR 'ns2'.",
 	"bs-smwconnector-dataquery-modified-operator-label": "المعدل",
-	"bs-smwconnector-dataquery-modified-operator-help": "التصفية قبل / منذ / باستثناء تاريخ التعديل",
+	"bs-smwconnector-dataquery-modified-operator-help": "الفلترة قبل/منذ تاريخ التعديل",
 	"bs-smwconnector-dataquery-modified-operator-all": "الكل",
 	"bs-smwconnector-dataquery-modified-operator-since": "منذ",
 	"bs-smwconnector-dataquery-modified-operator-before": "قبل",
