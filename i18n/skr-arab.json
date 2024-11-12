@@ -19,5 +19,7 @@
 	"bs-smwconnector-dataquery-count-label": "عدد",
 	"bs-smwconnector-decision-overview-categories-label": "ونکیاں",
 	"bs-smwconnector-decision-overview-namespaces-label": "ناں جاہیں",
-	"bs-smwconnector-decision-overview-prefix-label": "سابقہ"
+	"bs-smwconnector-decision-overview-prefix-label": "سابقہ",
+	"bs-smwconnector-decision-overview-table-heading-page-label": "ورقہ",
+	"bs-smwconnector-decision-overview-table-heading-decisions-label": "فیصلے"
 }
