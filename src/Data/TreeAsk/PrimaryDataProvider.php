@@ -36,7 +36,7 @@ class PrimaryDataProvider extends Base {
 	 */
 	protected function appendDataToRecord( $data, Schema $schema, ReaderParams $params ) {
 		$node = ( $params instanceof TreeAskReaderParams ) ? $params->getNode() : '';
-		$data['name'] = $node . '/' . str_replace( '/', '+', $data['page'] );
+		$data['id'] = $node . '/' . str_replace( '/', '+', $data['page'] );
 
 		return parent::appendDataToRecord( $data, $schema, $params );
 	}

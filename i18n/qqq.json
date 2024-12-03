@@ -8,7 +8,7 @@
 		]
 	},
 	"bs-bssmwconnector-desc": "{{desc|name=BlueSpiceSMWConnector|url=https://www.mediawiki.org/wiki/Extension:BlueSpiceSMWConnector}}",
-	"bs-bssmwconnector-srf-printername-bsgrid": "Name of a Semantic Result Format that uses BlueSpice/OOJS\n\n'''Related messages:'''\n*{{msg-mw|Srf-paramdesc-theme}}",
+	"bs-bssmwconnector-srf-printername-bsgrid": "Name of a Semantic Result Format that uses BlueSpice/ExtJS\n\n'''Related messages:'''\n*{{msg-mw|Srf-paramdesc-theme}}",
 	"bs-bssmwconnector-nmmngr-label-smw": "{{optional}}\nLabel for column in grid of NamespaceManager extension",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "Label for the group holding semantic properties filters in the dialog for adding filters",
 	"bs-smwconnector-extendedsearch-smwproperty-result-value": "{{optional}}\nHelper message to show name and values of semantic property in search results. $1 - smw property name, $2 - smw property value",
@@ -58,7 +58,5 @@
 	"bs-smwconnector-decision-overview-droplet-title": "Title for decision overview droplet card",
 	"bs-smwconnector-decision-overview-droplet-description": "Label for description of decision overview droplet card",
 	"bs-smwconnector-decision-overview-table-heading-page-label": "Table heading for decision overview for column page which contains page links",
-	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Table heading for decision overview for column decisions which contains decisions made on the page",
-	"bs-smwconnector-yes": "Label for true value{{Identical|Yes}}",
-	"bs-smwconnector-no": "Label for false value{{Identical|No}}"
+	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Table heading for decision overview for column decisions which contains decisions made on the page"
 }

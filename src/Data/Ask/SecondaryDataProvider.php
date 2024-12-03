@@ -81,9 +81,6 @@ class SecondaryDataProvider implements ISecondaryDataProvider {
 			$links = $links[0];
 		}
 
-		if ( $key === 'page' ) {
-			$record->set( 'page_url', $title->getLocalURL() );
-		}
 		$record->set( "{$key}_link", $links );
 	}
 }
