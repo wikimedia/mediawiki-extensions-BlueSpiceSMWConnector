@@ -1,23 +1,20 @@
 ( function( $ ){
-	$( '.bs-smw-connector-async-ask-tree-container' ).each( function() {
-		var $container = $( this );
-		var data = $container.data( 'query' );
+	Ext.onReady( function(){
+		$( '.bs-smw-connector-async-ask-tree-container' ).each( function() {
+			var $container = $( this );
+			var data = $container.data( 'query' );
 
-		var store = new bs.smwconnector.ui.data.SMWTreeStore( {
-			action: 'bs-smw-connector-tree-ask-store',
-			query: data.query,
-			pageSize: 500
-		} );
-		store.load().done( function( data ) {
-			var tree = new bs.smwconnector.ui.data.AsyncResultTree( {
-				data: Object.values( data ),
-				fixed: true,
-				expanded: false,
-				allowAdditions: false,
-				allowDeletions: false,
-				store: store
+			Ext.require( 'BS.SMWConnector.tree.AsyncResultPrinter', function() {
+				var tree = Ext.create( 'BS.SMWConnector.tree.AsyncResultPrinter', {
+					renderTo: $container[0],
+					query: data.query || '',
+					rootNode: data.rootNode || '',
+					storeAction: data.storeAction
+				} );
+				tree.store.on( 'load', function() {
+					$container.find( '.loading-text' ).remove();
+				} );
 			} );
-			$container.html( tree.$element );
 		} );
 	} );
 } )( jQuery );

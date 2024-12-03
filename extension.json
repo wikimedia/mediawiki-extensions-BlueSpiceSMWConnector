@@ -244,44 +244,33 @@
 				"ext.BSSMWConnector.PF.Inputs.UserTags.js"
 			]
 		},
-		"ext.BSSMWConnector.resultGrid": {
+		"ext.srf.bsextjsgrid": {
 			"scripts": [
-				"ui/data/AskResultPrinter.js",
-				"ext.BSSMWConnector.resultGrid.js"
+				"ext.srf.bsextjsgrid.js"
 			],
 			"dependencies": [
-				"ext.bluespice",
 				"ext.BSSMWConnector",
-				"ext.oOJSPlus.data"
-			],
-			"messages": [
-				"bs-smwconnector-yes",
-				"bs-smwconnector-no"
+				"ext.bluespice.extjs",
+				"ext.extjsbase.ux"
 			],
 			"class": "\\BlueSpice\\SMWConnector\\ResourceModule\\SMWApiModule"
 		},
 		"ext.BSSMWConnector.async.grid": {
-			"scripts": [
-				"ui/data/SMWStore.js",
-				"ui/data/AsyncResultGrid.js",
-				"ext.BSSMWConnector.async.grid.js"
-			],
+			"scripts": "ext.BSSMWConnector.async.grid.js",
 			"dependencies": [
-				"ext.bluespice",
-				"ext.BSSMWConnector",
-				"ext.oOJSPlus.data"
+				"ext.bluespice.extjs"
+			],
+			"messages": [
+				"bs-smw-connector-async-error"
 			]
 		},
 		"ext.BSSMWConnector.async.tree": {
-			"scripts": [
-				"ui/data/SMWTreeStore.js",
-				"ui/data/AsyncResultTree.js",
-				"ext.BSSMWConnector.async.tree.js"
-			],
+			"scripts": "ext.BSSMWConnector.async.tree.js",
 			"dependencies": [
-				"ext.bluespice",
-				"ext.BSSMWConnector",
-				"ext.oOJSPlus.data"
+				"ext.bluespice.extjs"
+			],
+			"messages": [
+				"bs-smw-connector-async-error"
 			]
 		},
 		"ext.BSSMWConnector.PageForms.DateTimePicker.fix": {

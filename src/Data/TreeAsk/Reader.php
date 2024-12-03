@@ -11,11 +11,4 @@ class Reader extends Base {
 	protected function getPrimaryDataProviderClass() {
 		return PrimaryDataProvider::class;
 	}
-
-	/**
-	 * @return SecondaryDataProvider
-	 */
-	public function makeSecondaryDataProvider() {
-		return new SecondaryDataProvider( $this->getSchema() );
-	}
 }
