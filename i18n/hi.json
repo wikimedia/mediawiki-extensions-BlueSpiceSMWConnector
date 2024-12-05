@@ -7,5 +7,7 @@
 	"bs-smwconnector-dataquery-modified-operator-all": "सभी",
 	"bs-smwconnector-dataquery-modified-date-label": "दिनांक",
 	"bs-smwconnector-decision-overview-categories-label": "श्रेणियाँ",
-	"bs-smwconnector-decision-overview-namespaces-label": "नामस्थान"
+	"bs-smwconnector-decision-overview-namespaces-label": "नामस्थान",
+	"bs-smwconnector-yes": "हाँ",
+	"bs-smwconnector-no": "नहीं"
 }
