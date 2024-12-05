@@ -132,16 +132,7 @@ class UserCombo extends \PFFormInput {
 		];
 
 		if ( $user instanceof User ) {
-			$params['userRecord'] = [
-				'user_id' => $user->getId(),
-				'user_name' => $user->getName(),
-				'user_real_name' => $user->getRealName(),
-				'user_registration' => $user->getRegistration(),
-				'user_editcount' => $user->getEditCount(),
-				'groups' => $this->userGroupManager->getUserEffectiveGroups( $user ),
-				'display_name' => $user->getRealName() ?: $user->getName(),
-				'page_prefixed_text' => $user->getUserPage()->getPrefixedText()
-			];
+			$params['username'] = $user->getName();
 		}
 
 		if ( !empty( $this->groups ) ) {

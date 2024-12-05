@@ -122,7 +122,10 @@ class UserTags extends \PFFormInput {
 	protected function getInitParams() {
 		$params = [
 			'input_name' => $this->mInputName,
-			'current_value' => $this->mCurrentValue
+			'current_value' => $this->mCurrentValue,
+			'users' => array_map( static function ( $user ) {
+				return $user->getName();
+			}, $this->users )
 		];
 
 		if ( !empty( $this->groups ) ) {
