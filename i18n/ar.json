@@ -6,6 +6,7 @@
 			"Dr. Mohammed",
 			"FiberAhmed",
 			"Meno25",
+			"Mohammed Qays",
 			"NEHAOUA",
 			"أَحمد",
 			"ديفيد",
@@ -33,7 +34,7 @@
 	"apihelp-bs-smw-connector-tree-ask-store-summary": "مخزن شجرة متوافق مع ExtJS لتنفيذ الاستعلامات الدلالية",
 	"bs-smw-connector-async-error": "لا يمكن جلب البيانات",
 	"bs-smwconnector-dataquery-name": "الاستعلام عن البيانات",
-	"bs-smwconnector-dataquery-desc": "لتمكين الاستعلامات عن المحتوى في wiki",
+	"bs-smwconnector-dataquery-desc": "تمكين الاستعلامات حول المحتوى في الويكي",
 	"bs-smwconnector-dataquery-category-label": "التصنيف",
 	"bs-smwconnector-dataquery-category-help": "تصفية حسب الفئة (الفئات) ، مع فصل الإدخالات المتعددة باستخدام \"|\". على سبيل المثال ، يؤدي استخدام \"cat1 | cat2\" إلى عرض صفحات في فئات \"cat1\" أو \"cat2\".",
 	"bs-smwconnector-dataquery-namespace-label": "النطاق",
@@ -53,5 +54,7 @@
 	"bs-smwconnector-dataquery-format-numbered-list": "قائمة مرقمة",
 	"bs-smwconnector-dataquery-count-label": "رقم",
 	"bs-smwconnector-dataquery-count-help": "حدد عدد النتائج التي تم إرجاعها",
-	"bs-smwconnector-decision-overview-categories-label": "التصنيفات"
+	"bs-smwconnector-decision-overview-categories-label": "التصنيفات",
+	"bs-smwconnector-yes": "نعم",
+	"bs-smwconnector-no": "لا"
 }

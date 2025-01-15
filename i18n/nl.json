@@ -55,5 +55,9 @@
 	"bs-smwconnector-decision-overview-title": "Beslissingsoverzicht",
 	"bs-smwconnector-decision-overview-no-result": "Geen beslissingen gevonden met de huidige filters",
 	"bs-smwconnector-decision-overview-droplet-title": "Beslissingsoverzicht",
-	"bs-smwconnector-decision-overview-droplet-description": "Maakt het mogelijk dat query’s een overzicht van beslissingen krijgen"
+	"bs-smwconnector-decision-overview-droplet-description": "Maakt het mogelijk dat query’s een overzicht van beslissingen krijgen",
+	"bs-smwconnector-decision-overview-table-heading-page-label": "Pagina",
+	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Beslissingen",
+	"bs-smwconnector-yes": "Ja",
+	"bs-smwconnector-no": "Nee"
 }

@@ -21,5 +21,7 @@
 	"bs-smwconnector-decision-overview-namespaces-label": "Nummraim",
 	"bs-smwconnector-decision-overview-prefix-label": "Prefix",
 	"bs-smwconnector-decision-overview-table-heading-page-label": "Säit",
-	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Decisiounen"
+	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Decisiounen",
+	"bs-smwconnector-yes": "Jo",
+	"bs-smwconnector-no": "Neen"
 }

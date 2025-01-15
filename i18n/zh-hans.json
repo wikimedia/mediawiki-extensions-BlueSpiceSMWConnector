@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"GuoPC",
+			"Huajing",
 			"Kishinsagi",
 			"LittlePaw365",
 			"Liuxinyu970226",
@@ -50,5 +51,10 @@
 	"bs-smwconnector-dataquery-format-bulleted-list": "无序列表",
 	"bs-smwconnector-dataquery-format-numbered-list": "有序列表",
 	"bs-smwconnector-dataquery-count-label": "结果数",
-	"bs-smwconnector-dataquery-count-help": "限制返回的结果数"
+	"bs-smwconnector-dataquery-count-help": "限制返回的结果数",
+	"bs-smwconnector-decision-overview-categories-label": "分类",
+	"bs-smwconnector-decision-overview-categories-help": "按一个或多个分类进行筛选，使用多个选项时用“|”来分隔。",
+	"bs-smwconnector-decision-overview-namespaces-label": "命名空间",
+	"bs-smwconnector-decision-overview-namespaces-help": "按一个或多个命名空间进行筛选，使用多个选项时用“|”来分隔。",
+	"bs-smwconnector-decision-overview-prefix-label": "前缀"
 }

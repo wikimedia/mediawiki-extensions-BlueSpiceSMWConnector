@@ -27,5 +27,7 @@
 	"bs-smwconnector-dataquery-count-label": "Број",
 	"bs-smwconnector-decision-overview-categories-label": "Категорије",
 	"bs-smwconnector-decision-overview-namespaces-label": "Именски простори",
-	"bs-smwconnector-decision-overview-prefix-label": "Префикс"
+	"bs-smwconnector-decision-overview-prefix-label": "Префикс",
+	"bs-smwconnector-yes": "Да",
+	"bs-smwconnector-no": "Не"
 }
