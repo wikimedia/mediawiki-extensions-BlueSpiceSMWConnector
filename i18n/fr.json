@@ -64,5 +64,7 @@
 	"bs-smwconnector-decision-overview-droplet-title": "Aperçu de décision",
 	"bs-smwconnector-decision-overview-droplet-description": "Permet aux requêtes d'obtenir un aperçu des décisions",
 	"bs-smwconnector-decision-overview-table-heading-page-label": "Page",
-	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Décisions"
+	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Décisions",
+	"bs-smwconnector-yes": "Oui",
+	"bs-smwconnector-no": "Non"
 }

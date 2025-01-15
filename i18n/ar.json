@@ -6,11 +6,11 @@
 			"Dr. Mohammed",
 			"FiberAhmed",
 			"Meno25",
+			"Mohammed Qays",
 			"NEHAOUA",
 			"أَحمد",
 			"ديفيد",
-			"محمد أحمد عبد الفتاح",
-			"Mohammed Qays"
+			"محمد أحمد عبد الفتاح"
 		]
 	},
 	"bs-bssmwconnector-desc": "يدمج SemanticMediaWiki في BlueSpice",
@@ -52,5 +52,7 @@
 	"bs-smwconnector-dataquery-format-numbered-list": "قائمة مرقمة",
 	"bs-smwconnector-dataquery-count-label": "رقم",
 	"bs-smwconnector-dataquery-count-help": "حدد عدد النتائج التي تم إرجاعها",
-	"bs-smwconnector-decision-overview-categories-label": "التصنيفات"
+	"bs-smwconnector-decision-overview-categories-label": "التصنيفات",
+	"bs-smwconnector-yes": "نعم",
+	"bs-smwconnector-no": "لا"
 }

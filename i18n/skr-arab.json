@@ -21,5 +21,7 @@
 	"bs-smwconnector-decision-overview-namespaces-label": "ناں جاہیں",
 	"bs-smwconnector-decision-overview-prefix-label": "سابقہ",
 	"bs-smwconnector-decision-overview-table-heading-page-label": "ورقہ",
-	"bs-smwconnector-decision-overview-table-heading-decisions-label": "فیصلے"
+	"bs-smwconnector-decision-overview-table-heading-decisions-label": "فیصلے",
+	"bs-smwconnector-yes": "جیا",
+	"bs-smwconnector-no": "کو"
 }
