@@ -3,8 +3,8 @@
 namespace BlueSpice\SMWConnector\BreadcrumbDataProvider;
 
 use BlueSpice\Discovery\BreadcrumbDataProvider\BaseBreadcrumbDataProvider;
+use MediaWiki\Title\Title;
 use RequestContext;
-use Title;
 
 class SpecialBrowseProvider extends BaseBreadcrumbDataProvider {
 

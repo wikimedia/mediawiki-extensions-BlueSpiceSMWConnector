@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Title\Title;
+
 class BSSMWPropertyPageProvider implements BlueSpice\Bookshelf\MassAdd\IHandler {
 	/**
 	 * Property based on which pages
@@ -20,7 +22,7 @@ class BSSMWPropertyPageProvider implements BlueSpice\Bookshelf\MassAdd\IHandler 
 
 		$pagesRes = [];
 		foreach ( $values as $value ) {
-			$title = \Title::newFromText( $value->getDBkey(), $value->getNamespace() );
+			$title = Title::newFromText( $value->getDBkey(), $value->getNamespace() );
 			if ( !( $title instanceof Title ) ) {
 				continue;
 			}

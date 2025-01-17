@@ -2,6 +2,7 @@
 
 namespace BlueSpice\SMWConnector\Hook\BSUEModulePDFcollectMetaData;
 
+use MediaWiki\Title\Title;
 use SMW\DataValueFactory;
 use SMW\DIProperty;
 use SMW\Services\ServicesFactory;
@@ -47,7 +48,7 @@ class AddSemanitcMetaData extends \BlueSpice\UEModulePDF\Hook\BSUEModulePDFcolle
 	 *
 	 * @param Title|null $title
 	 */
-	protected function getPropertyValuesForTitle( \Title $title = null ) {
+	protected function getPropertyValuesForTitle( Title $title = null ) {
 		if ( !empty( $title ) ) {
 
 			$subject = DataValueFactory::getInstance()->newDataValueByType( '_wpg', $title->getFullText() );

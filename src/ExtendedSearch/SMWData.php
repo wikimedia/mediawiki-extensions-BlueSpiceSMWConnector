@@ -20,9 +20,9 @@ use BS\ExtendedSearch\Source\DocumentProvider\WikiPage as WikiPageProvider;
 use BS\ExtendedSearch\Source\WikiPages;
 use IContextSource;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use Message;
 use RequestContext;
-use Title;
 use User;
 
 class SMWData implements
@@ -276,7 +276,7 @@ class SMWData implements
 	 * @return string
 	 */
 	private function parseSemanticValue( $value, &$type ) {
-		if ( $value instanceof \SMW\DIWikiPage && $value->getTitle() instanceof \Title ) {
+		if ( $value instanceof \SMW\DIWikiPage && $value->getTitle() instanceof Title ) {
 			$type = 'title';
 			return $value->getTitle()->getPrefixedText();
 		} elseif ( $value instanceof \SMWDINumber ) {

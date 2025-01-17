@@ -4,8 +4,8 @@ namespace BlueSpice\SMWConnector\BreadcrumbDataProvider;
 
 use BlueSpice\Discovery\BreadcrumbDataProvider\BaseBreadcrumbDataProvider;
 use MediaWiki\SpecialPage\SpecialPageFactory;
+use MediaWiki\Title\Title;
 use MWException;
-use Title;
 
 class SpecialAskProvider extends BaseBreadcrumbDataProvider {
 

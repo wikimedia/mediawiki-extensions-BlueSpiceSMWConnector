@@ -4,12 +4,12 @@ namespace BlueSpice\SMWConnector\PropertyValueProvider;
 
 use BlueSpice\SMWConnector\PropertyValueProvider;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use SESP\AppFactory;
 use SMW\DIProperty;
 use SMW\SemanticData;
 use SMWDataItem;
 use SMWDIWikiPage;
-use Title;
 use WikiPage;
 use WikitextContent;
 
