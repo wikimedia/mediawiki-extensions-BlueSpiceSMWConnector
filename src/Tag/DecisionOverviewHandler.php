@@ -5,6 +5,7 @@ namespace BlueSpice\SMWConnector\Tag;
 use BlueSpice\Tag\Handler;
 use Html;
 use Language;
+use MediaWiki\Title\Title;
 use Parser;
 use PPFrame;
 use SMW\DIProperty;

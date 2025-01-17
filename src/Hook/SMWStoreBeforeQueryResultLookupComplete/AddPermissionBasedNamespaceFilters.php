@@ -3,6 +3,7 @@
 namespace BlueSpice\SMWConnector\Hook\SMWStoreBeforeQueryResultLookupComplete;
 
 use BlueSpice\SMWConnector\Hook\SMWStoreBeforeQueryResultLookupComplete;
+use MediaWiki\Title\Title;
 use SMW\Query\Language\Conjunction;
 use SMW\Query\Language\Disjunction;
 use SMW\Query\Language\NamespaceDescription;
@@ -50,7 +51,7 @@ class AddPermissionBasedNamespaceFilters extends SMWStoreBeforeQueryResultLookup
 		$pm = \MediaWiki\MediaWikiServices::getInstance()->getPermissionManager();
 		$user = $this->getContext()->getUser();
 		foreach ( $namespaceIds as $nmspText => $namespaceId ) {
-			$dummyTitle = \Title::makeTitle( $namespaceId, 'X' );
+			$dummyTitle = Title::makeTitle( $namespaceId, 'X' );
 			if ( $pm->userCan( 'read', $user, $dummyTitle ) ) {
 				$readableNamespaceDescriptions[] = new NamespaceDescription( $namespaceId );
 			}

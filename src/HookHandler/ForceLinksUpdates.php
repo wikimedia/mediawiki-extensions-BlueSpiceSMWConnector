@@ -5,8 +5,8 @@ namespace BlueSpice\SMWConnector\HookHandler;
 use MediaWiki\Deferred\LinksUpdate\LinksUpdate;
 use MediaWiki\Revision\RenderedRevision;
 use MediaWiki\Storage\Hook\RevisionDataUpdatesHook;
+use MediaWiki\Title\Title;
 use MWException;
-use Title;
 
 class ForceLinksUpdates implements RevisionDataUpdatesHook {
 

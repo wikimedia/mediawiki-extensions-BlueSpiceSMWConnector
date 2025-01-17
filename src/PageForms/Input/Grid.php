@@ -3,6 +3,7 @@
 namespace BlueSpice\SMWConnector\PageForms\Input;
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Title\Title;
 use TextContent;
 
 class Grid extends \PFFormInput {
@@ -93,7 +94,7 @@ class Grid extends \PFFormInput {
 	protected function makeDataAttributes() {
 		$colDefSource = $this->mOtherArgs['colDef'];
 		$wikiPage = MediaWikiServices::getInstance()->getWikiPageFactory()
-			->newFromTitle( \Title::newFromText( $colDefSource ) );
+			->newFromTitle( Title::newFromText( $colDefSource ) );
 		$content = $wikiPage->getContent();
 		$contentText = ( $content instanceof TextContent ) ? $content->getText() : '{}';
 		$colDef = \FormatJson::decode( $contentText );
