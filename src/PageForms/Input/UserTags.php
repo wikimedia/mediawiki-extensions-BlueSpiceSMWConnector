@@ -3,12 +3,13 @@
 namespace BlueSpice\SMWConnector\PageForms\Input;
 
 use MediaWiki\MediaWikiServices;
+use MediaWiki\User\User;
 
 class UserTags extends \PFFormInput {
 
 	/**
 	 *
-	 * @var \User[]
+	 * @var User[]
 	 */
 	protected $users = [];
 
