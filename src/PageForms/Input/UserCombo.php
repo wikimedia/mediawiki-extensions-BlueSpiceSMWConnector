@@ -4,8 +4,8 @@ namespace BlueSpice\SMWConnector\PageForms\Input;
 
 use Html;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\User\User;
 use MediaWiki\User\UserGroupManager;
-use User;
 
 class UserCombo extends \PFFormInput {
 	/**

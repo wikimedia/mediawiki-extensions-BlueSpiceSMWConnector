@@ -3,8 +3,8 @@
 namespace BlueSpice\SMWConnector\Privacy;
 
 use BlueSpice\Privacy\IPrivacyHandler;
+use MediaWiki\User\User;
 use Status;
-use User;
 use Wikimedia\Rdbms\IDatabase;
 
 class Handler implements IPrivacyHandler {
