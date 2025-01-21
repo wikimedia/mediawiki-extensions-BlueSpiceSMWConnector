@@ -5,7 +5,7 @@ namespace BlueSpice\SMWConnector\SmartListMode;
 use BlueSpice\ParamProcessor\ParamDefinition;
 use BlueSpice\ParamProcessor\ParamType;
 use BlueSpice\SmartList\Mode\BaseMode;
-use RequestContext;
+use MediaWiki\Context\RequestContext;
 use SMW\DIProperty;
 use SMW\DIWikiPage;
 use SMW\Query\QueryResult;
