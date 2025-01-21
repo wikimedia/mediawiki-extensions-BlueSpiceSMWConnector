@@ -3,16 +3,16 @@
 	"descriptionmsg": "bs-bssmwconnector-desc",
 	"license-name": "GPL-3.0-only",
 	"type": "bluespice",
-	"version": "4.2.0-alpha",
+	"version": "5.0.0",
 	"author": [
 		"Robert Vogel",
 		"Leonid Verhovskij"
 	],
 	"url": "https://en.wiki.bluespice.com/wiki/Reference:BlueSpiceSMWConnector",
 	"requires": {
-		"MediaWiki": ">= 1.39.0",
+		"MediaWiki": ">= 1.43.0",
 		"extensions": {
-			"BlueSpiceFoundation": ">= 4.3"
+			"BlueSpiceFoundation": ">= 5.0.0"
 		}
 	},
 	"attributes": {
