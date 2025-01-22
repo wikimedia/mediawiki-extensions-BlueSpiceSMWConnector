@@ -2,7 +2,7 @@
 
 namespace BlueSpice\SMWConnector\Data\Ask;
 
-use Message;
+use MediaWiki\Message\Message;
 use MWStake\MediaWiki\Component\DataStore\FieldType;
 use MWStake\MediaWiki\Component\DataStore\Schema as DataStoreSchema;
 use SMW\DIProperty;

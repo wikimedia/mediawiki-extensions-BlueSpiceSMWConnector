@@ -21,9 +21,9 @@ use BS\ExtendedSearch\Source\WikiPages;
 use IContextSource;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Message\Message;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
-use Message;
 
 class SMWData implements
 	ISearchPlugin,
