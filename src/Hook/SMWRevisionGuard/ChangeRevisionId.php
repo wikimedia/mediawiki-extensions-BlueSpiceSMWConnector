@@ -6,8 +6,8 @@
 namespace BlueSpice\SMWConnector\Hook\SMWRevisionGuard;
 
 use BlueSpice\Hook;
-use IContextSource;
 use MediaWiki\Config\Config;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\Title\Title;
 
 abstract class ChangeRevisionId extends Hook {
