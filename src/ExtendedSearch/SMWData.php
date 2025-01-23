@@ -18,7 +18,7 @@ use BS\ExtendedSearch\Plugin\ISearchPlugin;
 use BS\ExtendedSearch\SearchResult;
 use BS\ExtendedSearch\Source\DocumentProvider\WikiPage as WikiPageProvider;
 use BS\ExtendedSearch\Source\WikiPages;
-use IContextSource;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;

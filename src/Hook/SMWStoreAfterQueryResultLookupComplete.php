@@ -4,6 +4,7 @@ namespace BlueSpice\SMWConnector\Hook;
 
 use BlueSpice\Hook;
 use MediaWiki\Config\Config;
+use MediaWiki\Context\IContextSource;
 
 abstract class SMWStoreAfterQueryResultLookupComplete extends Hook {
 
@@ -20,7 +21,7 @@ abstract class SMWStoreAfterQueryResultLookupComplete extends Hook {
 
 	/**
 	 *
-	 * @param \IContextSource $context
+	 * @param IContextSource $context
 	 * @param Config $config
 	 * @param \SMW\Store $store
 	 * @param \SMWQueryResult &$result
