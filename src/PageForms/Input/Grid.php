@@ -2,6 +2,7 @@
 
 namespace BlueSpice\SMWConnector\PageForms\Input;
 
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use TextContent;
@@ -39,7 +40,7 @@ class Grid extends \PFFormInput {
 	 * @return string
 	 */
 	public function getHtmlText() {
-		$html = \Html::openElement(
+		$html = Html::openElement(
 			'div',
 			[
 				'id' => 'input_' . $this->mInputNumber . '_cnt',
@@ -48,7 +49,7 @@ class Grid extends \PFFormInput {
 			+
 			$this->makeDataAttributes()
 		);
-		$html .= \Html::input(
+		$html .= Html::input(
 			$this->mInputName,
 			$this->mCurrentValue,
 			'hidden',
@@ -56,7 +57,7 @@ class Grid extends \PFFormInput {
 				'id' => 'input_' . $this->mInputNumber
 			]
 		);
-		$html .= \Html::closeElement( 'div' );
+		$html .= Html::closeElement( 'div' );
 
 		return $html;
 	}

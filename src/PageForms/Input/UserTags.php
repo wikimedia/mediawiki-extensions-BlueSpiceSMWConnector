@@ -2,6 +2,7 @@
 
 namespace BlueSpice\SMWConnector\PageForms\Input;
 
+use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\User\User;
 
@@ -55,7 +56,7 @@ class UserTags extends \PFFormInput {
 	 * @return string
 	 */
 	public function getHtmlText() {
-		$html = \Html::openElement(
+		$html = Html::openElement(
 			'span',
 			[
 				'id' => 'input_' . $this->mInputNumber . '_cnt',
@@ -64,7 +65,7 @@ class UserTags extends \PFFormInput {
 			]
 		);
 		$users = implode( ',', $this->users );
-		$html .= \Html::input(
+		$html .= Html::input(
 			$this->mInputName,
 			"$users",
 			'hidden',
@@ -72,7 +73,7 @@ class UserTags extends \PFFormInput {
 				'id' => 'input_' . $this->mInputNumber
 			]
 		);
-		$html .= \Html::closeElement( 'span' );
+		$html .= Html::closeElement( 'span' );
 
 		return $html;
 	}

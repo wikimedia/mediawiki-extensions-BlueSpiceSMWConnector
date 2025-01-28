@@ -2,6 +2,7 @@
 
 namespace BlueSpice\SMWConnector\PageForms\Input;
 
+use MediaWiki\Html\Html;
 use PFTextAreaInput;
 
 class MWVisualEditor extends PFTextAreaInput {
@@ -43,7 +44,7 @@ class MWVisualEditor extends PFTextAreaInput {
 	 * @return string
 	 */
 	public function getHtmlText(): string {
-		$html = \Html::openElement(
+		$html = Html::openElement(
 			'div',
 			[
 				'id' => 'input_' . $this->mInputNumber . '_cnt',
@@ -52,7 +53,7 @@ class MWVisualEditor extends PFTextAreaInput {
 			+
 			$this->makeDataAttributes()
 		);
-		$html .= \Html::input(
+		$html .= Html::input(
 			$this->mInputName,
 			$this->mCurrentValue,
 			'hidden',
@@ -60,7 +61,7 @@ class MWVisualEditor extends PFTextAreaInput {
 				'id' => 'input_' . $this->mInputNumber
 			]
 		);
-		$html .= \Html::closeElement( 'div' );
+		$html .= Html::closeElement( 'div' );
 
 		return $html;
 	}

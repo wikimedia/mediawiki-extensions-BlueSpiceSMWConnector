@@ -5,7 +5,7 @@ namespace BlueSpice\SMWConnector\AsyncAskHandler;
 use BlueSpice\SMWConnector\Hook\ParserFirstCallInit\AsyncAsk;
 use BlueSpice\SMWConnector\IAsyncAskHandler;
 use FormatJson;
-use Html;
+use MediaWiki\Html\Html;
 use MediaWiki\Message\Message;
 
 class Tree implements IAsyncAskHandler {

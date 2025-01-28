@@ -5,7 +5,7 @@ namespace BlueSpice\SMWConnector\Hook\ParserFirstCallInit;
 use BlueSpice\ExtensionAttributeBasedRegistry;
 use BlueSpice\Hook\ParserFirstCallInit;
 use BlueSpice\SMWConnector\IAsyncAskHandler;
-use Html;
+use MediaWiki\Html\Html;
 use MWException;
 use Parser;
 
