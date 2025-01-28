@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Html\Html;
+use SMW\Query\QueryResult;
 use SMW\Query\ResultPrinters\ResultPrinter;
 use SRF\ResourceFormatter;
 
@@ -17,14 +18,14 @@ class BSGridResultPrinter extends ResultPrinter {
 	/**
 	 * @see ResultPrinter::getResultText
 	 *
-	 * @param SMWQueryResult $res
+	 * @param QueryResult $res
 	 * @param int $outputmode
 	 *
 	 * @return string The output HTML
 	 *
 	 * {@inheritDoc}
 	 */
-	protected function getResultText( SMWQueryResult $res, $outputmode ) {
+	protected function getResultText( $res, $outputmode ) {
 		$resourceFormatter = new ResourceFormatter();
 		$data = $resourceFormatter->getData( $res, $outputmode, $this->params );
 
@@ -35,14 +36,14 @@ class BSGridResultPrinter extends ResultPrinter {
 		$resourceFormatter->encode( $id, $data );
 
 		// Init RL module
-		$resourceFormatter->registerResources( [ 'ext.srf.bsextjsgrid' ] );
+		$resourceFormatter->registerResources( [ 'ext.BSSMWConnector.resultGrid' ] );
 
 		// Element includes info, spinner, and container placeholder
 		return Html::rawElement(
 			'div',
 			[
 				'id' => $id,
-				'class' => 'srf-bsextjsgrid',
+				'class' => 'srf-bssmwconnector-result-grid',
 			]
 		);
 	}
