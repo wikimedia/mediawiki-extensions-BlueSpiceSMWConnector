@@ -2,11 +2,11 @@
 
 namespace BlueSpice\SMWConnector\PageForms\Input;
 
+use MediaWiki\Content\TextContent;
 use MediaWiki\Html\Html;
 use MediaWiki\Json\FormatJson;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
-use TextContent;
 
 class Grid extends \PFFormInput {
 
