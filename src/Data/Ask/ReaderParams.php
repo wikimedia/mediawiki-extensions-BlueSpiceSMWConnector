@@ -2,7 +2,7 @@
 
 namespace BlueSpice\SMWConnector\Data\Ask;
 
-use FormatJson;
+use MediaWiki\Json\FormatJson;
 use MWStake\MediaWiki\Component\DataStore\ReaderParams as BaseReaderParams;
 
 class ReaderParams extends BaseReaderParams {

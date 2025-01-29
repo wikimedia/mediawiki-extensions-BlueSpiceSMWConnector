@@ -3,6 +3,7 @@
 namespace BlueSpice\SMWConnector\PageForms\Input;
 
 use MediaWiki\Html\Html;
+use MediaWiki\Json\FormatJson;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use TextContent;
@@ -98,11 +99,11 @@ class Grid extends \PFFormInput {
 			->newFromTitle( Title::newFromText( $colDefSource ) );
 		$content = $wikiPage->getContent();
 		$contentText = ( $content instanceof TextContent ) ? $content->getText() : '{}';
-		$colDef = \FormatJson::decode( $contentText );
+		$colDef = FormatJson::decode( $contentText );
 
 		$dataAttribs = [
 			'data-template' => $this->mOtherArgs['template'],
-			'data-coldef' => \FormatJson::encode( $colDef )
+			'data-coldef' => FormatJson::encode( $colDef )
 		];
 
 		return $dataAttribs;

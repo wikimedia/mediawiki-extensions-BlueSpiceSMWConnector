@@ -4,8 +4,8 @@ namespace BlueSpice\SMWConnector\AsyncAskHandler;
 
 use BlueSpice\SMWConnector\Hook\ParserFirstCallInit\AsyncAsk;
 use BlueSpice\SMWConnector\IAsyncAskHandler;
-use FormatJson;
 use MediaWiki\Html\Html;
+use MediaWiki\Json\FormatJson;
 
 class Grid implements IAsyncAskHandler {
 
