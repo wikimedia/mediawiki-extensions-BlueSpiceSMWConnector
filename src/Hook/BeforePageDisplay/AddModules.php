@@ -2,12 +2,14 @@
 
 namespace BlueSpice\SMWConnector\Hook\BeforePageDisplay;
 
+use MediaWiki\Output\OutputPage;
+
 // TODO: when on 'master', derive from BlueSpice\Hook\BeforePageDisplay and remove redundant code
 class AddModules {
 
 	/**
 	 *
-	 * @var \OutputPage
+	 * @var OutputPage
 	 */
 	protected $out = null;
 	/**
@@ -20,7 +22,7 @@ class AddModules {
 	 *
 	 * @param null $context As long as not on 'master'
 	 * @param null $config As long as not on 'master'
-	 * @param \OutputPage $out
+	 * @param OutputPage $out
 	 * @param \Skin $skin
 	 */
 	public function __construct( $context, $config, $out, $skin ) {
@@ -30,7 +32,7 @@ class AddModules {
 
 	/**
 	 *
-	 * @param \OutputPage $out
+	 * @param OutputPage $out
 	 * @param \Skin $skin
 	 * @return bool
 	 */
