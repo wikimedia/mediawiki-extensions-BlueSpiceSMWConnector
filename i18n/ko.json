@@ -23,5 +23,7 @@
 	"bs-smwconnector-dataquery-count-label": "번호",
 	"bs-smwconnector-decision-overview-categories-label": "분류",
 	"bs-smwconnector-decision-overview-table-heading-page-label": "문서",
-	"bs-smwconnector-decision-overview-table-heading-decisions-label": "결정"
+	"bs-smwconnector-decision-overview-table-heading-decisions-label": "결정",
+	"bs-smwconnector-yes": "예",
+	"bs-smwconnector-no": "아니요"
 }

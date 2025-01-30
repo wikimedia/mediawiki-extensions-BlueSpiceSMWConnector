@@ -2,12 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"GuoPC",
+			"Huajing",
 			"Kishinsagi",
 			"LittlePaw365",
 			"Liuxinyu970226",
 			"Xyb",
-			"列维劳德",
-			"Huajing"
+			"列维劳德"
 		]
 	},
 	"bs-bssmwconnector-desc": "把语义MediaWiki集成到BlueSpice内",
