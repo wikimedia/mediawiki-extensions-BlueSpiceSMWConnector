@@ -187,7 +187,6 @@
 		"BSPageTemplatesBeforeRender": "BSSMWCPageTemplates::onBSPageTemplatesBeforeRender",
 		"PageSaveComplete": "BSSMWConnectorHooks::onPageSaveComplete",
 		"SMW::Store::AfterQueryResultLookupComplete": "BlueSpice\\SMWConnector\\Hook\\SMWStoreAfterQueryResultLookupComplete\\ApplySecurityTrimming::callback",
-		"BSUEModulePDFcollectMetaData": "BlueSpice\\SMWConnector\\Hook\\BSUEModulePDFcollectMetaData\\AddSemanitcMetaData::callback",
 		"ParserFirstCallInit": "BlueSpice\\SMWConnector\\Hook\\ParserFirstCallInit\\AsyncAsk::callback",
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
 		"RevisionDataUpdates": "forceLinksUpdate"
