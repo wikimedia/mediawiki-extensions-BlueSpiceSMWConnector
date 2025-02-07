@@ -42,7 +42,7 @@ class DecisionOverviewHandler extends Handler {
 		$categories = $this->createSMWformat( $this->processedArgs[DecisionOverview::ATTR_CATEGORIES], 'categories' );
 		$namespaces = $this->createSMWformat( $this->processedArgs[DecisionOverview::ATTR_NAMESPACES], 'namespaces' );
 		$prefix = $this->createSMWformat( $this->processedArgs[DecisionOverview::ATTR_PREFIX], 'prefix' );
-		$this->parser->getOutput()->addModuleStyles( 'ext.BSSMWConnector.decisionOverview.styles' );
+		$this->parser->getOutput()->addModuleStyles( [ 'ext.BSSMWConnector.decisionOverview.styles' ] );
 
 		$query = '{{#ask:' . $categories . $namespaces . $prefix . '[[Decision::+]]|?Decision}}';
 		$queryResult = $this->runSMWQuery( $query );
