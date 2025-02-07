@@ -3,8 +3,8 @@
 namespace BlueSpice\SMWConnector\Tag;
 
 use BlueSpice\Tag\Handler;
-use Language;
 use MediaWiki\Html\Html;
+use MediaWiki\Language\Language;
 use MediaWiki\Title\Title;
 use Parser;
 use PPFrame;
