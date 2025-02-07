@@ -9,7 +9,7 @@ use BlueSpice\Tag\Tag;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Parser\Parser;
-use PPFrame;
+use MediaWiki\Parser\PPFrame;
 
 class DataQuery extends Tag {
 
