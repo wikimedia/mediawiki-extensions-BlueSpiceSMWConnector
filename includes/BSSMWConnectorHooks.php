@@ -4,6 +4,7 @@ use MediaWiki\Api\ApiMain;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
+use MediaWiki\Request\DerivativeRequest;
 use MediaWiki\Revision\RevisionRecord;
 
 class BSSMWConnectorHooks {
