@@ -6,6 +6,7 @@ use MediaWiki\Content\ContentHandler;
 use MediaWiki\Content\TextContent;
 use MediaWiki\Content\WikitextContent;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Request\DerivativeRequest;
 use MediaWiki\Revision\SlotRecord;
 use MediaWiki\Title\Title;
 
