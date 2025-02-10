@@ -2,6 +2,7 @@
 
 use MediaWiki\Api\ApiMain;
 use MediaWiki\CommentStore\CommentStoreComment;
+use MediaWiki\Content\ContentHandler;
 use MediaWiki\Content\TextContent;
 use MediaWiki\Content\WikitextContent;
 use MediaWiki\MediaWikiServices;
