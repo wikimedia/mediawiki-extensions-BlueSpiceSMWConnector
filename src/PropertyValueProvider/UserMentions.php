@@ -3,6 +3,7 @@
 namespace BlueSpice\SMWConnector\PropertyValueProvider;
 
 use BlueSpice\SMWConnector\PropertyValueProvider;
+use MediaWiki\Content\WikitextContent;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use SESP\AppFactory;
@@ -11,7 +12,6 @@ use SMW\SemanticData;
 use SMWDataItem;
 use SMWDIWikiPage;
 use WikiPage;
-use WikitextContent;
 
 class UserMentions extends PropertyValueProvider {
 
