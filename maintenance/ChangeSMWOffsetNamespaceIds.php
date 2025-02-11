@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\Maintenance\Maintenance;
+
 require __DIR__ . '/../../../maintenance/Maintenance.php';
 
 class ChangeSMWOffsetNamespaceIds extends Maintenance {
@@ -46,7 +48,7 @@ not yet created a backup, please abort and do so now!
 
 HERE
 		);
-		\Maintenance::countDown( 5 );
+		Maintenance::countDown( 5 );
 
 		$this->output( "Too late ..." );
 
