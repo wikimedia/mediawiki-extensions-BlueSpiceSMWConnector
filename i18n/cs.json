@@ -1,9 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ilimanaq29"
+			"Jrobicek"
 		]
 	},
 	"bs-dlg-choosesmwprop-label": "Vlastnost",
-	"bs-dlg-choosesmwprop-type-smwprop": "Sémantická vlastnost"
+	"bs-dlg-choosesmwprop-type-smwprop": "Sémantická vlastnost",
+	"bs-smwconnector-decision-overview-categories-label": "Kategorie",
+	"bs-smwconnector-decision-overview-namespaces-label": "Jmenné prostory",
+	"bs-smwconnector-decision-overview-prefix-label": "Předpona",
+	"bs-smwconnector-decision-overview-title": "Přehled rozhodnutí",
+	"bs-smwconnector-decision-overview-table-heading-page-label": "Stránka"
 }
