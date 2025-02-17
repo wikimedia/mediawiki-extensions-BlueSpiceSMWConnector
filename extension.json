@@ -228,11 +228,6 @@
 				"ext.BSSMWConnector.PF.Inputs.MWVisualEditor.js"
 			]
 		},
-		"ext.BSSMWConnector.PF.Input.Grid": {
-			"scripts": [
-				"ext.BSSMWConnector.PF.Inputs.Grid.js"
-			]
-		},
 		"ext.BSSMWConnector.PF.Input.UserCombo": {
 			"scripts": [
 				"ext.BSSMWConnector.PF.Inputs.UserCombo.js"
