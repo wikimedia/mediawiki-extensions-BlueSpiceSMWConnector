@@ -13,15 +13,15 @@ use MWStake\MediaWiki\Component\DataStore\IPrimaryDataProvider;
 use MWStake\MediaWiki\Component\DataStore\Record;
 use SMW\DataValueFactory;
 use SMW\DIProperty;
+use SMW\DIWikiPage;
 use SMW\Query\Language\Conjunction;
 use SMW\Query\Language\Disjunction;
+use SMW\Query\QueryResult;
 use SMW\Services\ServicesFactory;
 use SMW\StoreFactory;
 use SMWDataItem;
-use SMWDIWikiPage;
 use SMWQuery;
 use SMWQueryProcessor;
-use SMWQueryResult;
 
 class PrimaryDataProvider implements IPrimaryDataProvider {
 	/** @var Schema|null */
@@ -165,7 +165,7 @@ class PrimaryDataProvider implements IPrimaryDataProvider {
 	/**
 	 * @param string $queryParam
 	 * @param ReaderParams $params
-	 * @return SMWQueryResult
+	 * @return QueryResult
 	 */
 	private function getQueryResult( $queryParam, $params ) {
 		// This does a roundabout way of getting the query
@@ -214,12 +214,12 @@ class PrimaryDataProvider implements IPrimaryDataProvider {
 	}
 
 	/**
-	 * @param SMWDIWikiPage $wikiPage
+	 * @param DIWikiPage $wikiPage
 	 * @param Schema $schema
 	 * @param ReaderParams $params
 	 * @return Record
 	 */
-	private function getRow( SMWDIWikiPage $wikiPage, Schema $schema, ReaderParams $params ) {
+	private function getRow( DIWikiPage $wikiPage, Schema $schema, ReaderParams $params ) {
 		$recordData = [
 			'page' => $wikiPage->getTitle()->getPrefixedText()
 		];

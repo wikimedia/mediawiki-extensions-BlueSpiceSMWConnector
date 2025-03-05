@@ -287,7 +287,7 @@ class DecisionOverviewHandler extends Handler {
 		$propertiesData = [];
 		$semanticData = $store->getSemanticData( $DIWikiPage );
 		$DIProperties = $semanticData->getProperties();
-		/** @var \SMW\DIProperty $standardProperty */
+		/** @var DIProperty $standardProperty */
 		foreach ( $DIProperties as $DIProperty ) {
 			$values = $this->getPropertyData( $DIWikiPage, $DIProperty, $printouts, $store );
 			if ( empty( $values ) ) {

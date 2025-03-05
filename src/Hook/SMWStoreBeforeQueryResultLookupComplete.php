@@ -5,31 +5,36 @@ namespace BlueSpice\SMWConnector\Hook;
 use BlueSpice\Hook;
 use MediaWiki\Config\Config;
 use MediaWiki\Context\IContextSource;
+use SMW\Query\QueryResult;
+use SMW\QueryEngine;
+use SMW\SQLStore\QueryEngine\QueryEngine as SQLStoreQueryEngine;
+use SMW\Store;
+use SMWQuery;
 
 abstract class SMWStoreBeforeQueryResultLookupComplete extends Hook {
 
 	/**
 	 *
-	 * @var \SMW\Store
+	 * @var Store
 	 */
 	protected $store = null;
 
 	/**
 	 *
-	 * @var \SMWQuery
+	 * @var SMWQuery
 	 */
 	protected $query = null;
 
 	/**
 	 * ATTENTION: THE PARAMETER IS NULL DURING THE HOOK CALL, BUT IF RETURNING
-	 * FALSE THIS MUST BE SET TO \SMWQueryResult
-	 * @var \SMWQueryResult|null
+	 * FALSE THIS MUST BE SET TO QueryResult
+	 * @var QueryResult|null
 	 */
 	protected $result = null;
 
 	/**
 	 *
-	 * @var \SMW\QueryEngine
+	 * @var QueryEngine
 	 */
 	protected $slaveQueryEngine = null;
 
@@ -37,10 +42,10 @@ abstract class SMWStoreBeforeQueryResultLookupComplete extends Hook {
 	 *
 	 * @param IContextSource $context
 	 * @param Config $config
-	 * @param \SMW\Store $store
-	 * @param \SMWQuery $query
+	 * @param Store $store
+	 * @param SMWQuery $query
 	 * @param null &$result
-	 * @param \SMW\QueryEngine $slaveQueryEngine
+	 * @param QueryEngine $slaveQueryEngine
 	 */
 	public function __construct( $context, $config, $store, $query, &$result, $slaveQueryEngine ) {
 		parent::__construct( $context, $config );
@@ -53,10 +58,10 @@ abstract class SMWStoreBeforeQueryResultLookupComplete extends Hook {
 
 	/**
 	 *
-	 * @param \SMW\Store $store
-	 * @param \SMWQuery $query
-	 * @param \SMWQueryResult &$result
-	 * @param \SMW\SQLStore\QueryEngine\QueryEngine $slaveQueryEngine
+	 * @param Store $store
+	 * @param SMWQuery $query
+	 * @param QueryResult &$result
+	 * @param SQLStoreQueryEngine $slaveQueryEngine
 	 * @return bool
 	 */
 	public static function callback( $store, $query, &$result, $slaveQueryEngine ) {

@@ -8,9 +8,9 @@ use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use SESP\AppFactory;
 use SMW\DIProperty;
+use SMW\DIWikiPage;
 use SMW\SemanticData;
 use SMWDataItem;
-use SMWDIWikiPage;
 use WikiPage;
 
 class UserMentions extends PropertyValueProvider {
@@ -83,7 +83,7 @@ class UserMentions extends PropertyValueProvider {
 			$userPage = Title::makeTitle( NS_USER, $name );
 			$semanticData->addPropertyObjectValue(
 				$property,
-				SMWDIWikiPage::newFromTitle( $userPage )
+				DIWikiPage::newFromTitle( $userPage )
 			);
 		}
 	}
