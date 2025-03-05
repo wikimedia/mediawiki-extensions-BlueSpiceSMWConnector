@@ -5,17 +5,19 @@ namespace BlueSpice\SMWConnector\Hook;
 use BlueSpice\Hook;
 use MediaWiki\Config\Config;
 use MediaWiki\Context\IContextSource;
+use SMW\Query\QueryResult;
+use SMW\Store;
 
 abstract class SMWStoreAfterQueryResultLookupComplete extends Hook {
 
 	/**
 	 *
-	 * @var \SMW\Store
+	 * @var Store
 	 */
 	protected $store = null;
 
 	/**
-	 * @var \SMWQueryResult
+	 * @var QueryResult
 	 */
 	protected $result = null;
 
@@ -23,8 +25,8 @@ abstract class SMWStoreAfterQueryResultLookupComplete extends Hook {
 	 *
 	 * @param IContextSource $context
 	 * @param Config $config
-	 * @param \SMW\Store $store
-	 * @param \SMWQueryResult &$result
+	 * @param Store $store
+	 * @param QueryResult &$result
 	 */
 	public function __construct( $context, $config, $store, &$result ) {
 		parent::__construct( $context, $config );
@@ -35,8 +37,8 @@ abstract class SMWStoreAfterQueryResultLookupComplete extends Hook {
 
 	/**
 	 *
-	 * @param \SMW\Store $store
-	 * @param \SMWQueryResult &$result
+	 * @param Store $store
+	 * @param QueryResult &$result
 	 * @return bool|null
 	 */
 	public static function callback( $store, &$result ) {

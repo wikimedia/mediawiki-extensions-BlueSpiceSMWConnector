@@ -2,6 +2,11 @@
 
 namespace BlueSpice\SMWConnector;
 
+use SESP\AppFactory;
+use SMW\DIProperty;
+use SMW\SemanticData;
+use SMWDataItem;
+
 // phpcs:ignore Generic.Files.LineLength.TooLong
 // See https://github.com/SemanticMediaWiki/SemanticExtraSpecialProperties/blob/master/docs/extension.md
 
@@ -13,7 +18,7 @@ interface IPropertyValueProvider {
 	public function getId();
 
 	/**
-	 * One of \SMWDataItem::TYPE_*
+	 * One of SMWDataItem::TYPE_*
 	 * @return int
 	 */
 	public function getType();
@@ -35,10 +40,10 @@ interface IPropertyValueProvider {
 
 	/**
 	 *
-	 * @param \SESP\AppFactory $appFactory
-	 * @param \SMW\DIProperty $property
-	 * @param \SMW\SemanticData $semanticData
-	 * @return \SMWDataItem
+	 * @param AppFactory $appFactory
+	 * @param DIProperty $property
+	 * @param SemanticData $semanticData
+	 * @return SMWDataItem
 	 */
 	public function addAnnotation( $appFactory, $property, $semanticData );
 }

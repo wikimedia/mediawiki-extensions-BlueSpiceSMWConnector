@@ -5,6 +5,7 @@ namespace BlueSpice\SMWConnector\BreadcrumbDataProvider;
 use BlueSpice\Discovery\BreadcrumbDataProvider\BaseBreadcrumbDataProvider;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\Title\Title;
+use SMW\Encoder;
 
 class SpecialBrowseProvider extends BaseBreadcrumbDataProvider {
 
@@ -18,8 +19,8 @@ class SpecialBrowseProvider extends BaseBreadcrumbDataProvider {
 			return $title;
 		}
 		$pagename = array_pop( $bits );
-		if ( class_exists( \SMW\Encoder::class ) ) {
-			$decoded = \SMW\Encoder::decode( $pagename );
+		if ( class_exists( Encoder::class ) ) {
+			$decoded = Encoder::decode( $pagename );
 			if ( $decoded ) {
 				$pagename = $decoded;
 			}

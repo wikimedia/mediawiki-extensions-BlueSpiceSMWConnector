@@ -3,19 +3,21 @@
 namespace BlueSpice\SMWConnector\Hook\SMWStoreAfterQueryResultLookupComplete;
 
 use BlueSpice\SMWConnector\Hook\SMWStoreAfterQueryResultLookupComplete;
-use SMWQueryResult;
+use MediaWiki\MediaWikiServices;
+use SMW\DIWikiPage;
+use SMW\Query\QueryResult;
 
 class ApplySecurityTrimming extends SMWStoreAfterQueryResultLookupComplete {
 	/**
 	 * @return bool
 	 */
 	protected function skipProcessing() {
-		return !( $this->result instanceof SMWQueryResult );
+		return !( $this->result instanceof QueryResult );
 	}
 
 	/**
 	 *
-	 * @var \SMW\DIWikiPage[]
+	 * @var DIWikiPage[]
 	 */
 	protected $resultItems = [];
 
@@ -23,7 +25,7 @@ class ApplySecurityTrimming extends SMWStoreAfterQueryResultLookupComplete {
 		$this->resultItems = $this->result->getResults();
 		$filteredItems = [];
 
-		$pm = \MediaWiki\MediaWikiServices::getInstance()->getPermissionManager();
+		$pm = MediaWikiServices::getInstance()->getPermissionManager();
 		$user = $this->getContext()->getUser();
 		foreach ( $this->resultItems as $wikiPageItem ) {
 			$title = $wikiPageItem->getTitle();
@@ -40,7 +42,7 @@ class ApplySecurityTrimming extends SMWStoreAfterQueryResultLookupComplete {
 		}
 
 		if ( count( $filteredItems ) !== count( $this->resultItems ) ) {
-			$this->result = new SMWQueryResult(
+			$this->result = new QueryResult(
 				$this->result->getPrintRequests(),
 				$this->result->getQuery(),
 				$filteredItems,

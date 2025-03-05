@@ -3,16 +3,19 @@
 namespace BlueSpice\SMWConnector\Hook\SMWStoreBeforeQueryResultLookupComplete;
 
 use BlueSpice\SMWConnector\Hook\SMWStoreBeforeQueryResultLookupComplete;
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 use SMW\Query\Language\Conjunction;
+use SMW\Query\Language\Description;
 use SMW\Query\Language\Disjunction;
 use SMW\Query\Language\NamespaceDescription;
+use SMW\Query\QueryResult;
 
 class AddPermissionBasedNamespaceFilters extends SMWStoreBeforeQueryResultLookupComplete {
 
 	/**
 	 *
-	 * @var \SMW\Query\Language\Description
+	 * @var Description
 	 */
 	protected $originalDescription = null;
 
@@ -22,7 +25,7 @@ class AddPermissionBasedNamespaceFilters extends SMWStoreBeforeQueryResultLookup
 
 		// The user is not allowed to read in any namespace!?
 		if ( $namespaceFilterDisjunction instanceof Disjunction === false ) {
-			$this->result = new \SMWQueryResult(
+			$this->result = new QueryResult(
 				$this->originalDescription->getPrintRequests(),
 				$this->query,
 				[],
@@ -48,7 +51,7 @@ class AddPermissionBasedNamespaceFilters extends SMWStoreBeforeQueryResultLookup
 		$readableNamespaceDescriptions = [];
 		$namespaceIds = $this->getContext()->getLanguage()->getNamespaceIds();
 
-		$pm = \MediaWiki\MediaWikiServices::getInstance()->getPermissionManager();
+		$pm = MediaWikiServices::getInstance()->getPermissionManager();
 		$user = $this->getContext()->getUser();
 		foreach ( $namespaceIds as $nmspText => $namespaceId ) {
 			$dummyTitle = Title::makeTitle( $namespaceId, 'X' );
