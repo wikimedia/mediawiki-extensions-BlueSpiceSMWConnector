@@ -19,7 +19,8 @@ class ApiSMWPropertyStore extends BSApiExtJSStoreBase {
 			[
 				"smw_namespace" => SMW_NS_PROPERTY,
 				"smw_title" . $dbr->buildLike( $query, $dbr->anyString() )
-			]
+			],
+			__METHOD__
 		);
 
 		foreach ( $res as $row ) {
