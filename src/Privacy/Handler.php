@@ -28,12 +28,17 @@ class Handler implements IPrivacyHandler {
 	public function anonymize( $oldUsername, $newUsername ) {
 		$this->db->update(
 			'smw_object_ids',
-			[ 'smw_title' => $newUsername, 'smw_sortkey' => $newUsername, 'smw_sort' => $newUsername ],
+			[
+				'smw_title' => $newUsername,
+				'smw_sortkey' => $newUsername,
+				'smw_sort' => $newUsername
+			],
 			[
 				// Just handle links to user pages, not random string that match the username
 				'smw_title' => $oldUsername,
 				'smw_namespace' => NS_USER
-			]
+			],
+			__METHOD__
 		);
 		return Status::newGood();
 	}
