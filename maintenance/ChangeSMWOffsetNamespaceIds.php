@@ -89,12 +89,9 @@ HERE
 
 			$this->getDB( DB_PRIMARY )->update(
 				$tableName,
-				[
-					$fieldName => $newNS
-				],
-				[
-					$fieldName => $oldNS
-				]
+				[ $fieldName => $newNS ],
+				[ $fieldName => $oldNS ],
+				__METHOD__
 			);
 			$this->output( " done." );
 		}
