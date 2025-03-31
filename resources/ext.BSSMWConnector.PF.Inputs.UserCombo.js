@@ -14,10 +14,11 @@ bs_smwc_pf_input_usercombo_init = function( input_id, params ) {
 
 		//On multitemplate, the container we are rendering to loses its id,
 		//so it needs to be recreated
-		const $cnt = $( '#' + input_id + '_cnt' );
+		let $cnt = $( '#' + input_id + '_cnt' );
 		const $input = $( '#' + input_id );
 		if ( $cnt.length === 0 ) {
 			$input.parent( 'span' ).attr( 'id', input_id + '_cnt' );
+			$cnt = $input.parent();
 		}
 
 		userPicker.connect( this, {
