@@ -10,6 +10,11 @@ bs_smwc_pf_input_usercombo_init = function ( input_id, params ) { // eslint-disa
 		if ( params.groups ) {
 			cfg.groups = params.groups;
 		}
+		if ( params.placeholder ) {
+			cfg.placeholder = params.placeholder;
+		} else {
+			cfg.placeholder = mw.msg( 'bs-smwconnector-user-input-placeholder' );
+		}
 		const userPicker = new OOJSPlus.ui.widget.UserPickerWidget( cfg );
 
 		// On multitemplate, the container we are rendering to loses its id,
@@ -26,8 +31,6 @@ bs_smwc_pf_input_usercombo_init = function ( input_id, params ) { // eslint-disa
 				const selected = userPicker.getSelectedUser();
 				if ( selected ) {
 					$input.val( selected.userWidget.user.page_prefixed_text );
-				} else {
-					$input.val( '' );
 				}
 			},
 			choose: function ( item ) {

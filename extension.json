@@ -232,11 +232,17 @@
 		"ext.BSSMWConnector.PF.Input.UserCombo": {
 			"scripts": [
 				"ext.BSSMWConnector.PF.Inputs.UserCombo.js"
+			],
+			"messages": [
+				"bs-smwconnector-user-input-placeholder"
 			]
 		},
 		"ext.BSSMWConnector.PF.Input.UserTags": {
 			"scripts": [
 				"ext.BSSMWConnector.PF.Inputs.UserTags.js"
+			],
+			"messages": [
+				"bs-smwconnector-user-input-placeholder"
 			]
 		},
 		"ext.BSSMWConnector.resultGrid": {
