@@ -57,5 +57,6 @@
 	"bs-smwconnector-decision-overview-table-heading-page-label": "Page",
 	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Decisions",
 	"bs-smwconnector-yes": "Yes",
-	"bs-smwconnector-no": "No"
+	"bs-smwconnector-no": "No",
+	"bs-smwconnector-user-input-placeholder": "Please type a letter…"
 }
