@@ -131,7 +131,9 @@
 		}
 	},
 	"AutoloadNamespaces": {
-		"BlueSpice\\SMWConnector\\": "src/",
+		"BlueSpice\\SMWConnector\\": "src/"
+	},
+	"TestAutoloadNamespaces": {
 		"BlueSpice\\SMWConnector\\Tests\\": "tests/phpunit/"
 	},
 	"AutoloadClasses": {
