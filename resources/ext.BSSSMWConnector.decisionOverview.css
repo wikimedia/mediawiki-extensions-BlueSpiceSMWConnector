@@ -4,10 +4,12 @@
 	border: 1px solid #a2a9b1;
 	border-collapse: collapse;
 }
+
 .decisionOverview-table td {
 	padding: 8px;
 	border: 1px solid #a2a9b1;
 }
+
 .decisionOverview-table th {
 	padding: 8px;
 	background-color: #eaecf0;
@@ -23,8 +25,8 @@
 }
 
 .cd-decision-entry::before {
-	content: "\f058";
+	content: '\f058';
 	color: #94c11f;
-	font-family: "fontawesome";
+	font-family: 'fontawesome';
 	margin-right: 5px;
 }

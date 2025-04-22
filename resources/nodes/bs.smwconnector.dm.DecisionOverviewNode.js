@@ -1,4 +1,4 @@
-( function( mw, $, d, bs ) {
+( function ( mw, $, d, bs ) {
 	bs.util.registerNamespace( 'bs.smwconnector.dm' );
 
 	bs.smwconnector.dm.DecisionOverviewNode = function BsSMWConnectorDmDecisionOverviewNode() {
@@ -19,7 +19,6 @@
 	// Name of the parser tag
 	bs.smwconnector.dm.DecisionOverviewNode.static.extensionName = 'decisionoverview';
 
-
 	// This tag renders without content
 	bs.smwconnector.dm.DecisionOverviewNode.static.childNodeTypes = [];
 	bs.smwconnector.dm.DecisionOverviewNode.static.isContent = false;
@@ -28,4 +27,4 @@
 
 	ve.dm.modelRegistry.register( bs.smwconnector.dm.DecisionOverviewNode );
 
-})( mediaWiki, jQuery, document, blueSpice );
+}( mediaWiki, jQuery, document, blueSpice ) );

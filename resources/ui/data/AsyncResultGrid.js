@@ -1,12 +1,12 @@
 bs.util.registerNamespace( 'bs.smwconnector.ui.data' );
 
-bs.smwconnector.ui.data.AsyncResultGrid = function( cfg ) {
-	var data = cfg.data || {};
-	cfg.store = new bs.smwconnector.ui.data.SMWStore({
+bs.smwconnector.ui.data.AsyncResultGrid = function ( cfg ) {
+	const data = cfg.data || {};
+	cfg.store = new bs.smwconnector.ui.data.SMWStore( {
 		action: data.storeAction,
 		pageSize: 25,
 		props: data.props || {},
-		query: data.query || '',
+		query: data.query || ''
 	} );
 	cfg.store.connect( this, {
 		buildMeta: 'onBuildMeta'
@@ -17,44 +17,44 @@ bs.smwconnector.ui.data.AsyncResultGrid = function( cfg ) {
 
 OO.inheritClass( bs.smwconnector.ui.data.AsyncResultGrid, OOJSPlus.ui.data.GridWidget );
 
-bs.smwconnector.ui.data.AsyncResultGrid.prototype.onBuildMeta = function( meta ) {
+bs.smwconnector.ui.data.AsyncResultGrid.prototype.onBuildMeta = function ( meta ) {
 	if ( !this.initialized ) {
 		this.initialize( meta );
 	}
 };
 
-bs.smwconnector.ui.data.AsyncResultGrid.prototype.initialize = function( meta ) {
+bs.smwconnector.ui.data.AsyncResultGrid.prototype.initialize = function ( meta ) {
 	this.initialized = true;
 	this.buildColumns( this.prepareColumns( meta ) );
 	this.addHeader();
 };
 
-bs.smwconnector.ui.data.AsyncResultGrid.prototype.prepareColumns = function( meta ) {
-	var columns = {
+bs.smwconnector.ui.data.AsyncResultGrid.prototype.prepareColumns = function ( meta ) {
+	const columns = {
 		page: {
 			type: 'text',
-			valueParser: function( value, row ) {
+			valueParser: function ( value, row ) {
 				return new OO.ui.HtmlSnippet( row.page_link );
 			},
 			filter: { type: 'text' }
 		}
 	};
-	for ( var key in meta ) {
+	for ( const key in meta ) {
 		if ( !meta.hasOwnProperty( key ) ) {
 			continue;
 		}
 		if ( key === 'page' || key.endsWith( '_link' ) ) {
 			continue;
 		}
-		var metaItem = meta[key];
-		var column = {
+		const metaItem = meta[ key ];
+		const column = {
 			headerText: key,
-			type: meta.type === 'float' ? 'number' : meta.type,
+			type: meta.type === 'float' ? 'number' : meta.type
 		};
 
-		column.valueParser = function( value, row, id ) {
+		column.valueParser = function ( value, row, id ) {
 			if ( row.hasOwnProperty( id + '_link' ) ) {
-				return new OO.ui.HtmlSnippet( row[id + '_link'] );
+				return new OO.ui.HtmlSnippet( row[ id + '_link' ] );
 			}
 			return value;
 		};
@@ -66,8 +66,7 @@ bs.smwconnector.ui.data.AsyncResultGrid.prototype.prepareColumns = function( met
 		if ( metaItem.sortable ) {
 			column.sortable = true;
 		}
-		columns[key.replaceAll( ' ', '_')] = column;
+		columns[ key.replaceAll( ' ', '_' ) ] = column;
 	}
 	return columns;
 };
-
