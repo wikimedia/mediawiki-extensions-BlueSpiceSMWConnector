@@ -203,7 +203,6 @@
 		},
 		"ext.BSSMWConnector": {
 			"scripts": [
-				"ext.BSSMWConnector.smwc.js",
 				"ext.BSSMWConnector.util.js"
 			],
 			"messages": [
