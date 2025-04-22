@@ -1,11 +1,11 @@
 ( function () {
 	bs.util.registerNamespace( 'bs.swmconnector.ui' );
 
-	bs.swmconnector.ui.SMWPropertyInputWidget = function( config ) {
+	bs.swmconnector.ui.SMWPropertyInputWidget = function ( config ) {
 		config = config || {};
 		config.$overlay = true;
 
-		bs.swmconnector.ui.SMWPropertyInputWidget.parent.call( this, $.extend( {}, config, { autocomplete: false } ) );
+		bs.swmconnector.ui.SMWPropertyInputWidget.parent.call( this, Object.assign( {}, config, { autocomplete: false } ) );
 
 		OO.ui.mixin.LookupElement.call( this, config );
 
@@ -36,13 +36,11 @@
 	 * @inheritdoc
 	 */
 	bs.swmconnector.ui.SMWPropertyInputWidget.prototype.focus = function () {
-		var retval;
-
 		// Prevent programmatic focus from opening the menu
 		this.setLookupsDisabled( true );
 
 		// Parent method
-		retval = bs.swmconnector.ui.SMWPropertyInputWidget.parent.prototype.focus.apply( this, arguments );
+		const retval = bs.swmconnector.ui.SMWPropertyInputWidget.parent.prototype.focus.apply( this, arguments );
 
 		this.setLookupsDisabled( false );
 
@@ -53,7 +51,7 @@
 	 * @inheritdoc
 	 */
 	bs.swmconnector.ui.SMWPropertyInputWidget.prototype.getLookupRequest = function () {
-		var inputValue = this.value;
+		const inputValue = this.value;
 
 		return new mw.Api().get( {
 			action: 'bs-smw-connector-smw-property-store',
@@ -66,10 +64,11 @@
 	};
 
 	bs.swmconnector.ui.SMWPropertyInputWidget.prototype.getLookupMenuOptionsFromData = function ( data ) {
-		var i, items = [];
+		let i;
+		const items = [];
 
 		for ( i = 0; i < data.length; i++ ) {
-			var prop = data[i].prop_title.replace( '_', ' ' );
+			const prop = data[ i ].prop_title.replace( '_', ' ' );
 			items.push( new OO.ui.MenuOptionWidget( {
 				label: prop,
 				data: prop

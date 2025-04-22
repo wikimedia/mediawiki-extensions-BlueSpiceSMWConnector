@@ -1,11 +1,11 @@
-( function ( mw, $, bs, undefined ) {
-	mw.loader.using( 'ext.bluespice.visualEditorConnector.standalone.bootstrap' ).done( function() {
-		var cfg = {
+( function ( mw, $, bs ) {
+	mw.loader.using( 'ext.bluespice.visualEditorConnector.standalone.bootstrap' ).done( function () {
+		const cfg = {
 			placeholder: $( '#pf_free_text' ).text(),
 			value: $( '#pf_free_text' ).text(),
 			selector: '#pf_free_text.bs-mwvisualeditor',
-			id : 'pf-freetext_ve',
-			classes : ['bs-pf-visualeditor-text'],
+			id: 'pf-freetext_ve',
+			classes: [ 'bs-pf-visualeditor-text' ],
 			format: 'wikitext'
 		};
 
@@ -18,8 +18,8 @@
 		this.text.makeVisualEditor();
 		$( cfg.selector ).hide();
 
-		$( '#pfForm' ).submit( function( e ){
-			var textToSubmit = bs.vec.getInstance( 'pf-freetext_ve' ).getWikiTextSync();
+		$( '#pfForm' ).on( 'submit', ( e ) => {
+			const textToSubmit = bs.vec.getInstance( 'pf-freetext_ve' ).getWikiTextSync();
 
 			if ( textToSubmit === false ) {
 				e.PreventDefault();
@@ -28,7 +28,7 @@
 				$( '#pf_free_text' ).val( textToSubmit );
 			}
 		} );
-	} ).fail( function (e ) {
-		console.log( e );
+	} ).fail( ( e ) => {
+		console.log( e ); // eslint-disable-line no-console
 	} );
-} (mediaWiki, jQuery, blueSpice) );
+}( mediaWiki, jQuery, blueSpice ) );

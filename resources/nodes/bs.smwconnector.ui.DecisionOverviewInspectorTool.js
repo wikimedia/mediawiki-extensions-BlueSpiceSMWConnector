@@ -1,4 +1,4 @@
-( function( mw, $, d, bs ) {
+( function ( mw, $, d, bs ) {
 	bs.util.registerNamespace( 'bs.smwconnector.ui' );
 
 	bs.smwconnector.ui.DecisionOverviewInspectorTool = function BsSMWConnectorUiDecisionOverviewInspectorTool( toolGroup, config ) {
@@ -21,4 +21,4 @@
 		)
 	);
 
-})( mediaWiki, jQuery, document, blueSpice );
+}( mediaWiki, jQuery, document, blueSpice ) );
