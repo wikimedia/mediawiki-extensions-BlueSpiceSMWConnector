@@ -1,4 +1,4 @@
-( function( mw, $, d, bs ) {
+( function ( mw, $, d, bs ) {
 	bs.util.registerNamespace( 'bs.smwconnector.dm' );
 
 	bs.smwconnector.dm.DataQueryNode = function BsSMWConnectorDmDataQueryNode() {
@@ -19,14 +19,12 @@
 	// Name of the parser tag
 	bs.smwconnector.dm.DataQueryNode.static.extensionName = 'dataquery';
 
-
 	// This tag renders without content
 	bs.smwconnector.dm.DataQueryNode.static.childNodeTypes = [];
 	bs.smwconnector.dm.DataQueryNode.static.isContent = false;
-
 
 	/* Registration */
 
 	ve.dm.modelRegistry.register( bs.smwconnector.dm.DataQueryNode );
 
-})( mediaWiki, jQuery, document, blueSpice );
+}( mediaWiki, jQuery, document, blueSpice ) );

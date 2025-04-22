@@ -1,6 +1,6 @@
 bs.util.registerNamespace( 'bs.smwconnector.ui.data' );
 
-bs.smwconnector.ui.data.AskResultPrinter = function( cfg ) {
+bs.smwconnector.ui.data.AskResultPrinter = function ( cfg ) {
 	this.prepareResults( cfg.records );
 	cfg.columns = this.columns;
 	cfg.data = this.records;
@@ -10,7 +10,7 @@ bs.smwconnector.ui.data.AskResultPrinter = function( cfg ) {
 
 OO.inheritClass( bs.smwconnector.ui.data.AskResultPrinter, OOJSPlus.ui.data.GridWidget );
 
-bs.smwconnector.ui.data.AskResultPrinter.prototype.prepareResults = function( data ) {
+bs.smwconnector.ui.data.AskResultPrinter.prototype.prepareResults = function ( data ) {
 	if (
 		!data ||
 		!data.hasOwnProperty( 'query' ) ||
@@ -19,8 +19,8 @@ bs.smwconnector.ui.data.AskResultPrinter.prototype.prepareResults = function( da
 	) {
 		return [];
 	}
-	var results = [];
-	var columns = {
+	const results = [];
+	const columns = {
 		pageLabel: {
 			headerText: data.query.ask.parameters.mainlabel || '',
 			type: 'text',
@@ -41,29 +41,29 @@ bs.smwconnector.ui.data.AskResultPrinter.prototype.prepareResults = function( da
 			}
 		}
 	};
-	for ( var key in data.query.result.results ) {
+	for ( const key in data.query.result.results ) {
 		if ( !data.query.result.results.hasOwnProperty( key ) ) {
 			continue;
 		}
-		var result = data.query.result.results[key];
-		var row = {
+		const result = data.query.result.results[ key ];
+		const row = {
 			rawPage: key,
 			pageLabel: result.displaytitle || result.fulltext,
 			url: result.fullurl || null
 		};
-		for ( var printoutKey in result.printouts ) {
+		for ( const printoutKey in result.printouts ) {
 			if ( !result.printouts.hasOwnProperty( printoutKey ) ) {
 				continue;
 			}
-			row[printoutKey] = result.printouts[printoutKey];
+			row[ printoutKey ] = result.printouts[ printoutKey ];
 			if ( !columns.hasOwnProperty( printoutKey ) ) {
-				var type = this.getTypeFromPrintout( result.printouts[printoutKey] );
-				columns[printoutKey] = {
+				const type = this.getTypeFromPrintout( result.printouts[ printoutKey ] );
+				columns[ printoutKey ] = {
 					headerText: printoutKey,
 					filter: { type: type },
 					sortable: true,
 					type: type,
-					valueParser: function ( value, row ) {
+					valueParser: function ( value ) {
 						if ( typeof value.getDIType === 'function' ) {
 							return this.makePrintoutValue( value );
 						}
@@ -78,27 +78,27 @@ bs.smwconnector.ui.data.AskResultPrinter.prototype.prepareResults = function( da
 	this.columns = columns;
 };
 
-bs.smwconnector.ui.data.AskResultPrinter.prototype.getTypeFromPrintout = function( printout ) {
-	for ( var key in printout ) {
+bs.smwconnector.ui.data.AskResultPrinter.prototype.getTypeFromPrintout = function ( printout ) {
+	for ( const key in printout ) {
 		// If key is not a number, skip
 		if ( isNaN( key ) ) {
 			continue;
 		}
-		var di = printout[key];
-		var type = di.getDIType();
+		const di = printout[ key ];
+		const type = di.getDIType();
 		switch ( type ) {
-			case '_wpg' :
+			case '_wpg':
 				return 'url';
-			case '_uri' :
+			case '_uri':
 				return 'url';
-			case '_dat' :
+			case '_dat':
 				return 'date';
-			case '_num' :
+			case '_num':
 				return 'number';
-			case '_qty' :
-			case '_str' :
+			case '_qty':
+			case '_str':
 			case '_txt':
-			case '_geo' :
+			case '_geo':
 			case '_boo':
 			default:
 				return 'text';
@@ -106,44 +106,44 @@ bs.smwconnector.ui.data.AskResultPrinter.prototype.getTypeFromPrintout = functio
 	}
 };
 
-bs.smwconnector.ui.data.AskResultPrinter.prototype.makePrintoutValue = function( printout ) {
-	var values = [];
-	for ( var key in printout ) {
+bs.smwconnector.ui.data.AskResultPrinter.prototype.makePrintoutValue = function ( printout ) {
+	const values = [];
+	for ( const key in printout ) {
 		// If key is not a number, skip
 		if ( isNaN( key ) ) {
 			continue;
 		}
-		var di = printout[key];
-		var type = di.getDIType();
+		const di = printout[ key ];
+		const type = di.getDIType();
 		switch ( type ) {
-			case '_wpg' :
+			case '_wpg':
 				values.push( new OO.ui.ButtonWidget( {
 					label: di.getFullText(),
 					href: di.getUri(),
 					framed: false
 				} ).$element );
 				break;
-			case '_uri' :
+			case '_uri':
 				values.push( new OO.ui.ButtonWidget( {
 					label: di.getUri(),
 					href: di.getUri(),
 					framed: false
 				} ).$element );
 				break;
-			case '_dat' :
+			case '_dat':
 				values.push( di.getDate().toLocaleString() );
 				break;
-			case '_num' :
+			case '_num':
 				values.push( di.getValue() );
 				break;
-			case '_qty' :
+			case '_qty':
 				values.push( di.getValue() );
 				break;
-			case '_str' :
+			case '_str':
 			case '_txt':
 				values.push( di.getText() );
 				break;
-			case '_geo' :
+			case '_geo':
 				values.push( di.getLatitude() + ', ' + di.getLongitude() );
 				break;
 			case '_boo':
@@ -157,20 +157,18 @@ bs.smwconnector.ui.data.AskResultPrinter.prototype.makePrintoutValue = function(
 		}
 	}
 
-	if ( values.every( function ( value ) {
-		return typeof value === 'string';
-	} ) ) {
+	if ( values.every( ( value ) => typeof value === 'string' ) ) {
 		return values.join( ', ' );
 	}
 	if ( values.length === 1 ) {
-		return new OO.ui.HtmlSnippet( values[0] );
+		return new OO.ui.HtmlSnippet( values[ 0 ] );
 	}
 	return new OO.ui.HtmlSnippet( $( '<span>' ).html( $( '<ul>' ).append(
 		...values.map( ( v ) => ( $( '<li>' ).html( v ) ) )
 	) ).html() );
 };
 
-bs.smwconnector.ui.data.AskResultPrinter.prototype.prepareStore = function() {
+bs.smwconnector.ui.data.AskResultPrinter.prototype.prepareStore = function () {
 	return new OOJSPlus.ui.data.store.Store( {
 		data: this.records,
 		// page size determined by query

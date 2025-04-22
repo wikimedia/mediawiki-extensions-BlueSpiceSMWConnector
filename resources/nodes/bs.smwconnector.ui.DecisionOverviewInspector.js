@@ -1,4 +1,4 @@
-( function( mw, $, d, bs ) {
+( function ( mw, $, d, bs ) {
 	bs.util.registerNamespace( 'bs.smwconnector.ui' );
 	bs.smwconnector.ui.DecisionOverviewInspector = function BsSMWConnectorUiDecisionOverviewInspector( config ) {
 		// Parent constructor
@@ -21,7 +21,7 @@
 
 	bs.smwconnector.ui.DecisionOverviewInspector.static.dir = 'ltr';
 
-	//This tag does not have any content
+	// This tag does not have any content
 	bs.smwconnector.ui.DecisionOverviewInspector.static.allowedEmpty = true;
 	bs.smwconnector.ui.DecisionOverviewInspector.static.selfCloseEmptyBody = false;
 
@@ -88,11 +88,11 @@
 	bs.smwconnector.ui.DecisionOverviewInspector.prototype.getSetupProcess = function ( data ) {
 		return bs.smwconnector.ui.DecisionOverviewInspector.super.prototype.getSetupProcess.call( this, data )
 			.next( function () {
-				var attributes = this.selectedNode.getAttribute( 'mw' ).attrs;
+				const attributes = this.selectedNode.getAttribute( 'mw' ).attrs;
 
 				this.categoriesInput.on( 'change', this.toggleInput.bind( this ) );
 				this.namespacesInput.on( 'change', this.toggleInput.bind( this ) );
-				this.prefixInput.on( 'change', function () {
+				this.prefixInput.on( 'change', () => {
 					if ( this.prefixInput.getValue() !== '' ) {
 						this.categoriesInput.setDisabled( true );
 						this.namespacesInput.setDisabled( true );
@@ -100,16 +100,16 @@
 						this.categoriesInput.setDisabled( false );
 						this.namespacesInput.setDisabled( false );
 					}
-				}.bind( this ) );
+				} );
 
 				if ( attributes.categories ) {
 					this.categoriesInput.setValue( attributes.categories );
 				}
 				if ( attributes.namespaces ) {
-					var namespaceData = attributes.namespaces.split( '|' );
+					const namespaceData = attributes.namespaces.split( '|' );
 					this.namespacesInput.clearItems();
-					for ( var namespace in namespaceData ) {
-						var namespaceItem = this.namespacesInput.menu.findItemFromData(
+					for ( const namespace in namespaceData ) {
+						const namespaceItem = this.namespacesInput.menu.findItemFromData(
 							namespaceData[ namespace ]
 						);
 						this.namespacesInput.addTag(
@@ -123,7 +123,7 @@
 					this.prefixInput.setValue( attributes.prefix );
 				}
 
-				//Get this out of here
+				// Get this out of here
 				this.actions.setAbilities( { done: true } );
 			}, this );
 	};
@@ -143,7 +143,7 @@
 		if ( this.categoriesInput.getValue() !== '' ) {
 			mwData.attrs.categories = this.categoriesInput.getValue();
 		} else {
-			delete( mwData.attrs.categories );
+			delete ( mwData.attrs.categories );
 		}
 
 		if ( this.namespacesInput.getValue() !== '' ) {
@@ -155,7 +155,7 @@
 		if ( this.prefixInput.getValue() ) {
 			mwData.attrs.prefix = this.prefixInput.getValue();
 		} else {
-			delete( mwData.attrs.prefix );
+			delete ( mwData.attrs.prefix );
 		}
 
 	};
@@ -178,4 +178,4 @@
 
 	ve.ui.windowFactory.register( bs.smwconnector.ui.DecisionOverviewInspector );
 
-})( mediaWiki, jQuery, document, blueSpice );
+}( mediaWiki, jQuery, document, blueSpice ) );

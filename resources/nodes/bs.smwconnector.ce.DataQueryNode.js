@@ -1,4 +1,4 @@
-( function( mw, $, d, bs ) {
+( function ( mw, $, d, bs ) {
 	bs.util.registerNamespace( 'bs.smwconnector.ce' );
 
 	bs.smwconnector.ce.DataQueryNode = function BsSMWConnectorCeDataQueryNode() {
@@ -32,4 +32,4 @@
 	/* Registration */
 	ve.ce.nodeFactory.register( bs.smwconnector.ce.DataQueryNode );
 
-})( mediaWiki, jQuery, document, blueSpice );
+}( mediaWiki, jQuery, document, blueSpice ) );

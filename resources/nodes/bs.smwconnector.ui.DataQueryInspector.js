@@ -1,4 +1,4 @@
-( function( mw, $, d, bs ) {
+( function ( mw, $, d, bs ) {
 	bs.util.registerNamespace( 'bs.smwconnector.ui' );
 	bs.smwconnector.ui.DataQueryInspector = function BsSMWConnectorUiDataQueryInspector( config ) {
 		// Parent constructor
@@ -21,7 +21,7 @@
 
 	bs.smwconnector.ui.DataQueryInspector.static.dir = 'ltr';
 
-	//This tag does not have any content
+	// This tag does not have any content
 	bs.smwconnector.ui.DataQueryInspector.static.allowedEmpty = true;
 	bs.smwconnector.ui.DataQueryInspector.static.selfCloseEmptyBody = true;
 
@@ -142,70 +142,65 @@
 	bs.smwconnector.ui.DataQueryInspector.prototype.getSetupProcess = function ( data ) {
 		return bs.smwconnector.ui.DataQueryInspector.super.prototype.getSetupProcess.call( this, data )
 			.next( function () {
-				var attributes = this.selectedNode.getAttribute( 'mw' ).attrs;
+				const attributes = this.selectedNode.getAttribute( 'mw' ).attrs;
 
-				if( attributes.categories ) {
+				if ( attributes.categories ) {
 					this.categoriesInput.setValue( attributes.categories );
 				}
-				if( attributes.namespaces ) {
+				if ( attributes.namespaces ) {
 					this.namespacesInput.setValue( attributes.namespaces );
 				}
 
-				var date = '';
+				let date = '';
 				this.modifiedDateLayout.toggle( false );
-				if( attributes.modified ) {
-					var operator = '';
-					for ( var i = 0; i < attributes.modified.length; i++ ) {
-						var char = attributes.modified.charAt(i);
+				if ( attributes.modified ) {
+					let operator = '';
+					for ( let i = 0; i < attributes.modified.length; i++ ) {
+						const char = attributes.modified.charAt( i );
 						if ( isNaN( char ) ) {
 							operator += char;
 						} else {
-							date = attributes.modified.substring(i);
+							date = attributes.modified.slice( Math.max( 0, i ) );
 							break;
 						}
 					}
 					this.modifiedOperatorInput.getMenu().selectItemByData( operator );
-					if( operator != '+' ) {
+					if ( operator !== '+' ) {
 						this.modifiedDateLayout.toggle( true );
-						if( date ) {
+						if ( date ) {
 							this.modifiedDateInput.setValue( date );
 						}
 					}
 				}
 
-				if( attributes.printouts ) {
+				if ( attributes.printouts ) {
 					this.printoutsInput.setValue( attributes.printouts );
 				}
-				if( attributes.format ) {
+				if ( attributes.format ) {
 					this.formatInput.getMenu().selectItemByData( attributes.format );
 				}
-				if( attributes.count ) {
+				if ( attributes.count ) {
 					this.countInput.setValue( attributes.count );
 				}
 				this.categoriesInput.on( 'change', this.onChangeHandler );
 				this.namespacesInput.on( 'change', this.onChangeHandler );
 
-				this.modifiedOperatorInput.getMenu().on( 'select', function() {
-					modifiedOperatorValue = this.modifiedOperatorInput.getMenu().findSelectedItem().getData();
-					if ( modifiedOperatorValue == '+' ) {
+				this.modifiedOperatorInput.getMenu().on( 'select', () => {
+					const modifiedOperatorValue = this.modifiedOperatorInput.getMenu().findSelectedItem().getData();
+					if ( modifiedOperatorValue === '+' ) {
 						this.modifiedDateInput.setValue( '' );
 						this.modifiedDateLayout.toggle( false );
 					} else {
 						this.modifiedDateInput.setValue( date );
 						this.modifiedDateLayout.toggle( true );
 					}
-				}.bind( this ) );
+				} );
 
 				this.modifiedDateInput.on( 'change', this.onChangeHandler );
 				this.printoutsInput.on( 'change', this.onChangeHandler );
-
-				this.formatInput.getMenu().on( 'select', function() {
-					formatValue = this.formatInput.getMenu().findSelectedItem().getData();
-				}.bind( this ) );
-
 				this.countInput.on( 'change', this.onChangeHandler );
 
-				//Get this out of here
+				// Get this out of here
 				this.actions.setAbilities( { done: true } );
 			}, this );
 	};
@@ -217,13 +212,13 @@
 		if ( this.categoriesInput.getValue() ) {
 			mwData.attrs.categories = this.categoriesInput.getValue();
 		} else {
-			delete( mwData.attrs.categories );
+			delete ( mwData.attrs.categories );
 		}
 
 		if ( this.namespacesInput.getValue() ) {
 			mwData.attrs.namespaces = this.namespacesInput.getValue();
 		} else {
-			delete( mwData.attrs.namespaces );
+			delete ( mwData.attrs.namespaces );
 		}
 
 		mwData.attrs.modified = this.modifiedOperatorInput.getMenu().findSelectedItem().getData();
@@ -234,7 +229,7 @@
 		if ( this.printoutsInput.getValue() ) {
 			mwData.attrs.printouts = this.printoutsInput.getValue();
 		} else {
-			delete( mwData.attrs.printouts );
+			delete ( mwData.attrs.printouts );
 		}
 
 		mwData.attrs.format = this.formatInput.getMenu().findSelectedItem().getData();
@@ -242,7 +237,7 @@
 		if ( this.countInput.getValue() ) {
 			mwData.attrs.count = this.countInput.getValue();
 		} else {
-			delete( mwData.attrs.count );
+			delete ( mwData.attrs.count );
 		}
 	};
 
@@ -264,4 +259,4 @@
 
 	ve.ui.windowFactory.register( bs.smwconnector.ui.DataQueryInspector );
 
-})( mediaWiki, jQuery, document, blueSpice );
+}( mediaWiki, jQuery, document, blueSpice ) );
