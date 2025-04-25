@@ -10,6 +10,7 @@ bs_smwc_pf_input_usertags_init = function ( input_id, params ) { // eslint-disab
 		if ( params.groups ) {
 			cfg.groups = params.groups;
 		}
+		cfg.placeholder = params.placeholder;
 		const userPicker = new OOJSPlus.ui.widget.UsersMultiselectWidget( cfg );
 		userPicker.$element.css( 'min-width', '200px' );
 

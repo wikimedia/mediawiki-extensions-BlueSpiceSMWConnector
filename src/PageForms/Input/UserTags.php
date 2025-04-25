@@ -4,6 +4,7 @@ namespace BlueSpice\SMWConnector\PageForms\Input;
 
 use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Message\Message;
 use MediaWiki\User\User;
 
 class UserTags extends \PFFormInput {
@@ -127,7 +128,10 @@ class UserTags extends \PFFormInput {
 			'current_value' => $this->mCurrentValue,
 			'users' => array_map( static function ( $user ) {
 				return $user->getName();
-			}, $this->users )
+			}, $this->users ),
+			'placeholder' =>
+				$this->mOtherArgs['placeholder'] ??
+				Message::newFromKey( 'bs-smwconnector-user-input-placeholder' )->text(),
 		];
 
 		if ( !empty( $this->groups ) ) {
