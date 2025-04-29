@@ -57,5 +57,6 @@
 	"bs-smwconnector-decision-overview-table-heading-page-label": "Pagina",
 	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Beslissingen",
 	"bs-smwconnector-yes": "Ja",
-	"bs-smwconnector-no": "Nee"
+	"bs-smwconnector-no": "Nee",
+	"bs-smwconnector-user-input-placeholder": "Typ een letter…"
 }
