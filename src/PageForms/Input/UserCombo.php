@@ -4,6 +4,7 @@ namespace BlueSpice\SMWConnector\PageForms\Input;
 
 use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Message\Message;
 use MediaWiki\User\User;
 use MediaWiki\User\UserGroupManager;
 
@@ -128,7 +129,10 @@ class UserCombo extends \PFFormInput {
 		$user = $this->getUser();
 		$params = [
 			'input_name' => $this->mInputName,
-			'current_value' => $this->mCurrentValue
+			'current_value' => $this->mCurrentValue,
+			'placeholder' =>
+				$this->mOtherArgs['placeholder'] ??
+				Message::newFromKey( 'bs-smwconnector-user-input-placeholder' )->text(),
 		];
 
 		if ( $user instanceof User ) {
