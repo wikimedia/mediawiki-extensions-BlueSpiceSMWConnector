@@ -58,5 +58,6 @@
 	"bs-smwconnector-decision-overview-table-heading-page-label": "דף",
 	"bs-smwconnector-decision-overview-table-heading-decisions-label": "החלטות",
 	"bs-smwconnector-yes": "כן",
-	"bs-smwconnector-no": "לא"
+	"bs-smwconnector-no": "לא",
+	"bs-smwconnector-user-input-placeholder": "נא להקליד אות..."
 }
