@@ -27,6 +27,8 @@ bs_smwc_pf_input_usercombo_init = function ( input_id, params ) { // eslint-disa
 				const selected = userPicker.getSelectedUser();
 				if ( selected ) {
 					$input.val( selected.userWidget.user.page_prefixed_text );
+				} else {
+					$input.val( '' );
 				}
 			},
 			choose: function ( item ) {

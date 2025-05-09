@@ -25,6 +25,10 @@ bs_smwc_pf_input_usertags_init = function ( input_id, params ) { // eslint-disab
 
 		userPicker.connect( this, {
 			change: function ( value ) {
+				if ( !value ) {
+					$input.val( '' );
+					return;
+				}
 				const promises = [];
 				for ( let i = 0; i < value.length; i++ ) {
 					promises.push( mws.commonwebapis.user.getByUsername( value[ i ].getData() ) );
