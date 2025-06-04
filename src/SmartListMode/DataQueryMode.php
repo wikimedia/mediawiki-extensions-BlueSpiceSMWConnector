@@ -2,10 +2,9 @@
 
 namespace BlueSpice\SMWConnector\SmartListMode;
 
-use BlueSpice\ParamProcessor\ParamDefinition;
-use BlueSpice\ParamProcessor\ParamType;
 use BlueSpice\SmartList\Mode\BaseMode;
 use MediaWiki\Context\RequestContext;
+use MWStake\MediaWiki\Component\InputProcessor\Processor\IntValue;
 use SMW\DIProperty;
 use SMW\DIWikiPage;
 use SMW\Query\QueryResult;
@@ -36,42 +35,33 @@ class DataQueryMode extends BaseMode {
 	}
 
 	/**
-	 * @return IParamDefinition[]
+	 * @return array
 	 */
 	public function getParams(): array {
-		$parentParams = parent::getParams();
-		return array_merge( $parentParams, [
-			new ParamDefinition(
-				ParamType::INTEGER,
-				static::ATTR_COUNT,
-				10
-			),
-			new ParamDefinition(
-				ParamType::STRING,
-				static::ATTR_CATEGORIES,
-				''
-			),
-			new ParamDefinition(
-				ParamType::STRING,
-				static::ATTR_NAMESPACES,
-				''
-			),
-			new ParamDefinition(
-				ParamType::STRING,
-				static::ATTR_MODIFIED,
-				''
-			),
-			new ParamDefinition(
-				ParamType::STRING,
-				static::ATTR_PRINTOUTS,
-				''
-			),
-			new ParamDefinition(
-				ParamType::STRING,
-				static::ATTR_FORMAT,
-				'ul'
-			)
-		] );
+		$params = parent::getParams();
+		$params[static::ATTR_COUNT] = ( new IntValue() )->setDefaultValue( 10 );
+		$params[static::ATTR_CATEGORIES] = [
+			'type' => 'string'
+		];
+		$params[static::ATTR_NAMESPACES] = [
+			'type' => 'string'
+		];
+		$params[static::ATTR_MODIFIED] = [
+			'type' => 'string',
+			'required' => false,
+			'default' => ''
+		];
+		$params[static::ATTR_PRINTOUTS] = [
+			'type' => 'string',
+			'required' => false,
+			'default' => ''
+		];
+		$params[static::ATTR_FORMAT] = [
+			'type' => 'string',
+			'required' => false,
+			'default' => 'ul'
+		];
+		return $params;
 	}
 
 	/**

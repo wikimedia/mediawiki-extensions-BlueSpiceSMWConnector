@@ -31,10 +31,6 @@
 					"package": "BlueSpice Pro"
 				}
 			},
-			"TagRegistry": {
-				"dataquery": "\\BlueSpice\\SMWConnector\\Tag\\DataQuery",
-				"decisionOverview": "\\BlueSpice\\SMWConnector\\Tag\\DecisionOverview"
-			},
 			"PermissionRegistry": {
 				"createclass": {
 					"type": "global",
@@ -170,6 +166,10 @@
 		},
 		"integrateSMWDataIntoSearch": {
 			"class": "\\BlueSpice\\SMWConnector\\Hook\\IntegrateSMWDataIntoSearch"
+		},
+		"registerTags": {
+			"class": "BlueSpice\\SMWConnector\\HookHandler\\RegisterTags",
+			"services": [ "BlueSpiceSmartList.SmartlistMode" ]
 		}
 	},
 	"Hooks": {
@@ -191,7 +191,8 @@
 		"SMW::Store::AfterQueryResultLookupComplete": "BlueSpice\\SMWConnector\\Hook\\SMWStoreAfterQueryResultLookupComplete\\ApplySecurityTrimming::callback",
 		"ParserFirstCallInit": "BlueSpice\\SMWConnector\\Hook\\ParserFirstCallInit\\AsyncAsk::callback",
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
-		"RevisionDataUpdates": "forceLinksUpdate"
+		"RevisionDataUpdates": "forceLinksUpdate",
+		"MWStakeGenericTagHandlerInitTags": "registerTags"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
@@ -293,14 +294,28 @@
 				"ext.bluespice"
 			]
 		},
-		"ext.BSSMWConnector.DataQuery.visualEditor": {
+		"ext.BSSMWConnector.DataQuery.droplet": {
+			"styles": "stylesheets/droplet.dataquery.css"
+		},
+		"ext.BSSMWConnector.decisionOverview.styles": {
+			"styles": [
+				"ext.BSSSMWConnector.decisionOverview.css",
+				"stylesheets/droplet.decisionoverview.css"
+			]
+		},
+		"ext.BSSMWConnector.dataquery.tag": {
 			"scripts": [
-				"nodes/bs.smwconnector.ce.DataQueryNode.js",
-				"nodes/bs.smwconnector.dm.DataQueryNode.js",
-				"nodes/bs.smwconnector.ui.DataQueryInspector.js",
-				"nodes/bs.smwconnector.ui.DataQueryInspectorTool.js"
+				"ve/dataQueryDefinition.js"
 			],
-			"styles": "stylesheets/droplet.dataquery.css",
+			"dependencies": [
+				"ext.bluespice",
+				"ext.visualEditorPlus.tags.definition"
+			]
+		},
+		"ext.BSSMWConnector.dataquery.form": {
+			"scripts": [
+				"ui/DataQueryForm.js"
+			],
 			"messages": [
 				"bs-smwconnector-dataquery-name",
 				"bs-smwconnector-dataquery-desc",
@@ -325,20 +340,15 @@
 				"bs-smwconnector-dataquery-count-help"
 			],
 			"dependencies": [
-				"ext.visualEditor.mwcore",
-				"ext.bluespice"
+				"ext.forms.formelements.bootstrap",
+				"ext.forms.standalone"
 			]
 		},
-		"ext.BSSMWConnector.decisionOverview.visualEditor": {
+		"ext.BSSMWConnector.decisionoverview.form": {
 			"scripts": [
-				"nodes/bs.smwconnector.ce.DecisionOverviewNode.js",
-				"nodes/bs.smwconnector.dm.DecisionOverviewNode.js",
-				"nodes/bs.smwconnector.ui.DecisionOverviewInspector.js",
-				"nodes/bs.smwconnector.ui.DecisionOverviewInspectorTool.js"
+				"ui/DecisionOverviewForm.js"
 			],
-			"styles": "stylesheets/droplet.decisionoverview.css",
 			"messages": [
-				"bs-smwconnector-decision-overview-title",
 				"bs-smwconnector-decision-overview-categories-label",
 				"bs-smwconnector-decision-overview-categories-help",
 				"bs-smwconnector-decision-overview-namespaces-label",
@@ -347,13 +357,8 @@
 				"bs-smwconnector-decision-overview-prefix-help"
 			],
 			"dependencies": [
-				"ext.visualEditor.mwcore",
-				"ext.bluespice"
-			]
-		},
-		"ext.BSSMWConnector.decisionOverview.styles": {
-			"styles": [
-				"ext.BSSSMWConnector.decisionOverview.css"
+				"ext.forms.formelements.bootstrap",
+				"ext.forms.standalone"
 			]
 		}
 	},

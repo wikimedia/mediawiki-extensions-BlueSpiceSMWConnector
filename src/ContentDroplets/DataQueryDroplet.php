@@ -33,7 +33,7 @@ class DataQueryDroplet extends TagDroplet {
 	 */
 	public function getRLModules(): array {
 		return [
-			'ext.BSSMWConnector.DataQuery.visualEditor'
+			'ext.BSSMWConnector.DataQuery.droplet'
 		];
 	}
 
