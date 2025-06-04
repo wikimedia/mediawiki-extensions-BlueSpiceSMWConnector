@@ -2,12 +2,12 @@
 
 namespace BlueSpice\SMWConnector\Tag;
 
-use BlueSpice\Tag\Handler;
 use MediaWiki\Html\Html;
 use MediaWiki\Language\Language;
 use MediaWiki\Parser\Parser;
 use MediaWiki\Parser\PPFrame;
 use MediaWiki\Title\Title;
+use MWStake\MediaWiki\Component\GenericTagHandler\ITagHandler;
 use SMW\DIProperty;
 use SMW\DIWikiPage;
 use SMW\Query\QueryResult;
@@ -16,33 +16,24 @@ use SMW\Store;
 use SMWQuery;
 use SMWQueryProcessor;
 
-class DecisionOverviewHandler extends Handler {
-
-	/** @var Language */
-	private $language = null;
+class DecisionOverviewHandler implements ITagHandler {
 
 	/**
-	 * @param string $processedInput
-	 * @param array $processedArgs
-	 * @param Parser $parser
-	 * @param PPFrame $frame
 	 * @param Language $language
 	 */
-	public function __construct( $processedInput, array $processedArgs, Parser $parser,
-		PPFrame $frame, Language $language ) {
-		parent::__construct( $processedInput, $processedArgs, $parser, $frame );
-		$this->language = $language;
+	public function __construct(
+		private readonly Language $language
+	) {
 	}
 
 	/**
-	 *
-	 * @return string
+	 * @inheritDoc
 	 */
-	public function handle() {
-		$categories = $this->createSMWformat( $this->processedArgs[DecisionOverview::ATTR_CATEGORIES], 'categories' );
-		$namespaces = $this->createSMWformat( $this->processedArgs[DecisionOverview::ATTR_NAMESPACES], 'namespaces' );
-		$prefix = $this->createSMWformat( $this->processedArgs[DecisionOverview::ATTR_PREFIX], 'prefix' );
-		$this->parser->getOutput()->addModuleStyles( [ 'ext.BSSMWConnector.decisionOverview.styles' ] );
+	public function getRenderedContent( string $input, array $params, Parser $parser, PPFrame $frame ): string {
+		$categories = $this->createSMWformat( $params[DecisionOverview::ATTR_CATEGORIES], 'categories' );
+		$namespaces = $this->createSMWformat( $params[DecisionOverview::ATTR_NAMESPACES], 'namespaces' );
+		$prefix = $this->createSMWformat( $params[DecisionOverview::ATTR_PREFIX], 'prefix' );
+		$parser->getOutput()->addModuleStyles( [ 'ext.BSSMWConnector.decisionOverview.styles' ] );
 
 		$query = '{{#ask:' . $categories . $namespaces . $prefix . '[[Decision::+]]|?Decision}}';
 		$queryResult = $this->runSMWQuery( $query );
@@ -64,9 +55,7 @@ class DecisionOverviewHandler extends Handler {
 				wfMessage( 'bs-smwconnector-decision-overview-no-result' )->plain()
 			);
 		}
-		$table = $this->getDecisionTable( $smwData );
-
-		return $table;
+		return $this->getDecisionTable( $smwData );
 	}
 
 	/**
@@ -197,30 +186,33 @@ class DecisionOverviewHandler extends Handler {
 	}
 
 	/**
-	 * @param string $args
+	 * @param string|array $args
 	 * @param string $format
 	 * @return string
 	 */
-	private function createSMWformat( string $args, string $format ): string {
+	private function createSMWformat( string|array $args, string $format ): string {
 		if ( empty( $args ) ) {
 			return '';
 		}
 
-		$argsArray = explode( '|', $args );
+		if ( is_string( $args ) ) {
+			// If a string is passed, we assume it is a single value
+			$args = explode( '|', $args );
+		}
 		$argsString = '';
 		$multiple = false;
 		switch ( $format ) {
 			case 'categories':
-				foreach ( $argsArray as $arg ) {
+				foreach ( $args as $arg ) {
 					if ( $multiple ) {
 						$argsString .= 'OR';
 					}
-					$argsString .= "[[Category:$arg]]";
+					$argsString .= "[[{$arg->getPrefixedDbKey()}]]";
 					$multiple = true;
 				}
 				break;
 			case 'namespaces':
-				foreach ( $argsArray as $arg ) {
+				foreach ( $args as $arg ) {
 					if ( $multiple ) {
 						$argsString .= 'OR';
 					}
@@ -234,7 +226,7 @@ class DecisionOverviewHandler extends Handler {
 				}
 				break;
 			case 'prefix':
-				foreach ( $argsArray as $arg ) {
+				foreach ( $args as $arg ) {
 					$argsString .= "[[$arg]]";
 				}
 				break;
@@ -270,11 +262,10 @@ class DecisionOverviewHandler extends Handler {
 			$values[] = str_replace( "_", " ", $value );
 		}
 
-		$decisions = [
+		return [
 			'page' => $DIWikiPage->getTitle(),
 			'decisions' => $values
 		];
-		return $decisions;
 	}
 
 	/**
@@ -297,5 +288,4 @@ class DecisionOverviewHandler extends Handler {
 		}
 		return $propertiesData;
 	}
-
 }

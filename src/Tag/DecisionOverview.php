@@ -2,92 +2,88 @@
 
 namespace BlueSpice\SMWConnector\Tag;
 
-use BlueSpice\ParamProcessor\ParamDefinition;
-use BlueSpice\ParamProcessor\ParamType;
-use BlueSpice\Tag\GenericHandler;
-use BlueSpice\Tag\MarkerType\NoWiki;
-use BlueSpice\Tag\Tag;
+use MediaWiki\Language\RawMessage;
 use MediaWiki\MediaWikiServices;
-use MediaWiki\Parser\Parser;
-use MediaWiki\Parser\PPFrame;
+use MediaWiki\Message\Message;
+use MWStake\MediaWiki\Component\FormEngine\FormLoaderSpecification;
+use MWStake\MediaWiki\Component\GenericTagHandler\ClientTagSpecification;
+use MWStake\MediaWiki\Component\GenericTagHandler\GenericTag;
+use MWStake\MediaWiki\Component\GenericTagHandler\ITagHandler;
+use MWStake\MediaWiki\Component\GenericTagHandler\MarkerType;
 
-class DecisionOverview extends Tag {
+class DecisionOverview extends GenericTag {
 
 	public const ATTR_CATEGORIES = 'categories';
 	public const ATTR_NAMESPACES = 'namespaces';
 	public const ATTR_PREFIX = 'prefix';
 
-	/** @var MediaWikiServices */
-	private $services;
-
-	public function __construct() {
-		$this->services = MediaWikiServices::getInstance();
+	/**
+	 * @inheritDoc
+	 */
+	public function getTagNames(): array {
+		return [ 'decisionoverview' ];
 	}
 
 	/**
-	 *
-	 * @return NoWiki
+	 * @inheritDoc
 	 */
-	public function getMarkerType() {
-		return new NoWiki();
+	public function hasContent(): bool {
+		return false;
 	}
 
 	/**
-	 *
-	 * @return string
+	 * @inheritDoc
 	 */
-	public function getContainerElementName() {
-		return GenericHandler::TAG_DIV;
+	public function getMarkerType(): MarkerType {
+		return new MarkerType\NoWiki();
 	}
 
 	/**
-	 * @param string $processedInput
-	 * @param array $processedArgs
-	 * @param Parser $parser
-	 * @param PPFrame $frame
-	 * @return SmartListHandler
+	 * @inheritDoc
 	 */
-	public function getHandler( $processedInput, array $processedArgs, Parser $parser, PPFrame $frame ) {
-		$language = $this->services->getContentLanguage();
+	public function getContainerElementName(): ?string {
+		return 'div';
+	}
 
-		return new DecisionOverviewHandler(
-			$processedInput,
-			$processedArgs,
-			$parser,
-			$frame,
-			$language
+	/**
+	 * @inheritDoc
+	 */
+	public function getHandler( MediaWikiServices $services ): ITagHandler {
+		return new DecisionOverviewHandler( $services->getContentLanguage() );
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function getParamDefinition(): ?array {
+		return [
+			static::ATTR_CATEGORIES => [
+				'type' => 'category-list',
+				'separator' => '|'
+			],
+			static::ATTR_NAMESPACES => [
+				'type' => 'namespace-list',
+				'separator' => '|'
+			],
+			static::ATTR_PREFIX => [
+				'type' => 'string',
+				'default' => ''
+			]
+		];
+	}
+
+	/**
+	 * @inheritDoc
+	 */
+	public function getClientTagSpecification(): ClientTagSpecification|null {
+		return new ClientTagSpecification(
+			'DecisionOverview',
+			new RawMessage( '' ),
+			new FormLoaderSpecification(
+				'bs.swmconnector.ui.DecisionOverviewForm',
+				[ 'ext.BSSMWConnector.decisionoverview.form' ]
+			),
+			Message::newFromKey( 'bs-smwconnector-decision-overview-title' )
 		);
-	}
-
-	/**
-	 * @return string[]
-	 */
-	public function getTagNames() {
-		return [
-			'decisionoverview'
-		];
-	}
-
-	/**
-	 * @return IParamDefinition[]
-	 */
-	public function getArgsDefinitions() {
-		return [
-			new ParamDefinition(
-				ParamType::STRING,
-				static::ATTR_CATEGORIES,
-				''
-			),
-			new ParamDefinition(
-				ParamType::STRING,
-				static::ATTR_NAMESPACES,
-				''
-			),
-			new ParamDefinition(
-				ParamType::STRING,
-				static::ATTR_PREFIX,
-				''
-			)
-		];
 	}
 }

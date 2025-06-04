@@ -2,69 +2,40 @@
 
 namespace BlueSpice\SMWConnector\Tag;
 
-use BlueSpice\SmartList\BlueSpiceSmartListModeFactory;
-use BlueSpice\SmartList\Mode\IMode;
-use BlueSpice\SmartList\Tag\SmartListHandler;
-use BlueSpice\Tag\Tag;
-use MediaWiki\Context\RequestContext;
-use MediaWiki\MediaWikiServices;
-use MediaWiki\Parser\Parser;
-use MediaWiki\Parser\PPFrame;
+use BlueSpice\SmartList\Tag\SmartlistTag;
+use MediaWiki\Language\RawMessage;
+use MediaWiki\Message\Message;
+use MWStake\MediaWiki\Component\FormEngine\FormLoaderSpecification;
+use MWStake\MediaWiki\Component\GenericTagHandler\ClientTagSpecification;
 
-class DataQuery extends Tag {
+class DataQuery extends SmartlistTag {
 
-	/** @var MediaWikiServices */
-	private $services;
-
-	/** @var BlueSpiceSmartListModeFactory */
-	private $factory;
-
-	/** @var IMode */
-	private $mode;
-
-	public function __construct() {
-		$this->services = MediaWikiServices::getInstance();
-		$this->factory = $this->services->getService( 'BlueSpiceSmartList.SmartlistMode' );
-		$this->mode = $this->factory->createMode( 'dataquery' );
+	/**
+	 * @inheritDoc
+	 */
+	public function getTagNames(): array {
+		return [ 'dataquery' ];
 	}
 
 	/**
-	 * @param string $processedInput
-	 * @param array $processedArgs
-	 * @param Parser $parser
-	 * @param PPFrame $frame
-	 * @return SmartListHandler
+	 * @inheritDoc
 	 */
-	public function getHandler( $processedInput, array $processedArgs, Parser $parser, PPFrame $frame ) {
-		$context = RequestContext::getMain();
-		$titleFactory = $this->services->getTitleFactory();
-		$hookContainer = $this->services->getHookContainer();
-
-		return new SmartListHandler(
-			$processedInput,
-			$processedArgs,
-			$parser,
-			$frame,
-			$context,
-			$titleFactory,
-			$hookContainer,
-			$this->mode
+	public function getClientTagSpecification(): ClientTagSpecification|null {
+		return new ClientTagSpecification(
+			'DataQuery',
+			new RawMessage( '' ),
+			new FormLoaderSpecification(
+				'bs.swmconnector.ui.DataQueryForm',
+				[ 'ext.BSSMWConnector.dataquery.form' ]
+			),
+			Message::newFromKey( 'bs-smwconnector-dataquery-name' )
 		);
 	}
 
 	/**
-	 * @return string[]
+	 * @inheritDoc
 	 */
-	public function getTagNames() {
-		return [
-			'dataquery'
-		];
-	}
-
-	/**
-	 * @return IParamDefinition[]
-	 */
-	public function getArgsDefinitions() {
-		return $this->mode->getParams();
+	public function getResourceLoaderModules(): ?array {
+		return [ 'ext.BSSMWConnector.dataquery.tag' ];
 	}
 }

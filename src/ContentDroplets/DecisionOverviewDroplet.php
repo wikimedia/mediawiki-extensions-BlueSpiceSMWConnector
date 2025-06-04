@@ -52,7 +52,7 @@ class DecisionOverviewDroplet extends TagDroplet {
 	 * @inheritDoc
 	 */
 	public function getRLModules(): array {
-		return [ 'ext.BSSMWConnector.decisionOverview.visualEditor' ];
+		return [ 'ext.BSSMWConnector.decisionOverview.styles' ];
 	}
 
 	/**
@@ -73,6 +73,6 @@ class DecisionOverviewDroplet extends TagDroplet {
 	 * @return string|null
 	 */
 	public function getVeCommand(): ?string {
-		return 'decisionOverviewCommand';
+		return 'decisionoverviewCommand';
 	}
 }
