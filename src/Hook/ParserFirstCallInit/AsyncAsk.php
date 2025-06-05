@@ -7,7 +7,6 @@ use BlueSpice\Hook\ParserFirstCallInit;
 use BlueSpice\SMWConnector\IAsyncAskHandler;
 use MediaWiki\Html\Html;
 use MediaWiki\Parser\Parser;
-use MWException;
 
 /**
  * Handler for #asyncAsk parser function
@@ -18,7 +17,6 @@ class AsyncAsk extends ParserFirstCallInit {
 
 	/**
 	 * @return bool
-	 * @throws MWException
 	 */
 	protected function doProcess() {
 		$this->parser->setFunctionHook( 'asyncAsk', [ $this, 'render' ] );
