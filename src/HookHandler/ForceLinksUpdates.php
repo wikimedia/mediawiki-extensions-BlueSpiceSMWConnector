@@ -6,7 +6,6 @@ use MediaWiki\Deferred\LinksUpdate\LinksUpdate;
 use MediaWiki\Revision\RenderedRevision;
 use MediaWiki\Storage\Hook\RevisionDataUpdatesHook;
 use MediaWiki\Title\Title;
-use MWException;
 
 class ForceLinksUpdates implements RevisionDataUpdatesHook {
 
@@ -19,7 +18,6 @@ class ForceLinksUpdates implements RevisionDataUpdatesHook {
 	 * @param array &$updates
 	 *
 	 * @return void
-	 * @throws MWException
 	 */
 	public function onRevisionDataUpdates( $title, $renderedRevision, &$updates ) {
 		$titleDBkey = $title->getPrefixedDBkey();
