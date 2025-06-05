@@ -2,7 +2,6 @@
 
 namespace BlueSpice\SMWConnector\Data\Ask;
 
-use MWException;
 use MWStake\MediaWiki\Component\DataStore\NullSorter;
 use MWStake\MediaWiki\Component\DataStore\NullTrimmer;
 use MWStake\MediaWiki\Component\DataStore\Reader as BaseReader;
@@ -20,12 +19,13 @@ class Reader extends BaseReader {
 	/**
 	 * @param ReaderParams $params
 	 * @return PrimaryDataProvider
+	 * @throws RuntimeException
 	 */
 	protected function makePrimaryDataProvider( $params ) {
 		if ( !$this->primaryProvider ) {
 			$primaryProviderClass = $this->getPrimaryDataProviderClass();
 			if ( !class_exists( $primaryProviderClass ) ) {
-				throw new MWException(
+				throw new RuntimeException(
 					'PrimaryDataProvider class ' . $primaryProviderClass . ' does not exist'
 				);
 			}

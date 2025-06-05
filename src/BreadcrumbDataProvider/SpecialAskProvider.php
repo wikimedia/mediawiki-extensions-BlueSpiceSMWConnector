@@ -6,7 +6,7 @@ use BlueSpice\Discovery\BreadcrumbDataProvider\BaseBreadcrumbDataProvider;
 use MediaWiki\SpecialPage\SpecialPageFactory;
 use MediaWiki\Title\NamespaceInfo;
 use MediaWiki\Title\Title;
-use MWException;
+use RuntimeException;
 
 class SpecialAskProvider extends BaseBreadcrumbDataProvider {
 
@@ -30,12 +30,12 @@ class SpecialAskProvider extends BaseBreadcrumbDataProvider {
 	/**
 	 * @param Title $title
 	 * @return Title
-	 * @throws MWException If the "Ask" page doesn't exist
+	 * @throws RuntimeException If the "Ask" page doesn't exist
 	 */
 	public function getRelevantTitle( $title ): Title {
 		$specialPage = $this->specialPageFactory->getPage( 'Ask' );
 		if ( !$specialPage ) {
-			throw new MWException( 'The "Ask" page doesn\'t exist' );
+			throw new RuntimeException( 'The "Ask" page doesn\'t exist' );
 		}
 		return $specialPage->getPageTitle();
 	}
