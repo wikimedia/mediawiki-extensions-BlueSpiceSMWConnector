@@ -23,11 +23,11 @@ bs_smwc_pf_input_usercombo_init = function ( input_id, params ) { // eslint-disa
 		}
 
 		userPicker.connect( this, {
-			change: function () {
+			change: function ( value ) {
 				const selected = userPicker.getSelectedUser();
 				if ( selected ) {
 					$input.val( selected.userWidget.user.page_prefixed_text );
-				} else {
+				} else if ( !value ) {
 					$input.val( '' );
 				}
 			},
