@@ -19,6 +19,11 @@
 		},
 		{
 			"name": "Leonid Verhovskij"
+		},
+		{
+			"name": "Hallo Welt! GmbH",
+			"email": "info@hallowelt.com",
+			"homepage": "https://www.hallowelt.com"
 		}
 	],
 	"require": {
