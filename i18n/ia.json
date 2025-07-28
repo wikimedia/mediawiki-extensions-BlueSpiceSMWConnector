@@ -57,5 +57,6 @@
 	"bs-smwconnector-decision-overview-table-heading-page-label": "Pagina",
 	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Decisiones",
 	"bs-smwconnector-yes": "Si",
-	"bs-smwconnector-no": "No"
+	"bs-smwconnector-no": "No",
+	"bs-smwconnector-user-input-placeholder": "Per favor digita un littera…"
 }
