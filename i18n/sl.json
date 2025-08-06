@@ -44,7 +44,7 @@
 	"bs-smwconnector-dataquery-format-label": "Format",
 	"bs-smwconnector-dataquery-format-help": "Format, uporabljen za izpise",
 	"bs-smwconnector-dataquery-format-bulleted-list": "Označen seznam",
-	"bs-smwconnector-dataquery-format-numbered-list": "Oštevilčen seznam",
+	"bs-smwconnector-dataquery-format-numbered-list": "Oštevilčeni seznam",
 	"bs-smwconnector-dataquery-count-label": "Številka",
 	"bs-smwconnector-dataquery-count-help": "Omejitev števila vrnjenih zadetkov",
 	"bs-smwconnector-decision-overview-categories-label": "Kategorije",
