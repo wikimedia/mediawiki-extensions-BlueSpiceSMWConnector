@@ -4,7 +4,8 @@
 			"Amir1arch",
 			"Ebrahim",
 			"Ebraminio",
-			"Jeeputer"
+			"Jeeputer",
+			"LordProfo"
 		]
 	},
 	"bs-dlg-choosesmwprop-label": "ویژگی",
@@ -20,5 +21,6 @@
 	"bs-smwconnector-dataquery-modified-operator-all": "همه",
 	"bs-smwconnector-dataquery-modified-operator-since": "از",
 	"bs-smwconnector-dataquery-modified-operator-before": "قبل از",
-	"bs-smwconnector-dataquery-count-label": "شماره"
+	"bs-smwconnector-dataquery-count-label": "شماره",
+	"bs-smwconnector-decision-overview-namespaces-label": "فضاهای نام"
 }
