@@ -3,6 +3,7 @@
 		"authors": [
 			"Athena in Wonderland",
 			"Hamilton Abreu",
+			"Mansil alfalb",
 			"Vitorvicentevalente"
 		]
 	},
@@ -19,5 +20,22 @@
 	"bs-swm-connector-ask-store-page-label": "Página",
 	"bs-smw-connector-async-ask-unknown-handler": "A rotina de tratamento (''handler'') para o formato \"$1\" não está registada ou é inválida",
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Valor do nó, que irá substituir o espaço reservado <nowiki>{{{node}}}</nowiki> na consulta",
-	"bs-smwconnector-extendedsearch-anon-user-label": "Utilizador anónimo"
+	"bs-smwconnector-extendedsearch-anon-user-label": "Utilizador anónimo",
+	"bs-smwconnector-dataquery-category-label": "Categoria",
+	"bs-smwconnector-dataquery-namespace-label": "Espaço nominal",
+	"bs-smwconnector-dataquery-modified-operator-label": "Modificado",
+	"bs-smwconnector-dataquery-modified-operator-all": "Tudo",
+	"bs-smwconnector-dataquery-modified-operator-since": "Desde",
+	"bs-smwconnector-dataquery-modified-operator-before": "Antes",
+	"bs-smwconnector-dataquery-modified-date-label": "Data",
+	"bs-smwconnector-dataquery-format-label": "Formato",
+	"bs-smwconnector-dataquery-count-label": "Número",
+	"bs-smwconnector-decision-overview-categories-label": "Categorias",
+	"bs-smwconnector-decision-overview-namespaces-label": "Espaços nominais",
+	"bs-smwconnector-decision-overview-prefix-label": "Prefixo",
+	"bs-smwconnector-decision-overview-table-heading-page-label": "Página",
+	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Decisões",
+	"bs-smwconnector-yes": "Sim",
+	"bs-smwconnector-no": "Não",
+	"bs-smwconnector-user-input-placeholder": "Por favor, digite uma letra…"
 }
