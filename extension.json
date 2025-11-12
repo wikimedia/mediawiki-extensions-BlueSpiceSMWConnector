@@ -349,11 +349,11 @@
 				"ui/DecisionOverviewForm.js"
 			],
 			"messages": [
-				"bs-smwconnector-decision-overview-categories-label",
+				"bs-smwconnector-decision-overview-input-categories-label",
 				"bs-smwconnector-decision-overview-categories-help",
-				"bs-smwconnector-decision-overview-namespaces-label",
+				"bs-smwconnector-decision-overview-input-namespaces-label",
 				"bs-smwconnector-decision-overview-namespaces-help",
-				"bs-smwconnector-decision-overview-prefix-label",
+				"bs-smwconnector-decision-overview-input-prefix-label",
 				"bs-smwconnector-decision-overview-prefix-help"
 			],
 			"dependencies": [

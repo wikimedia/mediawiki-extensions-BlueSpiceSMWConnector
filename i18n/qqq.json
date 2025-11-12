@@ -39,11 +39,8 @@
 	"bs-smwconnector-dataquery-format-bulleted-list": "Label for format dropdown 'Bulleted list' option",
 	"bs-smwconnector-dataquery-format-numbered-list": "Label for format dropdown 'Numbered list' option",
 	"bs-smwconnector-dataquery-count-help": "Help message for count number input field",
-	"bs-smwconnector-decision-overview-categories-label": "Label for category multi select input widget",
 	"bs-smwconnector-decision-overview-categories-help": "Help message for category multi select input widget",
-	"bs-smwconnector-decision-overview-namespaces-label": "Label for namespace multi select input widget",
 	"bs-smwconnector-decision-overview-namespaces-help": "Help message for namespace multi select input widget",
-	"bs-smwconnector-decision-overview-prefix-label": "Label for prefix text field",
 	"bs-smwconnector-decision-overview-prefix-help": "Help message for prefix text field",
 	"bs-smwconnector-decision-overview-title": "Label for decision overview inspector dialog",
 	"bs-smwconnector-decision-overview-no-result": "Label for decision overview visible if no decision could be found",
@@ -62,5 +59,8 @@
 	"bs-smwconnector-dataquery-modified-all": "Label for modified date operator dropdown 'All changes' option",
 	"bs-smwconnector-dataquery-modified-since": "Label for modified date operator dropdown 'Changes since' option",
 	"bs-smwconnector-dataquery-modified-before": "Label for modified date operator dropdown 'Changes until' option",
-	"bs-smwconnector-tree-loading": "Label for elements that are shown when waiting for Ajax data.\n{{Identical|Loading}}"
+	"bs-smwconnector-tree-loading": "Label for elements that are shown when waiting for Ajax data.\n{{Identical|Loading}}",
+	"bs-smwconnector-decision-overview-input-categories-label": "Label for categories text field",
+	"bs-smwconnector-decision-overview-input-namespaces-label": "Label for namespaces text field",
+	"bs-smwconnector-decision-overview-input-prefix-label": "Label for prefix text field"
 }

@@ -16,27 +16,30 @@ bs.swmconnector.ui.DecisionOverviewForm.prototype.makeItems = function () {
 		{
 			type: 'text',
 			name: 'categories',
-			label: mw.msg( 'bs-smwconnector-decision-overview-categories-label' ),
+			label: mw.msg( 'bs-smwconnector-decision-overview-input-categories-label' ),
 			help: mw.msg( 'bs-smwconnector-decision-overview-categories-help' ),
+			labelAlign: 'top'
 		},
 		{
 			type: 'text',
 			name: 'namespaces',
-			label: mw.msg( 'bs-smwconnector-decision-overview-namespaces-label' ),
+			label: mw.msg( 'bs-smwconnector-decision-overview-input-namespaces-label' ),
 			help: mw.msg( 'bs-smwconnector-decision-overview-namespaces-help' ),
-			widget_$overlay: true
+			widget_$overlay: true,
+			labelAlign: 'top'
 		},
 		{
 			type: 'text',
 			name: 'prefix',
-			label: mw.msg( 'bs-smwconnector-decision-overview-prefix-label' ),
+			label: mw.msg( 'bs-smwconnector-decision-overview-input-prefix-label' ),
 			help: mw.msg( 'bs-smwconnector-decision-overview-prefix-help' ),
 			widget_listeners: {
 				change: function( value ) {
 					this.getItem( 'categories' ).setDisabled( !!value );
 					this.getItem( 'namespaces' ).setDisabled( !!value );
 				}
-			}
+			},
+			labelAlign: 'top'
 		}
 	];
 };
