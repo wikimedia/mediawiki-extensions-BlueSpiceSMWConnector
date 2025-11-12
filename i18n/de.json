@@ -81,5 +81,8 @@
 	"bs-smwconnector-dataquery-modified-all": "Alle Änderungen",
 	"bs-smwconnector-dataquery-modified-since": "Änderungen seit",
 	"bs-smwconnector-dataquery-modified-before": "Änderungen bis",
-	"bs-smwconnector-tree-loading": "Lade …"
+	"bs-smwconnector-tree-loading": "Lade …",
+	"bs-smwconnector-decision-overview-input-categories-label": "Nach Kategorien filtern",
+	"bs-smwconnector-decision-overview-input-namespaces-label": "Nach Namensräumen filtern",
+	"bs-smwconnector-decision-overview-input-prefix-label": "Nach eigenem Präfix filtern"
 }
