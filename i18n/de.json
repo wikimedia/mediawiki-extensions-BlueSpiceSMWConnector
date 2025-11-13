@@ -73,5 +73,13 @@
 	"bs-smwconnector-yes": "Ja",
 	"bs-smwconnector-no": "Nein",
 	"bs-smwconnector-user-input-placeholder": "Zum Filtern tippen ...",
+	"bs-smwconnector-dataquery-number-input-label": "Anzahl angezeigter Ergebnisse",
+	"bs-smwconnector-dataquery-format-input-label": "Ausgabeformat",
+	"bs-smwconnector-dataquery-category-input-label": "Nach Kategorien filtern",
+	"bs-smwconnector-dataquery-namespace-input-label": "Nach Namensräumen filtern",
+	"bs-smwconnector-dataquery-modified-input-operator-label": "Änderungszeitraum",
+	"bs-smwconnector-dataquery-modified-all": "Alle Änderungen",
+	"bs-smwconnector-dataquery-modified-since": "Änderungen seit",
+	"bs-smwconnector-dataquery-modified-before": "Änderungen bis",
 	"bs-smwconnector-tree-loading": "Lade …"
 }
