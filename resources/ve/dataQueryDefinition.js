@@ -17,16 +17,19 @@ bs.swmconnector.ve.DataQueryDefinition.prototype.modifyDataBeforeSetToModel = fu
 bs.swmconnector.ve.DataQueryDefinition.prototype.modifyDataBeforeSetToInspector = function ( data ) {
 	let operator = '';
 	let date = '';
-	for ( let i = 0; i < data.modified.length; i++ ) {
-		const char = data.modified.charAt( i );
-		if ( isNaN( char ) ) {
-			operator += char;
-		} else {
-			date = data.modified.slice( Math.max( 0, i ) );
-			break;
+	if ( data.modified ) {
+		for ( let i = 0; i < data.modified.length; i++ ) {
+			const char = data.modified.charAt( i );
+			if ( isNaN( char ) ) {
+				operator += char;
+			} else {
+				date = data.modified.slice( Math.max( 0, i ) );
+				break;
+			}
 		}
 	}
-	data.modified = operator;
+
+	data.modified = operator || '+';
 	if ( operator !== '+' ) {
 		if ( date ) {
 			data.modifiedDate = date;

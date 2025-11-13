@@ -16,24 +16,27 @@ bs.swmconnector.ui.DataQueryForm.prototype.makeItems = function () {
 		{
 			type: 'text',
 			name: 'categories',
-			label: mw.msg( 'bs-smwconnector-dataquery-category-label' ),
-			help: mw.msg( 'bs-smwconnector-dataquery-category-help' )
+			label: mw.msg( 'bs-smwconnector-dataquery-category-input-label' ),
+			help: mw.msg( 'bs-smwconnector-dataquery-category-help' ),
+			labelAlign: 'top'
 		},
 		{
 			type: 'text',
 			name: 'namespaces',
-			label: mw.msg( 'bs-smwconnector-dataquery-namespace-label' ),
-			help: mw.msg( 'bs-smwconnector-dataquery-namespace-help' )
+			label: mw.msg( 'bs-smwconnector-dataquery-namespace-input-label' ),
+			help: mw.msg( 'bs-smwconnector-dataquery-namespace-help' ),
+			labelAlign: 'top'
 		},
 		{
 			type: 'dropdown',
-			label: mw.msg( 'bs-smwconnector-dataquery-modified-operator-label' ),
+			label: mw.msg( 'bs-smwconnector-dataquery-modified-input-operator-label' ),
 			help: mw.msg( 'bs-smwconnector-dataquery-modified-operator-help' ),
 			name: 'modified',
+			labelAlign: 'top',
 			options: [
-				{ data: '+', label: mw.msg( 'bs-smwconnector-dataquery-modified-operator-all' ) },
-				{ data: '>=', label: mw.msg( 'bs-smwconnector-dataquery-modified-operator-since' ) },
-				{ data: '<=', label: mw.msg( 'bs-smwconnector-dataquery-modified-operator-before' ) }
+				{ data: '+', label: mw.msg( 'bs-smwconnector-dataquery-modified-all' ) },
+				{ data: '>=', label: mw.msg( 'bs-smwconnector-dataquery-modified-since' ) },
+				{ data: '<=', label: mw.msg( 'bs-smwconnector-dataquery-modified-before' ) }
 			],
 			widget_listeners: {
 				change: function( value ) {
@@ -51,28 +54,34 @@ bs.swmconnector.ui.DataQueryForm.prototype.makeItems = function () {
 			label: mw.msg( 'bs-smwconnector-dataquery-modified-date-label' ),
 			help: mw.msg( 'bs-smwconnector-dataquery-modified-date-help' ),
 			hidden: true,
-			widget_$overlay: true
+			widget_$overlay: true,
+			labelAlign: 'top'
 		},
 		{
 			type: 'text',
 			name: 'printouts',
 			label: mw.msg( 'bs-smwconnector-dataquery-printouts-label' ),
-			help: mw.msg( 'bs-smwconnector-dataquery-printouts-help' )
+			help: mw.msg( 'bs-smwconnector-dataquery-printouts-help' ),
+			labelAlign: 'top'
 		},
 		{
 			type: 'dropdown',
 			name: 'format',
+			label: mw.msg( 'bs-smwconnector-dataquery-format-input-label' ),
 			options: [
 				{ data: 'ul', label: mw.msg( 'bs-smwconnector-dataquery-format-bulleted-list' ) },
 				{ data: 'ol', label: mw.msg( 'bs-smwconnector-dataquery-format-numbered-list' ) }
 			],
-			value: 'ul'
+			value: 'ul',
+			labelAlign: 'top'
 		},
 		{
 			type: 'number',
 			name: 'count',
+			label: mw.msg( 'bs-smwconnector-dataquery-number-input-label' ),
 			value: 10,
-			required: true
+			required: true,
+			labelAlign: 'top'
 		}
 	];
 };
