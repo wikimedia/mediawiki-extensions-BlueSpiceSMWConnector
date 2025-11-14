@@ -52,7 +52,7 @@
 	"bs-smwconnector-dataquery-modified-operator-before": "Vor",
 	"bs-smwconnector-dataquery-modified-date-label": "Datum",
 	"bs-smwconnector-dataquery-modified-date-help": "Datum des geänderten Filters",
-	"bs-smwconnector-dataquery-printouts-label": "Ausgedruckte Erklärungen",
+	"bs-smwconnector-dataquery-printouts-label": "Ausgabeanweisungen",
 	"bs-smwconnector-dataquery-printouts-help": "Eigenschaft(en) anzeigen, wobei mehrere Einträge mit '|' getrennt werden. Z. B. gibt 'prop1|prop2' die Eigenschaftswerte 'prop1' & 'prop2' der Seite zurück.",
 	"bs-smwconnector-dataquery-format-label": "Format",
 	"bs-smwconnector-dataquery-format-help": "Format für Ausdrucke",
