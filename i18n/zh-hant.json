@@ -56,5 +56,10 @@
 	"bs-smwconnector-decision-overview-title": "結論概要",
 	"bs-smwconnector-decision-overview-no-result": "目前的篩選器未找到結論",
 	"bs-smwconnector-decision-overview-droplet-title": "結論概要",
-	"bs-smwconnector-decision-overview-droplet-description": "啟用可取得結論概要的查詢"
+	"bs-smwconnector-decision-overview-droplet-description": "啟用可取得結論概要的查詢",
+	"bs-smwconnector-decision-overview-table-heading-page-label": "頁面",
+	"bs-smwconnector-decision-overview-table-heading-decisions-label": "定案",
+	"bs-smwconnector-yes": "是",
+	"bs-smwconnector-no": "否",
+	"bs-smwconnector-user-input-placeholder": "請輸入字母…"
 }
