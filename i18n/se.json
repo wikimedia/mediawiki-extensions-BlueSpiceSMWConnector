@@ -7,5 +7,6 @@
 	},
 	"bs-dlg-choosesmwprop-label": "Iešvuohta",
 	"bs-smwconnector-extendedsearch-anon-user-label": "Anonyma geavaheaddji",
-	"bs-smwconnector-decision-overview-categories-label": "Kategoriijat"
+	"bs-smwconnector-decision-overview-categories-label": "Kategoriijat",
+	"bs-smwconnector-dataquery-category-label": "Kategoriija"
 }
