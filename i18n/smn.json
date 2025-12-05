@@ -4,5 +4,6 @@
 			"Yupik"
 		]
 	},
-	"bs-smwconnector-decision-overview-categories-label": "Luokah"
+	"bs-smwconnector-decision-overview-categories-label": "Luokah",
+	"bs-smwconnector-dataquery-category-label": "Luokka"
 }
