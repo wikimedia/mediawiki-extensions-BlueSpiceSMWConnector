@@ -4,9 +4,10 @@
 		const data = $container.data( 'query' );
 
 		const store = new bs.smwconnector.ui.data.SMWTreeStore( {
-			action: 'bs-smw-connector-tree-ask-store',
+			action: data.storeAction,
 			query: data.query,
-			pageSize: 500
+			pageSize: 500,
+			node: data.rootNode || ''
 		} );
 		store.load().done( ( data ) => { // eslint-disable-line no-shadow
 			const tree = new bs.smwconnector.ui.data.AsyncResultTree( {

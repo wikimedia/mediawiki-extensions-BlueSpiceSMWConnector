@@ -31,7 +31,7 @@ class Tree implements IAsyncAskHandler {
 			'data-query' => FormatJson::encode( $data )
 		], Html::element( 'span', [
 				'class' => 'loading-text',
-			], Message::newFromKey( 'bs-extjs-loading' )->text() )
+			], Message::newFromKey( 'bs-smwconnector-tree-loading' )->text() )
 		);
 	}
 
