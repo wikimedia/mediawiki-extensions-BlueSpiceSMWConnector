@@ -2,7 +2,7 @@ bs.util.registerNamespace( 'bs.smwconnector.ui.data' );
 
 bs.smwconnector.ui.data.SMWTreeStore = function ( cfg ) {
 	bs.smwconnector.ui.data.SMWTreeStore.parent.call( this, cfg );
-	this.node = '';
+	this.node = cfg.node || '';
 };
 
 OO.inheritClass( bs.smwconnector.ui.data.SMWTreeStore, OOJSPlus.ui.data.store.RemoteStore );
@@ -22,7 +22,14 @@ bs.smwconnector.ui.data.SMWTreeStore.prototype.doLoadData = function () {
 	this.api.get( data ).done( ( response ) => {
 		if ( response.hasOwnProperty( 'results' ) ) {
 			this.total = response.total;
-			dfd.resolve( this.indexData( response.results ) );
+			const results = response.results.map( ( item ) => {
+				if ( item.page_url ) {
+					item.href = item.page_url;
+				}
+				return item;
+			} );
+
+			dfd.resolve( this.indexData( results ) );
 		}
 	} ).fail( ( e ) => {
 		dfd.reject( e );

@@ -12,6 +12,7 @@ bs.smwconnector.ui.data.AsyncResultGrid = function ( cfg ) {
 		buildMeta: 'onBuildMeta'
 	} );
 	this.initialized = false;
+	this.hiddenColumns = data.hiddenColumns || [];
 	bs.smwconnector.ui.data.AsyncResultGrid.parent.call( this, cfg );
 };
 
@@ -27,6 +28,7 @@ bs.smwconnector.ui.data.AsyncResultGrid.prototype.initialize = function ( meta )
 	this.initialized = true;
 	this.buildColumns( this.prepareColumns( meta ) );
 	this.addHeader();
+	this.updateToolbar();
 };
 
 bs.smwconnector.ui.data.AsyncResultGrid.prototype.prepareColumns = function ( meta ) {
@@ -67,6 +69,33 @@ bs.smwconnector.ui.data.AsyncResultGrid.prototype.prepareColumns = function ( me
 			column.sortable = true;
 		}
 		columns[ key.replaceAll( ' ', '_' ) ] = column;
+
+		if ( this.hiddenColumns.includes( metaItem.property_name ) ) {
+			column.hidden = true;
+		}
 	}
+
 	return columns;
+};
+
+/**
+ * Update settings button in toolbar after async retrieval of columns
+ */
+bs.smwconnector.ui.data.AsyncResultGrid.prototype.updateToolbar = function () {
+	const settingsWidget = this.getGridSettingsWidget();
+	if ( !( settingsWidget instanceof OO.ui.PopupButtonWidget ) ) {
+		return;
+	}
+
+	const items = this.toolbar.staticControls.getItems();
+	const toUpdate = items.filter(
+		item => item instanceof OO.ui.PopupButtonWidget
+	);
+
+	if ( toUpdate.length ) {
+		// keep the index of the first removed popup so we can reinsert there
+		const insertIndex = Math.max( 0, items.indexOf( toUpdate[0] ) );
+		this.toolbar.staticControls.removeItems( toUpdate );
+		this.toolbar.staticControls.addItems( [ settingsWidget ], insertIndex );
+	}
 };
