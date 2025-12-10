@@ -2,8 +2,8 @@
 
 namespace BlueSpice\SMWConnector\Data\TreeAsk;
 
+use MediaWiki\Title\Title;
 use MWStake\MediaWiki\Component\DataStore\Record;
-use Title;
 
 class SecondaryDataProvider extends \BlueSpice\SMWConnector\Data\Ask\SecondaryDataProvider {
 
@@ -19,5 +19,4 @@ class SecondaryDataProvider extends \BlueSpice\SMWConnector\Data\Ask\SecondaryDa
 		$record->set( 'page_url', $title->getLocalURL() );
 		$record->set( 'leaf', false );
 	}
-
 }
