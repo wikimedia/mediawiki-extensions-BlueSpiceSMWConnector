@@ -5,7 +5,7 @@
 		]
 	},
 	"bs-swm-connector-ask-store-page-label": "Seidd",
+	"bs-smwconnector-dataquery-category-label": "Kategoria",
 	"bs-smwconnector-decision-overview-categories-label": "Kategoria",
-	"bs-smwconnector-decision-overview-prefix-label": "Prefikss",
-	"bs-smwconnector-dataquery-category-label": "Kategoria"
+	"bs-smwconnector-decision-overview-prefix-label": "Prefikss"
 }
