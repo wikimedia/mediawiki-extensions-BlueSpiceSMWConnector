@@ -59,5 +59,6 @@
 	"bs-smwconnector-decision-overview-table-heading-decisions-label": "定案",
 	"bs-smwconnector-yes": "是",
 	"bs-smwconnector-no": "否",
-	"bs-smwconnector-user-input-placeholder": "請輸入字母…"
+	"bs-smwconnector-user-input-placeholder": "請輸入字母…",
+	"bs-smwconnector-tree-loading": "載入中…"
 }
