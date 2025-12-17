@@ -26,5 +26,6 @@
 	"bs-smwconnector-decision-overview-categories-label": "Categorie",
 	"bs-smwconnector-decision-overview-namespaces-label": "Namespace",
 	"bs-smwconnector-decision-overview-table-heading-page-label": "Pagina",
-	"bs-smwconnector-user-input-placeholder": "Per favore, digita una lettera…"
+	"bs-smwconnector-user-input-placeholder": "Per favore, digita una lettera…",
+	"bs-smwconnector-tree-loading": "Caricamento …"
 }

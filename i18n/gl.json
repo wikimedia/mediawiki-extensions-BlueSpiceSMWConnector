@@ -57,5 +57,6 @@
 	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Decisións",
 	"bs-smwconnector-yes": "Si",
 	"bs-smwconnector-no": "Non",
-	"bs-smwconnector-user-input-placeholder": "Escribe unha letra…"
+	"bs-smwconnector-user-input-placeholder": "Escribe unha letra…",
+	"bs-smwconnector-tree-loading": "Cargando…"
 }
