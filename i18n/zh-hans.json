@@ -6,6 +6,7 @@
 			"Kishinsagi",
 			"LittlePaw365",
 			"Liuxinyu970226",
+			"Pawsdt",
 			"Xyb",
 			"列维劳德"
 		]
@@ -54,5 +55,6 @@
 	"bs-smwconnector-decision-overview-categories-help": "按一个或多个分类进行筛选，使用多个选项时用“|”来分隔。",
 	"bs-smwconnector-decision-overview-namespaces-label": "命名空间",
 	"bs-smwconnector-decision-overview-namespaces-help": "按一个或多个命名空间进行筛选，使用多个选项时用“|”来分隔。",
-	"bs-smwconnector-decision-overview-prefix-label": "前缀"
+	"bs-smwconnector-decision-overview-prefix-label": "前缀",
+	"bs-smwconnector-tree-loading": "加载中……"
 }
