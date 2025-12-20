@@ -62,5 +62,16 @@
 	"bs-smwconnector-yes": "Label for true value{{Identical|Yes}}",
 	"bs-smwconnector-no": "Label for false value{{Identical|No}}",
 	"bs-smwconnector-user-input-placeholder": "Placeholder for user input in PageForms",
-	"bs-smwconnector-tree-loading": "Label for elements that are shown when waiting for Ajax data.\n{{Identical|Loading}}"
+	"bs-smwconnector-tree-loading": "Label for elements that are shown when waiting for Ajax data.\n{{Identical|Loading}}",
+	"bs-smwconnector-dataquery-number-input-label": "Label for count number input field",
+	"bs-smwconnector-dataquery-format-input-label": "Label for format dropdown",
+	"bs-smwconnector-dataquery-category-input-label": "Label for category text field",
+	"bs-smwconnector-dataquery-namespace-input-label": "Label for namespace text field",
+	"bs-smwconnector-dataquery-modified-input-operator-label": "Label for modified date operator dropdown",
+	"bs-smwconnector-dataquery-modified-all": "Label for modified date operator dropdown 'All changes' option",
+	"bs-smwconnector-dataquery-modified-since": "Label for modified date operator dropdown 'Changes since' option",
+	"bs-smwconnector-dataquery-modified-before": "Label for modified date operator dropdown 'Changes until' option",
+	"bs-smwconnector-decision-overview-input-categories-label": "Label for categories text field",
+	"bs-smwconnector-decision-overview-input-namespaces-label": "Label for namespaces text field",
+	"bs-smwconnector-decision-overview-input-prefix-label": "Label for prefix text field"
 }
