@@ -24,17 +24,7 @@
 	"apihelp-bs-smw-connector-ask-store-props-param": "Свойства, которые необходимо извлечь. Эти свойства будут соответствовать возвращаемой схеме и данным. Пары «Ключ-значение». Ключ — собственно, название свойства, значение — указанные данные (JSON)",
 	"bs-swm-connector-ask-store-page-label": "Страница",
 	"bs-smwconnector-extendedsearch-anon-user-label": "Анонимный участник",
-	"bs-smwconnector-dataquery-category-label": "Категория",
-	"bs-smwconnector-dataquery-namespace-label": "Пространство имён",
-	"bs-smwconnector-dataquery-modified-operator-label": "Изменено",
-	"bs-smwconnector-dataquery-modified-operator-all": "Всё",
-	"bs-smwconnector-dataquery-modified-operator-before": "До",
 	"bs-smwconnector-dataquery-modified-date-label": "Дата",
-	"bs-smwconnector-dataquery-format-label": "Формат",
 	"bs-smwconnector-dataquery-format-bulleted-list": "Маркированный список",
-	"bs-smwconnector-dataquery-format-numbered-list": "Нумерованный список",
-	"bs-smwconnector-dataquery-count-label": "Номер",
-	"bs-smwconnector-decision-overview-categories-label": "Категории",
-	"bs-smwconnector-decision-overview-namespaces-label": "Пространства имён",
-	"bs-smwconnector-decision-overview-prefix-label": "Префикс"
+	"bs-smwconnector-dataquery-format-numbered-list": "Нумерованный список"
 }

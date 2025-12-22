@@ -13,8 +13,5 @@
 	"bs-extendedsearch-search-center-result-smwproperty-label": "Semanttiset ominaisuudet:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Kyllä",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Ei",
-	"bs-smwconnector-extendedsearch-anon-user-label": "Anonyymi käyttäjä",
-	"bs-smwconnector-dataquery-category-label": "Luokka",
-	"bs-smwconnector-dataquery-namespace-label": "Nimiavaruus",
-	"bs-smwconnector-dataquery-modified-operator-all": "Kaikki"
+	"bs-smwconnector-extendedsearch-anon-user-label": "Anonyymi käyttäjä"
 }

@@ -23,21 +23,10 @@
 	"bs-smw-connector-async-error": "No se pudo obtener los datos",
 	"bs-smwconnector-dataquery-name": "consulta de datos",
 	"bs-smwconnector-dataquery-desc": "Activa las consultas sobre el contenido en la wiki",
-	"bs-smwconnector-dataquery-category-label": "Categoría",
-	"bs-smwconnector-dataquery-namespace-label": "Espacio de nombres",
-	"bs-smwconnector-dataquery-modified-operator-label": "Modificada",
 	"bs-smwconnector-dataquery-modified-operator-help": "Filtrar antes/desde una fecha de modificación",
-	"bs-smwconnector-dataquery-modified-operator-all": "Todo",
-	"bs-smwconnector-dataquery-modified-operator-since": "Desde",
-	"bs-smwconnector-dataquery-modified-operator-before": "Antes",
 	"bs-smwconnector-dataquery-modified-date-label": "Fecha",
-	"bs-smwconnector-dataquery-format-label": "Formato",
 	"bs-smwconnector-dataquery-format-help": "Formato usado para las impresiones",
 	"bs-smwconnector-dataquery-format-bulleted-list": "Lista de topos",
 	"bs-smwconnector-dataquery-format-numbered-list": "Lista numerada",
-	"bs-smwconnector-dataquery-count-label": "Número",
-	"bs-smwconnector-dataquery-count-help": "Límite en el número de resultados que devolver",
-	"bs-smwconnector-decision-overview-categories-label": "Categorías",
-	"bs-smwconnector-decision-overview-namespaces-label": "Espacios de nombres",
-	"bs-smwconnector-decision-overview-prefix-label": "Prefijo"
+	"bs-smwconnector-dataquery-count-help": "Límite en el número de resultados que devolver"
 }

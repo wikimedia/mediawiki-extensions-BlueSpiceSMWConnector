@@ -24,9 +24,6 @@
 	"bs-smw-connector-async-error": "Dataene kunne ikke hentes",
 	"bs-smwconnector-dataquery-name": "Dataspørring",
 	"bs-smwconnector-dataquery-desc": "Aktiver innholdsspørringer i wikien",
-	"bs-smwconnector-dataquery-category-label": "Kategori",
 	"bs-smwconnector-dataquery-category-help": "Filtrer etter kategori(er); atskill flere oppføringer med «|». F.eks. vil «kat1|kat2» returnere sider som ligger i kategoriene «kat1» ELLER «kat2».",
-	"bs-smwconnector-dataquery-namespace-label": "Navnerom",
-	"bs-smwconnector-dataquery-namespace-help": "Filtrer etter navnerom. Atskill flere oppføringer med «|». F.eks. vil «ns1|ns2» returnere sider i navnerommene «ns1» ELLER «ns2».",
-	"bs-smwconnector-dataquery-modified-operator-label": "Endret"
+	"bs-smwconnector-dataquery-namespace-help": "Filtrer etter navnerom. Atskill flere oppføringer med «|». F.eks. vil «ns1|ns2» returnere sider i navnerommene «ns1» ELLER «ns2»."
 }

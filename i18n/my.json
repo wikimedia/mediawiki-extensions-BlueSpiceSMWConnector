@@ -5,8 +5,5 @@
 		]
 	},
 	"bs-swm-connector-ask-store-page-label": "စာမျက်နှာ",
-	"bs-smwconnector-dataquery-category-label": "ကဏ္ဍ",
-	"bs-smwconnector-dataquery-modified-operator-all": "အားလုံး",
-	"bs-smwconnector-dataquery-modified-operator-before": "မတိုင်ခင်",
 	"bs-smwconnector-dataquery-modified-date-label": "ရက်စွဲ"
 }
