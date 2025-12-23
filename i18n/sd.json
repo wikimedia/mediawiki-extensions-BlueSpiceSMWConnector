@@ -7,7 +7,5 @@
 	},
 	"bs-smwconnector-extendedsearch-boolean-property-true": "ها",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "نہ",
-	"bs-swm-connector-ask-store-page-label": "صفحو",
-	"bs-smwconnector-dataquery-category-label": "زمرو",
-	"bs-smwconnector-decision-overview-categories-label": "زمرا"
+	"bs-swm-connector-ask-store-page-label": "صفحو"
 }
