@@ -60,5 +60,16 @@
 	"bs-smwconnector-yes": "是",
 	"bs-smwconnector-no": "否",
 	"bs-smwconnector-user-input-placeholder": "請輸入字母…",
-	"bs-smwconnector-tree-loading": "載入中…"
+	"bs-smwconnector-tree-loading": "載入中…",
+	"bs-smwconnector-dataquery-number-input-label": "顯示結果數量",
+	"bs-smwconnector-dataquery-format-input-label": "輸出格式",
+	"bs-smwconnector-dataquery-category-input-label": "按分類篩選",
+	"bs-smwconnector-dataquery-namespace-input-label": "按命名空間篩選",
+	"bs-smwconnector-dataquery-modified-input-operator-label": "變更的時段",
+	"bs-smwconnector-dataquery-modified-all": "所有變更",
+	"bs-smwconnector-dataquery-modified-since": "變更自",
+	"bs-smwconnector-dataquery-modified-before": "變更直至",
+	"bs-smwconnector-decision-overview-input-categories-label": "按分類篩選",
+	"bs-smwconnector-decision-overview-input-namespaces-label": "按命名空間篩選",
+	"bs-smwconnector-decision-overview-input-prefix-label": "按您自己的前綴篩選"
 }

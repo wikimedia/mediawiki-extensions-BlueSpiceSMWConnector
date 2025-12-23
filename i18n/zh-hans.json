@@ -7,6 +7,7 @@
 			"LittlePaw365",
 			"Liuxinyu970226",
 			"Pawsdt",
+			"Peterxy12",
 			"Xyb",
 			"列维劳德"
 		]
@@ -56,5 +57,26 @@
 	"bs-smwconnector-decision-overview-namespaces-label": "命名空间",
 	"bs-smwconnector-decision-overview-namespaces-help": "按一个或多个命名空间进行筛选，使用多个选项时用“|”来分隔。",
 	"bs-smwconnector-decision-overview-prefix-label": "前缀",
-	"bs-smwconnector-tree-loading": "加载中……"
+	"bs-smwconnector-tree-loading": "加载中……",
+	"bs-smwconnector-decision-overview-prefix-help": "以自己的前缀筛选，用“|”来分隔多个项目。",
+	"bs-smwconnector-decision-overview-title": "结论概要",
+	"bs-smwconnector-decision-overview-no-result": "目前的筛选器未找到结论",
+	"bs-smwconnector-decision-overview-droplet-title": "结论概要",
+	"bs-smwconnector-decision-overview-droplet-description": "启用可取得结论概要的查询",
+	"bs-smwconnector-decision-overview-table-heading-page-label": "页面",
+	"bs-smwconnector-decision-overview-table-heading-decisions-label": "定案",
+	"bs-smwconnector-yes": "是",
+	"bs-smwconnector-no": "否",
+	"bs-smwconnector-user-input-placeholder": "请输入字母…",
+	"bs-smwconnector-dataquery-number-input-label": "显示的结果数",
+	"bs-smwconnector-dataquery-format-input-label": "输出格式",
+	"bs-smwconnector-dataquery-category-input-label": "按分类筛选",
+	"bs-smwconnector-dataquery-namespace-input-label": "按命名空间筛选",
+	"bs-smwconnector-dataquery-modified-input-operator-label": "变更的时间段",
+	"bs-smwconnector-dataquery-modified-all": "所有更改",
+	"bs-smwconnector-dataquery-modified-since": "自...以来的变化",
+	"bs-smwconnector-dataquery-modified-before": "变更至",
+	"bs-smwconnector-decision-overview-input-categories-label": "按分类筛选",
+	"bs-smwconnector-decision-overview-input-namespaces-label": "按命名空间筛选",
+	"bs-smwconnector-decision-overview-input-prefix-label": "按您自己的前缀筛选"
 }

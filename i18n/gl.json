@@ -58,5 +58,16 @@
 	"bs-smwconnector-yes": "Si",
 	"bs-smwconnector-no": "Non",
 	"bs-smwconnector-user-input-placeholder": "Escribe unha letra…",
-	"bs-smwconnector-tree-loading": "Cargando…"
+	"bs-smwconnector-tree-loading": "Cargando…",
+	"bs-smwconnector-dataquery-number-input-label": "Número de resultados mostrados",
+	"bs-smwconnector-dataquery-format-input-label": "Formato de saída",
+	"bs-smwconnector-dataquery-category-input-label": "Filtrar por categorías",
+	"bs-smwconnector-dataquery-namespace-input-label": "Filtrar por espazos de nomes",
+	"bs-smwconnector-dataquery-modified-input-operator-label": "Período de tempo para os cambios",
+	"bs-smwconnector-dataquery-modified-all": "Todos os cambios",
+	"bs-smwconnector-dataquery-modified-since": "Cambios desde",
+	"bs-smwconnector-dataquery-modified-before": "Cambios ata",
+	"bs-smwconnector-decision-overview-input-categories-label": "Filtrar por categorías",
+	"bs-smwconnector-decision-overview-input-namespaces-label": "Filtrar por espazos de nomes",
+	"bs-smwconnector-decision-overview-input-prefix-label": "Filtrar polo teu propio prefixo"
 }
