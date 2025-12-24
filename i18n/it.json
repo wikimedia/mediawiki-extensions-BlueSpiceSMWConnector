@@ -29,5 +29,8 @@
 	"bs-smwconnector-decision-overview-namespaces-label": "Namespace",
 	"bs-smwconnector-decision-overview-table-heading-page-label": "Pagina",
 	"bs-smwconnector-user-input-placeholder": "Per favore, digita una lettera…",
-	"bs-smwconnector-tree-loading": "Caricamento …"
+	"bs-smwconnector-tree-loading": "Caricamento …",
+	"bs-smwconnector-dataquery-number-input-label": "Numero di risultati mostrati",
+	"bs-smwconnector-dataquery-format-input-label": "Formato di output",
+	"bs-smwconnector-dataquery-category-input-label": "Filtra per categorie"
 }
