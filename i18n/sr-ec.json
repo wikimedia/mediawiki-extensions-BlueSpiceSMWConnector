@@ -18,5 +18,6 @@
 	"bs-smwconnector-dataquery-format-numbered-list": "Нумерисани списак",
 	"bs-smwconnector-yes": "Да",
 	"bs-smwconnector-no": "Не",
-	"bs-smwconnector-tree-loading": "Учитавање …"
+	"bs-smwconnector-tree-loading": "Учитавање …",
+	"bs-smwconnector-decision-overview-input-namespaces-label": "По именским просторима"
 }
