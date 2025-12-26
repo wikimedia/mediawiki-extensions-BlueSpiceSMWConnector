@@ -23,5 +23,6 @@
 	"bs-smwconnector-decision-overview-table-heading-page-label": "Säit",
 	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Decisiounen",
 	"bs-smwconnector-yes": "Jo",
-	"bs-smwconnector-no": "Nee"
+	"bs-smwconnector-no": "Nee",
+	"bs-smwconnector-dataquery-modified-all": "All Ännerungen"
 }
