@@ -8,7 +8,8 @@
 			"Liuxinyu970226",
 			"Xyb",
 			"列维劳德",
-			"Pawsdt"
+			"Pawsdt",
+			"Peterxy12"
 		]
 	},
 	"bs-bssmwconnector-desc": "把语义MediaWiki集成到BlueSpice内",
@@ -55,5 +56,14 @@
 	"bs-smwconnector-decision-overview-categories-help": "按一个或多个分类进行筛选，使用多个选项时用“|”来分隔。",
 	"bs-smwconnector-decision-overview-namespaces-label": "命名空间",
 	"bs-smwconnector-decision-overview-namespaces-help": "按一个或多个命名空间进行筛选，使用多个选项时用“|”来分隔。",
-	"bs-smwconnector-decision-overview-prefix-label": "前缀"
+	"bs-smwconnector-decision-overview-prefix-label": "前缀",
+	"bs-smwconnector-decision-overview-prefix-help": "以自己的前缀筛选，用“|”来分隔多个项目。",
+	"bs-smwconnector-decision-overview-title": "结论概要",
+	"bs-smwconnector-decision-overview-no-result": "目前的筛选器未找到结论",
+	"bs-smwconnector-decision-overview-droplet-title": "结论概要",
+	"bs-smwconnector-decision-overview-droplet-description": "启用可取得结论概要的查询",
+	"bs-smwconnector-decision-overview-table-heading-page-label": "页面",
+	"bs-smwconnector-decision-overview-table-heading-decisions-label": "定案",
+	"bs-smwconnector-yes": "是",
+	"bs-smwconnector-no": "否"
 }
