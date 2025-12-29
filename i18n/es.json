@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Avengium",
 			"DiegoAmbrocio",
 			"Fitoschido",
 			"Jackiezelaya",
@@ -28,5 +29,7 @@
 	"bs-smwconnector-dataquery-format-help": "Formato usado para las impresiones",
 	"bs-smwconnector-dataquery-format-bulleted-list": "Lista de topos",
 	"bs-smwconnector-dataquery-format-numbered-list": "Lista numerada",
-	"bs-smwconnector-dataquery-count-help": "Límite en el número de resultados que devolver"
+	"bs-smwconnector-dataquery-count-help": "Límite en el número de resultados que devolver",
+	"bs-smwconnector-dataquery-number-input-label": "Número de resultados mostrados",
+	"bs-smwconnector-decision-overview-input-prefix-label": "Filtrar por su propio prefijo"
 }
