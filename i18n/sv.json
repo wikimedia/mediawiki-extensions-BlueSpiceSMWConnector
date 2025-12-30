@@ -2,10 +2,22 @@
 	"@metadata": {
 		"authors": [
 			"WikiPhoenix",
-			"Yupik"
+			"Yupik",
+			"Stefan2255"
 		]
 	},
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Ja",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Nej",
-	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Innehåll/användaromnämningar"
+	"bs-smwconnector-propertyvalueprovider-usermentions-alias": "Innehåll/användaromnämningar",
+	"bs-smwconnector-dataquery-number-input-label": "Antal visade resultat",
+	"bs-smwconnector-dataquery-format-input-label": "Utdataformat",
+	"bs-smwconnector-dataquery-category-input-label": "Filtrera efter kategori",
+	"bs-smwconnector-dataquery-namespace-input-label": "Filtrera efter namnrymd",
+	"bs-smwconnector-dataquery-modified-input-operator-label": "Tidsperiod för ändringar",
+	"bs-smwconnector-dataquery-modified-all": "Alla ändringar",
+	"bs-smwconnector-dataquery-modified-since": "Förändringar sedan",
+	"bs-smwconnector-dataquery-modified-before": "Ändringar fram till",
+	"bs-smwconnector-decision-overview-input-categories-label": "Filtrera efter kategorier",
+	"bs-smwconnector-decision-overview-input-namespaces-label": "Filtrera efter namnrymder",
+	"bs-smwconnector-decision-overview-input-prefix-label": "Filtrera efter ditt eget prefix"
 }
