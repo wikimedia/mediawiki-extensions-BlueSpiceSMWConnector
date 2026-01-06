@@ -17,6 +17,7 @@
 	"bs-smwconnector-dataquery-modified-all": "Alla ändringar",
 	"bs-smwconnector-dataquery-modified-since": "Förändringar sedan",
 	"bs-smwconnector-dataquery-modified-before": "Ändringar fram till",
+	"bs-smwconnector-tree-loading": "Laddar …",
 	"bs-smwconnector-decision-overview-input-categories-label": "Filtrera efter kategorier",
 	"bs-smwconnector-decision-overview-input-namespaces-label": "Filtrera efter namnrymder",
 	"bs-smwconnector-decision-overview-input-prefix-label": "Filtrera efter ditt eget prefix"

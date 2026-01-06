@@ -31,5 +31,15 @@
 	"bs-smwconnector-dataquery-format-numbered-list": "Lista numerada",
 	"bs-smwconnector-dataquery-count-help": "Límite en el número de resultados que devolver",
 	"bs-smwconnector-dataquery-number-input-label": "Número de resultados mostrados",
+	"bs-smwconnector-dataquery-format-input-label": "Formato de salida",
+	"bs-smwconnector-dataquery-category-input-label": "Filtrar por categorías",
+	"bs-smwconnector-dataquery-namespace-input-label": "Filtrar por espacios de nombres",
+	"bs-smwconnector-dataquery-modified-input-operator-label": "Plazo de tiempo para los cambios",
+	"bs-smwconnector-dataquery-modified-all": "Todos los cambios",
+	"bs-smwconnector-dataquery-modified-since": "Cambios desde",
+	"bs-smwconnector-dataquery-modified-before": "Cambios hasta",
+	"bs-smwconnector-tree-loading": "Cargando…",
+	"bs-smwconnector-decision-overview-input-categories-label": "Filtrar por categorías",
+	"bs-smwconnector-decision-overview-input-namespaces-label": "Filtrar por espacios de nombres",
 	"bs-smwconnector-decision-overview-input-prefix-label": "Filtrar por su propio prefijo"
 }
