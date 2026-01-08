@@ -1,12 +1,12 @@
 {
 	"@metadata": {
 		"authors": [
+			"Avengium",
 			"DiegoAmbrocio",
 			"Fitoschido",
 			"Jackiezelaya",
 			"Jmabel",
-			"Macofe",
-			"Avengium"
+			"Macofe"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integra SemanticMediaWiki en BlueSpice",

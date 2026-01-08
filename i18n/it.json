@@ -21,5 +21,7 @@
 	"bs-smwconnector-dataquery-number-input-label": "Numero di risultati mostrati",
 	"bs-smwconnector-dataquery-format-input-label": "Formato di output",
 	"bs-smwconnector-dataquery-category-input-label": "Filtra per categorie",
-	"bs-smwconnector-tree-loading": "Caricamento …"
+	"bs-smwconnector-tree-loading": "Caricamento …",
+	"bs-smwconnector-dataquery-modified-all": "Tutte le modifiche",
+	"bs-smwconnector-decision-overview-input-categories-label": "Filtra per categorie"
 }

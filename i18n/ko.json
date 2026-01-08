@@ -19,5 +19,10 @@
 	"bs-smwconnector-decision-overview-table-heading-page-label": "문서",
 	"bs-smwconnector-decision-overview-table-heading-decisions-label": "결정",
 	"bs-smwconnector-yes": "예",
-	"bs-smwconnector-no": "아니요"
+	"bs-smwconnector-no": "아니요",
+	"bs-smwconnector-dataquery-format-input-label": "출력 형식",
+	"bs-smwconnector-dataquery-category-input-label": "분류별 필터",
+	"bs-smwconnector-dataquery-namespace-input-label": "이름공간별 필터",
+	"bs-smwconnector-dataquery-modified-all": "모든 변경사항",
+	"bs-smwconnector-decision-overview-input-categories-label": "분류별 필터"
 }
