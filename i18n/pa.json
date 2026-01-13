@@ -4,8 +4,8 @@
 			"Cabal"
 		]
 	},
-	"bs-smwconnector-yes": "ਹਾਂ",
-	"bs-smwconnector-no": "ਨਹੀਂ",
 	"bs-swm-connector-ask-store-page-label": "ਵਰਕਾ",
-	"bs-smwconnector-decision-overview-table-heading-page-label": "ਵਰਕਾ"
+	"bs-smwconnector-decision-overview-table-heading-page-label": "ਵਰਕਾ",
+	"bs-smwconnector-yes": "ਹਾਂ",
+	"bs-smwconnector-no": "ਨਹੀਂ"
 }
