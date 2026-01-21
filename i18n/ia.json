@@ -45,5 +45,17 @@
 	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Decisiones",
 	"bs-smwconnector-yes": "Si",
 	"bs-smwconnector-no": "No",
-	"bs-smwconnector-user-input-placeholder": "Per favor digita un littera…"
+	"bs-smwconnector-user-input-placeholder": "Per favor digita un littera…",
+	"bs-smwconnector-dataquery-number-input-label": "Numero de resultatos monstrate",
+	"bs-smwconnector-dataquery-format-input-label": "Formato de sortita",
+	"bs-smwconnector-dataquery-category-input-label": "Filtrar per categorias",
+	"bs-smwconnector-dataquery-namespace-input-label": "Filtrar per spatios de nomines",
+	"bs-smwconnector-dataquery-modified-input-operator-label": "Periodo de tempore pro cambiamentos",
+	"bs-smwconnector-dataquery-modified-all": "Tote le cambiamentos",
+	"bs-smwconnector-dataquery-modified-since": "Cambiamentos desde",
+	"bs-smwconnector-dataquery-modified-before": "Cambiamentos usque",
+	"bs-smwconnector-tree-loading": "Cargamento in curso…",
+	"bs-smwconnector-decision-overview-input-categories-label": "Filtrar per categorias",
+	"bs-smwconnector-decision-overview-input-namespaces-label": "Filtrar per spatios de nomines",
+	"bs-smwconnector-decision-overview-input-prefix-label": "Filtrar per tu proprie prefixo"
 }
