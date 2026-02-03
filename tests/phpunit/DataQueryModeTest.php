@@ -18,8 +18,6 @@ class DataQueryModeTest extends TestCase {
 	 * @covers \BlueSpice\SMWConnector\DataQueryMode::createSMWformat
 	 */
 	public function testCreateSMWformat( $args, $format, $expectedSMW ) {
-		$this->markTestSkippedIfExtensionNotLoaded( 'BlueSpiceSmartList' );
-
 		$dataQueryMode = new DataQueryMode();
 		$actualSMW = $dataQueryMode->createSMWformat( $args, $format );
 		$this->assertSame( $expectedSMW, $actualSMW );
