@@ -3,6 +3,7 @@
 namespace BlueSpice\SMWConnector\Tests;
 
 use BlueSpice\SMWConnector\SmartListMode\DataQueryMode;
+use MediaWiki\Registration\ExtensionRegistry;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -18,6 +19,10 @@ class DataQueryModeTest extends TestCase {
 	 * @covers \BlueSpice\SMWConnector\DataQueryMode::createSMWformat
 	 */
 	public function testCreateSMWformat( $args, $format, $expectedSMW ) {
+		if ( !ExtensionRegistry::getInstance()->isLoaded( 'BlueSpiceSmartList' ) ) {
+			$this->markTestSkipped( 'Extension BlueSpiceSmartList is required for this test' );
+		}
+
 		$dataQueryMode = new DataQueryMode();
 		$actualSMW = $dataQueryMode->createSMWformat( $args, $format );
 		$this->assertSame( $expectedSMW, $actualSMW );
