@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"Red Winged Duck",
+			"Ucukor",
 			"W"
 		]
 	},
@@ -9,5 +10,6 @@
 	"bs-bssmwconnector-srf-printername-bsgrid": "BlueSpice Grid",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Так",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Не",
-	"bs-swm-connector-ask-store-page-label": "Старонка"
+	"bs-swm-connector-ask-store-page-label": "Старонка",
+	"bs-smwconnector-tree-loading": "Ладаваньне ..."
 }
