@@ -28,5 +28,8 @@
 	"bs-smwconnector-decision-overview-namespaces-label": "Именски простори",
 	"bs-smwconnector-decision-overview-prefix-label": "Префикс",
 	"bs-smwconnector-yes": "Да",
-	"bs-smwconnector-no": "Не"
+	"bs-smwconnector-no": "Не",
+	"bs-smwconnector-dataquery-number-input-label": "Број приказаних резултата",
+	"bs-smwconnector-tree-loading": "Учитавање …",
+	"bs-smwconnector-decision-overview-input-namespaces-label": "По именским просторима"
 }
