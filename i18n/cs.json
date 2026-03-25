@@ -1,9 +1,11 @@
 {
 	"@metadata": {
 		"authors": [
-			"Ilimanaq29"
+			"Jrobicek"
 		]
 	},
 	"bs-dlg-choosesmwprop-label": "Vlastnost",
-	"bs-dlg-choosesmwprop-type-smwprop": "Sémantická vlastnost"
+	"bs-dlg-choosesmwprop-type-smwprop": "Sémantická vlastnost",
+	"bs-smwconnector-decision-overview-title": "Přehled rozhodnutí",
+	"bs-smwconnector-decision-overview-table-heading-page-label": "Stránka"
 }

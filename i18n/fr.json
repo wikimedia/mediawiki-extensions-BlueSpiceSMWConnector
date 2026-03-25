@@ -1,10 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"Alien333",
 			"Derugon",
 			"DreZhsh",
 			"Golmore",
 			"Gomoko",
+			"MacOS Weed",
+			"Mahabarata",
 			"Naheulf",
 			"Verdy p",
 			"Wladek92"
@@ -53,5 +56,17 @@
 	"bs-smwconnector-dataquery-format-help": "Format utilisé pour les impressions",
 	"bs-smwconnector-dataquery-format-bulleted-list": "Liste à puces",
 	"bs-smwconnector-dataquery-format-numbered-list": "Liste numérotée",
-	"bs-smwconnector-decision-overview-categories-label": "Catégories"
+	"bs-smwconnector-decision-overview-categories-label": "Catégories",
+	"bs-smwconnector-decision-overview-categories-help": "Filtrer par une ou plusieurs catégories, en séparant des entrées multiples avec \"|\".",
+	"bs-smwconnector-decision-overview-namespaces-help": "Filtrer par un ou plusieurs espaces de noms, en séparant des entrées multiples avec \"|\".",
+	"bs-smwconnector-decision-overview-prefix-help": "Filtrer par vos propres préfixes, en séparant des entrées multiples avec \"|\".",
+	"bs-smwconnector-decision-overview-title": "Aperçu de décision",
+	"bs-smwconnector-decision-overview-no-result": "Aucune décision trouvée avec les filtres actuels",
+	"bs-smwconnector-decision-overview-droplet-title": "Aperçu de décision",
+	"bs-smwconnector-decision-overview-droplet-description": "Permet aux requêtes d'obtenir un aperçu des décisions",
+	"bs-smwconnector-decision-overview-table-heading-page-label": "Page",
+	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Décisions",
+	"bs-smwconnector-yes": "Oui",
+	"bs-smwconnector-no": "Non",
+	"bs-smwconnector-user-input-placeholder": "Veuillez entrer une lettre…"
 }

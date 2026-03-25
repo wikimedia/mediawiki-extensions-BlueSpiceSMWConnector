@@ -3,7 +3,8 @@
 		"authors": [
 			"Mainframe98",
 			"McDutchie",
-			"Romaine"
+			"Romaine",
+			"Siebrand"
 		]
 	},
 	"bs-bssmwconnector-desc": "Integreert SemanticMediaWiki in BlueSpice",
@@ -55,5 +56,22 @@
 	"bs-smwconnector-decision-overview-title": "Beslissingsoverzicht",
 	"bs-smwconnector-decision-overview-no-result": "Geen beslissingen gevonden met de huidige filters",
 	"bs-smwconnector-decision-overview-droplet-title": "Beslissingsoverzicht",
-	"bs-smwconnector-decision-overview-droplet-description": "Maakt het mogelijk dat query’s een overzicht van beslissingen krijgen"
+	"bs-smwconnector-decision-overview-droplet-description": "Maakt het mogelijk dat query’s een overzicht van beslissingen krijgen",
+	"bs-smwconnector-decision-overview-table-heading-page-label": "Pagina",
+	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Beslissingen",
+	"bs-smwconnector-yes": "Ja",
+	"bs-smwconnector-no": "Nee",
+	"bs-smwconnector-user-input-placeholder": "Typ een letter…",
+	"bs-smwconnector-dataquery-number-input-label": "Aantal weer te geven resultaten",
+	"bs-smwconnector-dataquery-format-input-label": "Uitvoeropmaak",
+	"bs-smwconnector-dataquery-category-input-label": "Filteren op categorieën",
+	"bs-smwconnector-dataquery-namespace-input-label": "Filteren op naamruimten",
+	"bs-smwconnector-dataquery-modified-input-operator-label": "Tijdsperiode voor wijzigingen",
+	"bs-smwconnector-dataquery-modified-all": "Alle wijzigingen",
+	"bs-smwconnector-dataquery-modified-since": "Wijzigingen sinds",
+	"bs-smwconnector-dataquery-modified-before": "Wijzigingen tot",
+	"bs-smwconnector-tree-loading": "Bezig met laden...",
+	"bs-smwconnector-decision-overview-input-categories-label": "Filteren op categorieën",
+	"bs-smwconnector-decision-overview-input-namespaces-label": "Filteren op naamruimten",
+	"bs-smwconnector-decision-overview-input-prefix-label": "Filteren op uw eigen voorvoegsel"
 }

@@ -56,5 +56,10 @@
 	"bs-smwconnector-decision-overview-title": "סקירת החלטה",
 	"bs-smwconnector-decision-overview-no-result": "לא נמצאו החלטות עם המסננים הנוכחיים",
 	"bs-smwconnector-decision-overview-droplet-title": "סקירת החלטה",
-	"bs-smwconnector-decision-overview-droplet-description": "זה מאפשר לשאילתות לקבל סקירה כללית של החלטות"
+	"bs-smwconnector-decision-overview-droplet-description": "זה מאפשר לשאילתות לקבל סקירה כללית של החלטות",
+	"bs-smwconnector-decision-overview-table-heading-page-label": "דף",
+	"bs-smwconnector-decision-overview-table-heading-decisions-label": "החלטות",
+	"bs-smwconnector-yes": "כן",
+	"bs-smwconnector-no": "לא",
+	"bs-smwconnector-user-input-placeholder": "נא להקליד אות..."
 }

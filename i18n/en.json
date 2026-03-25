@@ -56,5 +56,22 @@
 	"bs-smwconnector-decision-overview-title": "Decision overview",
 	"bs-smwconnector-decision-overview-no-result": "No decisions found with current filters",
 	"bs-smwconnector-decision-overview-droplet-title": "Decision overview",
-	"bs-smwconnector-decision-overview-droplet-description": "Enables queries to get an overview of decisions"
+	"bs-smwconnector-decision-overview-droplet-description": "Enables queries to get an overview of decisions",
+	"bs-smwconnector-decision-overview-table-heading-page-label": "Page",
+	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Decisions",
+	"bs-smwconnector-yes": "Yes",
+	"bs-smwconnector-no": "No",
+	"bs-smwconnector-user-input-placeholder": "Please type a letter…",
+	"bs-smwconnector-dataquery-number-input-label": "Number of shown results",
+	"bs-smwconnector-dataquery-format-input-label": "Output format",
+	"bs-smwconnector-dataquery-category-input-label": "Filter by categories",
+	"bs-smwconnector-dataquery-namespace-input-label": "Filter by namespaces",
+	"bs-smwconnector-dataquery-modified-input-operator-label": "Time period for changes",
+	"bs-smwconnector-dataquery-modified-all": "All changes",
+	"bs-smwconnector-dataquery-modified-since": "Changes since",
+	"bs-smwconnector-dataquery-modified-before": "Changes until",
+	"bs-smwconnector-tree-loading": "Loading …",
+	"bs-smwconnector-decision-overview-input-categories-label": "Filter by categories",
+	"bs-smwconnector-decision-overview-input-namespaces-label": "Filter by namespaces",
+	"bs-smwconnector-decision-overview-input-prefix-label": "Filter by your own prefix"
 }
