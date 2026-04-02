@@ -11,5 +11,6 @@
 	"bs-smwconnector-extendedsearch-boolean-property-true": "Так",
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Не",
 	"bs-swm-connector-ask-store-page-label": "Старонка",
-	"bs-smwconnector-tree-loading": "Ладаваньне ..."
+	"bs-smwconnector-tree-loading": "Ладаваньне ...",
+	"bs-smwconnector-dataquery-name": "Запыт зьвестак"
 }
