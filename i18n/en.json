@@ -59,5 +59,16 @@
 	"bs-smwconnector-yes": "Yes",
 	"bs-smwconnector-no": "No",
 	"bs-smwconnector-user-input-placeholder": "Please type a letter…",
-	"bs-smwconnector-tree-loading": "Loading …"
+	"bs-smwconnector-tree-loading": "Loading …",
+	"bs-smwconnector-dataquery-number-input-label": "Number of shown results",
+	"bs-smwconnector-dataquery-format-input-label": "Output format",
+	"bs-smwconnector-dataquery-category-input-label": "Filter by categories",
+	"bs-smwconnector-dataquery-namespace-input-label": "Filter by namespaces",
+	"bs-smwconnector-dataquery-modified-input-operator-label": "Time period for changes",
+	"bs-smwconnector-dataquery-modified-all": "All changes",
+	"bs-smwconnector-dataquery-modified-since": "Changes since",
+	"bs-smwconnector-dataquery-modified-before": "Changes until",
+	"bs-smwconnector-decision-overview-input-categories-label": "Filter by categories",
+	"bs-smwconnector-decision-overview-input-namespaces-label": "Filter by namespaces",
+	"bs-smwconnector-decision-overview-input-prefix-label": "Filter by your own prefix"
 }
