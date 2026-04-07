@@ -28,7 +28,7 @@
 	],
 	"require": {
 		"composer/installers": "~1.0|~2",
-		"mwstake/mediawiki-component-generictaghandler": "~1"
+		"mwstake/mediawiki-component-generictaghandler": "^2.0.0"
 	},
 	"autoload": {
 		"psr-4": {
