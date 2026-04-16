@@ -3,7 +3,8 @@
 		"authors": [
 			"DDPAT",
 			"Ice bulldog",
-			"Piramidion"
+			"Piramidion",
+			"Vlad5250"
 		]
 	},
 	"bs-bssmwconnector-desc": "Інтегрує SemanticMediaWiki в BlueSpice",
@@ -21,5 +22,7 @@
 	"bs-swm-connector-ask-store-page-label": "Сторінка",
 	"bs-smw-connector-async-ask-unknown-handler": "Обробник для формату \"$1\" не зареєстрований або неприпустимий",
 	"apihelp-bs-smw-connector-ask-tree-store-node-param": "Значення вузла, яке замінить <nowiki>{{{node}}}</nowiki> заповнювач у запиті",
-	"bs-smwconnector-extendedsearch-anon-user-label": "Анонімний користувач"
+	"bs-smwconnector-extendedsearch-anon-user-label": "Анонімний користувач",
+	"bs-smwconnector-dataquery-format-bulleted-list": "Маркований список",
+	"bs-smwconnector-dataquery-format-numbered-list": "Нумерований список"
 }
