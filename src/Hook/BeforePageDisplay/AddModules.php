@@ -3,6 +3,7 @@
 namespace BlueSpice\SMWConnector\Hook\BeforePageDisplay;
 
 use MediaWiki\Output\OutputPage;
+use Profiler;
 
 // TODO: when on 'master', derive from BlueSpice\Hook\BeforePageDisplay and remove redundant code
 class AddModules {
@@ -51,7 +52,7 @@ class AddModules {
 		if ( $this->skipProcessing() ) {
 			return true;
 		}
-		\Profiler::instance()->scopedProfileIn( "Hook " . __METHOD__ );
+		$scope = Profiler::instance()->scopedProfileIn( "Hook " . __METHOD__ );
 		$result = $this->doProcess();
 		return $result;
 	}
