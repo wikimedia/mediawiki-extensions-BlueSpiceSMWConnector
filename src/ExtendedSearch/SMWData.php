@@ -5,7 +5,6 @@ namespace BlueSpice\SMWConnector\ExtendedSearch;
 use BlueSpice\SMWConnector\ExtendedSearch\LookupModifier\AddSMWAggregation;
 use BlueSpice\SMWConnector\ExtendedSearch\LookupModifier\AddSourceFields;
 use BlueSpice\SMWConnector\ExtendedSearch\LookupModifier\ParseSMWFilters;
-use BlueSpice\UtilityFactory;
 use BS\ExtendedSearch\ILookupModifierProvider;
 use BS\ExtendedSearch\ISearchDocumentProvider;
 use BS\ExtendedSearch\ISearchSource;
@@ -20,10 +19,13 @@ use BS\ExtendedSearch\Source\DocumentProvider\WikiPage as WikiPageProvider;
 use BS\ExtendedSearch\Source\WikiPages;
 use MediaWiki\Context\IContextSource;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Language\Language;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
+use MediaWiki\User\UserFactory;
+use MediaWiki\User\UserNameUtils;
 use SMW\DIWikiPage;
 use SMW\StoreFactory;
 use SMWDataItem;
@@ -42,6 +44,18 @@ class SMWData implements
 
 	/** @var array */
 	protected $semanticData = [];
+
+	/**
+	 * @param Language $language
+	 * @param UserNameUtils $userNameUtils
+	 * @param UserFactory $userFactory
+	 */
+	public function __construct(
+		private readonly Language $language,
+		private readonly UserNameUtils $userNameUtils,
+		private readonly UserFactory $userFactory
+	) {
+	}
 
 	/**
 	 * @inheritDoc
@@ -340,20 +354,23 @@ class SMWData implements
 	 * @return string
 	 */
 	private function checkAndFormatUsername( $titleKey ) {
-		$title = Title::newFromText( $titleKey );
-		if ( !$title instanceof Title || $title->getNamespace() !== NS_USER ) {
+		if ( !str_contains( $titleKey, ':' ) ) {
+			return $titleKey;
+		}
+		$bits = explode( ':', $titleKey, 2 );
+		$ns = $bits[0];
+		$index = $this->language->getNsIndex( $ns );
+		if ( $index !== NS_USER ) {
 			return $titleKey;
 		}
 
 		$services = MediaWikiServices::getInstance();
-		if ( $services->getUserNameUtils()->isIP( $title->getDBkey() ) ) {
+		if ( $this->userNameUtils->isIP( $bits[1] ) ) {
 			return Message::newFromKey( "bs-smwconnector-extendedsearch-anon-user-label" )->text();
 		}
-		$user = $services->getUserFactory()->newFromName( $title->getDBkey() );
+		$user = $this->userFactory->newFromName( $bits[1] );
 		if ( $user instanceof User ) {
-			/** @var UtilityFactory $utilFactory */
-			$utilFactory = $services->getService( 'BSUtilityFactory' );
-			return $utilFactory->getUserHelper( $user )->getDisplayName();
+			return $user->getRealName() ?: $user->getName();
 		}
 
 		return $titleKey;
