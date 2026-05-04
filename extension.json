@@ -19,7 +19,8 @@
 		"BlueSpiceExtendedSearch": {
 			"PluginRegistry": {
 				"smw": {
-					"class": "BlueSpice\\SMWConnector\\ExtendedSearch\\SMWData"
+					"class": "BlueSpice\\SMWConnector\\ExtendedSearch\\SMWData",
+					"services": [ "ContentLanguage", "UserNameUtils", "UserFactory" ]
 				}
 			}
 		},
