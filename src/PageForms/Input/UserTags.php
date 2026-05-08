@@ -5,6 +5,7 @@ namespace BlueSpice\SMWConnector\PageForms\Input;
 use MediaWiki\Html\Html;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
+use MediaWiki\Output\OutputPage;
 use MediaWiki\User\User;
 
 class UserTags extends \PFFormInput {
@@ -22,6 +23,7 @@ class UserTags extends \PFFormInput {
 	protected $groups = [];
 
 	/**
+	 * @param OutputPage $out The output page this input will ultimately be added to.
 	 * @param string $input_number The number of the input in the form. For a simple HTML input
 	 *  element this should end up in the id attribute in the format 'input_<number>'.
 	 * @param string $cur_value The current value of the input field. For a simple HTML input
@@ -32,8 +34,8 @@ class UserTags extends \PFFormInput {
 	 * @param array $other_args An associative array of other parameters that were present in the
 	 *  input definition.
 	 */
-	public function __construct( $input_number, $cur_value, $input_name, $disabled, $other_args ) {
-		parent::__construct( $input_number, $cur_value, $input_name, $disabled, $other_args );
+	public function __construct( OutputPage $out, $input_number, $cur_value, $input_name, $disabled, $other_args ) {
+		parent::__construct( $out, $input_number, $cur_value, $input_name, $disabled, $other_args );
 
 		$this->parseCurrentValue();
 
