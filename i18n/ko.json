@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Tensama0415",
 			"Ykhwong"
 		]
 	},
@@ -32,5 +33,6 @@
 	"bs-smwconnector-dataquery-category-input-label": "분류별 필터",
 	"bs-smwconnector-dataquery-namespace-input-label": "이름공간별 필터",
 	"bs-smwconnector-dataquery-modified-all": "모든 변경사항",
-	"bs-smwconnector-decision-overview-input-categories-label": "분류별 필터"
+	"bs-smwconnector-decision-overview-input-categories-label": "분류별 필터",
+	"bs-smwconnector-decision-overview-input-namespaces-label": "이름공간별 필터"
 }
