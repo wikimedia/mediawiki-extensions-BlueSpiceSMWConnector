@@ -5,7 +5,8 @@
 			"Ykhwong"
 		]
 	},
-	"bs-bssmwconnector-desc": "SemanticMediaWiki를 BlueSpice에 연동",
+	"bs-bssmwconnector-desc": "SemanticMediaWiki를 블루스파이스에 연동",
+	"bs-bssmwconnector-srf-printername-bsgrid": "블루스파이스 그리드",
 	"bs-extendedsearch-add-filter-group-smwproperty-label": "시맨틱 속성",
 	"bs-extendedsearch-search-center-result-smwproperty-label": "시맨틱 속성:",
 	"bs-smwconnector-extendedsearch-boolean-property-true": "예",
@@ -25,6 +26,8 @@
 	"bs-smwconnector-dataquery-category-input-label": "분류별 필터",
 	"bs-smwconnector-dataquery-namespace-input-label": "이름공간별 필터",
 	"bs-smwconnector-dataquery-modified-all": "모든 변경사항",
+	"bs-smwconnector-tree-loading": "불러오는 중…",
 	"bs-smwconnector-decision-overview-input-categories-label": "분류별 필터",
-	"bs-smwconnector-decision-overview-input-namespaces-label": "이름공간별 필터"
+	"bs-smwconnector-decision-overview-input-namespaces-label": "이름공간별 필터",
+	"bs-smwconnector-decision-overview-input-prefix-label": "직접 지정한 접두사로 필터링"
 }
