@@ -28,7 +28,44 @@ bs.smwconnector.ui.data.AsyncResultGrid.prototype.onBuildMeta = function ( meta 
 
 bs.smwconnector.ui.data.AsyncResultGrid.prototype.initialize = function ( meta ) {
 	this.initialized = true;
+
+	// Reset noFilter so buildColumns() can register sort/filter options from the
+	// async columns (the parent constructor set it to true because columns were
+	// not yet available at construction time).
+	this.noFilter = false;
 	this.buildColumns( this.prepareColumns( meta ) );
+
+	// Mirror the implicit-no-filter check from Grid.js
+	if (
+		Object.keys( this.externalFilterConfig.sortOptions ).length === 0 &&
+		Object.keys( this.externalFilterConfig.filterOptions ).length === 0 &&
+		!this.externalFilterConfig.showQueryField
+	) {
+		this.noFilter = true;
+	}
+
+	// Create and mount the ExternalFilter widget, mirroring Grid.js lines 130-150
+	if ( !this.noFilter ) {
+		this.externalFilter = new OOJSPlus.ui.data.grid.ExternalFilter( this.externalFilterConfig );
+		this.externalFilter.connect( this, {
+			columnSort: ( column, direction ) => {
+				const selector = 'th[data-field="' + column + '"]';
+				if ( !this.columns[ column ] || this.columns[ column ].grid.$table.find( selector ).length < 1 ) {
+					return;
+				}
+				const $columnHeader = this.columns[ column ].grid.$table.find( selector )[ 0 ];
+				if ( direction.toLowerCase() === 'asc' ) {
+					$( $columnHeader ).attr( 'aria-sort', 'ascending' );
+				} else if ( direction.toLowerCase() === 'desc' ) {
+					$( $columnHeader ).attr( 'aria-sort', 'descending' );
+				} else {
+					$( $columnHeader ).attr( 'aria-sort', 'none' );
+				}
+			}
+		} );
+		this.$filterWidgetCnt.append( this.externalFilter.$element );
+	}
+
 	this.addHeader();
 	this.updateToolbar();
 };
