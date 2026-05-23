@@ -58,5 +58,6 @@
 	"bs-smwconnector-dataquery-number-input-label": "표시되는 결과 개수",
 	"bs-smwconnector-dataquery-modified-input-operator-label": "변경 기간",
 	"bs-smwconnector-dataquery-modified-since": "이 이후에 변경",
-	"bs-smwconnector-dataquery-modified-before": "이 이전에 변경"
+	"bs-smwconnector-dataquery-modified-before": "이 이전에 변경",
+	"bs-bssmwconnector-nmmngr-label-smw": "시맨틱 미디어위키"
 }
