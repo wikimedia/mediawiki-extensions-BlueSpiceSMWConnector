@@ -12,5 +12,7 @@
 	"bs-smwconnector-extendedsearch-boolean-property-false": "Не",
 	"bs-swm-connector-ask-store-page-label": "Старонка",
 	"bs-smwconnector-dataquery-name": "Запыт зьвестак",
-	"bs-smwconnector-tree-loading": "Ладаваньне ..."
+	"bs-smwconnector-dataquery-category-input-label": "Фільтар водле катэґорыі",
+	"bs-smwconnector-tree-loading": "Ладаваньне ...",
+	"bs-smwconnector-decision-overview-input-categories-label": "Фільтар водле катэґорыі"
 }
