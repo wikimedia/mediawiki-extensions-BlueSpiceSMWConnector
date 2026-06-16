@@ -129,6 +129,13 @@
 			"Handlers": [
 				"\\BlueSpice\\SMWConnector\\Privacy\\Handler"
 			]
+		},
+		"PDFCreator": {
+			"Processors": {
+				"removeSmwTooltipContent": {
+					"class": "\\BlueSpice\\SMWConnector\\Integration\\PDFCreator\\Processor\\RemoveSmwTooltipContent"
+				}
+			}
 		}
 	},
 	"AutoloadNamespaces": {
