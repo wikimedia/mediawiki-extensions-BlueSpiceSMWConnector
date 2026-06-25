@@ -68,6 +68,14 @@ bs.smwconnector.ui.data.AsyncResultGrid.prototype.initialize = function ( meta )
 
 	this.addHeader();
 	this.updateToolbar();
+
+	// Re-render the current page now that columns are available.
+	// dataAppended fired before initialize() was called (before columns existed),
+	// so the paginator rendered empty rows. Calling showRange() again fixes that.
+	if ( this.paginator && this.paginator.pages && this.paginator.pages.length > 0 ) {
+		const range = this.paginator.pages[ this.paginator.currentPageIndex ];
+		this.paginator.showRange( range[ 0 ], range[ 1 ] );
+	}
 };
 
 bs.smwconnector.ui.data.AsyncResultGrid.prototype.prepareColumns = function ( meta ) {
