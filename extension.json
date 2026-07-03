@@ -171,6 +171,10 @@
 		"registerTags": {
 			"class": "BlueSpice\\SMWConnector\\HookHandler\\RegisterTags",
 			"services": [ "BlueSpiceSmartList.SmartlistMode" ]
+		},
+		"updateRootPage": {
+			"class": "BlueSpice\\SMWConnector\\Hook\\UpdateRootPageOnSubpageCreation",
+			"services": [ "TitleFactory" ]
 		}
 	},
 	"Hooks": {
@@ -188,12 +192,14 @@
 		"NamespaceManager::editNamespace": "BSSMWCNamespaceManager::onEditNamespace",
 		"NamespaceManagerBeforePersistSettings": "writeNamespaceConfiguration",
 		"BSPageTemplatesBeforeRender": "BSSMWCPageTemplates::onBSPageTemplatesBeforeRender",
-		"PageSaveComplete": "BSSMWConnectorHooks::onPageSaveComplete",
+		"PageSaveComplete": [ "BSSMWConnectorHooks::onPageSaveComplete", "updateRootPage" ],
 		"SMW::Store::AfterQueryResultLookupComplete": "BlueSpice\\SMWConnector\\Hook\\SMWStoreAfterQueryResultLookupComplete\\ApplySecurityTrimming::callback",
 		"ParserFirstCallInit": "BlueSpice\\SMWConnector\\Hook\\ParserFirstCallInit\\AsyncAsk::callback",
 		"BlueSpiceDiscoveryTemplateDataProviderAfterInit": "discovery-skin",
 		"RevisionDataUpdates": "forceLinksUpdate",
-		"MWStakeGenericTagHandlerInitTags": "registerTags"
+		"MWStakeGenericTagHandlerInitTags": "registerTags",
+		"PageDeleteComplete": "updateRootPage",
+		"PageMoveComplete": "updateRootPage"
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "resources",
