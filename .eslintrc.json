@@ -11,6 +11,7 @@
 	"globals": {
 		"blueSpice": "readonly",
 		"bs": "readonly",
+		"ext": "readonly",
 		"jQuery": "readonly",
 		"mediaWiki": "readonly",
 		"mws": "readonly",
@@ -19,10 +20,12 @@
 		"ve": "readonly"
 	},
 	"rules": {
+		"es-x/no-array-prototype-includes": "off",
 		"es-x/no-object-values": "off",
 		"es-x/no-string-prototype-replaceall": "off",
 		"max-len": "off",
 		"no-jquery/no-global-selector": "off",
-		"no-prototype-builtins": "off"
+		"no-prototype-builtins": "off",
+		"no-jquery/no-done-fail": "warn"
 	}
 }

@@ -25,7 +25,7 @@ bs.swmconnector.ui.DecisionOverviewForm.prototype.makeItems = function () {
 			name: 'namespaces',
 			label: mw.msg( 'bs-smwconnector-decision-overview-input-namespaces-label' ),
 			help: mw.msg( 'bs-smwconnector-decision-overview-namespaces-help' ),
-			widget_$overlay: true,
+			widget_$overlay: true, // eslint-disable-line camelcase
 			labelAlign: 'top'
 		},
 		{
@@ -33,8 +33,8 @@ bs.swmconnector.ui.DecisionOverviewForm.prototype.makeItems = function () {
 			name: 'prefix',
 			label: mw.msg( 'bs-smwconnector-decision-overview-input-prefix-label' ),
 			help: mw.msg( 'bs-smwconnector-decision-overview-prefix-help' ),
-			widget_listeners: {
-				change: function( value ) {
+			widget_listeners: { // eslint-disable-line camelcase
+				change: function ( value ) {
 					this.getItem( 'categories' ).setDisabled( !!value );
 					this.getItem( 'namespaces' ).setDisabled( !!value );
 				}
