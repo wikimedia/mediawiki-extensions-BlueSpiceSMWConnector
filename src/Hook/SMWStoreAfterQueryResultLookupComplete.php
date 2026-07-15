@@ -11,7 +11,6 @@ use SMW\Store;
 abstract class SMWStoreAfterQueryResultLookupComplete extends Hook {
 
 	/**
-	 *
 	 * @var Store
 	 */
 	protected $store = null;
@@ -22,7 +21,6 @@ abstract class SMWStoreAfterQueryResultLookupComplete extends Hook {
 	protected $result = null;
 
 	/**
-	 *
 	 * @param IContextSource $context
 	 * @param Config $config
 	 * @param Store $store
@@ -36,7 +34,6 @@ abstract class SMWStoreAfterQueryResultLookupComplete extends Hook {
 	}
 
 	/**
-	 *
 	 * @param Store $store
 	 * @param QueryResult &$result
 	 * @return bool|null

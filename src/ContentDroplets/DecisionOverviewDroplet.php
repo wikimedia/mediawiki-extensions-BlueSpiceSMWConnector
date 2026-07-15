@@ -8,7 +8,6 @@ use MediaWiki\Message\Message;
 class DecisionOverviewDroplet extends TagDroplet {
 
 	/**
-	 *
 	 * @return string
 	 */
 	protected function getTagName(): string {
@@ -16,7 +15,6 @@ class DecisionOverviewDroplet extends TagDroplet {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	protected function getAttributes(): array {

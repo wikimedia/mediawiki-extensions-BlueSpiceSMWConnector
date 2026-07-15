@@ -14,7 +14,6 @@ class SpecialAskProvider extends BaseBreadcrumbDataProvider {
 	private $specialPageFactory;
 
 	/**
-	 *
 	 * @param SpecialPageFactory $specialPageFactory
 	 * @param TitleFactory $titleFactory
 	 * @param MessageLocalizer $messageLocalizer
@@ -49,7 +48,6 @@ class SpecialAskProvider extends BaseBreadcrumbDataProvider {
 	}
 
 	/**
-	 *
 	 * @param Title $title
 	 * @return bool
 	 */

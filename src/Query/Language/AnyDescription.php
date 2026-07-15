@@ -11,7 +11,6 @@ class AnyDescription extends Description {
 	protected $value;
 
 	/**
-	 *
 	 * @param string $field
 	 * @param string $value
 	 */
