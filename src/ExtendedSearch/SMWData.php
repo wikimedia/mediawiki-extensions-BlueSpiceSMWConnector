@@ -290,7 +290,6 @@ class SMWData implements
 	}
 
 	/**
-	 *
 	 * @param SMWDataItem $value
 	 * @param string &$type
 	 * @return string
@@ -315,7 +314,6 @@ class SMWData implements
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	private function getSemanticValueArray() {
@@ -377,7 +375,6 @@ class SMWData implements
 	}
 
 	/**
-	 *
 	 * @param bool $boolValue
 	 * @return string
 	 */

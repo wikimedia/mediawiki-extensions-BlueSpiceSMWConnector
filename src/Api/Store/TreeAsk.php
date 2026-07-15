@@ -27,7 +27,6 @@ class TreeAsk extends Ask {
 	}
 
 	/**
-	 *
 	 * @return ReaderParams
 	 */
 	protected function getReaderParams() {

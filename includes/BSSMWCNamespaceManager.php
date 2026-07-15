@@ -3,7 +3,6 @@
 class BSSMWCNamespaceManager {
 
 	/**
-	 *
 	 * @param array &$aMetaFields
 	 * @return bool
 	 */
@@ -20,7 +19,6 @@ class BSSMWCNamespaceManager {
 	}
 
 	/**
-	 *
 	 * @param array &$aResults
 	 * @return bool
 	 */
@@ -36,7 +34,6 @@ class BSSMWCNamespaceManager {
 	}
 
 	/**
-	 *
 	 * @param array &$aNamespaceDefinitions
 	 * @param int &$iNS
 	 * @param array $aAdditionalSettings

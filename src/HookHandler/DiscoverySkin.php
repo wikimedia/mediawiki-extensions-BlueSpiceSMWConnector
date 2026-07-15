@@ -8,7 +8,6 @@ use BlueSpice\Discovery\ITemplateDataProvider;
 class DiscoverySkin implements BlueSpiceDiscoveryTemplateDataProviderAfterInit {
 
 	/**
-	 *
 	 * @param ITemplateDataProvider $registry
 	 * @return void
 	 */

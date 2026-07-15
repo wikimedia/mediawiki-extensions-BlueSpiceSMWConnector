@@ -16,11 +16,13 @@ class ApplySecurityTrimming extends SMWStoreAfterQueryResultLookupComplete {
 	}
 
 	/**
-	 *
 	 * @var DIWikiPage[]
 	 */
 	protected $resultItems = [];
 
+	/**
+	 * @inheritDoc
+	 */
 	protected function doProcess() {
 		$this->resultItems = $this->result->getResults();
 		$filteredItems = [];

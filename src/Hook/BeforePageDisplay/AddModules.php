@@ -5,22 +5,18 @@ namespace BlueSpice\SMWConnector\Hook\BeforePageDisplay;
 use MediaWiki\Output\OutputPage;
 use Profiler;
 
-// TODO: when on 'master', derive from BlueSpice\Hook\BeforePageDisplay and remove redundant code
 class AddModules {
 
 	/**
-	 *
 	 * @var OutputPage
 	 */
 	protected $out = null;
 	/**
-	 *
 	 * @var \Skin
 	 */
 	protected $skin = null;
 
 	/**
-	 *
 	 * @param null $context As long as not on 'master'
 	 * @param null $config As long as not on 'master'
 	 * @param OutputPage $out
@@ -32,7 +28,6 @@ class AddModules {
 	}
 
 	/**
-	 *
 	 * @param OutputPage $out
 	 * @param \Skin $skin
 	 * @return bool
@@ -48,6 +43,9 @@ class AddModules {
 		return $hookHandler->process();
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function process() {
 		if ( $this->skipProcessing() ) {
 			return true;
@@ -57,6 +55,9 @@ class AddModules {
 		return $result;
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	protected function doProcess() {
 		$this->out->addModules( 'ext.BSSMWConnector' );
 		$this->out->addModuleStyles( 'ext.BSSMWConnector.styles' );

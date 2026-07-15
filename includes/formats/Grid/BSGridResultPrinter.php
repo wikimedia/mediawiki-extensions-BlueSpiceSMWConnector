@@ -8,7 +8,6 @@ use SRF\ResourceFormatter;
 class BSGridResultPrinter extends ResultPrinter {
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getName() {

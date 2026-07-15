@@ -34,7 +34,6 @@ class BSSMWConnectorHooks {
 	}
 
 	/**
-	 *
 	 * @param array &$aDummyPage
 	 * @param array &$aArticle
 	 * @param array &$aTemplate

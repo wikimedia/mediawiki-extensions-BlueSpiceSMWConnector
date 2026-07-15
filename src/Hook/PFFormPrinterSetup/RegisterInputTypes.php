@@ -9,6 +9,9 @@ use BlueSpice\SMWConnector\PageForms\Input\UserTags;
 
 class RegisterInputTypes extends PFFormPrinterSetup {
 
+	/**
+	 * @inheritDoc
+	 */
 	protected function doProcess() {
 		$this->formPrinter->registerInputType( UserCombo::class );
 		$this->formPrinter->registerInputType( UserTags::class );

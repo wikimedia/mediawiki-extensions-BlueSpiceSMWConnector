@@ -3,7 +3,6 @@
 class ApiSMWPropertyStore extends BSApiExtJSStoreBase {
 
 	/**
-	 *
 	 * @param string $query
 	 * @return \stdClass[]
 	 */

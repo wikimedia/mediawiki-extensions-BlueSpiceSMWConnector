@@ -14,11 +14,13 @@ use SMW\Query\QueryResult;
 class AddPermissionBasedNamespaceFilters extends SMWStoreBeforeQueryResultLookupComplete {
 
 	/**
-	 *
 	 * @var Description
 	 */
 	protected $originalDescription = null;
 
+	/**
+	 * @inheritDoc
+	 */
 	protected function doProcess() {
 		$namespaceFilterDisjunction = $this->makeNamespaceFilterDisjunction();
 		$this->originalDescription = $this->query->getDescription();

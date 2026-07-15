@@ -63,6 +63,9 @@ class GenerateRerenderScript extends Maintenance {
 		);
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function execute() {
 		if ( substr( $this->getOption( 'entrance' ), -9 ) !== 'index.php' ) {
 			$this->error(

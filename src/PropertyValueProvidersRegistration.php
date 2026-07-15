@@ -6,6 +6,9 @@ use BlueSpice\ExtensionAttributeBasedRegistry;
 
 class PropertyValueProvidersRegistration {
 
+	/**
+	 * @inheritDoc
+	 */
 	public static function addExtensions() {
 		if ( defined( 'MW_QUIBBLE_CI' ) ) {
 			return true;
@@ -37,7 +40,6 @@ class PropertyValueProvidersRegistration {
 	}
 
 	/**
-	 *
 	 * @param IPropertyValueProvider $propertyValueProvider
 	 * @return array
 	 */
