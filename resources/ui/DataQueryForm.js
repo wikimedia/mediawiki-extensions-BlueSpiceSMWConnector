@@ -38,15 +38,15 @@ bs.swmconnector.ui.DataQueryForm.prototype.makeItems = function () {
 				{ data: '>=', label: mw.msg( 'bs-smwconnector-dataquery-modified-since' ) },
 				{ data: '<=', label: mw.msg( 'bs-smwconnector-dataquery-modified-before' ) }
 			],
-			widget_listeners: {
-				change: function( value ) {
+			widget_listeners: { // eslint-disable-line camelcase
+				change: function ( value ) {
 					if ( value !== '+' ) {
-						this.showItem('modifiedDate');
+						this.showItem( 'modifiedDate' );
 					} else {
-						this.hideItem('modifiedDate');
+						this.hideItem( 'modifiedDate' );
 					}
 				}
-			},
+			}
 		},
 		{
 			type: 'date',
@@ -54,7 +54,7 @@ bs.swmconnector.ui.DataQueryForm.prototype.makeItems = function () {
 			label: mw.msg( 'bs-smwconnector-dataquery-modified-date-label' ),
 			help: mw.msg( 'bs-smwconnector-dataquery-modified-date-help' ),
 			hidden: true,
-			widget_$overlay: true,
+			widget_$overlay: true, // eslint-disable-line camelcase
 			labelAlign: 'top'
 		},
 		{
