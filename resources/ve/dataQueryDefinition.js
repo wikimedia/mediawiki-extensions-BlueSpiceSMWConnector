@@ -1,6 +1,6 @@
 bs.util.registerNamespace( 'bs.swmconnector.ve' );
 
-bs.swmconnector.ve.DataQueryDefinition = function( cfg ) {
+bs.swmconnector.ve.DataQueryDefinition = function ( cfg ) {
 	bs.swmconnector.ve.DataQueryDefinition.super.call( this, cfg );
 };
 
@@ -9,7 +9,7 @@ OO.inheritClass( bs.swmconnector.ve.DataQueryDefinition, ext.visualEditorPlus.ui
 bs.swmconnector.ve.DataQueryDefinition.prototype.modifyDataBeforeSetToModel = function ( data ) {
 	if ( data.modified !== '+' && data.modifiedDate ) {
 		data.modified += ' ' + data.modifiedDate;
-		delete( data.modifiedDate );
+		delete ( data.modifiedDate );
 	}
 	return data;
 };
