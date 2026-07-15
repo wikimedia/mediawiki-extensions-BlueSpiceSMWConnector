@@ -65,7 +65,6 @@ HERE
 	}
 
 	/**
-	 *
 	 * @param string $tableName
 	 * @param string $fieldName
 	 */

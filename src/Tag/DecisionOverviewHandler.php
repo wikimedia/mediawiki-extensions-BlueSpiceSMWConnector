@@ -91,7 +91,6 @@ class DecisionOverviewHandler extends Handler {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	private function getTableHeader(): string {
@@ -117,7 +116,6 @@ class DecisionOverviewHandler extends Handler {
 	}
 
 	/**
-	 *
 	 * @param array $decision
 	 * @return string
 	 */
@@ -134,7 +132,6 @@ class DecisionOverviewHandler extends Handler {
 	}
 
 	/**
-	 *
 	 * @param Title|null $pageTitle
 	 * @return string
 	 */
@@ -156,7 +153,6 @@ class DecisionOverviewHandler extends Handler {
 	}
 
 	/**
-	 *
 	 * @param array $decision
 	 * @return string
 	 */
@@ -244,7 +240,6 @@ class DecisionOverviewHandler extends Handler {
 	}
 
 	/**
-	 *
 	 * @param DIWikiPage $DIWikiPage
 	 * @param DIProperty $DIProperty
 	 * @param array $printouts

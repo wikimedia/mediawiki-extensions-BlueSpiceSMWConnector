@@ -11,7 +11,6 @@ use MediaWiki\User\UserGroupManager;
 
 class UserCombo extends \PFFormInput {
 	/**
-	 *
 	 * @var array
 	 */
 	protected $groups = [];
@@ -50,7 +49,6 @@ class UserCombo extends \PFFormInput {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public static function getName() {
@@ -58,7 +56,6 @@ class UserCombo extends \PFFormInput {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getHtmlText() {
@@ -84,7 +81,6 @@ class UserCombo extends \PFFormInput {
 	}
 
 	/**
-	 *
 	 * @return string[]
 	 */
 	public function getResourceModuleNames() {
@@ -94,7 +90,6 @@ class UserCombo extends \PFFormInput {
 	}
 
 	/**
-	 *
 	 * @return User|null
 	 */
 	protected function getUser() {
@@ -124,7 +119,6 @@ class UserCombo extends \PFFormInput {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	protected function getInitParams() {

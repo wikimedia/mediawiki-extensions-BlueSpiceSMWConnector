@@ -12,7 +12,6 @@ class Handler implements IPrivacyHandler {
 	protected $db;
 
 	/**
-	 *
 	 * @param IDatabase $db
 	 */
 	public function __construct( IDatabase $db ) {
@@ -20,7 +19,6 @@ class Handler implements IPrivacyHandler {
 	}
 
 	/**
-	 *
 	 * @param string $oldUsername
 	 * @param string $newUsername
 	 * @return Status
@@ -44,7 +42,6 @@ class Handler implements IPrivacyHandler {
 	}
 
 	/**
-	 *
 	 * @param User $userToDelete
 	 * @param User $deletedUser
 	 * @return Status
@@ -54,7 +51,6 @@ class Handler implements IPrivacyHandler {
 	}
 
 	/**
-	 *
 	 * @param array $types
 	 * @param string $format
 	 * @param User $user

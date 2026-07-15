@@ -34,7 +34,6 @@ class MWVisualEditor extends PFTextAreaInput {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public static function getName(): string {
@@ -42,7 +41,6 @@ class MWVisualEditor extends PFTextAreaInput {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getHtmlText(): string {
@@ -69,7 +67,6 @@ class MWVisualEditor extends PFTextAreaInput {
 	}
 
 	/**
-	 *
 	 * @return string[]
 	 */
 	public function getResourceModuleNames() {
@@ -80,7 +77,6 @@ class MWVisualEditor extends PFTextAreaInput {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	public static function getParameters() {
@@ -89,7 +85,6 @@ class MWVisualEditor extends PFTextAreaInput {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	protected function makeDataAttributes() {
@@ -97,7 +92,6 @@ class MWVisualEditor extends PFTextAreaInput {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	protected function getInitParams() {

@@ -2,17 +2,14 @@
 
 namespace BlueSpice\SMWConnector\Hook;
 
-// TODO: when on 'master', derive from BlueSpice\Hook and remove redundant code
 abstract class PFFormPrinterSetup {
 
 	/**
-	 *
 	 * @var \PFFormPrinter
 	 */
 	protected $formPrinter = null;
 
 	/**
-	 *
 	 * @param null $context As long as not on 'master'
 	 * @param null $config As long as not on 'master'
 	 * @param \PFFormPrinter $formPrinter
@@ -22,7 +19,6 @@ abstract class PFFormPrinterSetup {
 	}
 
 	/**
-	 *
 	 * @param \PFFormPrinter $formPrinter
 	 * @return bool
 	 */
@@ -36,10 +32,16 @@ abstract class PFFormPrinterSetup {
 		return $hookHandler->process();
 	}
 
+	/**
+	 * @inheritDoc
+	 */
 	public function process() {
 		$result = $this->doProcess();
 		return $result;
 	}
 
+	/**
+	 * @return bool
+	 */
 	abstract protected function doProcess();
 }

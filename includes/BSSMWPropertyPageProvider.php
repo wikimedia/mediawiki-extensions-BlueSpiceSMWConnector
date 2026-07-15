@@ -14,7 +14,6 @@ class BSSMWPropertyPageProvider implements BlueSpice\Bookshelf\MassAdd\IHandler 
 	protected $root;
 
 	/**
-	 *
 	 * @return array
 	 */
 	public function getData() {
@@ -49,7 +48,6 @@ class BSSMWPropertyPageProvider implements BlueSpice\Bookshelf\MassAdd\IHandler 
 	}
 
 	/**
-	 *
 	 * @param string $root
 	 */
 	protected function __construct( $root ) {

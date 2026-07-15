@@ -20,7 +20,6 @@ class SecondaryDataProvider implements ISecondaryDataProvider {
 	}
 
 	/**
-	 *
 	 * @param Record[] $dataSets
 	 * @return Record[]
 	 */

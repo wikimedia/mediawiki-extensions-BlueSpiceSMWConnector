@@ -14,13 +14,11 @@ use SMWQuery;
 abstract class SMWStoreBeforeQueryResultLookupComplete extends Hook {
 
 	/**
-	 *
 	 * @var Store
 	 */
 	protected $store = null;
 
 	/**
-	 *
 	 * @var SMWQuery
 	 */
 	protected $query = null;
@@ -33,13 +31,11 @@ abstract class SMWStoreBeforeQueryResultLookupComplete extends Hook {
 	protected $result = null;
 
 	/**
-	 *
 	 * @var QueryEngine
 	 */
 	protected $slaveQueryEngine = null;
 
 	/**
-	 *
 	 * @param IContextSource $context
 	 * @param Config $config
 	 * @param Store $store
@@ -57,7 +53,6 @@ abstract class SMWStoreBeforeQueryResultLookupComplete extends Hook {
 	}
 
 	/**
-	 *
 	 * @param Store $store
 	 * @param SMWQuery $query
 	 * @param QueryResult &$result
