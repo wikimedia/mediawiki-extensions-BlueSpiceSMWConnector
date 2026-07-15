@@ -7,10 +7,10 @@ bs.smwconnector.ui.data.AsyncResultGrid = function ( cfg ) {
 		pageSize: 25,
 		props: data.props || {},
 		query: data.query || '',
-		sorter: this.prepareSorter( data.sort ),
+		sorter: this.prepareSorter( data.sort )
 	} );
 	cfg.store.connect( this, {
-		buildMeta: 'onBuildMeta',
+		buildMeta: 'onBuildMeta'
 	} );
 	this.initialized = false;
 	this.hiddenColumns = data.hiddenColumns || [];
@@ -85,10 +85,10 @@ bs.smwconnector.ui.data.AsyncResultGrid.prototype.prepareSorter = function ( sor
 	if ( !sortCfg || !Array.isArray( sortCfg ) ) {
 		return {};
 	}
-	let sorter = {};
+	const sorter = {};
 
 	sortCfg.forEach( ( sort ) => {
-		sorter[sort.property] = { 'direction': sort.direction };
+		sorter[ sort.property ] = { direction: sort.direction };
 	} );
 
 	return sorter;
@@ -105,12 +105,12 @@ bs.smwconnector.ui.data.AsyncResultGrid.prototype.updateToolbar = function () {
 
 	const items = this.toolbar.staticControls.getItems();
 	const toUpdate = items.filter(
-		item => item instanceof OO.ui.PopupButtonWidget
+		( item ) => item instanceof OO.ui.PopupButtonWidget
 	);
 
 	if ( toUpdate.length ) {
 		// keep the index of the first removed popup so we can reinsert there
-		const insertIndex = Math.max( 0, items.indexOf( toUpdate[0] ) );
+		const insertIndex = Math.max( 0, items.indexOf( toUpdate[ 0 ] ) );
 		this.toolbar.staticControls.removeItems( toUpdate );
 		this.toolbar.staticControls.addItems( [ settingsWidget ], insertIndex );
 	}
