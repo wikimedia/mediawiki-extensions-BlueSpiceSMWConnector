@@ -7,7 +7,6 @@ use SMWDataItem;
 abstract class PropertyValueProvider implements IPropertyValueProvider {
 
 	/**
-	 *
 	 * @return int
 	 */
 	public function getType() {
@@ -15,7 +14,6 @@ abstract class PropertyValueProvider implements IPropertyValueProvider {
 	}
 
 	/**
-	 *
 	 * @return IPropertyValueProvider[]
 	 */
 	public static function factory() {

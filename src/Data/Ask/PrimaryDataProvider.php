@@ -32,7 +32,6 @@ class PrimaryDataProvider implements IPrimaryDataProvider {
 	protected $count = 0;
 
 	/**
-	 *
 	 * @param ReaderParams $params
 	 * @return Record[]
 	 */

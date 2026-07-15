@@ -39,7 +39,6 @@ interface IPropertyValueProvider {
 	public function getDescriptionMessageKey();
 
 	/**
-	 *
 	 * @param AppFactory $appFactory
 	 * @param DIProperty $property
 	 * @param SemanticData $semanticData

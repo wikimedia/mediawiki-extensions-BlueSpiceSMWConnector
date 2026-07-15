@@ -5,7 +5,6 @@ use MediaWiki\Title\Title;
 class BSSMWCPageTemplates {
 
 	/**
-	 *
 	 * @param PageTemplates $oSender
 	 * @param BSPageTemplateList &$oPageTemplateList
 	 * @param BSPageTemplateListRenderer &$oPageTemplateListRenderer

@@ -80,7 +80,6 @@ class DecisionOverviewHandler implements ITagHandler {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	private function getTableHeader(): string {
@@ -106,7 +105,6 @@ class DecisionOverviewHandler implements ITagHandler {
 	}
 
 	/**
-	 *
 	 * @param array $decision
 	 * @return string
 	 */
@@ -123,7 +121,6 @@ class DecisionOverviewHandler implements ITagHandler {
 	}
 
 	/**
-	 *
 	 * @param Title|null $pageTitle
 	 * @return string
 	 */
@@ -145,7 +142,6 @@ class DecisionOverviewHandler implements ITagHandler {
 	}
 
 	/**
-	 *
 	 * @param array $decision
 	 * @return string
 	 */
@@ -236,7 +232,6 @@ class DecisionOverviewHandler implements ITagHandler {
 	}
 
 	/**
-	 *
 	 * @param DIWikiPage $DIWikiPage
 	 * @param DIProperty $DIProperty
 	 * @param array $printouts

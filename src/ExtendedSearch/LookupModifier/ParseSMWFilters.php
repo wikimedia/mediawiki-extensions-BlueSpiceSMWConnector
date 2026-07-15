@@ -8,7 +8,6 @@ use BS\ExtendedSearch\Source\LookupModifier\LookupModifier;
  * Class ParseSMWFilters
  * This class gets encoded filters for SMW properties and
  * converts them to filters usable by Elastic
- *
  */
 class ParseSMWFilters extends LookupModifier {
 	/** @var array */
@@ -27,7 +26,6 @@ class ParseSMWFilters extends LookupModifier {
 	}
 
 	/**
-	 *
 	 * @param string $key
 	 * @param array|string $value
 	 */
@@ -67,7 +65,6 @@ class ParseSMWFilters extends LookupModifier {
 	}
 
 	/**
-	 *
 	 * @param string $key
 	 * @param string[] $value
 	 * @return array

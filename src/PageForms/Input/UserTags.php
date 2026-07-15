@@ -11,13 +11,11 @@ use MediaWiki\User\User;
 class UserTags extends \PFFormInput {
 
 	/**
-	 *
 	 * @var User[]
 	 */
 	protected $users = [];
 
 	/**
-	 *
 	 * @var array
 	 */
 	protected $groups = [];
@@ -47,7 +45,6 @@ class UserTags extends \PFFormInput {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public static function getName() {
@@ -55,7 +52,6 @@ class UserTags extends \PFFormInput {
 	}
 
 	/**
-	 *
 	 * @return string
 	 */
 	public function getHtmlText() {
@@ -82,7 +78,6 @@ class UserTags extends \PFFormInput {
 	}
 
 	/**
-	 *
 	 * @return string[]
 	 */
 	public function getResourceModuleNames() {
@@ -121,7 +116,6 @@ class UserTags extends \PFFormInput {
 	}
 
 	/**
-	 *
 	 * @return array
 	 */
 	protected function getInitParams() {

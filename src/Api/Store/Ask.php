@@ -32,7 +32,6 @@ class Ask extends Store {
 	}
 
 	/**
-	 *
 	 * @return ReaderParams
 	 */
 	protected function getReaderParams() {
