@@ -16,5 +16,6 @@
 	"bs-smwconnector-decision-overview-table-heading-decisions-label": "Decisiounen",
 	"bs-smwconnector-yes": "Jo",
 	"bs-smwconnector-no": "Nee",
+	"bs-smwconnector-dataquery-format-input-label": "Outputformat",
 	"bs-smwconnector-dataquery-modified-all": "All Ännerungen"
 }
