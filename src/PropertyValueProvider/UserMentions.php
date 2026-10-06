@@ -5,13 +5,13 @@ namespace BlueSpice\SMWConnector\PropertyValueProvider;
 use BlueSpice\SMWConnector\PropertyValueProvider;
 use MediaWiki\Content\WikitextContent;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Parser\ParserOutputLinkTypes;
 use MediaWiki\Title\Title;
 use SESP\AppFactory;
 use SMW\DIProperty;
 use SMW\DIWikiPage;
 use SMW\SemanticData;
 use SMWDataItem;
-use WikiPage;
 
 class UserMentions extends PropertyValueProvider {
 
@@ -58,10 +58,6 @@ class UserMentions extends PropertyValueProvider {
 	public function addAnnotation( $appFactory, $property, $semanticData ) {
 		$wikiPage = MediaWikiServices::getInstance()->getWikiPageFactory()
 			->newFromTitle( $semanticData->getSubject()->getTitle() );
-		if ( !$wikiPage instanceof WikiPage ) {
-			// no file or category pages
-			return;
-		}
 		$content = $wikiPage->getContent();
 		if ( !$content instanceof WikitextContent ) {
 			// do not do this for any other type of content as these may do not
@@ -70,16 +66,20 @@ class UserMentions extends PropertyValueProvider {
 		}
 		$contentRenderer = MediaWikiServices::getInstance()->getContentRenderer();
 		$links = $contentRenderer->getParserOutput( $content, $semanticData->getSubject()->getTitle() )
-			->getLinks();
-		if ( empty( $links[NS_USER] ) ) {
+			->getLinkList( ParserOutputLinkTypes::LOCAL, NS_USER );
+		if ( empty( $links ) ) {
 			return;
 		}
-		foreach ( $links[NS_USER] as $name => $id ) {
-			$userPage = Title::makeTitle( NS_USER, $name );
-			$semanticData->addPropertyObjectValue(
-				$property,
-				DIWikiPage::newFromTitle( $userPage )
-			);
+		foreach ( $links as $link ) {
+			if ( $link['pageid'] ) {
+				$userPage = Title::newFromID( $link['pageid'] );
+				if ( $userPage ) {
+					$semanticData->addPropertyObjectValue(
+						$property,
+						DIWikiPage::newFromTitle( $userPage )
+					);
+				}
+			}
 		}
 	}
 
