@@ -2,8 +2,8 @@
 
 namespace BlueSpice\SMWConnector\Hook;
 
-use ManualLogEntry;
 use MediaWiki\Hook\PageMoveCompleteHook;
+use MediaWiki\Logging\ManualLogEntry;
 use MediaWiki\Page\Hook\PageDeleteCompleteHook;
 use MediaWiki\Page\ProperPageIdentity;
 use MediaWiki\Permissions\Authority;
