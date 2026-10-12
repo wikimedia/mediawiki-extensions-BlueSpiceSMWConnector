@@ -23,10 +23,12 @@ class AnyDescription extends Description {
 	 * @inheritDoc
 	 */
 	public function getQueryString( $asValue = false ) {
+		// The "page" column is the subject itself, not a property
+		$prefix = $this->field === 'page' ? '' : $this->field . '::';
 		$parts = [
-			'[[' . $this->field . '::~*' . $this->value . '*]]',
-			'[[' . $this->field . '::~' . $this->value . '*]]',
-			'[[' . $this->field . '::~*' . $this->value . ']]',
+			'[[' . $prefix . '~*' . $this->value . '*]]',
+			'[[' . $prefix . '~' . $this->value . '*]]',
+			'[[' . $prefix . '~*' . $this->value . ']]',
 		];
 		$string = implode( ' OR ', $parts );
 

@@ -22,6 +22,15 @@ bs.smwconnector.ui.data.SMWStore.prototype.doLoadData = function () {
 	this.api.get( data ).done( ( response ) => {
 		if ( response.hasOwnProperty( 'results' ) ) {
 			this.total = response.total;
+			this.totalApproximated = !!response.total_approximate;
+			if ( !this.suppressEvents ) {
+				this.emit( 'metadataChange', {
+					total: this.total,
+					continue: null,
+					totalApproximated: this.totalApproximated,
+					pageSize: this.limit
+				} );
+			}
 			dfd.resolve( this.indexData( response.results ), response.metaData );
 		}
 	} ).fail( ( e ) => {
