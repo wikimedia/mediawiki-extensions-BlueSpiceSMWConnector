@@ -74,11 +74,13 @@ class PrimaryDataProvider implements IPrimaryDataProvider {
 	 * @return array
 	 */
 	private function getParamArray( $query, $params ) {
-		$limit = $params->getLimit();
+		// For counting, the limit must not apply, or total would be capped to page size.
+		// SMW clamps this to its configured maximum
+		$limit = $this->justCount ? PHP_INT_MAX : $params->getLimit();
 
 		$res = [ $query, "limit={$limit}" ];
 		if ( !$this->justCount ) {
-			$offset = $params->getStart() - 1;
+			$offset = max( 0, (int)$params->getStart() );
 			$res[] = "offset={$offset}";
 		}
 
@@ -142,8 +144,8 @@ class PrimaryDataProvider implements IPrimaryDataProvider {
 	 * @return Disjunction|null
 	 */
 	private function getGlobalDisjunction( Filter $filter ) {
-		$descriptions = [];
-		// Always "ct" comparison
+		// Always "ct" comparison; the page name is searched too
+		$descriptions = [ new AnyDescription( 'page', $filter->getValue() ) ];
 		foreach ( (array)$this->schema as $key => $def ) {
 			if ( !isset( $def[Schema::PROPERTY_TYPE] ) ) {
 				continue;
