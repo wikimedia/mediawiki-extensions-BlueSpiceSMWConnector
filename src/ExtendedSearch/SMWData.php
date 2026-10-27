@@ -22,6 +22,7 @@ use MediaWiki\Context\RequestContext;
 use MediaWiki\Language\Language;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Message\Message;
+use MediaWiki\Page\WikiPage;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
 use MediaWiki\User\UserFactory;
@@ -251,7 +252,7 @@ class SMWData implements
 	 * Gets all semantic properties for a given page
 	 * and sets correctly formatted array of values to be indexed as class variable
 	 *
-	 * @param \WikiPage $wikipage
+	 * @param WikiPage $wikipage
 	 */
 	private function getSemanticData( $wikipage ) {
 		$subject = DIWikiPage::newFromTitle( $wikipage->getTitle() );
