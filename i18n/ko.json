@@ -2,7 +2,8 @@
 	"@metadata": {
 		"authors": [
 			"Tensama0415",
-			"Ykhwong"
+			"Ykhwong",
+			"YeBoy371"
 		]
 	},
 	"bs-bssmwconnector-desc": "SemanticMediaWiki를 블루스파이스에 연동",
@@ -35,7 +36,7 @@
 	"bs-smwconnector-dataquery-format-help": "출력물에 사용될 형식",
 	"bs-smwconnector-dataquery-format-bulleted-list": "글머리 기호 목록",
 	"bs-smwconnector-dataquery-format-numbered-list": "숫자 목록",
-	"bs-smwconnector-dataquery-count-help": "반환되는 결과 갯수 제한",
+	"bs-smwconnector-dataquery-count-help": "반환되는 결과 개수 제한",
 	"bs-smwconnector-decision-overview-categories-help": "여러 항목이 '|'로 구분된, 하나 또는 여러 분류별 필터링",
 	"bs-smwconnector-decision-overview-namespaces-help": "여러 항목이 '|'로 구분된, 하나 또는 여러 이름공간별 필터링",
 	"bs-smwconnector-decision-overview-prefix-help": "여러 항목이 '|'로 구분된, 자체 접두사(들)로 필터링",
