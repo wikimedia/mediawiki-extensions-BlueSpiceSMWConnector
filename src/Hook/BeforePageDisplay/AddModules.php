@@ -3,7 +3,7 @@
 namespace BlueSpice\SMWConnector\Hook\BeforePageDisplay;
 
 use MediaWiki\Output\OutputPage;
-use Profiler;
+use MediaWiki\Profiler\Profiler;
 
 class AddModules {
 
