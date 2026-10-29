@@ -29,7 +29,7 @@
 	"require": {
 		"composer/installers": "~1.0|~2",
 		"mwstake/mediawiki-component-generictaghandler": "~3",
-		"mwstake/mediawiki-component-utils": "~3"
+		"mwstake/mediawiki-component-utils": "~4"
 	},
 	"autoload": {
 		"psr-4": {
