@@ -4,6 +4,7 @@ namespace BlueSpice\SMWConnector\Hook\BeforePageDisplay;
 
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Profiler\Profiler;
+use MediaWiki\Skin\Skin;
 
 class AddModules {
 
@@ -12,7 +13,7 @@ class AddModules {
 	 */
 	protected $out = null;
 	/**
-	 * @var \Skin
+	 * @var Skin
 	 */
 	protected $skin = null;
 
@@ -20,7 +21,7 @@ class AddModules {
 	 * @param null $context As long as not on 'master'
 	 * @param null $config As long as not on 'master'
 	 * @param OutputPage $out
-	 * @param \Skin $skin
+	 * @param Skin $skin
 	 */
 	public function __construct( $context, $config, $out, $skin ) {
 		$this->out = $out;
@@ -29,7 +30,7 @@ class AddModules {
 
 	/**
 	 * @param OutputPage $out
-	 * @param \Skin $skin
+	 * @param Skin $skin
 	 * @return bool
 	 */
 	public static function callback( $out, $skin ) {
