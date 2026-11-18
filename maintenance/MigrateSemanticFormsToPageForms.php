@@ -114,8 +114,7 @@ class MigrateSemanticFormsToPageForms extends Maintenance {
 			},
 			$wikiText
 		);
-		$user = MediaWikiServices::getInstance()->getService( 'BSUtilityFactory' )
-			->getMaintenanceUser()->getUser();
+		$user = User::newSystemUser( User::MAINTENANCE_SCRIPT_USER, [ 'steal' => true ] );
 		$updater = $wikiPage->newPageUpdater( $user );
 		$content = ContentHandler::makeContent( $wikiText, $wikiPage->getTitle() );
 		$updater->setContent( SlotRecord::MAIN, $content );
